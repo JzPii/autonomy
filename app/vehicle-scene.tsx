@@ -22,14 +22,14 @@ const VehicleScene=forwardRef<SceneHandle,Props>(function VehicleScene(props,ref
   setReady(false);setError(null);
   const el=host.current!; let renderer:THREE.WebGLRenderer;
   try{renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance'})}catch{setError('Trình duyệt của bạn không khởi động được chế độ 3D.');return}
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio,window.matchMedia('(pointer: coarse)').matches?1.25:1.5));renderer.setClearColor(0x000000,0);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.95;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;el.appendChild(renderer.domElement);
-  const scene=new THREE.Scene();scene.background=new THREE.Color('#050607');scene.fog=new THREE.Fog('#050607',16,55);const camera=new THREE.PerspectiveCamera(37,1,.05,500);camera.position.set(-5.7,2.9,6.3);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,window.matchMedia('(pointer: coarse)').matches?1.25:1.5));renderer.setClearColor(0x000000,0);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.0;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;el.appendChild(renderer.domElement);
+  const BG='#f5f2ed';const scene=new THREE.Scene();scene.background=new THREE.Color(BG);scene.fog=new THREE.Fog(BG,16,55);const camera=new THREE.PerspectiveCamera(37,1,.05,500);camera.position.set(-5.7,2.9,6.3);
   const controls=new OrbitControls(camera,renderer.domElement);controls.target.set(0,.8,0);controls.enableDamping=true;controls.dampingFactor=.065;controls.minDistance=5;controls.maxDistance=180;controls.maxPolarAngle=Math.PI*.49;controls.minPolarAngle=.18;controls.enablePan=true;controls.autoRotateSpeed=.65;engine.current={camera,controls,reset:()=>{fitView(true);invalidated=true},interrupt:()=>{framingTime=0}};
   const pmrem=new THREE.PMREMGenerator(renderer);const room=new RoomEnvironment();const env=pmrem.fromScene(room,.04);scene.environment=env.texture;
-  scene.add(new THREE.HemisphereLight(0xd8e9ff,0x444448,.8));
-  const key=new THREE.DirectionalLight(0xffffff,2.5);key.position.set(-4,8,4);scene.add(key);key.castShadow=true;key.shadow.mapSize.set(1024,1024);key.shadow.camera.left=-7;key.shadow.camera.right=7;key.shadow.camera.top=7;key.shadow.camera.bottom=-7;key.shadow.bias=-.001;
-  const rim=new THREE.DirectionalLight(0xa6c7eb,1.8);rim.position.set(3,4,-5);scene.add(rim);
-  const glow=new THREE.PointLight(0xe0c4a6,2,10);glow.position.set(1,0,4);scene.add(glow);
+  scene.add(new THREE.HemisphereLight(0xffffff,0xd9d2c6,.9));
+  const key=new THREE.DirectionalLight(0xffffff,2.2);key.position.set(-4,8,4);scene.add(key);key.castShadow=true;key.shadow.mapSize.set(1024,1024);key.shadow.camera.left=-7;key.shadow.camera.right=7;key.shadow.camera.top=7;key.shadow.camera.bottom=-7;key.shadow.bias=-.001;
+  const rim=new THREE.DirectionalLight(0xbfd3e6,1.2);rim.position.set(3,4,-5);scene.add(rim);
+  const glow=new THREE.PointLight(0xffe2c4,1.2,10);glow.position.set(1,0,4);scene.add(glow);
   const mat=(color:string,metal=.3,rough=.32)=>new THREE.MeshStandardMaterial({color,metalness:metal,roughness:rough});
   const dark=mat('#13181d',.28,.36),silver=mat('#94a2ae',.85,.25),orange=mat('#f97645',.55,.32);
   const groups={} as Record<PartId,THREE.Group>;parts.forEach(p=>{const g=new THREE.Group();g.name=p.id;g.userData.part=p.id;groups[p.id]=g;scene.add(g)});
@@ -82,16 +82,16 @@ const VehicleScene=forwardRef<SceneHandle,Props>(function VehicleScene(props,ref
    scene.remove(model);readyRef.current=true;setReady(true);fitView(true);invalidated=true;renderer.shadowMap.needsUpdate=true;
   },undefined,()=>{if(!cancelled)setError('Không tải được mô hình chi tiết. Hãy tải lại trang để thử lại.')});
   const markerGeometry=new THREE.BufferGeometry();
-  const markerMaterial=new THREE.PointsMaterial({color:0xf6bc99,size:4,sizeAttenuation:false,depthWrite:false,depthTest:false,transparent:true,opacity:.75});
+  const markerMaterial=new THREE.PointsMaterial({color:0xc9682e,size:4,sizeAttenuation:false,depthWrite:false,depthTest:false,transparent:true,opacity:.75});
   const markers=new THREE.Points(markerGeometry,markerMaterial);markers.visible=false;markers.frustumCulled=false;markers.renderOrder=10;scene.add(markers);
   // Bệ trưng bày thấp và sàn studio làm khung cho xe mà không cần thêm lượt render.
   const stage=new THREE.Group();scene.add(stage);
-  const stageMaterial=new THREE.MeshStandardMaterial({color:0x454f5b,metalness:.35,roughness:.48,transparent:true});
+  const stageMaterial=new THREE.MeshStandardMaterial({color:0xd6d0c6,metalness:.2,roughness:.55,transparent:true});
   const plinth=new THREE.Mesh(new THREE.CylinderGeometry(3.6,3.65,.13,96),stageMaterial);plinth.position.y=-.12;plinth.receiveShadow=true;stage.add(plinth);
-  const rimMaterial=new THREE.MeshStandardMaterial({color:0xa6b9c9,metalness:.7,roughness:.35,transparent:true});
+  const rimMaterial=new THREE.MeshStandardMaterial({color:0x8f9aa5,metalness:.7,roughness:.35,transparent:true});
   for(const radius of [3.41,3.56]){const ring=new THREE.Mesh(new THREE.TorusGeometry(radius,.007,5,128),rimMaterial);ring.rotation.x=-Math.PI/2;ring.position.y=-.05;stage.add(ring)}
-  const ground=new THREE.Mesh(new THREE.PlaneGeometry(200,200),new THREE.MeshStandardMaterial({color:0x343d49,roughness:.85,metalness:.12}));ground.rotation.x=-Math.PI/2;ground.position.y=-.19;ground.receiveShadow=true;scene.add(ground);
-  const grid=new THREE.GridHelper(100,100,0x657182,0x566272);grid.position.y=-.185;(grid.material as THREE.Material).transparent=true;(grid.material as THREE.Material).opacity=.13;scene.add(grid);
+  const groundMaterial=new THREE.MeshStandardMaterial({color:0xe6e1d8,roughness:.9,metalness:.05,transparent:true});const ground=new THREE.Mesh(new THREE.PlaneGeometry(200,200),groundMaterial);ground.rotation.x=-Math.PI/2;ground.position.y=-.19;ground.receiveShadow=true;scene.add(ground);
+  const grid=new THREE.GridHelper(100,100,0xb9b2a6,0xcdc7bc);grid.position.y=-.185;const gridMaterial=grid.material as THREE.Material;gridMaterial.transparent=true;gridMaterial.opacity=.35;scene.add(grid);
   const labelNodes=parts.map((p,i)=>{const b=document.createElement('button');b.className='scene-label';b.setAttribute('aria-label','Xem '+p.name);b.innerHTML='<span>'+String(i+1).padStart(2,'0')+'</span><strong>'+p.name+'</strong>';b.addEventListener('click',()=>latest.current.onSelect(p.id));el.appendChild(b);return {b,id:p.id}});
   let viewWidth=1,viewHeight=1;
   const resize=()=>{const w=el.clientWidth,h=el.clientHeight;viewWidth=w;viewHeight=h;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();if(readyRef.current){invalidated=true;framingTime=.8}};const observer=new ResizeObserver(resize);observer.observe(el);resize();
@@ -137,7 +137,9 @@ const VehicleScene=forwardRef<SceneHandle,Props>(function VehicleScene(props,ref
    if(geometryChanged){
     ground.position.y=-.19-.85*amount-individual*(layout?.height||0)*.6;grid.position.y=ground.position.y+.005;
     stage.visible=amount<.18&&!p.isolated;stageMaterial.opacity=1-THREE.MathUtils.smoothstep(amount,.02,.18);rimMaterial.opacity=stageMaterial.opacity;
-    renderer.shadowMap.enabled=individual<.05&&!p.isolated;ground.visible=individual<.2&&!p.isolated;grid.visible=individual<.2&&!p.isolated;
+    // Sàn và lưới mờ dần thay vì tắt đột ngột (tránh nền nhảy màu quanh 57%); bóng đổ giữ tới khi sàn biến mất.
+    const floor=p.isolated?0:1-THREE.MathUtils.smoothstep(individual,.02,.32);groundMaterial.opacity=floor;gridMaterial.opacity=.35*floor;
+    ground.visible=floor>.005;grid.visible=floor>.005;renderer.shadowMap.enabled=floor>.05;
     parts.forEach(({id})=>{const g=groups[id],o=offsets[id];g.position.set(o[0]*amount*(1-individual),o[1]*amount*(1-individual),o[2]*amount*(1-individual));g.visible=!p.isolated||p.selected===id;
      if(illustrative.includes(id))g.visible=g.visible&&(amount>.08||p.isolated)&&(individual<.98||p.isolated);
     });
