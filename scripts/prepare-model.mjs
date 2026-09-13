@@ -10,14 +10,14 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {NodeIO,Primitive} from '@gltf-transform/core';
 import {ALL_EXTENSIONS} from '@gltf-transform/extensions';
-import {dedup,flatten,prune,simplify,textureCompress,unpartition,weld} from '@gltf-transform/functions';
-import {MeshoptSimplifier} from 'meshoptimizer';
+import {cloneDocument,dedup,flatten,meshopt,prune,simplify,textureCompress,unpartition,weld} from '@gltf-transform/functions';
+import {MeshoptDecoder,MeshoptEncoder,MeshoptSimplifier} from 'meshoptimizer';
 
 const positional=process.argv.slice(2).filter(a=>!a.startsWith('--'));
 const args=Object.fromEntries(process.argv.slice(2).filter(a=>a.startsWith('--')).map(a=>{const m=a.match(/^--([^=]+)(?:=(.*))?$/);return [m[1],m[2]??true]}));
 const id=positional[0];if(!id)fail('Cách dùng: node scripts/prepare-model.mjs <id> [--simplify=0.35] [--textures=1024] [--flip]');
 const modelDir=path.join('models',id);const model=readJSON(path.join(modelDir,'model.json'));if(!model.id)fail(`Thiếu models/${id}/model.json`);
-const cfg=Object.assign({simplify:null,textures:1024,flip:false,maxPieces:500,minFaces:24,ignore:[],hints:[],input:null},model.pipeline||{});
+const cfg=Object.assign({simplify:null,textures:1024,flip:false,maxPieces:500,minFaces:24,ignore:[],hints:[],input:null,light:{faces:150000,textures:512},compress:true},model.pipeline||{});
 if(args.simplify!==undefined)cfg.simplify=Number(args.simplify);
 if(args.textures!==undefined)cfg.textures=args.textures==='none'?null:Number(args.textures);
 if(args.flip)cfg.flip=!cfg.flip;
@@ -29,7 +29,8 @@ const hints=cfg.hints.map(h=>({re:new RegExp(h.match,'i'),part:h.part,key:h.key}
 const outDir=path.join('public/models',id);fs.mkdirSync(outDir,{recursive:true});
 log(`${model.brand} ${model.name} ← ${input}`);
 
-const io=new NodeIO().registerExtensions(ALL_EXTENSIONS);
+await Promise.all([MeshoptDecoder.ready,MeshoptEncoder.ready]);
+const io=new NodeIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({'meshopt.decoder':MeshoptDecoder,'meshopt.encoder':MeshoptEncoder});
 const doc=await io.read(input);
 await doc.transform(unpartition(),dedup(),flatten(),prune());
 const root=doc.getRoot();const scene=root.getDefaultScene()||root.listScenes()[0];
@@ -131,17 +132,28 @@ for(const s of sources){s.node.dispose()}
 for(const n of scene.listChildren())if(!n.getMesh()||!entries.some(e=>e.id===n.getName()))n.dispose();
 for(const m of root.listMeshes())if(!m.listParents().some(p=>p.propertyType==='Node'))m.dispose();
 await doc.transform(prune());
-if(cfg.simplify&&cfg.simplify>0&&cfg.simplify<1){await MeshoptSimplifier.ready;await doc.transform(weld(),simplify({simplifier:MeshoptSimplifier,ratio:cfg.simplify,error:.001}));log(`Đã giảm mặt với tỉ lệ ${cfg.simplify}`)}
+const faceCount=d=>d.getRoot().listMeshes().reduce((s,m)=>s+m.listPrimitives().reduce((a,p)=>a+(p.getIndices()?p.getIndices().getCount():p.getAttribute('POSITION').getCount())/3,0),0);
+const baseFaces=faceCount(doc);
+// Bản nhẹ cho điện thoại/mạng chậm: cùng tập chi tiết, ít mặt hơn, texture nhỏ hơn.
+const light=cfg.light?cloneDocument(doc):null;
+await MeshoptSimplifier.ready;
+if(cfg.simplify&&cfg.simplify>0&&cfg.simplify<1){await doc.transform(weld(),simplify({simplifier:MeshoptSimplifier,ratio:cfg.simplify,error:.001}));log(`Đã giảm mặt với tỉ lệ ${cfg.simplify}`)}
 if(cfg.textures&&root.listTextures().length){const sharp=(await import('sharp')).default;await doc.transform(textureCompress({encoder:sharp,targetFormat:'webp',resize:[cfg.textures,cfg.textures],quality:82}));log(`Đã nén ${root.listTextures().length} texture → WebP ≤${cfg.textures}px`)}
+if(light){const ratio=Math.min(1,cfg.light.faces/baseFaces);await light.transform(weld(),simplify({simplifier:MeshoptSimplifier,ratio,error:.004}));
+ if(light.getRoot().listTextures().length){const sharp=(await import('sharp')).default;await light.transform(textureCompress({encoder:sharp,targetFormat:'webp',resize:[cfg.light.textures,cfg.light.textures],quality:75}))}
+ log(`Bản nhẹ: tỉ lệ ${ratio.toFixed(3)} → ${Math.round(faceCount(light))} mặt, texture ≤${cfg.light.textures}px`)}
+if(cfg.compress){await MeshoptEncoder.ready;await doc.transform(meshopt({encoder:MeshoptEncoder,level:'medium'}));if(light)await light.transform(meshopt({encoder:MeshoptEncoder,level:'medium'}));log('Đã nén hình học EXT_meshopt_compression')}
 {const byId=new Map(root.listNodes().map(n=>[n.getName(),n]));for(const e of entries){const m=byId.get(e.id)?.getMesh();if(m)e.faces=m.listPrimitives().reduce((s,p)=>s+(p.getIndices()?p.getIndices().getCount():p.getAttribute('POSITION').getCount())/3,0)}}
 
 const file='model.glb';const glbPath=path.join(outDir,file);
 await io.write(glbPath,doc);
 const bytes=fs.readFileSync(glbPath);const version=crypto.createHash('sha1').update(bytes).digest('hex').slice(0,10);
+const files={full:{file,bytes:bytes.length,faces:Math.round(faceCount(doc))}};
+if(light){const lf='model.light.glb';await io.write(path.join(outDir,lf),light);const lb=fs.statSync(path.join(outDir,lf)).size;files.light={file:lf,bytes:lb,faces:Math.round(faceCount(light))}}
 const counts={};for(const e of entries)counts[e.part]=(counts[e.part]||0)+1;
-fs.writeFileSync(path.join(outDir,'manifest.json'),JSON.stringify({id,file,version,generated:new Date().toISOString(),input:path.relative('.',input),lengthMeters:LENGTH,bounds:{length:r3(L),height:r3(H),bodyWidth:r3(Wb)},wheelCenters,counts,objects:entries},null,1));
+fs.writeFileSync(path.join(outDir,'manifest.json'),JSON.stringify({id,file,version,files,generated:new Date().toISOString(),input:path.relative('.',input),lengthMeters:LENGTH,bounds:{length:r3(L),height:r3(H),bodyWidth:r3(Wb)},wheelCenters,counts,objects:entries},null,1));
 writeReview();
-log(`Ghi ${glbPath} (${(bytes.length/1e6).toFixed(1)} MB, ${entries.reduce((s,e)=>s+e.faces,0)} mặt), manifest.json, review.md — ${JSON.stringify(counts)}`);
+log(`Ghi ${glbPath} (${(bytes.length/1e6).toFixed(1)} MB, ${files.full.faces} mặt)${files.light?` + bản nhẹ ${(files.light.bytes/1e6).toFixed(1)} MB (${files.light.faces} mặt)`:''}, manifest.json, review.md — ${JSON.stringify(counts)}`);
 
 // ---- Classification ---------------------------------------------------------------------------
 function classify(piece){

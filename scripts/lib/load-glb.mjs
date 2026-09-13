@@ -1,6 +1,7 @@
 // Đọc GLB trong Node bằng Three GLTFLoader, bỏ texture/ảnh (Node không có Image/canvas) để chỉ kiểm tra hình học và metadata.
 import fs from 'node:fs';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
+import {MeshoptDecoder} from 'three/examples/jsm/libs/meshopt_decoder.module.js';
 export function stripTextures(bytes){
  const dv=new DataView(bytes.buffer,bytes.byteOffset,bytes.byteLength);
  if(dv.getUint32(0,true)!==0x46546C67)throw new Error('Not a GLB');
@@ -17,4 +18,4 @@ export function stripTextures(bytes){
  o.setUint32(20+js.length,bin.length+binPad,true);o.setUint32(24+js.length,0x004E4942,true);Buffer.from(bin).copy(out,28+js.length);
  return out;
 }
-export async function loadGLB(path){const raw=fs.readFileSync(path);const bytes=stripTextures(raw);const asset=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');return {asset,bytes:raw}}
+export async function loadGLB(path){const raw=fs.readFileSync(path);const bytes=stripTextures(raw);const loader=new GLTFLoader();loader.setMeshoptDecoder(MeshoptDecoder);const asset=await loader.parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');return {asset,bytes:raw}}

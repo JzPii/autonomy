@@ -131,3 +131,7 @@
 .switcher-all{align-self:stretch;border-top:0;border-left:1px solid #0000000f;margin:0 0 0 4px;padding:8px 12px;flex-direction:column;justify-content:center;gap:6px;min-width:96px;font-size:11px;text-align:center}
 @media (max-width:700px),(max-height:500px){.switcher-menu{left:0;top:calc(100% + 10px);flex-direction:column;max-width:92vw;max-height:60dvh;overflow:auto}.switcher-all{border-left:0;border-top:1px solid #0000000f;margin:4px 0 0;flex-direction:row}}
 .model-plaque.switcher{z-index:30}
+/* mobile: horizontal language toggle in the tool grid; quality row in About */
+.quality-row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.quality-row .lang-toggle button{letter-spacing:0;font-size:11px}
+@media (max-width:700px),(max-height:500px){.view-tools .tools-lang{flex-direction:row;grid-column:1 / -1;justify-self:stretch;margin:2px 0 0}.view-tools .tools-lang button{flex:1;padding:6px 4px}}

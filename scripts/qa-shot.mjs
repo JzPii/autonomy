@@ -2,11 +2,11 @@
 // Mở trang trong Chrome headless (WebGL phần mềm), thu console/exception, đợi mô hình tải xong, in trạng thái DOM và chụp màn hình.
 import {spawn} from 'node:child_process';
 import fs from 'node:fs';
-const [url,out,waitArg]=process.argv.slice(2).filter(a=>!a.startsWith('--'));const clickSel=(process.argv.find(a=>a.startsWith('--click='))||'').slice(8);if(!url||!out){console.error('usage: qa-shot.mjs <url> <out.png> [waitMs]');process.exit(1)}
+const [url,out,waitArg]=process.argv.slice(2).filter(a=>!a.startsWith('--'));const clickSel=(process.argv.find(a=>a.startsWith('--click='))||'').slice(8);const mobile=process.argv.includes('--mobile');const vw=mobile?390:1200,vh=mobile?844:760;if(!url||!out){console.error('usage: qa-shot.mjs <url> <out.png> [waitMs]');process.exit(1)}
 const waitMs=Number(waitArg||60000);const port=9300+Math.floor(Math.random()*500);const profile=`/tmp/autonomy-qa-${port}`;
 const chrome=process.env.CHROME||'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
-const proc=spawn(chrome,['--headless=new','--disable-gpu','--use-angle=swiftshader','--enable-unsafe-swiftshader','--ignore-gpu-blocklist','--hide-scrollbars','--remote-allow-origins=*',`--remote-debugging-port=${port}`,`--user-data-dir=${profile}`,'--window-size=1200,760','about:blank'],{stdio:'ignore'});
-const cleanup=()=>{try{proc.kill('SIGKILL')}catch{}fs.rmSync(profile,{recursive:true,force:true})};process.on('exit',cleanup);
+const proc=spawn(chrome,['--headless=new','--disable-gpu','--use-angle=swiftshader','--enable-unsafe-swiftshader','--ignore-gpu-blocklist','--hide-scrollbars','--remote-allow-origins=*',`--remote-debugging-port=${port}`,`--user-data-dir=${profile}`,`--window-size=${vw},${vh}`,'about:blank'],{stdio:'ignore'});
+const cleanup=()=>{try{proc.kill('SIGKILL')}catch{}try{fs.rmSync(profile,{recursive:true,force:true,maxRetries:3})}catch{}};process.on('exit',cleanup);
 setTimeout(()=>{console.error('qa-shot: hard timeout');cleanup();process.exit(2)},waitMs+40000).unref();
 let targets;for(let i=0;i<50;i++){try{targets=await (await fetch(`http://127.0.0.1:${port}/json`)).json();if(targets.length)break}catch{}await sleep(200)}
 console.error('qa: targets',targets?.length);if(!targets?.length){console.error('qa-shot: Chrome DevTools not reachable');process.exit(2)}
@@ -18,7 +18,7 @@ ws.onmessage=e=>{const m=JSON.parse(e.data);if(m.id&&pending.has(m.id)){pending.
  if(m.method==='Log.entryAdded'&&m.params.entry.level==='error')logs.push(`[${m.params.entry.source}] ${m.params.entry.text} ${m.params.entry.url||''}`)};
 const send=(method,params={},timeout=25000)=>new Promise(r=>{const id=++seq;const t=setTimeout(()=>{if(pending.has(id)){pending.delete(id);console.error('qa: timeout',method);r({timeout:true})}},timeout);pending.set(id,m=>{clearTimeout(t);r(m)});ws.send(JSON.stringify({id,method,params}))});
 await send('Runtime.enable');console.error('qa: runtime');await send('Log.enable');await send('Page.enable');console.error('qa: page enabled');
-await send('Emulation.setDeviceMetricsOverride',{width:1200,height:760,deviceScaleFactor:1,mobile:false});
+await send('Emulation.setDeviceMetricsOverride',{width:vw,height:vh,deviceScaleFactor:mobile?2:1,mobile});if(mobile){await send('Emulation.setTouchEmulationEnabled',{enabled:true,maxTouchPoints:5});await send('Emulation.setUserAgentOverride',{userAgent:'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1'})}
 await send('Page.navigate',{url});console.error('qa: navigated');
 const started=Date.now();let state;
 while(Date.now()-started<waitMs){await sleep(1500);

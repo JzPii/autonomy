@@ -12,5 +12,10 @@
   `npm run check` và `npm run lint` đạt.
 - `scripts/qa-shot.mjs` (Chrome headless + DevTools): cả ba trang tải xong không có lỗi console; VF 9 8 s,
   930 10 s, 992 15 s trên WebGL phần mềm. Gallery, switcher, tìm kiếm chưa được kiểm tra tương tác bằng tay.
-- Chưa kiểm tra trên điện thoại thật. Nhãn hình học ở mảnh nhỏ có thể sai; xem `public/models/<id>/review.md`.
+- Nén EXT_meshopt_compression giảm dung lượng ~55–65 %; bản nhẹ (≈150–240 K mặt, texture 512) cho điện thoại. Cả hai bản
+  đi qua validate (Node GLTFLoader + MeshoptDecoder). Điện thoại giả lập (390×844, DPR 2, cảm ứng) đã chụp gallery, studio,
+  chi tiết, bảng hệ thống, bảng giới thiệu, tách rời 60 %: bố cục hợp lệ, bản nhẹ được chọn tự động.
+- Người dùng báo Safari iOS bị sập ở 100 % tách rời với 2× DPR → độ nét theo mức tách rời (2× ≤10 %, sau đó 1,5×/1,25×);
+  chưa xác nhận lại trên máy thật.
+- Chưa kiểm tra bằng tay trên điện thoại thật. Nhãn hình học ở mảnh nhỏ có thể sai; xem `public/models/<id>/review.md`.
 - Thông số kỹ thuật lấy từ nguồn công khai (trang hãng, Wikipedia); nên đối chiếu trước khi công bố.

@@ -6,7 +6,8 @@ export type ModelMeta={id:string;brand:string;name:string;type:VehicleType;year?
 export type System={id:string;name:string;category:string;tag:string;description:string;principle:string;specs:[string,string][];source:string;illustrative?:boolean;explode:[number,number,number];anchor:[number,number,number]};
 export type Content={systems:System[];labels?:Record<string,string>;pieces?:Record<string,string>;notes?:string};
 export type Piece={id:string;part:string;key:string;side:'L'|'R'|null;end:'F'|'R'|null;source:string;material?:string;center:[number,number,number];size:[number,number,number];faces:number};
-export type Manifest={id:string;file:string;version:string;generated:string;lengthMeters:number;bounds:{length:number;height:number;bodyWidth:number};counts:Record<string,number>;objects:Piece[]};
+export type Variant={file:string;bytes:number;faces:number};
+export type Manifest={id:string;file:string;files?:{full:Variant;light?:Variant};version:string;generated:string;lengthMeters:number;bounds:{length:number;height:number;bodyWidth:number};counts:Record<string,number>;objects:Piece[]};
 export type Shape={system:string;shape:'box'|'cylinder'|'torus'|'tube';size?:[number,number,number];at?:[number,number,number];radius?:number;tube?:number;length?:number;axis?:'x'|'y'|'z';points?:[number,number,number][];material:'dark'|'silver'|'orange'|'module'|'copper';repeat?:{count:[number,number];step:[number,number]};stack?:{count:number;step:number};mirror?:'x'|'z'|'xz'};
 export type Internals={shapes:Shape[]};
 export type RegistryEntry={id:string;brand:string;name:string;type:VehicleType;year?:string;tagline?:Record<Lang,string>;powertrain?:string;pieces:number;ready:boolean;thumbnail:string|null;creator:string};
@@ -27,3 +28,14 @@ export function systemFor(part:string,vehicle:Vehicle):string{
  const fb=vehicle.meta.systemFallback?.[part];if(fb&&ids.has(fb))return fb;
  return ids.has('body')?'body':vehicle.content.systems[0].id;
 }
+
+export type Quality='full'|'light';
+/** Auto quality: light on phones or slow / data-saver connections; override with ?q=full|light. */
+export function detectQuality():Quality{
+ const q=new URLSearchParams(location.search).get('q');if(q==='full'||q==='light')return q;
+ const nav=navigator as Navigator&{connection?:{saveData?:boolean;effectiveType?:string}};
+ const slow=nav.connection?.saveData||/(^|-)(2g|3g)$/.test(nav.connection?.effectiveType||'');
+ const phone=window.matchMedia('(pointer: coarse)').matches&&Math.min(innerWidth,innerHeight)<=820;
+ return slow||phone?'light':'full';
+}
+export function variantFile(m:Manifest,q:Quality){return (q==='light'&&m.files?.light)?m.files.light.file:(m.files?.full.file||m.file)}

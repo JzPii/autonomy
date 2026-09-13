@@ -1,6 +1,6 @@
 # Review — VinFast VF 9
 
-Input: source/vinfast-vf9/scene.gltf  ·  279 pieces  ·  423156 faces  ·  L 5.118 m, H 1.799 m, body W 1.998 m
+Input: source/vinfast-vf9/scene.gltf  ·  279 pieces  ·  423156 faces  ·  L 5.118 m, H 1.696 m, body W 1.998 m
 
 Cột: id · part · key · side/end · kích thước (m) · tâm (m) · mặt · lưới nguồn · vật liệu. Sửa nhãn sai bằng `pipeline.hints` trong model.json (match = regex trên "vật liệu tên-lưới tên-node").
 
@@ -16,6 +16,8 @@ Cột: id · part · key · side/end · kích thước (m) · tâm (m) · mặt 
 | body_0085 | body | exterior | L | 0.06×0.14×0.63 | 2.51, 0.52, 0.39 | 2404 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0060 | body | exterior | L | 0.97×0.30×0.19 | -1.53, 1.15, 0.97 | 2155 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0057 | body | exterior | R | 1.00×0.28×0.16 | -1.55, 1.09, -0.98 | 2151 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
+| body_0045 | body | exterior | R | 1.18×0.14×0.02 | -0.51, 0.45, -1.06 | 2101 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
+| body_0047 | body | exterior | L | 1.18×0.14×0.02 | -0.51, 0.45, 1.06 | 1973 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0096 | body | exterior | L | 0.11×0.44×0.27 | 2.46, 0.93, 0.82 | 1961 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0008 | body | exterior | R | 2.46×0.11×0.50 | 0.90, 1.70, -0.39 | 1887 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0064 | body | exterior | R | 0.94×0.23×0.13 | -1.57, 1.07, -0.99 | 1876 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
@@ -25,6 +27,8 @@ Cột: id · part · key · side/end · kích thước (m) · tâm (m) · mặt 
 | body_0077 | body | exterior | L | 0.76×0.18×0.14 | 1.36, 1.61, 0.71 | 751 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0127 | body | exterior | R | 0.10×0.15×0.27 | 2.47, 0.78, -0.82 | 715 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0080 | body | exterior | R | 0.78×0.17×0.01 | 0.74, 0.48, -1.05 | 569 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
+| body_0131 | body | exterior | L | 0.20×0.12×0.26 | -0.92, 1.38, 1.09 | 546 | Cube.006_Car Paint.002_0 | Car_Paint.002 |
+| body_0132 | body | exterior | R | 0.20×0.12×0.26 | -0.92, 1.38, -1.09 | 539 | Cube.006_Car Paint.002_0 | Car_Paint.002 |
 | body_0075 | body | exterior | L | 0.85×0.28×0.04 | 1.59, 0.82, 1.06 | 464 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0074 | body | exterior |  | 0.30×0.06×0.87 | -0.26, 1.75, 0.09 | 435 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0092 | body | exterior | R | 0.39×0.56×0.00 | 1.24, 0.69, -1.07 | 413 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
@@ -40,7 +44,10 @@ Cột: id · part · key · side/end · kích thước (m) · tâm (m) · mặt 
 | body_0109 | body | exterior | L | 0.51×0.12×0.11 | -1.59, 1.12, 0.98 | 293 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0184 | body | exterior | L | 0.08×0.11×0.03 | 1.96, 0.70, 1.05 | 276 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0165 | body | exterior |  | 0.02×0.14×0.16 | -2.54, 0.42, 0.00 | 240 | Plane.017_Material.012_0 | Material.012 |
+| body_0065 | body | exterior | L | 1.12×0.12×0.00 | -0.53, 0.44, 1.07 | 235 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0125 | body | exterior | L | 0.36×0.13×0.05 | 2.12, 1.08, 1.02 | 225 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
+| body_0071 | body | exterior | R | 1.09×0.11×0.00 | -0.54, 0.44, -1.07 | 200 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
+| body_0070 | body | exterior | L | 1.12×0.10×0.00 | -0.52, 0.44, 1.06 | 196 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0073 | body | exterior | L | 1.04×0.03×0.03 | 0.65, 1.68, 0.65 | 190 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0194 | body | exterior | L | 0.01×0.02×0.12 | 2.50, 0.52, 0.61 | 186 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0124 | body | exterior | R | 0.13×0.39×0.01 | -1.18, 0.82, -1.05 | 155 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
@@ -152,8 +159,6 @@ Cột: id · part · key · side/end · kích thước (m) · tâm (m) · mặt 
 | body_0146 | body | logo |  | 0.03×0.13×0.14 | -2.48, 0.98, 0.00 | 2037 | Plane.023_logo color_0 | logo_color |
 | body_0107 | body | mirror | R | 0.26×0.20×0.36 | -0.94, 1.33, -1.03 | 1596 | Cube.006_plastic_0 | plastic |
 | body_0106 | body | mirror | L | 0.26×0.20×0.36 | -0.94, 1.33, 1.03 | 1594 | Cube.006_plastic_0 | plastic |
-| body_0131 | body | mirror | L | 0.20×0.12×0.26 | -0.92, 1.38, 1.09 | 546 | Cube.006_Car Paint.002_0 | Car_Paint.002 |
-| body_0132 | body | mirror | R | 0.20×0.12×0.26 | -0.92, 1.38, -1.09 | 539 | Cube.006_Car Paint.002_0 | Car_Paint.002 |
 | body_0155 | body | mirror | R | 0.22×0.05×0.03 | -0.08, 1.09, -1.06 | 246 | Cube.003_Material.010_0 | Material.010 |
 | body_0156 | body | mirror | L | 0.22×0.05×0.03 | -0.08, 1.09, 1.06 | 246 | Cube.003_Material.010_0 | Material.010 |
 | body_0153 | body | mirror | L | 0.09×0.15×0.22 | -0.87, 1.34, 1.09 | 121 | Cube.007_MIRROR_0 | Material.006 |
@@ -162,18 +167,15 @@ Cột: id · part · key · side/end · kích thước (m) · tâm (m) · mặt 
 | body_0003 | body | roof |  | 2.54×0.15×1.33 | 0.86, 1.71, 0.03 | 11387 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0002 | body | roof |  | 2.55×0.26×1.41 | 0.86, 1.65, -0.07 | 9620 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0006 | body | roof |  | 2.27×0.12×1.18 | 0.86, 1.74, 0.00 | 2530 | Plane.022_plastic_0 | plastic |
+| body_0043 | body | roof.rail | R | 1.26×0.43×0.28 | -0.41, 1.45, -0.81 | 1142 | Plane.009_plastic_0 | plastic |
+| body_0044 | body | roof.rail | L | 1.26×0.43×0.28 | -0.41, 1.45, 0.81 | 1142 | Plane.009_plastic_0 | plastic |
 | body_0021 | body | roof.rail | L | 2.24×0.08×0.04 | 0.90, 1.69, 0.64 | 267 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
-| body_0045 | body | sill | R | 1.18×0.14×0.02 | -0.51, 0.45, -1.06 | 2101 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
-| body_0047 | body | sill | L | 1.18×0.14×0.02 | -0.51, 0.45, 1.06 | 1973 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0026 | body | sill | L | 1.91×0.01×0.11 | -0.06, 0.34, 1.09 | 1420 | Cube.011_lop xe_0 | lop_xe |
 | body_0025 | body | sill | R | 1.91×0.01×0.11 | -0.06, 0.34, -1.08 | 1416 | Cube.018_lop xe_0 | lop_xe |
 | body_0014 | body | sill | L | 2.37×0.10×0.03 | -0.07, 0.34, 1.06 | 694 | Plane.005_Car Paint.002_0 | Car_Paint.002 |
 | body_0015 | body | sill | R | 2.37×0.10×0.03 | -0.07, 0.34, -1.06 | 694 | Plane.005_Car Paint.002_0 | Car_Paint.002 |
 | body_0036 | body | sill | L | 2.20×0.03×0.10 | -0.08, 0.33, 1.09 | 236 | Cube.010_Car Paint.002_0 | Car_Paint.002 |
 | body_0037 | body | sill | R | 2.20×0.03×0.10 | -0.08, 0.33, -1.08 | 236 | Cube.017_Car Paint.002_0 | Car_Paint.002 |
-| body_0065 | body | sill | L | 1.12×0.12×0.00 | -0.53, 0.44, 1.07 | 235 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
-| body_0071 | body | sill | R | 1.09×0.11×0.00 | -0.54, 0.44, -1.07 | 200 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
-| body_0070 | body | sill | L | 1.12×0.10×0.00 | -0.52, 0.44, 1.06 | 196 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
 | body_0264 | body | small | L | 0.08×0.06×0.04 | 1.42, 1.50, 0.80 | 1547 | Plane.013_logo color_0 | logo_color |
 | body_0265 | body | small | R | 0.08×0.06×0.04 | 1.42, 1.50, -0.80 | 1547 | Plane.013_logo color_0 | logo_color |
 | body_0233 | body | small | L | 0.43×1.22×0.95 | 2.33, 1.06, 0.56 | 453 | Plane.014_Car Paint.002_0 | Car_Paint.002 |
@@ -226,8 +228,6 @@ Cột: id · part · key · side/end · kích thước (m) · tâm (m) · mặt 
 | body_0053 | body | trim | L | 0.84×0.48×0.31 | -0.72, 1.49, 0.74 | 3494 | Plane.014_plastic_0 | plastic |
 | body_0041 | body | trim | L | 1.21×0.48×0.34 | 0.74, 1.45, 0.81 | 1286 | Plane.010_plastic_0 | plastic |
 | body_0042 | body | trim | R | 1.21×0.48×0.34 | 0.74, 1.45, -0.81 | 1286 | Plane.010_plastic_0 | plastic |
-| body_0043 | body | trim | R | 1.26×0.43×0.28 | -0.41, 1.45, -0.81 | 1142 | Plane.009_plastic_0 | plastic |
-| body_0044 | body | trim | L | 1.26×0.43×0.28 | -0.41, 1.45, 0.81 | 1142 | Plane.009_plastic_0 | plastic |
 | body_0143 | body | trim | L | 0.17×0.11×0.09 | 1.43, 1.50, 0.80 | 626 | Plane.014_plastic_0 | plastic |
 | body_0144 | body | trim | R | 0.17×0.11×0.09 | 1.43, 1.50, -0.80 | 626 | Plane.014_plastic_0 | plastic |
 | body_0180 | body | trim | R | 0.11×0.08×0.12 | -2.15, 1.01, -0.66 | 170 | Cube.014_plastic_0 | plastic |
@@ -273,14 +273,14 @@ Cột: id · part · key · side/end · kích thước (m) · tâm (m) · mặt 
 | wheels_0067 | wheels | rim | RF | 0.58×0.58×0.08 | -1.68, 0.44, -1.02 | 6522 | Cylinder.011_Material.005_0 | Material.022 |
 | wheels_0068 | wheels | rim | LF | 0.58×0.58×0.08 | -1.68, 0.44, 1.03 | 6522 | Cylinder.011_Material.005_0 | Material.022 |
 | wheels_0069 | wheels | rim | LR | 0.58×0.58×0.08 | 1.55, 0.44, 1.02 | 6522 | Cylinder.011_Material.005_0 | Material.022 |
-| wheels_0081 | wheels | rim | RF | 0.58×0.58×0.14 | -1.68, 0.44, -1.00 | 1078 | Cylinder.011_Material.004_0 | Material.004 |
-| wheels_0082 | wheels | rim | RR | 0.58×0.58×0.14 | 1.55, 0.44, -0.99 | 1078 | Cylinder.011_Material.004_0 | Material.004 |
-| wheels_0083 | wheels | rim | LF | 0.58×0.58×0.14 | -1.68, 0.44, 1.01 | 1078 | Cylinder.011_Material.004_0 | Material.004 |
-| wheels_0084 | wheels | rim | LR | 0.58×0.58×0.14 | 1.55, 0.44, 1.00 | 1078 | Cylinder.011_Material.004_0 | Material.004 |
 | wheels_0017 | wheels | tire | LF | 0.88×0.88×0.39 | -1.67, 0.44, 0.89 | 34765 | Plane.015_lop xe_0 | lop_xe |
 | wheels_0019 | wheels | tire | RF | 0.88×0.88×0.39 | -1.68, 0.44, -0.88 | 34765 | Plane.015_lop xe_0 | lop_xe |
 | wheels_0020 | wheels | tire | RR | 0.88×0.88×0.39 | 1.55, 0.44, -0.88 | 34765 | Plane.015_lop xe_0 | lop_xe |
 | wheels_0018 | wheels | tire | LR | 0.88×0.88×0.39 | 1.55, 0.44, 0.89 | 34764 | Plane.015_lop xe_0 | lop_xe |
+| wheels_0081 | wheels | tire | RF | 0.58×0.58×0.14 | -1.68, 0.44, -1.00 | 1078 | Cylinder.011_Material.004_0 | Material.004 |
+| wheels_0082 | wheels | tire | RR | 0.58×0.58×0.14 | 1.55, 0.44, -0.99 | 1078 | Cylinder.011_Material.004_0 | Material.004 |
+| wheels_0083 | wheels | tire | LF | 0.58×0.58×0.14 | -1.68, 0.44, 1.01 | 1078 | Cylinder.011_Material.004_0 | Material.004 |
+| wheels_0084 | wheels | tire | LR | 0.58×0.58×0.14 | 1.55, 0.44, 1.00 | 1078 | Cylinder.011_Material.004_0 | Material.004 |
 | wheels_0100 | wheels | tire | LR | 0.79×0.07×0.01 | 0.47, 0.46, 1.07 | 208 | Plane.043_lop xe_0 | lop_xe |
 | wheels_0101 | wheels | tire | RR | 0.79×0.07×0.01 | 0.47, 0.46, -1.07 | 208 | Plane.043_lop xe_0 | lop_xe |
 | wheels_0088 | wheels | tire | RF | 1.12×0.07×0.01 | -0.48, 0.45, -1.07 | 144 | Plane.044_lop xe_0 | lop_xe |
@@ -288,22 +288,23 @@ Cột: id · part · key · side/end · kích thước (m) · tâm (m) · mặt 
 
 ## Tổng hợp
 
-- body/exterior: 104
+- body/exterior: 111
 - body/small: 46
-- body/trim: 16
+- body/trim: 14
 - body/fender: 13
+- wheels/tire: 12
 - body/light.front: 12
-- body/sill: 11
-- body/mirror: 9
-- wheels/tire: 8
-- wheels/rim: 8
 - glass/glass: 8
+- body/mirror: 7
+- body/sill: 6
 - glass/glass.side: 6
 - body/grille: 4
+- wheels/rim: 4
 - body/light.rear: 4
 - wheels/hubcap: 4
 - body/roof: 3
 - doors/tailgate: 3
+- body/roof.rail: 3
 - doors/door.rear: 3
 - body/bumper.front: 2
 - body/bumper.rear: 2
@@ -313,7 +314,6 @@ Cột: id · part · key · side/end · kích thước (m) · tâm (m) · mặt 
 - cabin/interior.block: 1
 - glass/windshield.roof: 1
 - body/hood: 1
-- body/roof.rail: 1
 - glass/lens.rear: 1
 - glass/glass.rear: 1
 - glass/lens.front: 1

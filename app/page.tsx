@@ -7,7 +7,7 @@ import {Switch} from '@/components/ui/switch';
 import {Tabs,TabsList,TabsTrigger} from '@/components/ui/tabs';
 import {UI,type Lang} from './i18n/ui';
 import {pieceLabel,pieceNote} from './labels';
-import {loadVehicle,systemFor,type Registry,type Vehicle} from './registry';
+import {detectQuality,loadVehicle,systemFor,type Quality,type Registry,type Vehicle} from './registry';
 import {galleryHref} from './router';
 import {registerStudioTools} from './agent-tools';
 import LangToggle from './lang-toggle';
@@ -31,13 +31,14 @@ export default function Studio({id,lang,setLang,registry}:{id:string;lang:Lang;s
  const [explode,setExplode]=useState(initial.explode); const [labels,setLabels]=useState(initial.labels); const [rotate,setRotate]=useState(false); const [isolated,setIsolated]=useState(false); const [help,setHelp]=useState(false); const [searchOpen,setSearchOpen]=useState(false);
  const [focusedMesh,setFocusedMesh]=useState(initial.piece);
  const [hidden,setHidden]=useState<string[]>(initial.hidden);
+ const [quality,setQuality]=useState<Quality>(()=>detectQuality());
  const EXTERIOR=['body','glass','doors'];
  useEffect(()=>{setCanFullscreen(Boolean(document.fullscreenEnabled));const query=window.matchMedia(compactQuery);const update=()=>{setCompact(query.matches);setComponentsOpen(!query.matches);setToolsOpen(false)};update();query.addEventListener('change',update);return()=>query.removeEventListener('change',update)},[]);
  useEffect(()=>{const key=(e:KeyboardEvent)=>{if(e.key==='/'&&!(e.target instanceof HTMLInputElement)&&!(e.target instanceof HTMLTextAreaElement)){e.preventDefault();setSearchOpen(true);if(window.matchMedia(compactQuery).matches){setComponentsOpen(false);setDetailOpen(false);setHelp(false)}}};window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key)},[]);
  // Default system once content is known; keep URL shareable.
  const systems=useMemo(()=>vehicle?.content.systems??[],[vehicle]);
  useEffect(()=>{if(vehicle&&!systems.some(s=>s.id===selected))setSelected(systems[0]?.id||'')},[vehicle,systems,selected]);
- useEffect(()=>{if(!vehicle)return;const u=new URL(location.href);const set=(k:string,v:string|null)=>{if(v)u.searchParams.set(k,v);else u.searchParams.delete(k)};set('system',detailOpen?selected:null);set('piece',focusedMesh||null);set('explode',explode?String(explode):null);set('labels',labels?'1':null);set('hide',hidden.length?hidden.join(','):null);history.replaceState(null,'',u)},[vehicle,selected,detailOpen,focusedMesh,explode,labels,hidden]);
+ useEffect(()=>{if(!vehicle)return;const u=new URL(location.href);const set=(k:string,v:string|null)=>{if(v)u.searchParams.set(k,v);else u.searchParams.delete(k)};set('system',detailOpen?selected:null);set('piece',focusedMesh||null);set('explode',explode?String(explode):null);set('labels',labels?'1':null);set('hide',hidden.length?hidden.join(','):null);set('q',quality==='light'?'light':null);history.replaceState(null,'',u)},[vehicle,selected,detailOpen,focusedMesh,explode,labels,hidden,quality]);
  const [tab,setTab]=useState('overview'); const scene=useRef<SceneHandle|null>(null); const root=useRef<HTMLDivElement>(null);
  function select(sid:string){setFocusedMesh('');setSelected(sid);setTab('overview');setDetailOpen(true);setSearchOpen(false);setHidden(h=>h.includes(sid)?h.filter(x=>x!==sid):h);if(compact){setComponentsOpen(false);setHelp(false);setToolsOpen(false)}}
  function inspect(pieceId:string){setFocusedMesh(pieceId);if(pieceId&&vehicle){const p=vehicle.manifest.objects.find(x=>x.id===pieceId);if(p){const sid=systemFor(p.part,vehicle);setSelected(sid);setDetailOpen(true);setTab('overview');setHidden(h=>h.includes(sid)?h.filter(x=>x!==sid):h)}}}
@@ -67,7 +68,7 @@ export default function Studio({id,lang,setLang,registry}:{id:string;lang:Lang;s
 
  return <main className="studio" ref={root}>
   <section className="stage-view" aria-label={t.studioLabel(name)}>
-   <VehicleScene vehicle={vehicle} lang={lang} focusedMesh={focusedMesh} onInspect={inspect} ref={scene} selected={system.id} explode={explode} labels={labels} autoRotate={rotate} isolated={isolated} hiddenIds={hidden.join(',')} onSelect={select}/>
+   <VehicleScene vehicle={vehicle} lang={lang} focusedMesh={focusedMesh} onInspect={inspect} ref={scene} selected={system.id} explode={explode} labels={labels} autoRotate={rotate} isolated={isolated} hiddenIds={hidden.join(',')} quality={quality} onSelect={select}/>
   </section>
   <Switcher meta={meta} registry={registry} lang={lang}/>
   {componentsOpen&&<aside className="components-panel floating-panel" aria-label={t.systems}>
@@ -116,8 +117,9 @@ export default function Studio({id,lang,setLang,registry}:{id:string;lang:Lang;s
   </div>
   {help&&<aside className="about-panel floating-panel" aria-label={t.about}><div className="panel-heading"><h2>{t.aboutTitle}</h2><button className="icon-button" onClick={()=>setHelp(false)} aria-label={t.about}><X size={15}/></button></div>
    <p>{t.aboutHelp}</p>
-   <p>{t.aboutModel(catalog.length,'')}<a href={meta.attribution.source} target="_blank" rel="noreferrer">{meta.attribution.title}</a> — <a href={meta.attribution.creatorUrl||meta.attribution.source} target="_blank" rel="noreferrer">{meta.attribution.creator}</a> ({t.license} <a href={meta.attribution.licenseUrl} target="_blank" rel="noreferrer">{meta.attribution.license}</a>).</p>
+   <p>{t.aboutModelPrefix} <a href={meta.attribution.source} target="_blank" rel="noreferrer">{meta.attribution.title}</a> — <a href={meta.attribution.creatorUrl||meta.attribution.source} target="_blank" rel="noreferrer">{meta.attribution.creator}</a> ({t.license} <a href={meta.attribution.licenseUrl} target="_blank" rel="noreferrer">{meta.attribution.license}</a>). {t.aboutModel(catalog.length)}</p>
    {systems.some(s=>s.illustrative)&&<p>{t.aboutIllustrative}</p>}
+   {vehicle.manifest.files?.light&&<p className="quality-row"><span>{t.quality}</span><span className="lang-toggle" role="group" aria-label={t.quality}>{(['light','full'] as Quality[]).map(q=><button key={q} className={q===quality?'active':''} aria-pressed={q===quality} onClick={()=>setQuality(q)}>{q==='light'?t.qualityLight:t.qualityFull} · {((vehicle.manifest.files![q]?.bytes||0)/1e6).toFixed(1)} MB</button>)}</span></p>}
    <p>{t.aboutDisclaimer(meta.brand)} {meta.links?.specs&&<a href={meta.links.specs} target="_blank" rel="noreferrer">{t.specsSource}</a>}</p>
   </aside>}
  </main>

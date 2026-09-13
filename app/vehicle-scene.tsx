@@ -4,13 +4,14 @@ import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 import {RoundedBoxGeometry} from 'three/examples/jsm/geometries/RoundedBoxGeometry.js';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 import {RoomEnvironment} from 'three/examples/jsm/environments/RoomEnvironment.js';
+import {MeshoptDecoder} from 'three/examples/jsm/libs/meshopt_decoder.module.js';
 import {createExplosionLayout,layoutCenter,overviewDirection} from './explosion-layout';
 import {PointerTap} from './pointer-tap';
 import {UI,type Lang} from './i18n/ui';
 import {pieceLabel} from './labels';
-import {systemFor,url,type Shape,type Vehicle} from './registry';
+import {systemFor,url,variantFile,type Quality,type Shape,type Vehicle} from './registry';
 export type SceneHandle={zoom:(factor:number)=>void;reset:()=>void};
-type Props={vehicle:Vehicle;lang:Lang;focusedMesh:string;onInspect:(id:string)=>void;selected:string;explode:number;labels:boolean;autoRotate:boolean;isolated:boolean;hiddenIds:string;onSelect:(id:string)=>void};
+type Props={vehicle:Vehicle;lang:Lang;quality:Quality;focusedMesh:string;onInspect:(id:string)=>void;selected:string;explode:number;labels:boolean;autoRotate:boolean;isolated:boolean;hiddenIds:string;onSelect:(id:string)=>void};
 // Hệ tọa độ: chiều dài xe dọc trục X (đầu xe về -X), bề ngang dọc trục Z, Y hướng lên. scripts/prepare-model.mjs chuẩn hóa GLB về hệ này.
 const VehicleScene=forwardRef<SceneHandle,Props>(function VehicleScene(props,ref){
  const host=useRef<HTMLDivElement>(null);const latest=useRef(props);latest.current=props;
@@ -22,7 +23,7 @@ const VehicleScene=forwardRef<SceneHandle,Props>(function VehicleScene(props,ref
   for(const {b,id,index} of labelRefs.current.pieces){const p=byId.get(id);const label=p?pieceLabel(p,l,v):T.unknownPiece;b.title=label;b.setAttribute('aria-label',T.inspectPiece(index+1,label))}
  },[props.lang,props.vehicle]);
  useImperativeHandle(ref,()=>({zoom(f){const e=engine.current;if(e){e.interrupt();e.camera.position.sub(e.controls.target).multiplyScalar(f).add(e.controls.target)}},reset(){const e=engine.current;if(e){e.reset()}}}),[]);
- const {vehicle}=props;const modelUrl=url(`models/${vehicle.meta.id}/${vehicle.manifest.file}?v=${vehicle.manifest.version}`);
+ const {vehicle}=props;const modelUrl=url(`models/${vehicle.meta.id}/${variantFile(vehicle.manifest,props.quality)}?v=${vehicle.manifest.version}`);
  const t=UI[props.lang];
  useEffect(()=>{
   setReady(false);setError(null);setProgress(0);
@@ -33,9 +34,14 @@ const VehicleScene=forwardRef<SceneHandle,Props>(function VehicleScene(props,ref
   const illustrative=new Set(systems.filter(s=>s.illustrative).map(s=>s.id));
   const offsets=Object.fromEntries(systems.map(s=>[s.id,s.explode||[0,0,0]])) as Record<string,[number,number,number]>;
   const anchors=Object.fromEntries(systems.map(s=>[s.id,s.anchor||[0,dims.height*.6,0]])) as Record<string,[number,number,number]>;
-  // Độ nét: render tới 2× DPR; nếu khung hình chậm liên tục khi đang chuyển động thì hạ dần xuống 1×.
-  let pixelRatio=Math.min(window.devicePixelRatio||1,2);renderer.setPixelRatio(pixelRatio);let slowFrames=0;
-  const adaptQuality=(dt:number,busy:boolean)=>{if(!busy){slowFrames=0;return}if(dt>.045)slowFrames++;else slowFrames=Math.max(0,slowFrames-1);if(slowFrames>24&&pixelRatio>1){pixelRatio=Math.max(1,pixelRatio-.25);renderer.setPixelRatio(pixelRatio);renderer.setSize(el.clientWidth,el.clientHeight);slowFrames=0}};renderer.setClearColor(0x000000,0);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.0;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;el.appendChild(renderer.domElement);
+  // Độ nét: 0–10% tách rời render tới 2× DPR (xe nguyên khối, ít vật thể); trên 10% hạ về 1,5× (desktop) / 1,25× (cảm ứng)
+  // để Safari trên điện thoại không hết bộ nhớ khi bung hàng trăm chi tiết; khung hình chậm liên tục còn hạ thêm.
+  const coarse=window.matchMedia('(pointer: coarse)').matches;const dpr=window.devicePixelRatio||1;
+  let qualityCap=2;let pixelRatio=0;let slowFrames=0;
+  const applyPixelRatio=(explode:number)=>{const want=Math.min(dpr,explode<=10?qualityCap:Math.min(qualityCap,coarse?1.25:1.5));if(Math.abs(want-pixelRatio)>.01){pixelRatio=want;renderer.setPixelRatio(pixelRatio);renderer.setSize(el.clientWidth||1,el.clientHeight||1)}};
+  applyPixelRatio(latest.current.explode);
+  const adaptQuality=(dt:number,busy:boolean)=>{if(!busy){slowFrames=0;return}if(dt>.045)slowFrames++;else slowFrames=Math.max(0,slowFrames-1);if(slowFrames>24&&qualityCap>1){qualityCap=Math.max(1,qualityCap-.25);slowFrames=0;pixelRatio=0;applyPixelRatio(latest.current.explode)}};
+  renderer.setClearColor(0x000000,0);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.0;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;el.appendChild(renderer.domElement);
   const BG='#f5f2ed';const scene=new THREE.Scene();scene.background=new THREE.Color(BG);scene.fog=new THREE.Fog(BG,16*S,55*S);const camera=new THREE.PerspectiveCamera(37,1,.05,500);camera.position.set(-5.7*S,2.9*S,6.3*S);
   const controls=new OrbitControls(camera,renderer.domElement);controls.target.set(0,dims.height*.47,0);controls.enableDamping=true;controls.dampingFactor=.065;controls.minDistance=5*S;controls.maxDistance=180;controls.maxPolarAngle=Math.PI*.49;controls.minPolarAngle=.18;controls.enablePan=true;controls.autoRotateSpeed=.65;engine.current={camera,controls,reset:()=>{fitView(true);invalidated=true},interrupt:()=>{framingTime=0}};
   const pmrem=new THREE.PMREMGenerator(renderer);const room=new RoomEnvironment();const env=pmrem.fromScene(room,.04);scene.environment=env.texture;
@@ -72,7 +78,7 @@ const VehicleScene=forwardRef<SceneHandle,Props>(function VehicleScene(props,ref
   const pieceLabels:{b:HTMLButtonElement;id:string;part:string;center:THREE.Vector3;spread:THREE.Vector3;fullSpread:THREE.Vector3}[]=[];
   const disposeObject=(root:THREE.Object3D)=>root.traverse(o=>{if(o instanceof THREE.Mesh){o.geometry.dispose();(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m.dispose())}});
   const byId=new Map(vehicle.manifest.objects.map(p=>[p.id,p]));
-  new GLTFLoader().load(modelUrl,gltf=>{
+  const loader=new GLTFLoader();loader.setMeshoptDecoder(MeshoptDecoder);loader.load(modelUrl,gltf=>{
    if(cancelled){disposeObject(gltf.scene);return}
    Object.values(groups).forEach(g=>g.position.set(0,0,0));scene.updateMatrixWorld(true);
    const model=gltf.scene;scene.add(model);model.updateMatrixWorld(true);
@@ -114,7 +120,7 @@ const VehicleScene=forwardRef<SceneHandle,Props>(function VehicleScene(props,ref
   const grid=new THREE.GridHelper(100,100,0xb9b2a6,0xcdc7bc);grid.position.y=-.185;const gridMaterial=grid.material as THREE.Material;gridMaterial.transparent=true;gridMaterial.opacity=.35;scene.add(grid);
   const labelNodes=systems.map((p,i)=>{const b=document.createElement('button');b.className='scene-label';b.setAttribute('aria-label',T.inspect(p.name));b.innerHTML='<span>'+String(i+1).padStart(2,'0')+'</span><strong>'+p.name.replace(/</g,'&lt;')+'</strong>';b.addEventListener('click',()=>latest.current.onSelect(p.id));el.appendChild(b);return {b,id:p.id}});labelRefs.current.systems=labelNodes;
   let viewWidth=1,viewHeight=1;
-  const resize=()=>{const w=el.clientWidth,h=el.clientHeight;viewWidth=w;viewHeight=h;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();if(readyRef.current){invalidated=true;framingTime=.8}};const observer=new ResizeObserver(resize);observer.observe(el);resize();
+  const resize=()=>{const w=el.clientWidth,h=el.clientHeight;viewWidth=w;viewHeight=h;renderer.setPixelRatio(pixelRatio);renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();if(readyRef.current){invalidated=true;framingTime=.8}};const observer=new ResizeObserver(resize);observer.observe(el);resize();
   const taps=new PointerTap();const raycaster=new THREE.Raycaster();const pointer=new THREE.Vector2();
   const onDown=(e:PointerEvent)=>{taps.down(e.pointerId,e.clientX,e.clientY,e.pointerType==='touch'?10:5)};
   const onMove=(e:PointerEvent)=>{taps.move(e.pointerId,e.clientX,e.clientY)};
@@ -134,7 +140,7 @@ const VehicleScene=forwardRef<SceneHandle,Props>(function VehicleScene(props,ref
    const target=homeTarget.clone().lerp(layoutCenter,f);
    const tangent=Math.tan(THREE.MathUtils.degToRad(camera.fov/2));
    const fullDistance=layout?Math.max(layout.height/(2*tangent),layout.width/(2*tangent*camera.aspect))*1.18+3:9;
-   const assembledDistance=Math.max(10.5,7.5/camera.aspect)*S;
+   const assembledDistance=Math.max(10.5,6.6/camera.aspect)*S;
    const distance=THREE.MathUtils.lerp(assembledDistance,fullDistance,f);
    const direction=immediate?overviewDirection:framingDirection.clone().lerp(overviewDirection,f).normalize();
    const blend=immediate?1:1-Math.exp(-8*dt);
@@ -149,7 +155,7 @@ const VehicleScene=forwardRef<SceneHandle,Props>(function VehicleScene(props,ref
    if(p.explode!==previousExplosion){previousExplosion=p.explode;framingTime=1.5;framingDirection.copy(camera.position).sub(controls.target).normalize()}
    const oldAmount=amount;amount=reduced?p.explode/100:THREE.MathUtils.damp(amount,p.explode/100,7,dt);if(Math.abs(amount-p.explode/100)<.0001)amount=p.explode/100;
    const moving=oldAmount!==amount,geometryChanged=moving||invalidated||propsChanged;
-   adaptQuality(dt,moving||framingTime>0||p.autoRotate);
+   adaptQuality(dt,moving||framingTime>0||p.autoRotate);applyPixelRatio(p.explode);
    const individual=THREE.MathUtils.smoothstep(amount,.4,1);
    if(scene.fog instanceof THREE.Fog){scene.fog.near=16*S+individual*384;scene.fog.far=55*S+individual*445;}
    framingTime=Math.max(0,framingTime-dt);if(framingTime>0)fitView(false,dt);
@@ -215,7 +221,7 @@ const VehicleScene=forwardRef<SceneHandle,Props>(function VehicleScene(props,ref
   }raf=requestAnimationFrame(frame);
   return()=>{cancelled=true;labelRefs.current={systems:[],pieces:[]};cancelAnimationFrame(raf);observer.disconnect();controls.removeEventListener('start',stopFraming);controls.dispose();markerGeometry.dispose();markerMaterial.dispose();engine.current=null;labelNodes.forEach(x=>x.b.remove());pieceLabels.forEach(x=>x.b.remove());renderer.domElement.removeEventListener('pointerdown',onDown);renderer.domElement.removeEventListener('pointermove',onMove);renderer.domElement.removeEventListener('pointercancel',onCancel);renderer.domElement.removeEventListener('pointerup',onUp);renderer.domElement.removeEventListener('webglcontextlost',lost);scene.traverse(o=>{if(o instanceof THREE.Mesh){o.geometry.dispose();const ms=Array.isArray(o.material)?o.material:[o.material];ms.forEach(m=>m.dispose())}});env.dispose();pmrem.dispose();room.dispose();renderer.dispose();renderer.domElement.remove();};
  // eslint-disable-next-line react-hooks/exhaustive-deps
- },[modelUrl]);
+ },[modelUrl]); // eslint-disable-line react-hooks/exhaustive-deps
  const name=`${vehicle.meta.brand} ${vehicle.meta.name}`;
  return <><div ref={host} className="canvas-host" aria-label={t.sceneLabel(name)}/>{!ready&&!error&&<div className="scene-loading" aria-live="polite"><span/>{progress>0&&progress<100?t.loadingProgress(progress):t.loadingModel(name)}<i className="scene-progress" style={{width:`${progress}%`}}/></div>}{error&&<div className="scene-error"><h3>{t.needsMoment}</h3><p>{error}</p><button onClick={()=>location.reload()}>{t.reload}</button></div>}</>;
 });

@@ -1,8 +1,20 @@
 {
  "id": "porsche-911-930",
  "file": "model.glb",
- "version": "5976fb15b3",
- "generated": "2026-09-13T08:12:15.407Z",
+ "version": "ee4b0ea703",
+ "files": {
+  "full": {
+   "file": "model.glb",
+   "bytes": 3693032,
+   "faces": 196717
+  },
+  "light": {
+   "file": "model.light.glb",
+   "bytes": 2412836,
+   "faces": 150566
+  }
+ },
+ "generated": "2026-09-13T10:00:04.784Z",
  "input": "source/porsche-911-930/scene.gltf",
  "lengthMeters": 4.291,
  "bounds": {

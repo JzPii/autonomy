@@ -16,7 +16,7 @@ npm run dev          # http://localhost:3017  (registry + trang cho từng xe đ
 npm run build        # → dist/  (trang tĩnh: /, /<id>/, /models/<id>/…)
 ```
 
-Xem `dist/` mà không cần npm: `python3 -m http.server 8080 -d dist`.
+Xem `dist/` mà không cần npm: `python3 -m http.server 8080 -d dist`. Bản demo: https://jzpii.github.io/autonomy/ (GitHub Pages, tự triển khai từ `main`).
 
 ## Cấu trúc / Layout
 
@@ -27,7 +27,7 @@ models/<id>/            nguồn sự thật cho mỗi phương tiện (viết ta
   content.en.json       bản tiếng Anh, cùng cấu trúc
   internals.json        nội tạng minh họa (hộp/trụ/ống) cho các hệ thống mô hình nguồn không có
 source/<id>/            mô hình gốc tải về (git-ignore)
-public/models/<id>/     sinh ra: model.glb, manifest.json, review.md (+ bản sao model/content/internals)
+public/models/<id>/     sinh ra: model.glb (đầy đủ) + model.light.glb (bản nhẹ), manifest.json, review.md (+ bản sao model/content/internals)
 public/registry.json    sinh ra: danh sách phương tiện cho trang chủ và bộ chuyển đổi
 app/                    ứng dụng React + Three.js dùng chung cho mọi xe
   app.tsx               định tuyến: / → gallery, /<id>/ → studio
@@ -56,7 +56,18 @@ scripts/
 Pipeline: bake transform → chuẩn hóa trục (dài dọc X, đầu xe −X, bánh chạm y = 0, dài đúng khai báo; đầu xe đoán theo
 "ca-pô thấp hơn đuôi", ghi đè `pipeline.flip`) → tách đảo lưới liên thông → gộp gai lốp/nan mâm theo góc bánh, dịch ngang
 để tâm bánh đối xứng (cửa mở/gương không làm lệch xe) → phân loại (từ khóa vật liệu/tên lưới, độ trong suốt, phát sáng,
-vị trí so với kích thước khai báo) → giảm mặt (`pipeline.simplify`) → nén texture WebP ≤ `pipeline.textures` px.
+vị trí so với kích thước khai báo) → giảm mặt (`pipeline.simplify`) → nén texture WebP ≤ `pipeline.textures` px →
+bản nhẹ cùng tập chi tiết (`pipeline.light`: mặc định ≈150 nghìn mặt, texture 512 px) → nén hình học EXT_meshopt_compression.
+
+Ứng dụng tự chọn bản nhẹ trên điện thoại hoặc mạng chậm/tiết kiệm dữ liệu; ghi đè bằng `?q=full` / `?q=light` hoặc
+trong bảng "Về mô hình". Độ nét render: tới 2× DPR khi xe nguyên khối (≤10 % tách rời), 1,5×/1,25× khi bung chi tiết,
+hạ thêm nếu khung hình chậm liên tục.
+
+| Xe | Đầy đủ | Bản nhẹ |
+|---|---|---|
+| VinFast VF 9 | 4,2 MB · 423 K mặt | 2,9 MB · 241 K mặt |
+| Porsche 911 Turbo (930) | 3,7 MB · 197 K mặt | 2,4 MB · 151 K mặt |
+| Porsche 911 Turbo S (992) | 7,7 MB · 420 K mặt | 4,0 MB · 166 K mặt |
 
 ## Kiểm tra / Checks
 
@@ -64,7 +75,7 @@ vị trí so với kích thước khai báo) → giảm mặt (`pipeline.simplif
 npm run check                          # tsc
 npm run lint
 npm run validate [-- <id>]             # GLB ↔ manifest, kích thước, bố cục không chồng lấn, cử chỉ
-npm run qa -- http://localhost:4173/porsche-911-930/ /tmp/shot.png   # sau `npm run preview`
+npm run qa -- http://localhost:4173/porsche-911-930/ /tmp/shot.png [--mobile] [--click=.switcher-button]   # sau `npm run preview`
 ```
 
 ## Giấy phép & ghi công / License & credits
