@@ -2,7 +2,7 @@
 // Mở trang trong Chrome headless (WebGL phần mềm), thu console/exception, đợi mô hình tải xong, in trạng thái DOM và chụp màn hình.
 import {spawn} from 'node:child_process';
 import fs from 'node:fs';
-const [url,out,waitArg]=process.argv.slice(2);if(!url||!out){console.error('usage: qa-shot.mjs <url> <out.png> [waitMs]');process.exit(1)}
+const [url,out,waitArg]=process.argv.slice(2).filter(a=>!a.startsWith('--'));const clickSel=(process.argv.find(a=>a.startsWith('--click='))||'').slice(8);if(!url||!out){console.error('usage: qa-shot.mjs <url> <out.png> [waitMs]');process.exit(1)}
 const waitMs=Number(waitArg||60000);const port=9300+Math.floor(Math.random()*500);const profile=`/tmp/autonomy-qa-${port}`;
 const chrome=process.env.CHROME||'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const proc=spawn(chrome,['--headless=new','--disable-gpu','--use-angle=swiftshader','--enable-unsafe-swiftshader','--ignore-gpu-blocklist','--hide-scrollbars','--remote-allow-origins=*',`--remote-debugging-port=${port}`,`--user-data-dir=${profile}`,'--window-size=1200,760','about:blank'],{stdio:'ignore'});
@@ -24,6 +24,7 @@ const started=Date.now();let state;
 while(Date.now()-started<waitMs){await sleep(1500);
  const r=await send('Runtime.evaluate',{returnByValue:true,expression:`JSON.stringify({markers:document.querySelectorAll('.mesh-marker').length,loading:document.querySelector('.scene-loading')?.textContent||null,error:document.querySelector('.scene-error')?.textContent||null,canvas:!!document.querySelector('canvas'),title:document.title})`});
  state=JSON.parse(r.result?.result?.value||'{}');if(state.markers>0||state.error)break}
+if(clickSel){await send('Runtime.evaluate',{expression:`document.querySelector(${JSON.stringify(clickSel)})?.click()`});await sleep(800)}
 await sleep(2500);
 const shot=await send('Page.captureScreenshot',{format:'png'},60000);if(shot.result?.data)fs.writeFileSync(out,Buffer.from(shot.result.data,'base64'));else console.error('qa: no screenshot');
 console.log(JSON.stringify({url,waited:Math.round((Date.now()-started)/1000)+'s',...state},null,0));

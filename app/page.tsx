@@ -1,6 +1,6 @@
 import {flushSync} from 'react-dom';
 import {useState, useRef, useEffect, useMemo} from 'react';
-import {ArrowUpRight, Box, Layers3, RotateCcw, Rotate3d, Plus, Minus, Maximize2, X, Crosshair, ChevronRight, CircleHelp, Expand, MoreHorizontal, Search} from 'lucide-react';
+import {ArrowUpRight, Box, Layers3, RotateCcw, Rotate3d, Plus, Minus, Maximize2, X, Crosshair, CircleHelp, Expand, MoreHorizontal, Search} from 'lucide-react';
 import {Select,SelectTrigger,SelectValue,SelectContent,SelectItem} from '@/components/ui/select';
 import {Slider} from '@/components/ui/slider';
 import {Switch} from '@/components/ui/switch';
@@ -17,7 +17,7 @@ import VehicleScene, {type SceneHandle} from './vehicle-scene';
 const compactQuery='(max-width: 700px), (max-height: 500px)';
 function readUrlState(){
  const q=new URLSearchParams(location.search);const explode=Number(q.get('explode'));
- return {system:q.get('system')||'',piece:q.get('piece')||'',explode:Number.isFinite(explode)?Math.min(100,Math.max(0,Math.round(explode))):0,labels:q.get('labels')==='1'};
+ return {system:q.get('system')||'',piece:q.get('piece')||'',explode:Number.isFinite(explode)?Math.min(100,Math.max(0,Math.round(explode))):0,labels:q.get('labels')==='1',hidden:(q.get('hide')||'').split(',').filter(Boolean)};
 }
 export default function Studio({id,lang,setLang,registry}:{id:string;lang:Lang;setLang:(l:Lang)=>void;registry:Registry|null}){
  const t=UI[lang];
@@ -30,15 +30,20 @@ export default function Studio({id,lang,setLang,registry}:{id:string;lang:Lang;s
  const [componentsOpen,setComponentsOpen]=useState(false);const [detailOpen,setDetailOpen]=useState(Boolean(initial.system||initial.piece));
  const [explode,setExplode]=useState(initial.explode); const [labels,setLabels]=useState(initial.labels); const [rotate,setRotate]=useState(false); const [isolated,setIsolated]=useState(false); const [help,setHelp]=useState(false); const [searchOpen,setSearchOpen]=useState(false);
  const [focusedMesh,setFocusedMesh]=useState(initial.piece);
+ const [hidden,setHidden]=useState<string[]>(initial.hidden);
+ const EXTERIOR=['body','glass','doors'];
  useEffect(()=>{setCanFullscreen(Boolean(document.fullscreenEnabled));const query=window.matchMedia(compactQuery);const update=()=>{setCompact(query.matches);setComponentsOpen(!query.matches);setToolsOpen(false)};update();query.addEventListener('change',update);return()=>query.removeEventListener('change',update)},[]);
  useEffect(()=>{const key=(e:KeyboardEvent)=>{if(e.key==='/'&&!(e.target instanceof HTMLInputElement)&&!(e.target instanceof HTMLTextAreaElement)){e.preventDefault();setSearchOpen(true);if(window.matchMedia(compactQuery).matches){setComponentsOpen(false);setDetailOpen(false);setHelp(false)}}};window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key)},[]);
  // Default system once content is known; keep URL shareable.
  const systems=useMemo(()=>vehicle?.content.systems??[],[vehicle]);
  useEffect(()=>{if(vehicle&&!systems.some(s=>s.id===selected))setSelected(systems[0]?.id||'')},[vehicle,systems,selected]);
- useEffect(()=>{if(!vehicle)return;const u=new URL(location.href);const set=(k:string,v:string|null)=>{if(v)u.searchParams.set(k,v);else u.searchParams.delete(k)};set('system',detailOpen?selected:null);set('piece',focusedMesh||null);set('explode',explode?String(explode):null);set('labels',labels?'1':null);history.replaceState(null,'',u)},[vehicle,selected,detailOpen,focusedMesh,explode,labels]);
+ useEffect(()=>{if(!vehicle)return;const u=new URL(location.href);const set=(k:string,v:string|null)=>{if(v)u.searchParams.set(k,v);else u.searchParams.delete(k)};set('system',detailOpen?selected:null);set('piece',focusedMesh||null);set('explode',explode?String(explode):null);set('labels',labels?'1':null);set('hide',hidden.length?hidden.join(','):null);history.replaceState(null,'',u)},[vehicle,selected,detailOpen,focusedMesh,explode,labels,hidden]);
  const [tab,setTab]=useState('overview'); const scene=useRef<SceneHandle|null>(null); const root=useRef<HTMLDivElement>(null);
- function select(sid:string){setFocusedMesh('');setSelected(sid);setTab('overview');setDetailOpen(true);setSearchOpen(false);if(compact){setComponentsOpen(false);setHelp(false);setToolsOpen(false)}}
- function inspect(pieceId:string){setFocusedMesh(pieceId);if(pieceId&&vehicle){const p=vehicle.manifest.objects.find(x=>x.id===pieceId);if(p){setSelected(systemFor(p.part,vehicle));setDetailOpen(true);setTab('overview')}}}
+ function select(sid:string){setFocusedMesh('');setSelected(sid);setTab('overview');setDetailOpen(true);setSearchOpen(false);setHidden(h=>h.includes(sid)?h.filter(x=>x!==sid):h);if(compact){setComponentsOpen(false);setHelp(false);setToolsOpen(false)}}
+ function inspect(pieceId:string){setFocusedMesh(pieceId);if(pieceId&&vehicle){const p=vehicle.manifest.objects.find(x=>x.id===pieceId);if(p){const sid=systemFor(p.part,vehicle);setSelected(sid);setDetailOpen(true);setTab('overview');setHidden(h=>h.includes(sid)?h.filter(x=>x!==sid):h)}}}
+ const toggleHidden=(sid:string)=>setHidden(h=>h.includes(sid)?h.filter(x=>x!==sid):[...h,sid]);
+ const applyPreset=(kind:'all'|'exterior'|'inside')=>setHidden(kind==='all'?[]:systems.map(s=>s.id).filter(id=>kind==='exterior'?!EXTERIOR.includes(id):EXTERIOR.includes(id)));
+ const preset=hidden.length===0?'all':systems.every(s=>EXTERIOR.includes(s.id)?!hidden.includes(s.id):hidden.includes(s.id))?'exterior':systems.every(s=>EXTERIOR.includes(s.id)?hidden.includes(s.id):!hidden.includes(s.id))?'inside':'';
  useEffect(()=>{if(!vehicle)return;return registerStudioTools(vehicle,lang,{
   select(sid){flushSync(()=>select(sid))},inspect(pid){flushSync(()=>{inspect(pid);setSearchOpen(false)})},
   setExplode(v){flushSync(()=>setExplode(v))},setIsolated(v){flushSync(()=>setIsolated(v))},
@@ -55,16 +60,26 @@ export default function Studio({id,lang,setLang,registry}:{id:string;lang:Lang;s
  const system=systems.find(s=>s.id===selected)||systems[0];
  const piece=catalog.find(p=>p.id===focusedMesh);
  const inSystem=catalog.filter(p=>systemFor(p.part,vehicle)===system.id);
+ const countBySystem=new Map<string,number>();for(const p of catalog){const sid=systemFor(p.part,vehicle);countBySystem.set(sid,(countBySystem.get(sid)||0)+1)}
+ const visiblePieces=catalog.filter(p=>!hidden.includes(systemFor(p.part,vehicle))).length;
+ const PALETTE=['#c0533a','#3a7ca5','#5b8c5a','#b08a3e','#7a5ea8','#d07a2f','#3f8f8a','#8c5a4a','#5a6e8c','#a04f7a'];
  const sourceLink=meta.links?.[system.source]||system.source;
 
  return <main className="studio" ref={root}>
   <section className="stage-view" aria-label={t.studioLabel(name)}>
-   <VehicleScene vehicle={vehicle} lang={lang} focusedMesh={focusedMesh} onInspect={inspect} ref={scene} selected={system.id} explode={explode} labels={labels} autoRotate={rotate} isolated={isolated} onSelect={select}/>
+   <VehicleScene vehicle={vehicle} lang={lang} focusedMesh={focusedMesh} onInspect={inspect} ref={scene} selected={system.id} explode={explode} labels={labels} autoRotate={rotate} isolated={isolated} hiddenIds={hidden.join(',')} onSelect={select}/>
   </section>
   <Switcher meta={meta} registry={registry} lang={lang}/>
   {componentsOpen&&<aside className="components-panel floating-panel" aria-label={t.systems}>
-   <div className="panel-heading"><h2>{t.systems}</h2><button className="icon-button" onClick={()=>setComponentsOpen(false)} aria-label={t.hideSystems}><X size={14}/></button></div>
-   <div className="parts-list">{systems.map((p,i)=><button key={p.id} onClick={()=>select(p.id)} className={'part-row '+(p.id===system.id&&detailOpen?'selected':'')} aria-pressed={p.id===system.id&&detailOpen}><span className="part-number">{String(i+1).padStart(2,'0')}</span><span>{p.name}</span><ChevronRight size={13}/></button>)}</div>
+   <div className="panel-heading"><h2>{t.systems} <span className="count-badge">{systems.length}</span></h2><button className="icon-button" onClick={()=>setComponentsOpen(false)} aria-label={t.hideSystems}><X size={14}/></button></div>
+   <div className="preset-bar" role="group" aria-label={t.systemsPresets}>{([['all',t.presetAll],['exterior',t.presetExterior],['inside',t.presetInside]] as const).map(([k,label])=><button key={k} className={preset===k?'active':''} aria-pressed={preset===k} onClick={()=>applyPreset(k)}>{label}</button>)}</div>
+   <div className="parts-list">{systems.map((p,i)=>{const on=!hidden.includes(p.id);const n=countBySystem.get(p.id)||0;return <div key={p.id} className={'part-row '+(p.id===system.id&&detailOpen?'selected':'')+(on?'':' is-hidden')}>
+    <span className="part-dot" style={{background:PALETTE[i%PALETTE.length]}}/>
+    <button className="part-name" onClick={()=>select(p.id)} aria-pressed={p.id===system.id&&detailOpen}><span>{p.name}</span></button>
+    <span className="part-count">{p.illustrative&&!n?t.illustrative:n}</span>
+    <Switch checked={on} onCheckedChange={()=>toggleHidden(p.id)} aria-label={t.toggleVisibility(p.name)}/>
+   </div>})}</div>
+   <div className="panel-footer"><span>{t.visiblePieces(visiblePieces)}</span><button onClick={()=>hidden.length?applyPreset('all'):setHidden(systems.map(s=>s.id))}>{hidden.length?t.showAll2:t.hideAll}</button></div>
   </aside>}
   <nav className="view-tools floating-panel" data-expanded={toolsOpen} aria-label={t.moreControls}>
    <button className={'tools-components '+(componentsOpen?'active':'')} title={t.systems} onClick={toggleComponents} aria-label={t.toggleSystems} aria-pressed={componentsOpen}><Layers3 size={18}/></button>

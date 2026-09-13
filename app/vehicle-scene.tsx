@@ -10,7 +10,7 @@ import {UI,type Lang} from './i18n/ui';
 import {pieceLabel} from './labels';
 import {systemFor,url,type Shape,type Vehicle} from './registry';
 export type SceneHandle={zoom:(factor:number)=>void;reset:()=>void};
-type Props={vehicle:Vehicle;lang:Lang;focusedMesh:string;onInspect:(id:string)=>void;selected:string;explode:number;labels:boolean;autoRotate:boolean;isolated:boolean;onSelect:(id:string)=>void};
+type Props={vehicle:Vehicle;lang:Lang;focusedMesh:string;onInspect:(id:string)=>void;selected:string;explode:number;labels:boolean;autoRotate:boolean;isolated:boolean;hiddenIds:string;onSelect:(id:string)=>void};
 // Hệ tọa độ: chiều dài xe dọc trục X (đầu xe về -X), bề ngang dọc trục Z, Y hướng lên. scripts/prepare-model.mjs chuẩn hóa GLB về hệ này.
 const VehicleScene=forwardRef<SceneHandle,Props>(function VehicleScene(props,ref){
  const host=useRef<HTMLDivElement>(null);const latest=useRef(props);latest.current=props;
@@ -117,14 +117,14 @@ const VehicleScene=forwardRef<SceneHandle,Props>(function VehicleScene(props,ref
   const onDown=(e:PointerEvent)=>{taps.down(e.pointerId,e.clientX,e.clientY,e.pointerType==='touch'?10:5)};
   const onMove=(e:PointerEvent)=>{taps.move(e.pointerId,e.clientX,e.clientY)};
   const onCancel=(e:PointerEvent)=>{taps.cancel(e.pointerId)};
-  const onUp=(e:PointerEvent)=>{if(!taps.up(e.pointerId,e.clientX,e.clientY))return;const r=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);raycaster.setFromCamera(pointer,camera);if(markers.visible){let nearest=-1,nearestDistance=e.pointerType==='touch'?324:64;pieces.forEach((piece,i)=>{vector.copy(piece.center).add(piece.node.position).sub(piece.home).add(groups[piece.part].position).project(camera);const dx=(vector.x-pointer.x)*viewWidth/2,dy=(vector.y-pointer.y)*viewHeight/2,d=dx*dx+dy*dy;if(vector.z<1&&d<nearestDistance){nearest=i;nearestDistance=d}});if(nearest>=0){latest.current.onSelect(pieces[nearest].part);latest.current.onInspect(pieces[nearest].id);return}}
+  const onUp=(e:PointerEvent)=>{if(!taps.up(e.pointerId,e.clientX,e.clientY))return;const r=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);raycaster.setFromCamera(pointer,camera);if(markers.visible){let nearest=-1,nearestDistance=e.pointerType==='touch'?324:64;pieces.forEach((piece,i)=>{if(!groups[piece.part].visible)return;vector.copy(piece.center).add(piece.node.position).sub(piece.home).add(groups[piece.part].position).project(camera);const dx=(vector.x-pointer.x)*viewWidth/2,dy=(vector.y-pointer.y)*viewHeight/2,d=dx*dx+dy*dy;if(vector.z<1&&d<nearestDistance){nearest=i;nearestDistance=d}});if(nearest>=0){latest.current.onSelect(pieces[nearest].part);latest.current.onInspect(pieces[nearest].id);return}}
    const hits=raycaster.intersectObjects(Object.values(groups),true).filter(h=>{let o:THREE.Object3D|null=h.object;while(o){if(!o.visible)return false;o=o.parent}return true});if(hits[0]){latest.current.onSelect(hits[0].object.userData.part);latest.current.onInspect(hits[0].object.userData.component||'')}};
   renderer.domElement.addEventListener('pointerdown',onDown);renderer.domElement.addEventListener('pointermove',onMove);renderer.domElement.addEventListener('pointercancel',onCancel);renderer.domElement.addEventListener('pointerup',onUp);
   const lost=(e:Event)=>{e.preventDefault();setError(T.contextLost)};renderer.domElement.addEventListener('webglcontextlost',lost);
   let raf=0;let amount=latest.current.explode/100;const vector=new THREE.Vector3();let last=performance.now();
   let focusKey='';let previousExplosion=latest.current.explode;let framingTime=0;
   let invalidated=true,previousProps:Props|null=null,lastLabels=0,lastShadow=0;
-  let labelsPending=false;let lastHighlighted='';const cameraPosition=new THREE.Vector3(),cameraQuaternion=new THREE.Quaternion();
+  let labelsPending=false;let lastHighlighted='';let hiddenKey='';let hidden=new Set<string>();const cameraPosition=new THREE.Vector3(),cameraQuaternion=new THREE.Quaternion();
   const homeTarget=new THREE.Vector3(0,dims.height*.47,0),framingDirection=overviewDirection.clone();
   function fitView(immediate=false,dt=1/60){
    if(latest.current.isolated)return;
@@ -141,7 +141,9 @@ const VehicleScene=forwardRef<SceneHandle,Props>(function VehicleScene(props,ref
   const stopFraming=()=>{framingTime=0};controls.addEventListener('start',stopFraming);
   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function frame(now:number){raf=requestAnimationFrame(frame);const dt=Math.min((now-last)/1000,.05);last=now;if(document.hidden)return;
-   const p=latest.current,propsChanged=!previousProps||p.selected!==previousProps.selected||p.focusedMesh!==previousProps.focusedMesh||p.isolated!==previousProps.isolated||p.labels!==previousProps.labels||p.autoRotate!==previousProps.autoRotate;
+   const p=latest.current,propsChanged=!previousProps||p.selected!==previousProps.selected||p.focusedMesh!==previousProps.focusedMesh||p.isolated!==previousProps.isolated||p.labels!==previousProps.labels||p.autoRotate!==previousProps.autoRotate||p.hiddenIds!==previousProps.hiddenIds;
+   if(p.hiddenIds!==hiddenKey){hiddenKey=p.hiddenIds;hidden=new Set(p.hiddenIds?p.hiddenIds.split(','):[])}
+   const shown=(id:string)=>p.isolated?p.selected===id:!hidden.has(id);
    if(p.explode!==previousExplosion){previousExplosion=p.explode;framingTime=1.5;framingDirection.copy(camera.position).sub(controls.target).normalize()}
    const oldAmount=amount;amount=reduced?p.explode/100:THREE.MathUtils.damp(amount,p.explode/100,7,dt);if(Math.abs(amount-p.explode/100)<.0001)amount=p.explode/100;
    const moving=oldAmount!==amount,geometryChanged=moving||invalidated||propsChanged;
@@ -157,14 +159,14 @@ const VehicleScene=forwardRef<SceneHandle,Props>(function VehicleScene(props,ref
     stage.visible=amount<.18&&!p.isolated;stageMaterial.opacity=1-THREE.MathUtils.smoothstep(amount,.02,.18);rimMaterial.opacity=stageMaterial.opacity;
     const floor=p.isolated?0:1-THREE.MathUtils.smoothstep(individual,.02,.32);groundMaterial.opacity=floor;gridMaterial.opacity=.35*floor;
     ground.visible=floor>.005;grid.visible=floor>.005;renderer.shadowMap.enabled=floor>.05;
-    systems.forEach(({id})=>{const g=groups[id],o=offsets[id];g.position.set(o[0]*amount*(1-individual),o[1]*amount*(1-individual),o[2]*amount*(1-individual));g.visible=!p.isolated||p.selected===id;
+    systems.forEach(({id})=>{const g=groups[id],o=offsets[id];g.position.set(o[0]*amount*(1-individual),o[1]*amount*(1-individual),o[2]*amount*(1-individual));g.visible=shown(id);
      if(illustrative.has(id))g.visible=g.visible&&(amount>.08||p.isolated)&&(individual<.98||p.isolated);
     });
     const positions=markerGeometry.getAttribute('position') as THREE.BufferAttribute|undefined;
     pieces.forEach((piece,i)=>{
      piece.node.position.copy(piece.home).addScaledVector(piece.spread,amount*(1-individual)).addScaledVector(piece.fullSpread,individual);
      piece.node.visible=!p.isolated||!p.focusedMesh||p.focusedMesh===piece.id;
-     if(positions){vector.copy(piece.center).add(piece.node.position).sub(piece.home).add(groups[piece.part].position);positions.setXYZ(i,vector.x,vector.y,vector.z)}
+     if(positions){if(shown(piece.part)){vector.copy(piece.center).add(piece.node.position).sub(piece.home).add(groups[piece.part].position);positions.setXYZ(i,vector.x,vector.y,vector.z)}else positions.setXYZ(i,0,-1e5,0)}
     });
     if(positions)positions.needsUpdate=true;
     markers.visible=individual>.45&&!p.isolated&&!p.labels;
@@ -192,13 +194,13 @@ const VehicleScene=forwardRef<SceneHandle,Props>(function VehicleScene(props,ref
    }
    if(now-lastLabels>50||propsChanged||invalidated){
     lastLabels=now;labelsPending=false;
-    labelNodes.forEach(({b,id})=>{const show=individual<.5&&readyRef.current&&p.labels&&(!illustrative.has(id)||amount>.08||p.isolated)&&(!p.isolated||p.selected===id);
+    labelNodes.forEach(({b,id})=>{const show=individual<.5&&readyRef.current&&p.labels&&(!illustrative.has(id)||amount>.08||p.isolated)&&shown(id);
      if(b.hidden===show)b.hidden=!show;if(!show)return;
      const a=anchors[id];vector.set(...a).add(groups[id].position).project(camera);b.style.display=vector.z<1?'flex':'none';b.classList.toggle('chosen',id===p.selected);
      b.style.transform=`translate3d(${(vector.x*.5+.5)*viewWidth}px,${(-vector.y*.5+.5)*viewHeight}px,0) translate(-12px,-50%)`;
     });
     pieceLabels.forEach(({b,id,part,center,spread,fullSpread})=>{
-     const show=individual>.45&&(p.labels||id===p.focusedMesh)&&(!p.isolated||p.selected===part)&&(!p.isolated||!p.focusedMesh||p.focusedMesh===id);
+     const show=individual>.45&&(p.labels||id===p.focusedMesh)&&shown(part)&&(!p.isolated||!p.focusedMesh||p.focusedMesh===id);
      if(b.hidden===show)b.hidden=!show;if(!show)return;
      vector.copy(center).addScaledVector(spread,amount*(1-individual)).addScaledVector(fullSpread,individual).add(groups[part].position).project(camera);
      b.style.display=vector.z<1&&Math.abs(vector.x)<1&&Math.abs(vector.y)<1?'grid':'none';b.classList.toggle('chosen',p.focusedMesh===id);b.classList.add('numbered');
