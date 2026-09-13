@@ -60,8 +60,7 @@ vị trí so với kích thước khai báo) → giảm mặt (`pipeline.simplif
 bản nhẹ cùng tập chi tiết (`pipeline.light`: mặc định ≈150 nghìn mặt, texture 512 px) → nén hình học EXT_meshopt_compression.
 
 Ứng dụng tự chọn bản nhẹ trên điện thoại hoặc mạng chậm/tiết kiệm dữ liệu; ghi đè bằng `?q=full` / `?q=light` hoặc
-trong bảng "Về mô hình". Độ nét render: tới 2× DPR khi xe nguyên khối (≤10 % tách rời), 1,5×/1,25× khi bung chi tiết,
-hạ thêm nếu khung hình chậm liên tục.
+trong bảng "Về mô hình". Độ nét render: tới 2× DPR khi xe nguyên khối (tách rời = 0), 1,5× desktop / 1,25× cảm ứng ngay khi bắt đầu bung chi tiết.
 
 | Xe | Đầy đủ | Bản nhẹ |
 |---|---|---|

@@ -34,13 +34,12 @@ const VehicleScene=forwardRef<SceneHandle,Props>(function VehicleScene(props,ref
   const illustrative=new Set(systems.filter(s=>s.illustrative).map(s=>s.id));
   const offsets=Object.fromEntries(systems.map(s=>[s.id,s.explode||[0,0,0]])) as Record<string,[number,number,number]>;
   const anchors=Object.fromEntries(systems.map(s=>[s.id,s.anchor||[0,dims.height*.6,0]])) as Record<string,[number,number,number]>;
-  // Độ nét: 0–10% tách rời render tới 2× DPR (xe nguyên khối, ít vật thể); trên 10% hạ về 1,5× (desktop) / 1,25× (cảm ứng)
-  // để Safari trên điện thoại không hết bộ nhớ khi bung hàng trăm chi tiết; khung hình chậm liên tục còn hạ thêm.
+  // Độ nét: xe nguyên khối (explode = 0) render tới 2× DPR để zoom thật nét; hễ bắt đầu tách rời thì hạ về
+  // 1,5× (desktop) / 1,25× (cảm ứng) vì hàng trăm chi tiết + nhãn nặng hơn nhiều. Quy tắc cố định, không tự hạ theo FPS.
   const coarse=window.matchMedia('(pointer: coarse)').matches;const dpr=window.devicePixelRatio||1;
-  let qualityCap=2;let pixelRatio=0;let slowFrames=0;
-  const applyPixelRatio=(explode:number)=>{const want=Math.min(dpr,explode<=10?qualityCap:Math.min(qualityCap,coarse?1.25:1.5));if(Math.abs(want-pixelRatio)>.01){pixelRatio=want;renderer.setPixelRatio(pixelRatio);renderer.setSize(el.clientWidth||1,el.clientHeight||1)}};
+  let pixelRatio=0;
+  const applyPixelRatio=(explode:number)=>{const want=Math.min(dpr,explode<=0?2:(coarse?1.25:1.5));if(Math.abs(want-pixelRatio)>.01){pixelRatio=want;renderer.setPixelRatio(pixelRatio);renderer.setSize(el.clientWidth||1,el.clientHeight||1)}};
   applyPixelRatio(latest.current.explode);
-  const adaptQuality=(dt:number,busy:boolean)=>{if(!busy){slowFrames=0;return}if(dt>.045)slowFrames++;else slowFrames=Math.max(0,slowFrames-1);if(slowFrames>24&&qualityCap>1){qualityCap=Math.max(1,qualityCap-.25);slowFrames=0;pixelRatio=0;applyPixelRatio(latest.current.explode)}};
   renderer.setClearColor(0x000000,0);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.0;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;el.appendChild(renderer.domElement);
   const BG='#f5f2ed';const scene=new THREE.Scene();scene.background=new THREE.Color(BG);scene.fog=new THREE.Fog(BG,16*S,55*S);const camera=new THREE.PerspectiveCamera(37,1,.05,500);camera.position.set(-5.7*S,2.9*S,6.3*S);
   const controls=new OrbitControls(camera,renderer.domElement);controls.target.set(0,dims.height*.47,0);controls.enableDamping=true;controls.dampingFactor=.065;controls.minDistance=5*S;controls.maxDistance=180;controls.maxPolarAngle=Math.PI*.49;controls.minPolarAngle=.18;controls.enablePan=true;controls.autoRotateSpeed=.65;engine.current={camera,controls,reset:()=>{fitView(true);invalidated=true},interrupt:()=>{framingTime=0}};
@@ -155,7 +154,7 @@ const VehicleScene=forwardRef<SceneHandle,Props>(function VehicleScene(props,ref
    if(p.explode!==previousExplosion){previousExplosion=p.explode;framingTime=1.5;framingDirection.copy(camera.position).sub(controls.target).normalize()}
    const oldAmount=amount;amount=reduced?p.explode/100:THREE.MathUtils.damp(amount,p.explode/100,7,dt);if(Math.abs(amount-p.explode/100)<.0001)amount=p.explode/100;
    const moving=oldAmount!==amount,geometryChanged=moving||invalidated||propsChanged;
-   adaptQuality(dt,moving||framingTime>0||p.autoRotate);applyPixelRatio(p.explode);
+   applyPixelRatio(p.explode);
    const individual=THREE.MathUtils.smoothstep(amount,.4,1);
    if(scene.fog instanceof THREE.Fog){scene.fog.near=16*S+individual*384;scene.fog.far=55*S+individual*445;}
    framingTime=Math.max(0,framingTime-dt);if(framingTime>0)fitView(false,dt);
