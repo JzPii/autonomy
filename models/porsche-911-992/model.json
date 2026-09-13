@@ -33,7 +33,88 @@
       "invisible",
       "service_black"
     ],
-    "hints": []
+    "hints": [
+      {
+        "match": "steering_wheel",
+        "part": "cabin",
+        "key": "steering"
+      },
+      {
+        "match": "monitors_",
+        "part": "cabin",
+        "key": "display"
+      },
+      {
+        "match": "pipes_",
+        "part": "exhaust",
+        "key": "exhaust"
+      },
+      {
+        "match": "mirror_(door|cover)",
+        "part": "body",
+        "key": "mirror"
+      },
+      {
+        "match": "mirror_middle",
+        "part": "cabin",
+        "key": "mirror"
+      },
+      {
+        "match": "headlights_(flash|plastics)|hedlights_grid|headlights_plastic_ring",
+        "part": "body",
+        "key": "light.front"
+      },
+      {
+        "match": "reflector",
+        "part": "body",
+        "key": "reflector"
+      },
+      {
+        "match": "number_plate",
+        "part": "body",
+        "key": "plate"
+      },
+      {
+        "match": "red_light_back",
+        "part": "body",
+        "key": "light.rear"
+      },
+      {
+        "match": "logo_door",
+        "part": "body",
+        "key": "logo"
+      },
+      {
+        "match": "dynamic",
+        "part": "cabin",
+        "key": "speaker"
+      },
+      {
+        "match": "interior_grid",
+        "part": "cabin",
+        "key": "dashboard"
+      },
+      {
+        "match": "belts_",
+        "part": "cabin",
+        "key": "belt"
+      },
+      {
+        "match": "rug(s_|_interior)",
+        "part": "cabin",
+        "key": "carpet"
+      },
+      {
+        "match": "leather_perforated",
+        "part": "cabin",
+        "key": "seat"
+      },
+      {
+        "match": "metal_parts",
+        "part": "engine",
+        "key": "engine"
+      }
+    ]
   },
   "systemFallback": {
     "exhaust": "engine",
@@ -42,5 +123,7 @@
   "links": {
     "specs": "https://www.porsche.com/international/models/911/911-turbo-models/911-turbo-s/",
     "manual": "https://www.porsche.com/international/accessoriesandservice/porscheservice/vehicleinformation/"
-  }
+  },
+  "layout": "rear-engine",
+  "doors": 2
 }

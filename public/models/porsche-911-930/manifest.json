@@ -1,20 +1,20 @@
 {
  "id": "porsche-911-930",
  "file": "model.glb",
- "version": "ee4b0ea703",
+ "version": "5f6c2dd37e",
  "files": {
   "full": {
    "file": "model.glb",
-   "bytes": 3693032,
-   "faces": 196717
+   "bytes": 3735740,
+   "faces": 197545
   },
   "light": {
    "file": "model.light.glb",
-   "bytes": 2412836,
-   "faces": 150566
+   "bytes": 2455384,
+   "faces": 150867
   }
  },
- "generated": "2026-09-13T10:00:04.784Z",
+ "generated": "2026-09-13T10:31:08.956Z",
  "input": "source/porsche-911-930/scene.gltf",
  "lengthMeters": 4.291,
  "bounds": {
@@ -45,11 +45,12 @@
   ]
  },
  "counts": {
-  "body": 139,
-  "cabin": 26,
+  "body": 157,
+  "cabin": 30,
   "glass": 42,
-  "doors": 8,
-  "wheels": 10
+  "doors": 4,
+  "wheels": 10,
+  "exhaust": 3
  },
  "objects": [
   {
@@ -413,9 +414,9 @@
    "faces": 572
   },
   {
-   "id": "doors_0018",
-   "part": "doors",
-   "key": "tailgate",
+   "id": "body_0018",
+   "part": "body",
+   "key": "engine.lid",
    "side": null,
    "end": null,
    "source": "Object_60",
@@ -473,9 +474,9 @@
    "faces": 2652
   },
   {
-   "id": "doors_0021",
-   "part": "doors",
-   "key": "tailgate",
+   "id": "body_0021",
+   "part": "body",
+   "key": "spoiler",
    "side": null,
    "end": null,
    "source": "Object_56",
@@ -515,7 +516,7 @@
   {
    "id": "body_0023",
    "part": "body",
-   "key": "trim",
+   "key": "spoiler",
    "side": null,
    "end": null,
    "source": "Object_55",
@@ -535,7 +536,7 @@
   {
    "id": "doors_0024",
    "part": "doors",
-   "key": "door.front",
+   "key": "door",
    "side": "L",
    "end": null,
    "source": "Object_60",
@@ -555,7 +556,7 @@
   {
    "id": "doors_0025",
    "part": "doors",
-   "key": "door.front",
+   "key": "door",
    "side": "R",
    "end": null,
    "source": "Object_60",
@@ -575,7 +576,7 @@
   {
    "id": "glass_0026",
    "part": "glass",
-   "key": "glass",
+   "key": "glass.rear",
    "side": null,
    "end": null,
    "source": "Object_18",
@@ -835,7 +836,7 @@
   {
    "id": "body_0039",
    "part": "body",
-   "key": "exterior",
+   "key": "roof",
    "side": null,
    "end": null,
    "source": "Object_60",
@@ -895,7 +896,7 @@
   {
    "id": "body_0042",
    "part": "body",
-   "key": "trim",
+   "key": "roof",
    "side": null,
    "end": null,
    "source": "Object_56",
@@ -933,9 +934,9 @@
    "faces": 912
   },
   {
-   "id": "doors_0044",
-   "part": "doors",
-   "key": "tailgate",
+   "id": "body_0044",
+   "part": "body",
+   "key": "reflector",
    "side": null,
    "end": null,
    "source": "Object_58",
@@ -953,9 +954,9 @@
    "faces": 416
   },
   {
-   "id": "doors_0045",
-   "part": "doors",
-   "key": "tailgate",
+   "id": "body_0045",
+   "part": "body",
+   "key": "engine.lid",
    "side": null,
    "end": null,
    "source": "Object_56",
@@ -1015,7 +1016,7 @@
   {
    "id": "body_0048",
    "part": "body",
-   "key": "trim",
+   "key": "hood",
    "side": "L",
    "end": null,
    "source": "Object_44",
@@ -1035,7 +1036,7 @@
   {
    "id": "body_0049",
    "part": "body",
-   "key": "trim",
+   "key": "hood",
    "side": "R",
    "end": null,
    "source": "Object_44",
@@ -1095,7 +1096,7 @@
   {
    "id": "body_0052",
    "part": "body",
-   "key": "trim",
+   "key": "spoiler",
    "side": null,
    "end": null,
    "source": "Object_55",
@@ -1113,9 +1114,9 @@
    "faces": 10684
   },
   {
-   "id": "body_0053",
-   "part": "body",
-   "key": "trim.lower",
+   "id": "exhaust_0053",
+   "part": "exhaust",
+   "key": "exhaust",
    "side": "L",
    "end": null,
    "source": "Object_30",
@@ -1137,7 +1138,7 @@
    "part": "glass",
    "key": "glass.side",
    "side": "L",
-   "end": "R",
+   "end": null,
    "source": "Object_13",
    "material": "glass",
    "center": [
@@ -1157,7 +1158,7 @@
    "part": "glass",
    "key": "glass.side",
    "side": "R",
-   "end": "R",
+   "end": null,
    "source": "Object_13",
    "material": "glass",
    "center": [
@@ -1173,9 +1174,9 @@
    "faces": 80
   },
   {
-   "id": "body_0056",
-   "part": "body",
-   "key": "trim.lower",
+   "id": "exhaust_0056",
+   "part": "exhaust",
+   "key": "exhaust",
    "side": null,
    "end": null,
    "source": "Object_30",
@@ -1237,7 +1238,7 @@
    "part": "glass",
    "key": "glass.side",
    "side": "L",
-   "end": "R",
+   "end": null,
    "source": "Object_13",
    "material": "glass",
    "center": [
@@ -1257,7 +1258,7 @@
    "part": "glass",
    "key": "glass.side",
    "side": "R",
-   "end": "R",
+   "end": null,
    "source": "Object_13",
    "material": "glass",
    "center": [
@@ -1275,7 +1276,7 @@
   {
    "id": "body_0061",
    "part": "body",
-   "key": "trim.lower",
+   "key": "bumper.front",
    "side": null,
    "end": null,
    "source": "Object_0",
@@ -1295,7 +1296,7 @@
   {
    "id": "body_0062",
    "part": "body",
-   "key": "trim",
+   "key": "bumper.rear",
    "side": null,
    "end": null,
    "source": "Object_0",
@@ -1395,7 +1396,7 @@
   {
    "id": "body_0067",
    "part": "body",
-   "key": "trim",
+   "key": "bumper.rear",
    "side": "R",
    "end": null,
    "source": "Object_56",
@@ -1415,7 +1416,7 @@
   {
    "id": "body_0068",
    "part": "body",
-   "key": "trim",
+   "key": "bumper.rear",
    "side": "L",
    "end": null,
    "source": "Object_56",
@@ -1476,7 +1477,7 @@
    "id": "glass_0071",
    "part": "glass",
    "key": "lens.rear",
-   "side": null,
+   "side": "L",
    "end": null,
    "source": "Object_70",
    "material": "930_lights",
@@ -1496,7 +1497,7 @@
    "id": "glass_0072",
    "part": "glass",
    "key": "lens.rear",
-   "side": null,
+   "side": "R",
    "end": null,
    "source": "Object_70",
    "material": "930_lights",
@@ -1515,7 +1516,7 @@
   {
    "id": "body_0073",
    "part": "body",
-   "key": "trim",
+   "key": "light.front",
    "side": "L",
    "end": null,
    "source": "Object_26",
@@ -1535,7 +1536,7 @@
   {
    "id": "body_0074",
    "part": "body",
-   "key": "trim",
+   "key": "light.front",
    "side": "R",
    "end": null,
    "source": "Object_26",
@@ -1555,7 +1556,7 @@
   {
    "id": "body_0075",
    "part": "body",
-   "key": "exterior",
+   "key": "light.front",
    "side": "L",
    "end": null,
    "source": "Object_60",
@@ -1575,7 +1576,7 @@
   {
    "id": "body_0076",
    "part": "body",
-   "key": "exterior",
+   "key": "light.front",
    "side": "R",
    "end": null,
    "source": "Object_60",
@@ -1635,7 +1636,7 @@
   {
    "id": "body_0079",
    "part": "body",
-   "key": "trim.lower",
+   "key": "bumper.rear",
    "side": "L",
    "end": null,
    "source": "Object_56",
@@ -1655,7 +1656,7 @@
   {
    "id": "body_0080",
    "part": "body",
-   "key": "trim.lower",
+   "key": "bumper.rear",
    "side": "R",
    "end": null,
    "source": "Object_56",
@@ -1695,7 +1696,7 @@
   {
    "id": "body_0082",
    "part": "body",
-   "key": "trim",
+   "key": "grille",
    "side": "L",
    "end": null,
    "source": "Object_38",
@@ -1713,7 +1714,27 @@
    "faces": 112
   },
   {
-   "id": "body_0083",
+   "id": "cabin_0083",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "L",
+   "end": null,
+   "source": "Object_39",
+   "material": "930_plastics",
+   "center": [
+    -0.6,
+    0.871,
+    0.475
+   ],
+   "size": [
+    0.195,
+    0.026,
+    0.363
+   ],
+   "faces": 112
+  },
+  {
+   "id": "body_0084",
    "part": "body",
    "key": "mirror",
    "side": "L",
@@ -1733,7 +1754,7 @@
    "faces": 1556
   },
   {
-   "id": "body_0084",
+   "id": "body_0085",
    "part": "body",
    "key": "mirror",
    "side": "R",
@@ -1753,7 +1774,7 @@
    "faces": 1545
   },
   {
-   "id": "cabin_0085",
+   "id": "cabin_0086",
    "part": "cabin",
    "key": "trim.interior",
    "side": null,
@@ -1773,7 +1794,7 @@
    "faces": 112
   },
   {
-   "id": "body_0086",
+   "id": "body_0087",
    "part": "body",
    "key": "trim.lower",
    "side": "L",
@@ -1793,7 +1814,7 @@
    "faces": 214
   },
   {
-   "id": "body_0087",
+   "id": "body_0088",
    "part": "body",
    "key": "trim.lower",
    "side": "R",
@@ -1813,10 +1834,10 @@
    "faces": 214
   },
   {
-   "id": "glass_0088",
+   "id": "glass_0089",
    "part": "glass",
    "key": "lens.front",
-   "side": null,
+   "side": "R",
    "end": null,
    "source": "Object_69",
    "material": "930_lights",
@@ -1833,10 +1854,10 @@
    "faces": 416
   },
   {
-   "id": "glass_0089",
+   "id": "glass_0090",
    "part": "glass",
    "key": "lens.front",
-   "side": null,
+   "side": "L",
    "end": null,
    "source": "Object_69",
    "material": "930_lights",
@@ -1853,11 +1874,11 @@
    "faces": 416
   },
   {
-   "id": "glass_0090",
+   "id": "glass_0091",
    "part": "glass",
    "key": "glass.side",
    "side": "L",
-   "end": "F",
+   "end": null,
    "source": "Object_13",
    "material": "glass",
    "center": [
@@ -1873,11 +1894,11 @@
    "faces": 31
   },
   {
-   "id": "glass_0091",
+   "id": "glass_0092",
    "part": "glass",
    "key": "glass.side",
    "side": "R",
-   "end": "F",
+   "end": null,
    "source": "Object_13",
    "material": "glass",
    "center": [
@@ -1893,10 +1914,10 @@
    "faces": 31
   },
   {
-   "id": "glass_0092",
+   "id": "glass_0093",
    "part": "glass",
    "key": "lens.front",
-   "side": null,
+   "side": "R",
    "end": null,
    "source": "Object_51",
    "material": "930_lights_refraction",
@@ -1913,10 +1934,10 @@
    "faces": 416
   },
   {
-   "id": "glass_0093",
+   "id": "glass_0094",
    "part": "glass",
    "key": "lens.front",
-   "side": null,
+   "side": "L",
    "end": null,
    "source": "Object_51",
    "material": "930_lights_refraction",
@@ -1933,9 +1954,9 @@
    "faces": 416
   },
   {
-   "id": "body_0094",
+   "id": "body_0095",
    "part": "body",
-   "key": "trim",
+   "key": "grille",
    "side": "L",
    "end": null,
    "source": "Object_38",
@@ -1953,7 +1974,7 @@
    "faces": 476
   },
   {
-   "id": "body_0095",
+   "id": "body_0096",
    "part": "body",
    "key": "trim",
    "side": "L",
@@ -1973,7 +1994,7 @@
    "faces": 1468
   },
   {
-   "id": "body_0096",
+   "id": "body_0097",
    "part": "body",
    "key": "trim",
    "side": "R",
@@ -1993,7 +2014,27 @@
    "faces": 1468
   },
   {
-   "id": "cabin_0097",
+   "id": "cabin_0098",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "L",
+   "end": null,
+   "source": "Object_39",
+   "material": "930_plastics",
+   "center": [
+    -0.608,
+    0.886,
+    0.479
+   ],
+   "size": [
+    0.135,
+    0.024,
+    0.246
+   ],
+   "faces": 476
+  },
+  {
+   "id": "cabin_0099",
    "part": "cabin",
    "key": "trim.interior",
    "side": null,
@@ -2013,7 +2054,7 @@
    "faces": 476
   },
   {
-   "id": "cabin_0098",
+   "id": "cabin_0100",
    "part": "cabin",
    "key": "interior",
    "side": null,
@@ -2033,9 +2074,9 @@
    "faces": 30
   },
   {
-   "id": "body_0099",
+   "id": "body_0101",
    "part": "body",
-   "key": "trim",
+   "key": "light.rear",
    "side": "L",
    "end": null,
    "source": "Object_19",
@@ -2053,9 +2094,9 @@
    "faces": 464
   },
   {
-   "id": "body_0100",
+   "id": "body_0102",
    "part": "body",
-   "key": "trim",
+   "key": "light.rear",
    "side": "R",
    "end": null,
    "source": "Object_19",
@@ -2073,7 +2114,7 @@
    "faces": 463
   },
   {
-   "id": "body_0101",
+   "id": "body_0103",
    "part": "body",
    "key": "mirror",
    "side": "R",
@@ -2093,7 +2134,7 @@
    "faces": 960
   },
   {
-   "id": "body_0102",
+   "id": "body_0104",
    "part": "body",
    "key": "mirror",
    "side": "L",
@@ -2113,9 +2154,9 @@
    "faces": 960
   },
   {
-   "id": "body_0103",
+   "id": "body_0105",
    "part": "body",
-   "key": "trim",
+   "key": "light.front",
    "side": "L",
    "end": null,
    "source": "Object_56",
@@ -2133,9 +2174,9 @@
    "faces": 70
   },
   {
-   "id": "body_0104",
+   "id": "body_0106",
    "part": "body",
-   "key": "trim",
+   "key": "light.front",
    "side": "R",
    "end": null,
    "source": "Object_56",
@@ -2153,9 +2194,9 @@
    "faces": 70
   },
   {
-   "id": "body_0105",
+   "id": "body_0107",
    "part": "body",
-   "key": "trim.lower",
+   "key": "bumper.front",
    "side": "R",
    "end": null,
    "source": "Object_22",
@@ -2173,9 +2214,9 @@
    "faces": 820
   },
   {
-   "id": "body_0106",
+   "id": "body_0108",
    "part": "body",
-   "key": "trim.lower",
+   "key": "bumper.front",
    "side": "L",
    "end": null,
    "source": "Object_22",
@@ -2193,11 +2234,11 @@
    "faces": 820
   },
   {
-   "id": "doors_0107",
+   "id": "doors_0109",
    "part": "doors",
    "key": "door.handle",
    "side": "R",
-   "end": "R",
+   "end": null,
    "source": "Object_56",
    "material": "930_plastics",
    "center": [
@@ -2213,11 +2254,11 @@
    "faces": 505
   },
   {
-   "id": "doors_0108",
+   "id": "doors_0110",
    "part": "doors",
    "key": "door.handle",
    "side": "L",
-   "end": "R",
+   "end": null,
    "source": "Object_56",
    "material": "930_plastics",
    "center": [
@@ -2233,10 +2274,10 @@
    "faces": 505
   },
   {
-   "id": "glass_0109",
+   "id": "glass_0111",
    "part": "glass",
    "key": "lens.front",
-   "side": null,
+   "side": "R",
    "end": null,
    "source": "Object_67",
    "material": "930_lights",
@@ -2253,10 +2294,10 @@
    "faces": 424
   },
   {
-   "id": "glass_0110",
+   "id": "glass_0112",
    "part": "glass",
    "key": "lens.front",
-   "side": null,
+   "side": "L",
    "end": null,
    "source": "Object_71",
    "material": "930_lights",
@@ -2273,9 +2314,9 @@
    "faces": 424
   },
   {
-   "id": "body_0111",
+   "id": "body_0113",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": "L",
    "end": null,
    "source": "Object_31",
@@ -2293,7 +2334,7 @@
    "faces": 352
   },
   {
-   "id": "cabin_0112",
+   "id": "cabin_0114",
    "part": "cabin",
    "key": "interior",
    "side": null,
@@ -2313,9 +2354,9 @@
    "faces": 78
   },
   {
-   "id": "body_0113",
-   "part": "body",
-   "key": "trim.lower",
+   "id": "exhaust_0115",
+   "part": "exhaust",
+   "key": "exhaust",
    "side": "R",
    "end": null,
    "source": "Object_30",
@@ -2333,7 +2374,7 @@
    "faces": 102
   },
   {
-   "id": "body_0114",
+   "id": "body_0116",
    "part": "body",
    "key": "trim.lower",
    "side": "L",
@@ -2353,7 +2394,7 @@
    "faces": 245
   },
   {
-   "id": "wheels_0115",
+   "id": "wheels_0117",
    "part": "wheels",
    "key": "wheel.part",
    "side": "R",
@@ -2373,9 +2414,9 @@
    "faces": 245
   },
   {
-   "id": "body_0116",
+   "id": "body_0118",
    "part": "body",
-   "key": "trim.lower",
+   "key": "bumper.front",
    "side": "L",
    "end": null,
    "source": "Object_27",
@@ -2393,9 +2434,9 @@
    "faces": 144
   },
   {
-   "id": "body_0117",
+   "id": "body_0119",
    "part": "body",
-   "key": "trim.lower",
+   "key": "bumper.front",
    "side": "R",
    "end": null,
    "source": "Object_27",
@@ -2413,9 +2454,9 @@
    "faces": 144
   },
   {
-   "id": "body_0118",
+   "id": "body_0120",
    "part": "body",
-   "key": "trim",
+   "key": "light.rear",
    "side": "L",
    "end": null,
    "source": "Object_59",
@@ -2433,9 +2474,9 @@
    "faces": 381
   },
   {
-   "id": "body_0119",
+   "id": "body_0121",
    "part": "body",
-   "key": "trim",
+   "key": "light.rear",
    "side": "R",
    "end": null,
    "source": "Object_59",
@@ -2453,7 +2494,7 @@
    "faces": 381
   },
   {
-   "id": "body_0120",
+   "id": "body_0122",
    "part": "body",
    "key": "trim.lower",
    "side": "L",
@@ -2473,7 +2514,7 @@
    "faces": 245
   },
   {
-   "id": "body_0121",
+   "id": "body_0123",
    "part": "body",
    "key": "trim.lower",
    "side": "R",
@@ -2493,7 +2534,7 @@
    "faces": 245
   },
   {
-   "id": "body_0122",
+   "id": "body_0124",
    "part": "body",
    "key": "trim",
    "side": "L",
@@ -2513,7 +2554,7 @@
    "faces": 162
   },
   {
-   "id": "body_0123",
+   "id": "body_0125",
    "part": "body",
    "key": "trim",
    "side": "R",
@@ -2533,10 +2574,10 @@
    "faces": 162
   },
   {
-   "id": "glass_0124",
+   "id": "glass_0126",
    "part": "glass",
    "key": "lens.rear",
-   "side": null,
+   "side": "L",
    "end": null,
    "source": "Object_45",
    "material": "930_lights",
@@ -2553,10 +2594,10 @@
    "faces": 208
   },
   {
-   "id": "glass_0125",
+   "id": "glass_0127",
    "part": "glass",
    "key": "lens.rear",
-   "side": null,
+   "side": "R",
    "end": null,
    "source": "Object_45",
    "material": "930_lights",
@@ -2573,9 +2614,9 @@
    "faces": 208
   },
   {
-   "id": "body_0126",
+   "id": "body_0128",
    "part": "body",
-   "key": "trim",
+   "key": "bumper.rear",
    "side": null,
    "end": null,
    "source": "Object_32",
@@ -2593,7 +2634,7 @@
    "faces": 509
   },
   {
-   "id": "body_0127",
+   "id": "body_0129",
    "part": "body",
    "key": "mirror",
    "side": "L",
@@ -2613,7 +2654,7 @@
    "faces": 138
   },
   {
-   "id": "body_0128",
+   "id": "body_0130",
    "part": "body",
    "key": "mirror",
    "side": "R",
@@ -2633,10 +2674,10 @@
    "faces": 138
   },
   {
-   "id": "glass_0129",
+   "id": "glass_0131",
    "part": "glass",
    "key": "lens.front",
-   "side": null,
+   "side": "R",
    "end": null,
    "source": "Object_69",
    "material": "930_lights",
@@ -2653,10 +2694,10 @@
    "faces": 196
   },
   {
-   "id": "glass_0130",
+   "id": "glass_0132",
    "part": "glass",
    "key": "lens.front",
-   "side": null,
+   "side": "L",
    "end": null,
    "source": "Object_69",
    "material": "930_lights",
@@ -2673,7 +2714,7 @@
    "faces": 196
   },
   {
-   "id": "body_0131",
+   "id": "body_0133",
    "part": "body",
    "key": "trim",
    "side": "R",
@@ -2693,7 +2734,7 @@
    "faces": 95
   },
   {
-   "id": "cabin_0132",
+   "id": "cabin_0134",
    "part": "cabin",
    "key": "interior",
    "side": null,
@@ -2713,10 +2754,10 @@
    "faces": 1924
   },
   {
-   "id": "glass_0133",
+   "id": "glass_0135",
    "part": "glass",
    "key": "lens.front",
-   "side": null,
+   "side": "R",
    "end": null,
    "source": "Object_12",
    "material": "930_lights",
@@ -2733,10 +2774,10 @@
    "faces": 66
   },
   {
-   "id": "glass_0134",
+   "id": "glass_0136",
    "part": "glass",
    "key": "lens.front",
-   "side": null,
+   "side": "L",
    "end": null,
    "source": "Object_12",
    "material": "930_lights",
@@ -2753,9 +2794,9 @@
    "faces": 66
   },
   {
-   "id": "body_0135",
+   "id": "body_0137",
    "part": "body",
-   "key": "trim.lower",
+   "key": "bumper.front",
    "side": "L",
    "end": null,
    "source": "Object_23",
@@ -2773,9 +2814,9 @@
    "faces": 112
   },
   {
-   "id": "body_0136",
+   "id": "body_0138",
    "part": "body",
-   "key": "trim.lower",
+   "key": "bumper.front",
    "side": "R",
    "end": null,
    "source": "Object_23",
@@ -2793,7 +2834,7 @@
    "faces": 112
   },
   {
-   "id": "cabin_0137",
+   "id": "cabin_0139",
    "part": "cabin",
    "key": "interior",
    "side": "L",
@@ -2813,7 +2854,7 @@
    "faces": 36
   },
   {
-   "id": "cabin_0138",
+   "id": "cabin_0140",
    "part": "cabin",
    "key": "interior",
    "side": "R",
@@ -2833,10 +2874,50 @@
    "faces": 36
   },
   {
-   "id": "glass_0139",
+   "id": "cabin_0141",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "L",
+   "end": null,
+   "source": "Object_39",
+   "material": "930_plastics",
+   "center": [
+    -0.546,
+    0.878,
+    0.589
+   ],
+   "size": [
+    0.078,
+    0.023,
+    0.124
+   ],
+   "faces": 120
+  },
+  {
+   "id": "cabin_0142",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "L",
+   "end": null,
+   "source": "Object_39",
+   "material": "930_plastics",
+   "center": [
+    -0.662,
+    0.872,
+    0.365
+   ],
+   "size": [
+    0.067,
+    0.023,
+    0.13
+   ],
+   "faces": 120
+  },
+  {
+   "id": "glass_0143",
    "part": "glass",
    "key": "lens.rear",
-   "side": null,
+   "side": "L",
    "end": null,
    "source": "Object_70",
    "material": "930_lights",
@@ -2853,9 +2934,9 @@
    "faces": 448
   },
   {
-   "id": "body_0140",
+   "id": "body_0144",
    "part": "body",
-   "key": "trim.lower",
+   "key": "bumper.rear",
    "side": "L",
    "end": null,
    "source": "Object_21",
@@ -2873,9 +2954,9 @@
    "faces": 358
   },
   {
-   "id": "body_0141",
+   "id": "body_0145",
    "part": "body",
-   "key": "trim",
+   "key": "grille",
    "side": "L",
    "end": null,
    "source": "Object_38",
@@ -2893,9 +2974,9 @@
    "faces": 120
   },
   {
-   "id": "body_0142",
+   "id": "body_0146",
    "part": "body",
-   "key": "trim",
+   "key": "grille",
    "side": "L",
    "end": null,
    "source": "Object_38",
@@ -2913,7 +2994,7 @@
    "faces": 120
   },
   {
-   "id": "cabin_0143",
+   "id": "cabin_0147",
    "part": "cabin",
    "key": "trim.interior",
    "side": null,
@@ -2933,7 +3014,7 @@
    "faces": 120
   },
   {
-   "id": "cabin_0144",
+   "id": "cabin_0148",
    "part": "cabin",
    "key": "trim.interior",
    "side": null,
@@ -2953,10 +3034,10 @@
    "faces": 120
   },
   {
-   "id": "glass_0145",
+   "id": "glass_0149",
    "part": "glass",
    "key": "lens.front",
-   "side": null,
+   "side": "R",
    "end": null,
    "source": "Object_51",
    "material": "930_lights_refraction",
@@ -2973,10 +3054,10 @@
    "faces": 72
   },
   {
-   "id": "glass_0146",
+   "id": "glass_0150",
    "part": "glass",
    "key": "lens.front",
-   "side": null,
+   "side": "L",
    "end": null,
    "source": "Object_51",
    "material": "930_lights_refraction",
@@ -2993,10 +3074,10 @@
    "faces": 72
   },
   {
-   "id": "glass_0147",
+   "id": "glass_0151",
    "part": "glass",
    "key": "lens.rear",
-   "side": null,
+   "side": "L",
    "end": null,
    "source": "Object_45",
    "material": "930_lights",
@@ -3013,10 +3094,10 @@
    "faces": 128
   },
   {
-   "id": "glass_0148",
+   "id": "glass_0152",
    "part": "glass",
    "key": "lens.rear",
-   "side": null,
+   "side": "R",
    "end": null,
    "source": "Object_45",
    "material": "930_lights",
@@ -3033,7 +3114,7 @@
    "faces": 128
   },
   {
-   "id": "body_0149",
+   "id": "body_0153",
    "part": "body",
    "key": "trim",
    "side": "L",
@@ -3053,7 +3134,7 @@
    "faces": 124
   },
   {
-   "id": "body_0150",
+   "id": "body_0154",
    "part": "body",
    "key": "trim",
    "side": "R",
@@ -3073,7 +3154,7 @@
    "faces": 124
   },
   {
-   "id": "body_0151",
+   "id": "body_0155",
    "part": "body",
    "key": "trim",
    "side": "L",
@@ -3093,7 +3174,7 @@
    "faces": 37
   },
   {
-   "id": "wheels_0152",
+   "id": "wheels_0156",
    "part": "wheels",
    "key": "rim",
    "side": "L",
@@ -3113,7 +3194,7 @@
    "faces": 56
   },
   {
-   "id": "body_0153",
+   "id": "body_0157",
    "part": "body",
    "key": "trim",
    "side": null,
@@ -3133,7 +3214,7 @@
    "faces": 10
   },
   {
-   "id": "body_0154",
+   "id": "body_0158",
    "part": "body",
    "key": "trim",
    "side": "L",
@@ -3153,7 +3234,7 @@
    "faces": 10
   },
   {
-   "id": "body_0155",
+   "id": "body_0159",
    "part": "body",
    "key": "trim",
    "side": "R",
@@ -3173,9 +3254,9 @@
    "faces": 6
   },
   {
-   "id": "body_0156",
+   "id": "body_0160",
    "part": "body",
-   "key": "trim",
+   "key": "logo",
    "side": null,
    "end": null,
    "source": "Object_8",
@@ -3193,9 +3274,9 @@
    "faces": 20
   },
   {
-   "id": "glass_0157",
+   "id": "glass_0161",
    "part": "glass",
-   "key": "small",
+   "key": "lens.rear",
    "side": "L",
    "end": null,
    "source": "Object_10",
@@ -3213,9 +3294,9 @@
    "faces": 184
   },
   {
-   "id": "glass_0158",
+   "id": "glass_0162",
    "part": "glass",
-   "key": "small",
+   "key": "lens.rear",
    "side": "L",
    "end": null,
    "source": "Object_11",
@@ -3233,49 +3314,89 @@
    "faces": 14
   },
   {
-   "id": "cabin_0159",
-   "part": "cabin",
-   "key": "interior",
+   "id": "body_0163",
+   "part": "body",
+   "key": "trim",
    "side": "L",
    "end": null,
    "source": "Object_14",
    "material": "930_chromes",
    "center": [
-    1.845,
+    1.748,
     0.528,
-    0.585
+    0.704
    ],
    "size": [
-    0.202,
+    0.008,
     0.01,
-    0.244
+    0.008
    ],
-   "faces": 234
+   "faces": 78
   },
   {
-   "id": "cabin_0160",
-   "part": "cabin",
-   "key": "interior",
+   "id": "body_0164",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_14",
+   "material": "930_chromes",
+   "center": [
+    1.926,
+    0.529,
+    0.525
+   ],
+   "size": [
+    0.04,
+    0.008,
+    0.124
+   ],
+   "faces": 156
+  },
+  {
+   "id": "body_0165",
+   "part": "body",
+   "key": "trim",
    "side": "R",
    "end": null,
    "source": "Object_14",
    "material": "930_chromes",
    "center": [
-    1.845,
+    1.748,
     0.528,
-    -0.585
+    -0.704
    ],
    "size": [
-    0.202,
+    0.008,
     0.01,
-    0.244
+    0.008
    ],
-   "faces": 234
+   "faces": 78
   },
   {
-   "id": "body_0161",
+   "id": "body_0166",
    "part": "body",
-   "key": "small",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_14",
+   "material": "930_chromes",
+   "center": [
+    1.926,
+    0.529,
+    -0.525
+   ],
+   "size": [
+    0.04,
+    0.008,
+    0.124
+   ],
+   "faces": 156
+  },
+  {
+   "id": "body_0167",
+   "part": "body",
+   "key": "trim",
    "side": null,
    "end": null,
    "source": "Object_17",
@@ -3293,9 +3414,9 @@
    "faces": 268
   },
   {
-   "id": "body_0162",
+   "id": "body_0168",
    "part": "body",
-   "key": "small",
+   "key": "trim.lower",
    "side": "L",
    "end": null,
    "source": "Object_20",
@@ -3313,9 +3434,9 @@
    "faces": 84
   },
   {
-   "id": "body_0163",
+   "id": "body_0169",
    "part": "body",
-   "key": "small",
+   "key": "trim.lower",
    "side": "L",
    "end": null,
    "source": "Object_21",
@@ -3333,9 +3454,9 @@
    "faces": 84
   },
   {
-   "id": "body_0164",
+   "id": "body_0170",
    "part": "body",
-   "key": "small",
+   "key": "bumper.front",
    "side": "L",
    "end": null,
    "source": "Object_22",
@@ -3350,12 +3471,32 @@
     0.078,
     0.091
    ],
-   "faces": 800
+   "faces": 576
   },
   {
-   "id": "body_0165",
+   "id": "body_0171",
    "part": "body",
-   "key": "small",
+   "key": "bumper.front",
+   "side": "L",
+   "end": null,
+   "source": "Object_22",
+   "material": "930_plastics",
+   "center": [
+    -2.001,
+    0.243,
+    0.522
+   ],
+   "size": [
+    0.036,
+    0.025,
+    0.013
+   ],
+   "faces": 224
+  },
+  {
+   "id": "body_0172",
+   "part": "body",
+   "key": "bumper.front",
    "side": "R",
    "end": null,
    "source": "Object_22",
@@ -3370,12 +3511,32 @@
     0.078,
     0.091
    ],
-   "faces": 800
+   "faces": 576
   },
   {
-   "id": "body_0166",
+   "id": "body_0173",
    "part": "body",
-   "key": "small",
+   "key": "bumper.front",
+   "side": "R",
+   "end": null,
+   "source": "Object_22",
+   "material": "930_plastics",
+   "center": [
+    -2.001,
+    0.243,
+    -0.522
+   ],
+   "size": [
+    0.036,
+    0.025,
+    0.013
+   ],
+   "faces": 224
+  },
+  {
+   "id": "body_0174",
+   "part": "body",
+   "key": "trim.lower",
    "side": "L",
    "end": null,
    "source": "Object_23",
@@ -3393,9 +3554,9 @@
    "faces": 48
   },
   {
-   "id": "body_0167",
+   "id": "body_0175",
    "part": "body",
-   "key": "small",
+   "key": "trim.lower",
    "side": "R",
    "end": null,
    "source": "Object_23",
@@ -3413,47 +3574,87 @@
    "faces": 48
   },
   {
-   "id": "body_0168",
+   "id": "body_0176",
    "part": "body",
-   "key": "small",
+   "key": "light.front",
    "side": "L",
    "end": null,
    "source": "Object_26",
    "material": "930_chromes",
    "center": [
-    -1.794,
-    0.586,
+    -1.724,
+    0.636,
     0.638
    ],
    "size": [
-    0.144,
-    0.136,
+    0.003,
+    0.037,
     0.037
    ],
-   "faces": 194
+   "faces": 170
   },
   {
-   "id": "body_0169",
+   "id": "body_0177",
    "part": "body",
-   "key": "small",
+   "key": "light.front",
+   "side": "L",
+   "end": null,
+   "source": "Object_26",
+   "material": "930_chromes",
+   "center": [
+    -1.863,
+    0.521,
+    0.643
+   ],
+   "size": [
+    0.007,
+    0.006,
+    0.009
+   ],
+   "faces": 24
+  },
+  {
+   "id": "body_0178",
+   "part": "body",
+   "key": "light.front",
    "side": "R",
    "end": null,
    "source": "Object_26",
    "material": "930_chromes",
    "center": [
-    -1.794,
-    0.586,
+    -1.724,
+    0.636,
     -0.638
    ],
    "size": [
-    0.144,
-    0.136,
+    0.003,
+    0.037,
     0.037
    ],
-   "faces": 194
+   "faces": 170
   },
   {
-   "id": "cabin_0170",
+   "id": "body_0179",
+   "part": "body",
+   "key": "light.front",
+   "side": "R",
+   "end": null,
+   "source": "Object_26",
+   "material": "930_chromes",
+   "center": [
+    -1.863,
+    0.521,
+    -0.642
+   ],
+   "size": [
+    0.007,
+    0.006,
+    0.009
+   ],
+   "faces": 24
+  },
+  {
+   "id": "cabin_0180",
    "part": "cabin",
    "key": "interior",
    "side": "L",
@@ -3461,19 +3662,59 @@
    "source": "Object_28",
    "material": "black",
    "center": [
-    -1.868,
+    -1.721,
+    0.627,
+    0.638
+   ],
+   "size": [
+    0.01,
+    0.055,
+    0.038
+   ],
+   "faces": 88
+  },
+  {
+   "id": "cabin_0181",
+   "part": "cabin",
+   "key": "interior",
+   "side": "R",
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    -1.721,
+    0.627,
+    -0.638
+   ],
+   "size": [
+    0.01,
+    0.055,
+    0.038
+   ],
+   "faces": 88
+  },
+  {
+   "id": "cabin_0182",
+   "part": "cabin",
+   "key": "interior",
+   "side": "L",
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    -1.9,
     0.516,
     0.652
    ],
    "size": [
-    0.304,
+    0.24,
     0.292,
     0.156
    ],
-   "faces": 126
+   "faces": 38
   },
   {
-   "id": "cabin_0171",
+   "id": "cabin_0183",
    "part": "cabin",
    "key": "interior",
    "side": "R",
@@ -3481,19 +3722,19 @@
    "source": "Object_28",
    "material": "black",
    "center": [
-    -1.868,
+    -1.9,
     0.516,
     -0.652
    ],
    "size": [
-    0.304,
+    0.24,
     0.292,
     0.156
    ],
-   "faces": 126
+   "faces": 38
   },
   {
-   "id": "cabin_0172",
+   "id": "cabin_0184",
    "part": "cabin",
    "key": "interior",
    "side": null,
@@ -3501,19 +3742,19 @@
    "source": "Object_28",
    "material": "black",
    "center": [
-    -0.555,
-    0.987,
-    0
+    -0.309,
+    1.103,
+    0.001
    ],
    "size": [
-    0.541,
-    0.328,
-    0.159
+    0.054,
+    0.094,
+    0.037
    ],
-   "faces": 76
+   "faces": 68
   },
   {
-   "id": "cabin_0173",
+   "id": "cabin_0185",
    "part": "cabin",
    "key": "interior",
    "side": null,
@@ -3533,7 +3774,27 @@
    "faces": 16
   },
   {
-   "id": "cabin_0174",
+   "id": "cabin_0186",
+   "part": "cabin",
+   "key": "interior",
+   "side": null,
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    -0.823,
+    0.829,
+    0
+   ],
+   "size": [
+    0.005,
+    0.013,
+    0.159
+   ],
+   "faces": 16
+  },
+  {
+   "id": "cabin_0187",
    "part": "cabin",
    "key": "interior",
    "side": null,
@@ -3553,29 +3814,9 @@
    "faces": 16
   },
   {
-   "id": "cabin_0175",
-   "part": "cabin",
-   "key": "interior",
-   "side": null,
-   "end": null,
-   "source": "Object_28",
-   "material": "black",
-   "center": [
-    -0.286,
-    1.066,
-    0.001
-   ],
-   "size": [
-    0.007,
-    0.02,
-    0.02
-   ],
-   "faces": 8
-  },
-  {
-   "id": "body_0176",
+   "id": "body_0188",
    "part": "body",
-   "key": "small",
+   "key": "mirror",
    "side": null,
    "end": null,
    "source": "Object_29",
@@ -3593,9 +3834,9 @@
    "faces": 16
   },
   {
-   "id": "body_0177",
+   "id": "body_0189",
    "part": "body",
-   "key": "small",
+   "key": "logo",
    "side": null,
    "end": null,
    "source": "Object_33",
@@ -3613,9 +3854,9 @@
    "faces": 40
   },
   {
-   "id": "body_0178",
+   "id": "body_0190",
    "part": "body",
-   "key": "trim",
+   "key": "logo",
    "side": null,
    "end": null,
    "source": "Object_34",
@@ -3633,9 +3874,9 @@
    "faces": 18
   },
   {
-   "id": "body_0179",
+   "id": "body_0191",
    "part": "body",
-   "key": "small",
+   "key": "mirror",
    "side": null,
    "end": null,
    "source": "Object_35",
@@ -3653,9 +3894,9 @@
    "faces": 14
   },
   {
-   "id": "body_0180",
+   "id": "body_0192",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": null,
    "end": null,
    "source": "Object_36",
@@ -3673,9 +3914,9 @@
    "faces": 268
   },
   {
-   "id": "body_0181",
+   "id": "body_0193",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": null,
    "end": null,
    "source": "Object_40",
@@ -3693,9 +3934,9 @@
    "faces": 268
   },
   {
-   "id": "body_0182",
+   "id": "body_0194",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": "R",
    "end": null,
    "source": "Object_40",
@@ -3713,7 +3954,7 @@
    "faces": 108
   },
   {
-   "id": "body_0183",
+   "id": "body_0195",
    "part": "body",
    "key": "trim",
    "side": null,
@@ -3733,9 +3974,9 @@
    "faces": 10
   },
   {
-   "id": "glass_0184",
+   "id": "glass_0196",
    "part": "glass",
-   "key": "small",
+   "key": "lens.rear",
    "side": "L",
    "end": null,
    "source": "Object_45",
@@ -3753,9 +3994,9 @@
    "faces": 18
   },
   {
-   "id": "glass_0185",
+   "id": "glass_0197",
    "part": "glass",
-   "key": "small",
+   "key": "lens.rear",
    "side": "R",
    "end": null,
    "source": "Object_45",
@@ -3773,9 +4014,9 @@
    "faces": 610
   },
   {
-   "id": "glass_0186",
+   "id": "glass_0198",
    "part": "glass",
-   "key": "small",
+   "key": "lens.rear",
    "side": "L",
    "end": null,
    "source": "Object_45",
@@ -3793,9 +4034,9 @@
    "faces": 610
   },
   {
-   "id": "glass_0187",
+   "id": "glass_0199",
    "part": "glass",
-   "key": "small",
+   "key": "lens.rear",
    "side": "R",
    "end": null,
    "source": "Object_45",
@@ -3813,9 +4054,9 @@
    "faces": 18
   },
   {
-   "id": "body_0188",
+   "id": "body_0200",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": "L",
    "end": null,
    "source": "Object_46",
@@ -3833,9 +4074,9 @@
    "faces": 58
   },
   {
-   "id": "body_0189",
+   "id": "body_0201",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": "R",
    "end": null,
    "source": "Object_46",
@@ -3853,9 +4094,9 @@
    "faces": 58
   },
   {
-   "id": "body_0190",
+   "id": "body_0202",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": "L",
    "end": null,
    "source": "Object_50",
@@ -3873,9 +4114,9 @@
    "faces": 78
   },
   {
-   "id": "body_0191",
+   "id": "body_0203",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": "R",
    "end": null,
    "source": "Object_50",
@@ -3893,9 +4134,9 @@
    "faces": 78
   },
   {
-   "id": "glass_0192",
+   "id": "glass_0204",
    "part": "glass",
-   "key": "small",
+   "key": "lens.front",
    "side": "L",
    "end": null,
    "source": "Object_52",
@@ -3913,9 +4154,9 @@
    "faces": 200
   },
   {
-   "id": "glass_0193",
+   "id": "glass_0205",
    "part": "glass",
-   "key": "small",
+   "key": "lens.front",
    "side": "R",
    "end": null,
    "source": "Object_52",
@@ -3933,9 +4174,9 @@
    "faces": 200
   },
   {
-   "id": "body_0194",
+   "id": "body_0206",
    "part": "body",
-   "key": "small",
+   "key": "trim.lower",
    "side": "L",
    "end": null,
    "source": "Object_53",
@@ -3953,9 +4194,9 @@
    "faces": 24
   },
   {
-   "id": "body_0195",
+   "id": "body_0207",
    "part": "body",
-   "key": "small",
+   "key": "trim.lower",
    "side": "R",
    "end": null,
    "source": "Object_53",
@@ -3973,9 +4214,9 @@
    "faces": 24
   },
   {
-   "id": "body_0196",
+   "id": "body_0208",
    "part": "body",
-   "key": "small",
+   "key": "trim.lower",
    "side": "L",
    "end": null,
    "source": "Object_54",
@@ -3993,9 +4234,9 @@
    "faces": 56
   },
   {
-   "id": "body_0197",
+   "id": "body_0209",
    "part": "body",
-   "key": "small",
+   "key": "trim.lower",
    "side": "R",
    "end": null,
    "source": "Object_54",
@@ -4013,29 +4254,29 @@
    "faces": 56
   },
   {
-   "id": "body_0198",
+   "id": "body_0210",
    "part": "body",
-   "key": "small",
+   "key": "light.rear",
    "side": "L",
    "end": null,
    "source": "Object_56",
    "material": "930_plastics",
    "center": [
-    1.843,
-    0.526,
-    0.603
+    1.941,
+    0.474,
+    0.502
    ],
    "size": [
-    0.172,
-    0.066,
-    0.134
+    0.368,
+    0.17,
+    0.336
    ],
-   "faces": 124
+   "faces": 598
   },
   {
-   "id": "body_0199",
+   "id": "body_0211",
    "part": "body",
-   "key": "small",
+   "key": "light.front",
    "side": "L",
    "end": null,
    "source": "Object_56",
@@ -4053,89 +4294,89 @@
    "faces": 632
   },
   {
-   "id": "body_0200",
+   "id": "body_0212",
    "part": "body",
-   "key": "small",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -0.756,
+    0.854,
+    0.18
+   ],
+   "size": [
+    0.03,
+    0.026,
+    0.032
+   ],
+   "faces": 120
+  },
+  {
+   "id": "body_0213",
+   "part": "body",
+   "key": "trim.lower",
    "side": "L",
    "end": null,
    "source": "Object_56",
    "material": "930_plastics",
    "center": [
-    -0.668,
-    0.757,
-    0.489
+    0.184,
+    0.185,
+    0.74
    ],
    "size": [
-    0.322,
-    0.218,
-    0.65
+    0.1,
+    0.065,
+    0.073
    ],
-   "faces": 337
+   "faces": 214
   },
   {
-   "id": "body_0201",
+   "id": "body_0214",
    "part": "body",
-   "key": "small",
+   "key": "light.rear",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    1.941,
+    0.474,
+    -0.502
+   ],
+   "size": [
+    0.368,
+    0.17,
+    0.336
+   ],
+   "faces": 598
+  },
+  {
+   "id": "body_0215",
+   "part": "body",
+   "key": "trim",
    "side": "L",
    "end": null,
    "source": "Object_56",
    "material": "930_plastics",
    "center": [
-    0.201,
-    0.441,
-    0.75
+    -0.635,
+    0.831,
+    0.525
    ],
    "size": [
-    0.133,
-    0.577,
-    0.093
+    0.257,
+    0.049,
+    0.484
    ],
-   "faces": 336
+   "faces": 121
   },
   {
-   "id": "body_0202",
+   "id": "body_0216",
    "part": "body",
-   "key": "small",
-   "side": "R",
-   "end": null,
-   "source": "Object_56",
-   "material": "930_plastics",
-   "center": [
-    2.108,
-    0.417,
-    -0.342
-   ],
-   "size": [
-    0.033,
-    0.055,
-    0.017
-   ],
-   "faces": 474
-  },
-  {
-   "id": "body_0203",
-   "part": "body",
-   "key": "small",
-   "side": "R",
-   "end": null,
-   "source": "Object_56",
-   "material": "930_plastics",
-   "center": [
-    1.843,
-    0.526,
-    -0.603
-   ],
-   "size": [
-    0.172,
-    0.066,
-    0.134
-   ],
-   "faces": 124
-  },
-  {
-   "id": "body_0204",
-   "part": "body",
-   "key": "small",
+   "key": "light.front",
    "side": "R",
    "end": null,
    "source": "Object_56",
@@ -4153,89 +4394,109 @@
    "faces": 632
   },
   {
-   "id": "body_0205",
+   "id": "body_0217",
    "part": "body",
-   "key": "small",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -0.756,
+    0.854,
+    -0.18
+   ],
+   "size": [
+    0.03,
+    0.026,
+    0.032
+   ],
+   "faces": 120
+  },
+  {
+   "id": "body_0218",
+   "part": "body",
+   "key": "trim.lower",
    "side": "R",
    "end": null,
    "source": "Object_56",
    "material": "930_plastics",
    "center": [
-    -0.668,
-    0.757,
-    -0.489
+    0.184,
+    0.185,
+    -0.74
    ],
    "size": [
-    0.322,
-    0.218,
-    0.65
+    0.1,
+    0.065,
+    0.073
    ],
-   "faces": 337
+   "faces": 214
   },
   {
-   "id": "body_0206",
+   "id": "body_0219",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": "R",
    "end": null,
    "source": "Object_56",
    "material": "930_plastics",
    "center": [
-    0.201,
-    0.441,
-    -0.75
+    -0.635,
+    0.831,
+    -0.525
    ],
    "size": [
-    0.133,
-    0.577,
-    0.093
+    0.257,
+    0.049,
+    0.484
    ],
-   "faces": 336
+   "faces": 121
   },
   {
-   "id": "body_0207",
+   "id": "body_0220",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": "L",
    "end": null,
    "source": "Object_56",
    "material": "930_plastics",
    "center": [
-    2.108,
-    0.417,
-    0.342
+    0.25,
+    0.715,
+    0.793
    ],
    "size": [
-    0.033,
-    0.055,
-    0.017
+    0.036,
+    0.028,
+    0.007
    ],
-   "faces": 474
+   "faces": 122
   },
   {
-   "id": "body_0208",
+   "id": "body_0221",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": "L",
    "end": null,
    "source": "Object_56",
    "material": "930_plastics",
    "center": [
-    0.527,
-    0.944,
-    0.478
+    0.359,
+    0.717,
+    0.803
    ],
    "size": [
-    0.427,
-    0.473,
-    0.668
+    0.092,
+    0.019,
+    0.018
    ],
-   "faces": 68
+   "faces": 36
   },
   {
-   "id": "body_0209",
+   "id": "body_0222",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": null,
    "end": null,
    "source": "Object_56",
@@ -4253,9 +4514,9 @@
    "faces": 48
   },
   {
-   "id": "body_0210",
+   "id": "body_0223",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": null,
    "end": null,
    "source": "Object_56",
@@ -4273,49 +4534,169 @@
    "faces": 48
   },
   {
-   "id": "body_0211",
+   "id": "body_0224",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": null,
    "end": null,
    "source": "Object_56",
    "material": "930_plastics",
    "center": [
-    0.751,
-    1.176,
+    0.738,
+    1.165,
+    0.282
+   ],
+   "size": [
+    0.005,
+    0.031,
+    0.276
+   ],
+   "faces": 32
+  },
+  {
+   "id": "body_0225",
+   "part": "body",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.742,
+    1.18,
     0
    ],
    "size": [
-    0.019,
-    0.017,
+    0.001,
+    0.008,
     0.277
    ],
-   "faces": 116
+   "faces": 32
   },
   {
-   "id": "body_0212",
+   "id": "body_0226",
    "part": "body",
-   "key": "small",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -0.805,
+    0.665,
+    0.808
+   ],
+   "size": [
+    0.047,
+    0.034,
+    0.012
+   ],
+   "faces": 96
+  },
+  {
+   "id": "body_0227",
+   "part": "body",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.754,
+    1.169,
+    0
+   ],
+   "size": [
+    0.013,
+    0.005,
+    0.047
+   ],
+   "faces": 84
+  },
+  {
+   "id": "body_0228",
+   "part": "body",
+   "key": "trim",
    "side": "R",
    "end": null,
    "source": "Object_56",
    "material": "930_plastics",
    "center": [
-    0.527,
-    0.944,
-    -0.478
+    0.25,
+    0.715,
+    -0.793
    ],
    "size": [
-    0.427,
-    0.473,
-    0.668
+    0.036,
+    0.028,
+    0.007
    ],
-   "faces": 68
+   "faces": 122
   },
   {
-   "id": "body_0213",
+   "id": "body_0229",
    "part": "body",
-   "key": "small",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.359,
+    0.717,
+    -0.803
+   ],
+   "size": [
+    0.092,
+    0.019,
+    0.018
+   ],
+   "faces": 36
+  },
+  {
+   "id": "body_0230",
+   "part": "body",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.738,
+    1.165,
+    -0.282
+   ],
+   "size": [
+    0.005,
+    0.031,
+    0.276
+   ],
+   "faces": 32
+  },
+  {
+   "id": "body_0231",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -0.805,
+    0.665,
+    -0.808
+   ],
+   "size": [
+    0.047,
+    0.034,
+    0.012
+   ],
+   "faces": 96
+  },
+  {
+   "id": "body_0232",
+   "part": "body",
+   "key": "trim",
    "side": null,
    "end": null,
    "source": "Object_57",
@@ -4333,47 +4714,87 @@
    "faces": 112
   },
   {
-   "id": "body_0214",
+   "id": "body_0233",
    "part": "body",
-   "key": "small",
+   "key": "light.rear",
    "side": "L",
    "end": null,
    "source": "Object_59",
    "material": "930_chromes",
    "center": [
-    1.769,
-    0.528,
-    0.682
+    1.789,
+    0.529,
+    0.672
    ],
    "size": [
-    0.047,
-    0.011,
-    0.023
+    0.006,
+    0.006,
+    0.002
    ],
-   "faces": 38
+   "faces": 8
   },
   {
-   "id": "body_0215",
+   "id": "body_0234",
    "part": "body",
-   "key": "small",
+   "key": "light.rear",
+   "side": "L",
+   "end": null,
+   "source": "Object_59",
+   "material": "930_chromes",
+   "center": [
+    1.748,
+    0.528,
+    0.688
+   ],
+   "size": [
+    0.005,
+    0.011,
+    0.01
+   ],
+   "faces": 30
+  },
+  {
+   "id": "body_0235",
+   "part": "body",
+   "key": "light.rear",
    "side": "R",
    "end": null,
    "source": "Object_59",
    "material": "930_chromes",
    "center": [
-    1.769,
-    0.528,
-    -0.682
+    1.789,
+    0.529,
+    -0.672
    ],
    "size": [
-    0.047,
-    0.011,
-    0.023
+    0.006,
+    0.006,
+    0.002
    ],
-   "faces": 38
+   "faces": 8
   },
   {
-   "id": "cabin_0216",
+   "id": "body_0236",
+   "part": "body",
+   "key": "light.rear",
+   "side": "R",
+   "end": null,
+   "source": "Object_59",
+   "material": "930_chromes",
+   "center": [
+    1.748,
+    0.528,
+    -0.688
+   ],
+   "size": [
+    0.005,
+    0.011,
+    0.01
+   ],
+   "faces": 30
+  },
+  {
+   "id": "cabin_0237",
    "part": "cabin",
    "key": "interior",
    "side": null,
@@ -4393,9 +4814,9 @@
    "faces": 256
   },
   {
-   "id": "glass_0217",
+   "id": "glass_0238",
    "part": "glass",
-   "key": "small",
+   "key": "lens.rear",
    "side": "R",
    "end": null,
    "source": "Object_66",
@@ -4413,9 +4834,9 @@
    "faces": 14
   },
   {
-   "id": "glass_0218",
+   "id": "glass_0239",
    "part": "glass",
-   "key": "small",
+   "key": "lens.front",
    "side": "R",
    "end": null,
    "source": "Object_67",
@@ -4433,7 +4854,7 @@
    "faces": 138
   },
   {
-   "id": "body_0219",
+   "id": "body_0240",
    "part": "body",
    "key": "small",
    "side": "L",
@@ -4453,7 +4874,7 @@
    "faces": 46
   },
   {
-   "id": "body_0220",
+   "id": "body_0241",
    "part": "body",
    "key": "small",
    "side": "R",
@@ -4473,9 +4894,9 @@
    "faces": 46
   },
   {
-   "id": "glass_0221",
+   "id": "glass_0242",
    "part": "glass",
-   "key": "small",
+   "key": "lens.rear",
    "side": "L",
    "end": null,
    "source": "Object_70",
@@ -4493,9 +4914,9 @@
    "faces": 46
   },
   {
-   "id": "glass_0222",
+   "id": "glass_0243",
    "part": "glass",
-   "key": "small",
+   "key": "lens.rear",
    "side": "R",
    "end": null,
    "source": "Object_70",
@@ -4513,9 +4934,9 @@
    "faces": 46
   },
   {
-   "id": "glass_0223",
+   "id": "glass_0244",
    "part": "glass",
-   "key": "small",
+   "key": "lens.front",
    "side": "L",
    "end": null,
    "source": "Object_71",
@@ -4533,9 +4954,9 @@
    "faces": 138
   },
   {
-   "id": "body_0224",
+   "id": "body_0245",
    "part": "body",
-   "key": "trim",
+   "key": "logo",
    "side": "R",
    "end": null,
    "source": "Object_72",

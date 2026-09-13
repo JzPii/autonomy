@@ -1,20 +1,20 @@
 {
  "id": "porsche-911-992",
  "file": "model.glb",
- "version": "093b653d8a",
+ "version": "34e0b1dab6",
  "files": {
   "full": {
    "file": "model.glb",
-   "bytes": 7680272,
-   "faces": 419949
+   "bytes": 7693216,
+   "faces": 421397
   },
   "light": {
    "file": "model.light.glb",
-   "bytes": 3991072,
-   "faces": 165718
+   "bytes": 4022476,
+   "faces": 167795
   }
  },
- "generated": "2026-09-13T10:00:07.984Z",
+ "generated": "2026-09-13T10:31:11.786Z",
  "input": "source/porsche-911-992/scene.gltf",
  "lengthMeters": 4.535,
  "bounds": {
@@ -45,12 +45,14 @@
   ]
  },
  "counts": {
-  "body": 124,
-  "wheels": 27,
-  "cabin": 235,
-  "doors": 12,
-  "glass": 44,
-  "brakes": 8
+  "body": 135,
+  "cabin": 206,
+  "doors": 22,
+  "glass": 43,
+  "wheels": 26,
+  "brakes": 8,
+  "engine": 8,
+  "exhaust": 2
  },
  "objects": [
   {
@@ -114,27 +116,7 @@
    "faces": 3760
   },
   {
-   "id": "wheels_0003",
-   "part": "wheels",
-   "key": "rim",
-   "side": "L",
-   "end": "R",
-   "source": "metal_parts_rim_chrome_0",
-   "material": "rim_chrome",
-   "center": [
-    1.318,
-    0.64,
-    0.344
-   ],
-   "size": [
-    1.833,
-    0.258,
-    0.831
-   ],
-   "faces": 4654
-  },
-  {
-   "id": "body_0004",
+   "id": "body_0003",
    "part": "body",
    "key": "bumper.front",
    "side": null,
@@ -154,7 +136,7 @@
    "faces": 3998
   },
   {
-   "id": "body_0005",
+   "id": "body_0004",
    "part": "body",
    "key": "hood",
    "side": null,
@@ -174,7 +156,7 @@
    "faces": 2248
   },
   {
-   "id": "body_0006",
+   "id": "body_0005",
    "part": "body",
    "key": "bumper.rear",
    "side": null,
@@ -194,27 +176,7 @@
    "faces": 2862
   },
   {
-   "id": "wheels_0007",
-   "part": "wheels",
-   "key": "rim",
-   "side": "R",
-   "end": "R",
-   "source": "metal_parts_rim_chrome_0",
-   "material": "rim_chrome",
-   "center": [
-    1.316,
-    0.64,
-    -0.37
-   ],
-   "size": [
-    1.831,
-    0.258,
-    0.78
-   ],
-   "faces": 1973
-  },
-  {
-   "id": "body_0008",
+   "id": "body_0006",
    "part": "body",
    "key": "bumper.front",
    "side": null,
@@ -234,7 +196,7 @@
    "faces": 1888
   },
   {
-   "id": "cabin_0009",
+   "id": "cabin_0007",
    "part": "cabin",
    "key": "headliner",
    "side": null,
@@ -254,11 +216,11 @@
    "faces": 2976
   },
   {
-   "id": "body_0010",
+   "id": "body_0008",
    "part": "body",
-   "key": "exterior",
+   "key": "fender",
    "side": "R",
-   "end": null,
+   "end": "F",
    "source": "body_all_body_main_0",
    "material": "body_main",
    "center": [
@@ -274,11 +236,11 @@
    "faces": 2008
   },
   {
-   "id": "body_0011",
+   "id": "body_0009",
    "part": "body",
-   "key": "exterior",
+   "key": "fender",
    "side": "L",
-   "end": null,
+   "end": "F",
    "source": "body_all_body_main_0",
    "material": "body_main",
    "center": [
@@ -294,7 +256,7 @@
    "faces": 2008
   },
   {
-   "id": "body_0012",
+   "id": "body_0010",
    "part": "body",
    "key": "bumper.front",
    "side": null,
@@ -314,7 +276,7 @@
    "faces": 1024
   },
   {
-   "id": "body_0013",
+   "id": "body_0011",
    "part": "body",
    "key": "trim",
    "side": "R",
@@ -334,7 +296,7 @@
    "faces": 773
   },
   {
-   "id": "body_0014",
+   "id": "body_0012",
    "part": "body",
    "key": "trim",
    "side": "L",
@@ -354,7 +316,7 @@
    "faces": 773
   },
   {
-   "id": "doors_0015",
+   "id": "doors_0013",
    "part": "doors",
    "key": "door",
    "side": "L",
@@ -374,7 +336,7 @@
    "faces": 2987
   },
   {
-   "id": "body_0016",
+   "id": "body_0014",
    "part": "body",
    "key": "bumper.front",
    "side": null,
@@ -394,7 +356,7 @@
    "faces": 1632
   },
   {
-   "id": "doors_0017",
+   "id": "doors_0015",
    "part": "doors",
    "key": "door",
    "side": "R",
@@ -414,9 +376,9 @@
    "faces": 2987
   },
   {
-   "id": "doors_0018",
-   "part": "doors",
-   "key": "tailgate",
+   "id": "body_0016",
+   "part": "body",
+   "key": "spoiler",
    "side": null,
    "end": null,
    "source": "body_all_body_main_0",
@@ -434,7 +396,7 @@
    "faces": 2530
   },
   {
-   "id": "body_0019",
+   "id": "body_0017",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -454,7 +416,7 @@
    "faces": 1679
   },
   {
-   "id": "body_0020",
+   "id": "body_0018",
    "part": "body",
    "key": "exterior",
    "side": "L",
@@ -474,7 +436,7 @@
    "faces": 1679
   },
   {
-   "id": "cabin_0021",
+   "id": "cabin_0019",
    "part": "cabin",
    "key": "carpet",
    "side": "R",
@@ -494,7 +456,7 @@
    "faces": 572
   },
   {
-   "id": "cabin_0022",
+   "id": "cabin_0020",
    "part": "cabin",
    "key": "carpet",
    "side": "L",
@@ -514,7 +476,7 @@
    "faces": 572
   },
   {
-   "id": "glass_0023",
+   "id": "glass_0021",
    "part": "glass",
    "key": "lens.rear",
    "side": null,
@@ -534,7 +496,7 @@
    "faces": 1390
   },
   {
-   "id": "glass_0024",
+   "id": "glass_0022",
    "part": "glass",
    "key": "windshield",
    "side": null,
@@ -554,7 +516,7 @@
    "faces": 626
   },
   {
-   "id": "glass_0025",
+   "id": "glass_0023",
    "part": "glass",
    "key": "windshield",
    "side": null,
@@ -574,9 +536,9 @@
    "faces": 626
   },
   {
-   "id": "cabin_0026",
-   "part": "cabin",
-   "key": "trim.interior",
+   "id": "body_0024",
+   "part": "body",
+   "key": "spoiler",
    "side": null,
    "end": null,
    "source": "glossy_plastic_bl_pl__GL_int_ext_0",
@@ -594,7 +556,7 @@
    "faces": 958
   },
   {
-   "id": "body_0027",
+   "id": "body_0025",
    "part": "body",
    "key": "roof",
    "side": null,
@@ -614,9 +576,9 @@
    "faces": 872
   },
   {
-   "id": "cabin_0028",
+   "id": "cabin_0026",
    "part": "cabin",
-   "key": "interior",
+   "key": "dashboard",
    "side": null,
    "end": null,
    "source": "leather_all_leather_int_0",
@@ -634,7 +596,7 @@
    "faces": 1610
   },
   {
-   "id": "body_0029",
+   "id": "body_0027",
    "part": "body",
    "key": "exterior",
    "side": null,
@@ -654,9 +616,9 @@
    "faces": 998
   },
   {
-   "id": "cabin_0030",
-   "part": "cabin",
-   "key": "trim.interior",
+   "id": "body_0028",
+   "part": "body",
+   "key": "spoiler",
    "side": null,
    "end": null,
    "source": "glossy_plastic_bl_pl__GL_int_ext_0",
@@ -674,7 +636,7 @@
    "faces": 342
   },
   {
-   "id": "body_0031",
+   "id": "body_0029",
    "part": "body",
    "key": "sill",
    "side": "R",
@@ -694,7 +656,7 @@
    "faces": 325
   },
   {
-   "id": "body_0032",
+   "id": "body_0030",
    "part": "body",
    "key": "sill",
    "side": "L",
@@ -714,9 +676,9 @@
    "faces": 325
   },
   {
-   "id": "doors_0033",
-   "part": "doors",
-   "key": "tailgate",
+   "id": "body_0031",
+   "part": "body",
+   "key": "spoiler",
    "side": null,
    "end": null,
    "source": "body_all_body_main_0",
@@ -734,9 +696,9 @@
    "faces": 1060
   },
   {
-   "id": "cabin_0034",
+   "id": "cabin_0032",
    "part": "cabin",
-   "key": "trim.interior",
+   "key": "dashboard",
    "side": null,
    "end": null,
    "source": "plastic_all_bl_pl_M_int_0",
@@ -754,7 +716,7 @@
    "faces": 1026
   },
   {
-   "id": "body_0035",
+   "id": "body_0033",
    "part": "body",
    "key": "light.rear",
    "side": null,
@@ -774,7 +736,7 @@
    "faces": 430
   },
   {
-   "id": "doors_0036",
+   "id": "doors_0034",
    "part": "doors",
    "key": "door",
    "side": "L",
@@ -794,7 +756,7 @@
    "faces": 732
   },
   {
-   "id": "doors_0037",
+   "id": "doors_0035",
    "part": "doors",
    "key": "door",
    "side": "R",
@@ -814,9 +776,9 @@
    "faces": 732
   },
   {
-   "id": "cabin_0038",
+   "id": "cabin_0036",
    "part": "cabin",
-   "key": "interior",
+   "key": "dashboard",
    "side": null,
    "end": null,
    "source": "leather_all_leather_int_0",
@@ -834,7 +796,7 @@
    "faces": 661
   },
   {
-   "id": "glass_0039",
+   "id": "glass_0037",
    "part": "glass",
    "key": "windshield",
    "side": null,
@@ -854,7 +816,7 @@
    "faces": 156
   },
   {
-   "id": "cabin_0040",
+   "id": "cabin_0038",
    "part": "cabin",
    "key": "carpet",
    "side": null,
@@ -874,7 +836,7 @@
    "faces": 780
   },
   {
-   "id": "wheels_0041",
+   "id": "wheels_0039",
    "part": "wheels",
    "key": "tire",
    "side": "R",
@@ -894,7 +856,7 @@
    "faces": 2816
   },
   {
-   "id": "wheels_0042",
+   "id": "wheels_0040",
    "part": "wheels",
    "key": "tire",
    "side": "L",
@@ -914,7 +876,7 @@
    "faces": 2816
   },
   {
-   "id": "glass_0043",
+   "id": "glass_0041",
    "part": "glass",
    "key": "glass.rear",
    "side": null,
@@ -934,7 +896,7 @@
    "faces": 510
   },
   {
-   "id": "glass_0044",
+   "id": "glass_0042",
    "part": "glass",
    "key": "windshield",
    "side": null,
@@ -954,7 +916,7 @@
    "faces": 174
   },
   {
-   "id": "glass_0045",
+   "id": "glass_0043",
    "part": "glass",
    "key": "glass.rear",
    "side": null,
@@ -974,7 +936,7 @@
    "faces": 366
   },
   {
-   "id": "wheels_0046",
+   "id": "wheels_0044",
    "part": "wheels",
    "key": "tire",
    "side": "L",
@@ -994,7 +956,7 @@
    "faces": 2048
   },
   {
-   "id": "wheels_0047",
+   "id": "wheels_0045",
    "part": "wheels",
    "key": "tire",
    "side": "R",
@@ -1014,7 +976,7 @@
    "faces": 2048
   },
   {
-   "id": "cabin_0048",
+   "id": "cabin_0046",
    "part": "cabin",
    "key": "trim.interior",
    "side": "L",
@@ -1034,7 +996,7 @@
    "faces": 624
   },
   {
-   "id": "body_0049",
+   "id": "body_0047",
    "part": "body",
    "key": "grille",
    "side": null,
@@ -1054,7 +1016,7 @@
    "faces": 1056
   },
   {
-   "id": "cabin_0050",
+   "id": "cabin_0048",
    "part": "cabin",
    "key": "trim.interior",
    "side": "L",
@@ -1074,7 +1036,7 @@
    "faces": 981
   },
   {
-   "id": "cabin_0051",
+   "id": "cabin_0049",
    "part": "cabin",
    "key": "trim.interior",
    "side": "R",
@@ -1094,9 +1056,9 @@
    "faces": 624
   },
   {
-   "id": "cabin_0052",
+   "id": "cabin_0050",
    "part": "cabin",
-   "key": "interior",
+   "key": "dashboard",
    "side": null,
    "end": null,
    "source": "leather_all_leather_int_0",
@@ -1114,7 +1076,7 @@
    "faces": 176
   },
   {
-   "id": "wheels_0053",
+   "id": "wheels_0051",
    "part": "wheels",
    "key": "rim",
    "side": "L",
@@ -1134,7 +1096,7 @@
    "faces": 3482
   },
   {
-   "id": "wheels_0054",
+   "id": "wheels_0052",
    "part": "wheels",
    "key": "rim",
    "side": "R",
@@ -1154,7 +1116,7 @@
    "faces": 3482
   },
   {
-   "id": "doors_0055",
+   "id": "doors_0053",
    "part": "doors",
    "key": "door",
    "side": "L",
@@ -1174,9 +1136,9 @@
    "faces": 478
   },
   {
-   "id": "cabin_0056",
-   "part": "cabin",
-   "key": "trim.interior",
+   "id": "body_0054",
+   "part": "body",
+   "key": "spoiler",
    "side": null,
    "end": null,
    "source": "glossy_plastic_bl_pl__GL_int_ext_0",
@@ -1194,7 +1156,7 @@
    "faces": 1805
   },
   {
-   "id": "cabin_0057",
+   "id": "cabin_0055",
    "part": "cabin",
    "key": "trim.interior",
    "side": "R",
@@ -1214,7 +1176,7 @@
    "faces": 981
   },
   {
-   "id": "doors_0058",
+   "id": "doors_0056",
    "part": "doors",
    "key": "door",
    "side": "R",
@@ -1234,7 +1196,7 @@
    "faces": 478
   },
   {
-   "id": "cabin_0059",
+   "id": "cabin_0057",
    "part": "cabin",
    "key": "carpet",
    "side": null,
@@ -1254,7 +1216,7 @@
    "faces": 234
   },
   {
-   "id": "wheels_0060",
+   "id": "wheels_0058",
    "part": "wheels",
    "key": "rim",
    "side": "L",
@@ -1274,7 +1236,7 @@
    "faces": 4734
   },
   {
-   "id": "wheels_0061",
+   "id": "wheels_0059",
    "part": "wheels",
    "key": "rim",
    "side": "R",
@@ -1294,9 +1256,9 @@
    "faces": 4734
   },
   {
-   "id": "doors_0062",
-   "part": "doors",
-   "key": "tailgate",
+   "id": "body_0060",
+   "part": "body",
+   "key": "spoiler",
    "side": null,
    "end": null,
    "source": "plastic_exterior_bl_pl_M_ext_0",
@@ -1314,7 +1276,7 @@
    "faces": 638
   },
   {
-   "id": "glass_0063",
+   "id": "glass_0061",
    "part": "glass",
    "key": "glass.rear",
    "side": null,
@@ -1334,7 +1296,7 @@
    "faces": 140
   },
   {
-   "id": "cabin_0064",
+   "id": "cabin_0062",
    "part": "cabin",
    "key": "trim.interior",
    "side": null,
@@ -1354,7 +1316,7 @@
    "faces": 1559
   },
   {
-   "id": "doors_0065",
+   "id": "doors_0063",
    "part": "doors",
    "key": "door",
    "side": "L",
@@ -1374,7 +1336,7 @@
    "faces": 344
   },
   {
-   "id": "doors_0066",
+   "id": "doors_0064",
    "part": "doors",
    "key": "door",
    "side": "R",
@@ -1394,7 +1356,7 @@
    "faces": 334
   },
   {
-   "id": "cabin_0067",
+   "id": "cabin_0065",
    "part": "cabin",
    "key": "trim.interior",
    "side": "L",
@@ -1414,9 +1376,9 @@
    "faces": 597
   },
   {
-   "id": "cabin_0068",
+   "id": "cabin_0066",
    "part": "cabin",
-   "key": "interior",
+   "key": "dashboard",
    "side": null,
    "end": null,
    "source": "leather_all_leather_seam_0",
@@ -1434,7 +1396,7 @@
    "faces": 88
   },
   {
-   "id": "cabin_0069",
+   "id": "cabin_0067",
    "part": "cabin",
    "key": "trim.interior",
    "side": "R",
@@ -1454,9 +1416,9 @@
    "faces": 597
   },
   {
-   "id": "body_0070",
+   "id": "body_0068",
    "part": "body",
-   "key": "trim",
+   "key": "spoiler",
    "side": null,
    "end": null,
    "source": "plastic_exterior_bl_pl_M_ext_0",
@@ -1474,11 +1436,11 @@
    "faces": 390
   },
   {
-   "id": "glass_0071",
+   "id": "glass_0069",
    "part": "glass",
    "key": "glass.side",
    "side": "L",
-   "end": "F",
+   "end": null,
    "source": "window_door_2_windows_0",
    "material": "windows",
    "center": [
@@ -1494,7 +1456,7 @@
    "faces": 227
   },
   {
-   "id": "cabin_0072",
+   "id": "cabin_0070",
    "part": "cabin",
    "key": "trim.interior",
    "side": null,
@@ -1514,11 +1476,11 @@
    "faces": 728
   },
   {
-   "id": "glass_0073",
+   "id": "glass_0071",
    "part": "glass",
    "key": "glass.side",
    "side": "L",
-   "end": "F",
+   "end": null,
    "source": "window_door_2_windows_0",
    "material": "windows",
    "center": [
@@ -1534,7 +1496,7 @@
    "faces": 221
   },
   {
-   "id": "cabin_0074",
+   "id": "cabin_0072",
    "part": "cabin",
    "key": "trim.interior",
    "side": null,
@@ -1554,11 +1516,11 @@
    "faces": 681
   },
   {
-   "id": "glass_0075",
+   "id": "glass_0073",
    "part": "glass",
    "key": "glass.side",
    "side": "R",
-   "end": "R",
+   "end": null,
    "source": "window_door_1_windows_0",
    "material": "windows",
    "center": [
@@ -1574,11 +1536,11 @@
    "faces": 227
   },
   {
-   "id": "glass_0076",
+   "id": "glass_0074",
    "part": "glass",
    "key": "glass.side",
    "side": "R",
-   "end": "R",
+   "end": null,
    "source": "window_door_1_windows_0",
    "material": "windows",
    "center": [
@@ -1594,7 +1556,7 @@
    "faces": 221
   },
   {
-   "id": "cabin_0077",
+   "id": "cabin_0075",
    "part": "cabin",
    "key": "trim.interior",
    "side": null,
@@ -1614,9 +1576,9 @@
    "faces": 432
   },
   {
-   "id": "cabin_0078",
+   "id": "cabin_0076",
    "part": "cabin",
-   "key": "trim.interior",
+   "key": "seat",
    "side": "L",
    "end": null,
    "source": "plastic_all_bl_pl_M_int_0",
@@ -1634,7 +1596,7 @@
    "faces": 1039
   },
   {
-   "id": "wheels_0079",
+   "id": "wheels_0077",
    "part": "wheels",
    "key": "rim",
    "side": "L",
@@ -1654,7 +1616,7 @@
    "faces": 1066
   },
   {
-   "id": "wheels_0080",
+   "id": "wheels_0078",
    "part": "wheels",
    "key": "rim",
    "side": "R",
@@ -1674,7 +1636,7 @@
    "faces": 1066
   },
   {
-   "id": "glass_0081",
+   "id": "glass_0079",
    "part": "glass",
    "key": "glass.rear",
    "side": null,
@@ -1694,9 +1656,9 @@
    "faces": 116
   },
   {
-   "id": "cabin_0082",
+   "id": "cabin_0080",
    "part": "cabin",
-   "key": "trim.interior",
+   "key": "seat",
    "side": "R",
    "end": null,
    "source": "plastic_all_bl_pl_M_int_0",
@@ -1714,9 +1676,9 @@
    "faces": 919
   },
   {
-   "id": "cabin_0083",
+   "id": "cabin_0081",
    "part": "cabin",
-   "key": "interior",
+   "key": "seat",
    "side": "L",
    "end": null,
    "source": "leather_all_leather_int_0",
@@ -1734,9 +1696,9 @@
    "faces": 364
   },
   {
-   "id": "cabin_0084",
+   "id": "cabin_0082",
    "part": "cabin",
-   "key": "interior",
+   "key": "seat",
    "side": "R",
    "end": null,
    "source": "leather_all_leather_int_0",
@@ -1754,7 +1716,7 @@
    "faces": 364
   },
   {
-   "id": "cabin_0085",
+   "id": "cabin_0083",
    "part": "cabin",
    "key": "trim.interior",
    "side": "L",
@@ -1774,9 +1736,9 @@
    "faces": 809
   },
   {
-   "id": "body_0086",
+   "id": "body_0084",
    "part": "body",
-   "key": "trim",
+   "key": "roof.rail",
    "side": "R",
    "end": null,
    "source": "plastic_exterior_bl_pl_M_ext_0",
@@ -1794,9 +1756,9 @@
    "faces": 212
   },
   {
-   "id": "body_0087",
+   "id": "body_0085",
    "part": "body",
-   "key": "trim",
+   "key": "roof.rail",
    "side": "L",
    "end": null,
    "source": "plastic_exterior_bl_pl_M_ext_0",
@@ -1814,7 +1776,7 @@
    "faces": 212
   },
   {
-   "id": "wheels_0088",
+   "id": "wheels_0086",
    "part": "wheels",
    "key": "rim",
    "side": "L",
@@ -1834,7 +1796,7 @@
    "faces": 1368
   },
   {
-   "id": "wheels_0089",
+   "id": "wheels_0087",
    "part": "wheels",
    "key": "rim",
    "side": "R",
@@ -1854,7 +1816,7 @@
    "faces": 1368
   },
   {
-   "id": "cabin_0090",
+   "id": "cabin_0088",
    "part": "cabin",
    "key": "trim.interior",
    "side": "R",
@@ -1874,7 +1836,7 @@
    "faces": 809
   },
   {
-   "id": "cabin_0091",
+   "id": "cabin_0089",
    "part": "cabin",
    "key": "carpet",
    "side": "L",
@@ -1894,7 +1856,7 @@
    "faces": 603
   },
   {
-   "id": "cabin_0092",
+   "id": "cabin_0090",
    "part": "cabin",
    "key": "carpet",
    "side": null,
@@ -1914,7 +1876,7 @@
    "faces": 388
   },
   {
-   "id": "cabin_0093",
+   "id": "cabin_0091",
    "part": "cabin",
    "key": "trim.interior",
    "side": "L",
@@ -1934,7 +1896,7 @@
    "faces": 1799
   },
   {
-   "id": "cabin_0094",
+   "id": "cabin_0092",
    "part": "cabin",
    "key": "trim.interior",
    "side": "R",
@@ -1954,7 +1916,7 @@
    "faces": 1793
   },
   {
-   "id": "cabin_0095",
+   "id": "cabin_0093",
    "part": "cabin",
    "key": "trim.interior",
    "side": null,
@@ -1974,7 +1936,7 @@
    "faces": 365
   },
   {
-   "id": "cabin_0096",
+   "id": "cabin_0094",
    "part": "cabin",
    "key": "belt",
    "side": "R",
@@ -1994,7 +1956,7 @@
    "faces": 532
   },
   {
-   "id": "cabin_0097",
+   "id": "cabin_0095",
    "part": "cabin",
    "key": "belt",
    "side": "L",
@@ -2014,9 +1976,9 @@
    "faces": 532
   },
   {
-   "id": "cabin_0098",
+   "id": "cabin_0096",
    "part": "cabin",
-   "key": "interior",
+   "key": "seat",
    "side": "R",
    "end": null,
    "source": "leather_all_leather_seam_0",
@@ -2034,9 +1996,9 @@
    "faces": 200
   },
   {
-   "id": "cabin_0099",
+   "id": "cabin_0097",
    "part": "cabin",
-   "key": "interior",
+   "key": "seat",
    "side": "L",
    "end": null,
    "source": "leather_all_leather_seam_0",
@@ -2054,7 +2016,7 @@
    "faces": 200
   },
   {
-   "id": "cabin_0100",
+   "id": "cabin_0098",
    "part": "cabin",
    "key": "carpet",
    "side": "R",
@@ -2074,7 +2036,7 @@
    "faces": 448
   },
   {
-   "id": "brakes_0101",
+   "id": "brakes_0099",
    "part": "brakes",
    "key": "disc",
    "side": "L",
@@ -2094,7 +2056,7 @@
    "faces": 4056
   },
   {
-   "id": "brakes_0102",
+   "id": "brakes_0100",
    "part": "brakes",
    "key": "disc",
    "side": "R",
@@ -2114,9 +2076,9 @@
    "faces": 4056
   },
   {
-   "id": "cabin_0103",
+   "id": "cabin_0101",
    "part": "cabin",
-   "key": "interior",
+   "key": "seat",
    "side": "L",
    "end": null,
    "source": "leather_all_leather_perforated_0",
@@ -2134,9 +2096,9 @@
    "faces": 1342
   },
   {
-   "id": "cabin_0104",
+   "id": "cabin_0102",
    "part": "cabin",
-   "key": "interior",
+   "key": "seat",
    "side": "R",
    "end": null,
    "source": "leather_all_leather_perforated_0",
@@ -2154,9 +2116,9 @@
    "faces": 1342
   },
   {
-   "id": "cabin_0105",
+   "id": "cabin_0103",
    "part": "cabin",
-   "key": "trim.interior",
+   "key": "console",
    "side": null,
    "end": null,
    "source": "plast_leather_all_pl_leather_int_0",
@@ -2174,9 +2136,9 @@
    "faces": 166
   },
   {
-   "id": "cabin_0106",
+   "id": "cabin_0104",
    "part": "cabin",
-   "key": "trim.interior",
+   "key": "console",
    "side": null,
    "end": null,
    "source": "plast_leather_all_pl_leather_int_0",
@@ -2194,11 +2156,11 @@
    "faces": 166
   },
   {
-   "id": "glass_0107",
+   "id": "glass_0105",
    "part": "glass",
    "key": "glass.side",
    "side": "L",
-   "end": "F",
+   "end": null,
    "source": "window_door_2_windows_edge_0",
    "material": "windows_edge",
    "center": [
@@ -2214,11 +2176,11 @@
    "faces": 78
   },
   {
-   "id": "glass_0108",
+   "id": "glass_0106",
    "part": "glass",
    "key": "glass.side",
    "side": "R",
-   "end": "R",
+   "end": null,
    "source": "window_door_1_windows_edge_0",
    "material": "windows_edge",
    "center": [
@@ -2234,7 +2196,7 @@
    "faces": 78
   },
   {
-   "id": "cabin_0109",
+   "id": "cabin_0107",
    "part": "cabin",
    "key": "trim.interior",
    "side": "R",
@@ -2254,7 +2216,7 @@
    "faces": 515
   },
   {
-   "id": "cabin_0110",
+   "id": "cabin_0108",
    "part": "cabin",
    "key": "trim.interior",
    "side": "L",
@@ -2274,9 +2236,9 @@
    "faces": 515
   },
   {
-   "id": "cabin_0111",
+   "id": "cabin_0109",
    "part": "cabin",
-   "key": "trim.interior",
+   "key": "console",
    "side": null,
    "end": null,
    "source": "chrome_int_chrom_int_0",
@@ -2294,7 +2256,7 @@
    "faces": 1128
   },
   {
-   "id": "cabin_0112",
+   "id": "cabin_0110",
    "part": "cabin",
    "key": "trim.interior",
    "side": "R",
@@ -2314,7 +2276,7 @@
    "faces": 471
   },
   {
-   "id": "cabin_0113",
+   "id": "cabin_0111",
    "part": "cabin",
    "key": "trim.interior",
    "side": "L",
@@ -2334,7 +2296,7 @@
    "faces": 471
   },
   {
-   "id": "cabin_0114",
+   "id": "cabin_0112",
    "part": "cabin",
    "key": "carpet",
    "side": null,
@@ -2354,7 +2316,7 @@
    "faces": 184
   },
   {
-   "id": "brakes_0115",
+   "id": "brakes_0113",
    "part": "brakes",
    "key": "disc",
    "side": "L",
@@ -2374,7 +2336,7 @@
    "faces": 3872
   },
   {
-   "id": "brakes_0116",
+   "id": "brakes_0114",
    "part": "brakes",
    "key": "disc",
    "side": "R",
@@ -2394,7 +2356,7 @@
    "faces": 3872
   },
   {
-   "id": "body_0117",
+   "id": "body_0115",
    "part": "body",
    "key": "trim.lower",
    "side": "R",
@@ -2414,7 +2376,7 @@
    "faces": 385
   },
   {
-   "id": "body_0118",
+   "id": "body_0116",
    "part": "body",
    "key": "trim.lower",
    "side": "L",
@@ -2434,7 +2396,7 @@
    "faces": 385
   },
   {
-   "id": "cabin_0119",
+   "id": "cabin_0117",
    "part": "cabin",
    "key": "trim.interior",
    "side": "R",
@@ -2454,7 +2416,7 @@
    "faces": 451
   },
   {
-   "id": "cabin_0120",
+   "id": "cabin_0118",
    "part": "cabin",
    "key": "trim.interior",
    "side": "L",
@@ -2474,7 +2436,7 @@
    "faces": 451
   },
   {
-   "id": "cabin_0121",
+   "id": "cabin_0119",
    "part": "cabin",
    "key": "trim.interior",
    "side": "L",
@@ -2494,7 +2456,7 @@
    "faces": 583
   },
   {
-   "id": "cabin_0122",
+   "id": "cabin_0120",
    "part": "cabin",
    "key": "trim.interior",
    "side": "R",
@@ -2514,7 +2476,7 @@
    "faces": 583
   },
   {
-   "id": "cabin_0123",
+   "id": "cabin_0121",
    "part": "cabin",
    "key": "carpet",
    "side": "L",
@@ -2534,7 +2496,7 @@
    "faces": 206
   },
   {
-   "id": "cabin_0124",
+   "id": "cabin_0122",
    "part": "cabin",
    "key": "belt",
    "side": "R",
@@ -2554,7 +2516,7 @@
    "faces": 544
   },
   {
-   "id": "cabin_0125",
+   "id": "cabin_0123",
    "part": "cabin",
    "key": "belt",
    "side": "L",
@@ -2574,9 +2536,9 @@
    "faces": 544
   },
   {
-   "id": "cabin_0126",
+   "id": "cabin_0124",
    "part": "cabin",
-   "key": "trim.interior",
+   "key": "seat",
    "side": "L",
    "end": null,
    "source": "plastic_all_bl_pl_M_int_0",
@@ -2594,9 +2556,9 @@
    "faces": 598
   },
   {
-   "id": "cabin_0127",
+   "id": "cabin_0125",
    "part": "cabin",
-   "key": "trim.interior",
+   "key": "seat",
    "side": "R",
    "end": null,
    "source": "plastic_all_bl_pl_M_int_0",
@@ -2614,9 +2576,9 @@
    "faces": 598
   },
   {
-   "id": "cabin_0128",
-   "part": "cabin",
-   "key": "trim.interior",
+   "id": "body_0126",
+   "part": "body",
+   "key": "trim",
    "side": "R",
    "end": null,
    "source": "glossy_plastic_bl_pl__GL_int_ext_0",
@@ -2634,9 +2596,9 @@
    "faces": 861
   },
   {
-   "id": "cabin_0129",
-   "part": "cabin",
-   "key": "trim.interior",
+   "id": "body_0127",
+   "part": "body",
+   "key": "trim",
    "side": "L",
    "end": null,
    "source": "glossy_plastic_bl_pl__GL_int_ext_0",
@@ -2654,11 +2616,11 @@
    "faces": 861
   },
   {
-   "id": "glass_0130",
+   "id": "glass_0128",
    "part": "glass",
    "key": "glass.side",
    "side": "L",
-   "end": "R",
+   "end": null,
    "source": "windows_main_windows_0",
    "material": "windows",
    "center": [
@@ -2674,11 +2636,11 @@
    "faces": 324
   },
   {
-   "id": "glass_0131",
+   "id": "glass_0129",
    "part": "glass",
    "key": "glass.side",
    "side": "R",
-   "end": "R",
+   "end": null,
    "source": "windows_main_windows_0",
    "material": "windows",
    "center": [
@@ -2694,7 +2656,7 @@
    "faces": 324
   },
   {
-   "id": "cabin_0132",
+   "id": "cabin_0130",
    "part": "cabin",
    "key": "carpet",
    "side": "R",
@@ -2714,9 +2676,9 @@
    "faces": 158
   },
   {
-   "id": "cabin_0133",
+   "id": "cabin_0131",
    "part": "cabin",
-   "key": "interior",
+   "key": "seat",
    "side": "R",
    "end": null,
    "source": "leather_all_leather_int_0",
@@ -2734,9 +2696,9 @@
    "faces": 604
   },
   {
-   "id": "cabin_0134",
+   "id": "cabin_0132",
    "part": "cabin",
-   "key": "interior",
+   "key": "seat",
    "side": "L",
    "end": null,
    "source": "leather_all_leather_int_0",
@@ -2754,7 +2716,7 @@
    "faces": 604
   },
   {
-   "id": "cabin_0135",
+   "id": "cabin_0133",
    "part": "cabin",
    "key": "trim.interior",
    "side": "R",
@@ -2774,7 +2736,7 @@
    "faces": 56
   },
   {
-   "id": "cabin_0136",
+   "id": "cabin_0134",
    "part": "cabin",
    "key": "trim.interior",
    "side": "L",
@@ -2794,7 +2756,7 @@
    "faces": 56
   },
   {
-   "id": "body_0137",
+   "id": "body_0135",
    "part": "body",
    "key": "trim",
    "side": "R",
@@ -2814,7 +2776,7 @@
    "faces": 218
   },
   {
-   "id": "body_0138",
+   "id": "body_0136",
    "part": "body",
    "key": "trim",
    "side": "L",
@@ -2834,9 +2796,9 @@
    "faces": 218
   },
   {
-   "id": "body_0139",
+   "id": "body_0137",
    "part": "body",
-   "key": "trim.lower",
+   "key": "bumper.front",
    "side": null,
    "end": null,
    "source": "plastic_exterior_bl_pl_M_ext_0",
@@ -2854,9 +2816,9 @@
    "faces": 366
   },
   {
-   "id": "doors_0140",
-   "part": "doors",
-   "key": "tailgate",
+   "id": "body_0138",
+   "part": "body",
+   "key": "spoiler",
    "side": null,
    "end": null,
    "source": "plastic_exterior_bl_pl_M_ext_0",
@@ -2874,7 +2836,7 @@
    "faces": 28
   },
   {
-   "id": "wheels_0141",
+   "id": "wheels_0139",
    "part": "wheels",
    "key": "rim",
    "side": "R",
@@ -2894,7 +2856,7 @@
    "faces": 3506
   },
   {
-   "id": "wheels_0142",
+   "id": "wheels_0140",
    "part": "wheels",
    "key": "rim",
    "side": "L",
@@ -2914,7 +2876,7 @@
    "faces": 3506
   },
   {
-   "id": "cabin_0143",
+   "id": "cabin_0141",
    "part": "cabin",
    "key": "trim.interior",
    "side": "R",
@@ -2934,7 +2896,7 @@
    "faces": 670
   },
   {
-   "id": "cabin_0144",
+   "id": "cabin_0142",
    "part": "cabin",
    "key": "interior",
    "side": "R",
@@ -2954,7 +2916,7 @@
    "faces": 266
   },
   {
-   "id": "cabin_0145",
+   "id": "cabin_0143",
    "part": "cabin",
    "key": "interior",
    "side": "L",
@@ -2974,7 +2936,7 @@
    "faces": 266
   },
   {
-   "id": "cabin_0146",
+   "id": "cabin_0144",
    "part": "cabin",
    "key": "interior",
    "side": null,
@@ -2994,7 +2956,7 @@
    "faces": 266
   },
   {
-   "id": "cabin_0147",
+   "id": "cabin_0145",
    "part": "cabin",
    "key": "interior",
    "side": null,
@@ -3014,7 +2976,7 @@
    "faces": 266
   },
   {
-   "id": "cabin_0148",
+   "id": "cabin_0146",
    "part": "cabin",
    "key": "trim.interior",
    "side": "L",
@@ -3034,7 +2996,7 @@
    "faces": 366
   },
   {
-   "id": "cabin_0149",
+   "id": "cabin_0147",
    "part": "cabin",
    "key": "trim.interior",
    "side": "R",
@@ -3054,7 +3016,7 @@
    "faces": 366
   },
   {
-   "id": "cabin_0150",
+   "id": "cabin_0148",
    "part": "cabin",
    "key": "trim.interior",
    "side": "L",
@@ -3074,7 +3036,7 @@
    "faces": 213
   },
   {
-   "id": "cabin_0151",
+   "id": "cabin_0149",
    "part": "cabin",
    "key": "trim.interior",
    "side": "R",
@@ -3094,7 +3056,7 @@
    "faces": 213
   },
   {
-   "id": "body_0152",
+   "id": "body_0150",
    "part": "body",
    "key": "trim.lower",
    "side": "L",
@@ -3114,7 +3076,7 @@
    "faces": 761
   },
   {
-   "id": "body_0153",
+   "id": "body_0151",
    "part": "body",
    "key": "trim.lower",
    "side": "R",
@@ -3134,7 +3096,7 @@
    "faces": 761
   },
   {
-   "id": "cabin_0154",
+   "id": "cabin_0152",
    "part": "cabin",
    "key": "trim.interior",
    "side": "L",
@@ -3154,7 +3116,7 @@
    "faces": 941
   },
   {
-   "id": "cabin_0155",
+   "id": "cabin_0153",
    "part": "cabin",
    "key": "trim.interior",
    "side": "R",
@@ -3174,9 +3136,9 @@
    "faces": 941
   },
   {
-   "id": "cabin_0156",
+   "id": "cabin_0154",
    "part": "cabin",
-   "key": "interior",
+   "key": "console",
    "side": null,
    "end": null,
    "source": "leather_all_leather_int_0",
@@ -3194,9 +3156,9 @@
    "faces": 453
   },
   {
-   "id": "cabin_0157",
+   "id": "cabin_0155",
    "part": "cabin",
-   "key": "interior",
+   "key": "console",
    "side": null,
    "end": null,
    "source": "leather_all_leather_int_0",
@@ -3214,7 +3176,7 @@
    "faces": 453
   },
   {
-   "id": "cabin_0158",
+   "id": "cabin_0156",
    "part": "cabin",
    "key": "trim.interior",
    "side": "L",
@@ -3234,7 +3196,7 @@
    "faces": 435
   },
   {
-   "id": "brakes_0159",
+   "id": "brakes_0157",
    "part": "brakes",
    "key": "disc",
    "side": "L",
@@ -3254,7 +3216,7 @@
    "faces": 3843
   },
   {
-   "id": "brakes_0160",
+   "id": "brakes_0158",
    "part": "brakes",
    "key": "disc",
    "side": "R",
@@ -3274,7 +3236,7 @@
    "faces": 3843
   },
   {
-   "id": "cabin_0161",
+   "id": "cabin_0159",
    "part": "cabin",
    "key": "trim.interior",
    "side": "R",
@@ -3294,7 +3256,7 @@
    "faces": 435
   },
   {
-   "id": "body_0162",
+   "id": "body_0160",
    "part": "body",
    "key": "exterior",
    "side": "L",
@@ -3314,7 +3276,7 @@
    "faces": 221
   },
   {
-   "id": "body_0163",
+   "id": "body_0161",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -3334,9 +3296,9 @@
    "faces": 221
   },
   {
-   "id": "cabin_0164",
+   "id": "cabin_0162",
    "part": "cabin",
-   "key": "trim.interior",
+   "key": "console",
    "side": null,
    "end": null,
    "source": "plastic_all_bl_pl_M_int_0",
@@ -3354,9 +3316,9 @@
    "faces": 277
   },
   {
-   "id": "cabin_0165",
+   "id": "cabin_0163",
    "part": "cabin",
-   "key": "trim.interior",
+   "key": "console",
    "side": null,
    "end": null,
    "source": "plastic_all_bl_pl_M_int_0",
@@ -3374,7 +3336,7 @@
    "faces": 277
   },
   {
-   "id": "cabin_0166",
+   "id": "cabin_0164",
    "part": "cabin",
    "key": "trim.interior",
    "side": "L",
@@ -3394,7 +3356,7 @@
    "faces": 619
   },
   {
-   "id": "cabin_0167",
+   "id": "cabin_0165",
    "part": "cabin",
    "key": "trim.interior",
    "side": "R",
@@ -3414,7 +3376,7 @@
    "faces": 619
   },
   {
-   "id": "body_0168",
+   "id": "body_0166",
    "part": "body",
    "key": "trim",
    "side": "R",
@@ -3434,7 +3396,7 @@
    "faces": 1684
   },
   {
-   "id": "body_0169",
+   "id": "body_0167",
    "part": "body",
    "key": "trim",
    "side": "L",
@@ -3454,7 +3416,7 @@
    "faces": 1684
   },
   {
-   "id": "wheels_0170",
+   "id": "wheels_0168",
    "part": "wheels",
    "key": "wheel.part",
    "side": "R",
@@ -3474,7 +3436,7 @@
    "faces": 2958
   },
   {
-   "id": "wheels_0171",
+   "id": "wheels_0169",
    "part": "wheels",
    "key": "wheel.part",
    "side": "L",
@@ -3494,30 +3456,10 @@
    "faces": 2958
   },
   {
-   "id": "wheels_0172",
-   "part": "wheels",
-   "key": "rim",
-   "side": "L",
-   "end": "F",
-   "source": "metal_parts_rim_chrome_0",
-   "material": "rim_chrome",
-   "center": [
-    -0.832,
-    0.362,
-    0.319
-   ],
-   "size": [
-    0.11,
-    0.273,
-    0.422
-   ],
-   "faces": 579
-  },
-  {
-   "id": "glass_0173",
+   "id": "glass_0170",
    "part": "glass",
    "key": "lens.rear",
-   "side": null,
+   "side": "R",
    "end": null,
    "source": "trans_covers_lights_0",
    "material": "lights",
@@ -3534,10 +3476,10 @@
    "faces": 238
   },
   {
-   "id": "glass_0174",
+   "id": "glass_0171",
    "part": "glass",
    "key": "lens.rear",
-   "side": null,
+   "side": "L",
    "end": null,
    "source": "trans_covers_lights_0",
    "material": "lights",
@@ -3554,7 +3496,7 @@
    "faces": 238
   },
   {
-   "id": "cabin_0175",
+   "id": "cabin_0172",
    "part": "cabin",
    "key": "trim.interior",
    "side": null,
@@ -3574,9 +3516,9 @@
    "faces": 1260
   },
   {
-   "id": "body_0176",
+   "id": "body_0173",
    "part": "body",
-   "key": "trim.lower",
+   "key": "bumper.front",
    "side": "L",
    "end": null,
    "source": "plastic_exterior_bl_pl_M_ext_0",
@@ -3594,9 +3536,9 @@
    "faces": 303
   },
   {
-   "id": "body_0177",
+   "id": "body_0174",
    "part": "body",
-   "key": "trim.lower",
+   "key": "bumper.front",
    "side": "R",
    "end": null,
    "source": "plastic_exterior_bl_pl_M_ext_0",
@@ -3614,7 +3556,7 @@
    "faces": 303
   },
   {
-   "id": "cabin_0178",
+   "id": "cabin_0175",
    "part": "cabin",
    "key": "trim.interior",
    "side": null,
@@ -3634,7 +3576,7 @@
    "faces": 508
   },
   {
-   "id": "cabin_0179",
+   "id": "cabin_0176",
    "part": "cabin",
    "key": "trim.interior",
    "side": null,
@@ -3654,7 +3596,7 @@
    "faces": 508
   },
   {
-   "id": "cabin_0180",
+   "id": "cabin_0177",
    "part": "cabin",
    "key": "trim.interior",
    "side": null,
@@ -3674,7 +3616,7 @@
    "faces": 322
   },
   {
-   "id": "cabin_0181",
+   "id": "cabin_0178",
    "part": "cabin",
    "key": "trim.interior",
    "side": null,
@@ -3694,9 +3636,9 @@
    "faces": 322
   },
   {
-   "id": "cabin_0182",
+   "id": "cabin_0179",
    "part": "cabin",
-   "key": "interior",
+   "key": "console",
    "side": null,
    "end": null,
    "source": "leather_all_leather_int_0",
@@ -3714,7 +3656,7 @@
    "faces": 382
   },
   {
-   "id": "cabin_0183",
+   "id": "cabin_0180",
    "part": "cabin",
    "key": "interior",
    "side": "R",
@@ -3734,11 +3676,11 @@
    "faces": 238
   },
   {
-   "id": "glass_0184",
+   "id": "glass_0181",
    "part": "glass",
-   "key": "glass.side",
+   "key": "lens.front",
    "side": "L",
-   "end": "F",
+   "end": null,
    "source": "trans_covers_lights_0",
    "material": "lights",
    "center": [
@@ -3754,11 +3696,11 @@
    "faces": 413
   },
   {
-   "id": "glass_0185",
+   "id": "glass_0182",
    "part": "glass",
-   "key": "glass.side",
+   "key": "lens.front",
    "side": "R",
-   "end": "F",
+   "end": null,
    "source": "trans_covers_lights_0",
    "material": "lights",
    "center": [
@@ -3774,7 +3716,7 @@
    "faces": 413
   },
   {
-   "id": "cabin_0186",
+   "id": "cabin_0183",
    "part": "cabin",
    "key": "trim.interior",
    "side": "L",
@@ -3794,7 +3736,7 @@
    "faces": 2068
   },
   {
-   "id": "cabin_0187",
+   "id": "cabin_0184",
    "part": "cabin",
    "key": "trim.interior",
    "side": "L",
@@ -3814,67 +3756,7 @@
    "faces": 672
   },
   {
-   "id": "cabin_0188",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "R",
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    -0.685,
-    0.418,
-    -0.624
-   ],
-   "size": [
-    0.312,
-    0.255,
-    0.168
-   ],
-   "faces": 666
-  },
-  {
-   "id": "cabin_0189",
-   "part": "cabin",
-   "key": "interior",
-   "side": "R",
-   "end": null,
-   "source": "leather_all_leather_perforated_0",
-   "material": "leather_perforated",
-   "center": [
-    0.357,
-    0.457,
-    -0.34
-   ],
-   "size": [
-    0.142,
-    0.385,
-    0.302
-   ],
-   "faces": 258
-  },
-  {
-   "id": "cabin_0190",
-   "part": "cabin",
-   "key": "interior",
-   "side": "L",
-   "end": null,
-   "source": "leather_all_leather_perforated_0",
-   "material": "leather_perforated",
-   "center": [
-    0.357,
-    0.457,
-    0.34
-   ],
-   "size": [
-    0.142,
-    0.385,
-    0.302
-   ],
-   "faces": 258
-  },
-  {
-   "id": "wheels_0191",
+   "id": "wheels_0185",
    "part": "wheels",
    "key": "wheel.part",
    "side": "R",
@@ -3894,7 +3776,7 @@
    "faces": 520
   },
   {
-   "id": "wheels_0192",
+   "id": "wheels_0186",
    "part": "wheels",
    "key": "wheel.part",
    "side": "L",
@@ -3914,427 +3796,7 @@
    "faces": 520
   },
   {
-   "id": "cabin_0193",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "L",
-   "end": null,
-   "source": "chrome__door_2_chrom_int_0",
-   "material": "chrom_int",
-   "center": [
-    0.021,
-    0.813,
-    1.308
-   ],
-   "size": [
-    0.4,
-    0.035,
-    0.41
-   ],
-   "faces": 127
-  },
-  {
-   "id": "body_0194",
-   "part": "body",
-   "key": "reflector",
-   "side": null,
-   "end": null,
-   "source": "reflectors_all_reflectors_0",
-   "material": "reflectors",
-   "center": [
-    2.126,
-    0.947,
-    0
-   ],
-   "size": [
-    0.051,
-    0.017,
-    0.474
-   ],
-   "faces": 340
-  },
-  {
-   "id": "cabin_0195",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "L",
-   "end": null,
-   "source": "glossy_plastic_bl_pl__GL_int_ext_0",
-   "material": "bl_pl__GL_int_ext",
-   "center": [
-    1.912,
-    0.747,
-    0.62
-   ],
-   "size": [
-    0.409,
-    0.047,
-    0.294
-   ],
-   "faces": 230
-  },
-  {
-   "id": "cabin_0196",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "R",
-   "end": null,
-   "source": "glossy_plastic_bl_pl__GL_int_ext_0",
-   "material": "bl_pl__GL_int_ext",
-   "center": [
-    1.912,
-    0.747,
-    -0.619
-   ],
-   "size": [
-    0.409,
-    0.047,
-    0.294
-   ],
-   "faces": 230
-  },
-  {
-   "id": "cabin_0197",
-   "part": "cabin",
-   "key": "interior",
-   "side": null,
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    1.016,
-    0.783,
-    0.074
-   ],
-   "size": [
-    0.113,
-    0.356,
-    0.146
-   ],
-   "faces": 929
-  },
-  {
-   "id": "cabin_0198",
-   "part": "cabin",
-   "key": "interior",
-   "side": null,
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    1.016,
-    0.783,
-    -0.074
-   ],
-   "size": [
-    0.113,
-    0.356,
-    0.146
-   ],
-   "faces": 929
-  },
-  {
-   "id": "cabin_0199",
-   "part": "cabin",
-   "key": "interior",
-   "side": "L",
-   "end": null,
-   "source": "leather_all_leather_perforated_0",
-   "material": "leather_perforated",
-   "center": [
-    0.408,
-    0.638,
-    0.34
-   ],
-   "size": [
-    0.163,
-    0.394,
-    0.256
-   ],
-   "faces": 244
-  },
-  {
-   "id": "cabin_0200",
-   "part": "cabin",
-   "key": "interior",
-   "side": "R",
-   "end": null,
-   "source": "leather_all_leather_perforated_0",
-   "material": "leather_perforated",
-   "center": [
-    0.408,
-    0.638,
-    -0.34
-   ],
-   "size": [
-    0.163,
-    0.394,
-    0.256
-   ],
-   "faces": 244
-  },
-  {
-   "id": "body_0201",
-   "part": "body",
-   "key": "plate",
-   "side": null,
-   "end": null,
-   "source": "number_plate_number_plate1_0",
-   "material": "number_plate1",
-   "center": [
-    2.217,
-    0.552,
-    0
-   ],
-   "size": [
-    0.017,
-    0.101,
-    0.518
-   ],
-   "faces": 176
-  },
-  {
-   "id": "body_0202",
-   "part": "body",
-   "key": "reflector",
-   "side": "L",
-   "end": null,
-   "source": "reflectors_all_reflectors_0",
-   "material": "reflectors",
-   "center": [
-    1.974,
-    0.411,
-    0.727
-   ],
-   "size": [
-    0.34,
-    0.052,
-    0.273
-   ],
-   "faces": 476
-  },
-  {
-   "id": "body_0203",
-   "part": "body",
-   "key": "reflector",
-   "side": "R",
-   "end": null,
-   "source": "reflectors_all_reflectors_0",
-   "material": "reflectors",
-   "center": [
-    1.974,
-    0.411,
-    -0.727
-   ],
-   "size": [
-    0.34,
-    0.052,
-    0.273
-   ],
-   "faces": 476
-  },
-  {
-   "id": "cabin_0204",
-   "part": "cabin",
-   "key": "interior",
-   "side": "L",
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    0.32,
-    0.498,
-    0.539
-   ],
-   "size": [
-    0.2,
-    0.465,
-    0.09
-   ],
-   "faces": 191
-  },
-  {
-   "id": "cabin_0205",
-   "part": "cabin",
-   "key": "interior",
-   "side": "R",
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    0.32,
-    0.498,
-    -0.539
-   ],
-   "size": [
-    0.2,
-    0.465,
-    0.09
-   ],
-   "faces": 191
-  },
-  {
-   "id": "cabin_0206",
-   "part": "cabin",
-   "key": "headliner",
-   "side": "L",
-   "end": null,
-   "source": "upholstery_all_upholstery_0",
-   "material": "upholstery",
-   "center": [
-    -0.074,
-    1.191,
-    0.312
-   ],
-   "size": [
-    0.147,
-    0.054,
-    0.375
-   ],
-   "faces": 770
-  },
-  {
-   "id": "cabin_0207",
-   "part": "cabin",
-   "key": "headliner",
-   "side": "R",
-   "end": null,
-   "source": "upholstery_all_upholstery_0",
-   "material": "upholstery",
-   "center": [
-    -0.074,
-    1.191,
-    -0.312
-   ],
-   "size": [
-    0.147,
-    0.054,
-    0.375
-   ],
-   "faces": 770
-  },
-  {
-   "id": "cabin_0208",
-   "part": "cabin",
-   "key": "interior",
-   "side": null,
-   "end": null,
-   "source": "reisin_all_reisin_0",
-   "material": "reisin",
-   "center": [
-    -0.919,
-    0.891,
-    0.165
-   ],
-   "size": [
-    0.127,
-    0.036,
-    0.486
-   ],
-   "faces": 210
-  },
-  {
-   "id": "cabin_0209",
-   "part": "cabin",
-   "key": "interior",
-   "side": null,
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    0.32,
-    0.498,
-    -0.142
-   ],
-   "size": [
-    0.2,
-    0.465,
-    0.09
-   ],
-   "faces": 189
-  },
-  {
-   "id": "cabin_0210",
-   "part": "cabin",
-   "key": "interior",
-   "side": null,
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    0.32,
-    0.498,
-    0.142
-   ],
-   "size": [
-    0.2,
-    0.465,
-    0.09
-   ],
-   "faces": 189
-  },
-  {
-   "id": "cabin_0211",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "R",
-   "end": null,
-   "source": "glossy_plastic_bl_pl__GL_int_ext_0",
-   "material": "bl_pl__GL_int_ext",
-   "center": [
-    -1.734,
-    0.725,
-    -0.696
-   ],
-   "size": [
-    0.337,
-    0.231,
-    0.255
-   ],
-   "faces": 270
-  },
-  {
-   "id": "cabin_0212",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "L",
-   "end": null,
-   "source": "glossy_plastic_bl_pl__GL_int_ext_0",
-   "material": "bl_pl__GL_int_ext",
-   "center": [
-    -1.734,
-    0.725,
-    0.696
-   ],
-   "size": [
-    0.337,
-    0.231,
-    0.255
-   ],
-   "faces": 270
-  },
-  {
-   "id": "cabin_0213",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "R",
-   "end": null,
-   "source": "chrome_door_1_chrom_int_0",
-   "material": "chrom_int",
-   "center": [
-    0.156,
-    0.813,
-    -0.686
-   ],
-   "size": [
-    0.55,
-    0.035,
-    0.046
-   ],
-   "faces": 127
-  },
-  {
-   "id": "brakes_0214",
+   "id": "brakes_0187",
    "part": "brakes",
    "key": "disc",
    "side": "L",
@@ -4354,7 +3816,7 @@
    "faces": 2294
   },
   {
-   "id": "brakes_0215",
+   "id": "brakes_0188",
    "part": "brakes",
    "key": "disc",
    "side": "R",
@@ -4374,407 +3836,7 @@
    "faces": 2294
   },
   {
-   "id": "body_0216",
-   "part": "body",
-   "key": "mirror",
-   "side": "L",
-   "end": null,
-   "source": "body_door_2_body_main_0",
-   "material": "body_main",
-   "center": [
-    -0.479,
-    0.941,
-    1.113
-   ],
-   "size": [
-    0.158,
-    0.139,
-    0.296
-   ],
-   "faces": 1330
-  },
-  {
-   "id": "cabin_0217",
-   "part": "cabin",
-   "key": "interior",
-   "side": "L",
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    0.736,
-    0.425,
-    0.324
-   ],
-   "size": [
-    0.303,
-    0.058,
-    0.328
-   ],
-   "faces": 306
-  },
-  {
-   "id": "cabin_0218",
-   "part": "cabin",
-   "key": "interior",
-   "side": "R",
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    0.736,
-    0.425,
-    -0.324
-   ],
-   "size": [
-    0.303,
-    0.058,
-    0.328
-   ],
-   "faces": 306
-  },
-  {
-   "id": "cabin_0219",
-   "part": "cabin",
-   "key": "interior",
-   "side": null,
-   "end": null,
-   "source": "leather_all_leather_perforated_0",
-   "material": "leather_perforated",
-   "center": [
-    0.325,
-    0.489,
-    0.17
-   ],
-   "size": [
-    0.207,
-    0.447,
-    0.085
-   ],
-   "faces": 163
-  },
-  {
-   "id": "cabin_0220",
-   "part": "cabin",
-   "key": "interior",
-   "side": null,
-   "end": null,
-   "source": "leather_all_leather_perforated_0",
-   "material": "leather_perforated",
-   "center": [
-    0.325,
-    0.489,
-    -0.17
-   ],
-   "size": [
-    0.207,
-    0.447,
-    0.085
-   ],
-   "faces": 163
-  },
-  {
-   "id": "cabin_0221",
-   "part": "cabin",
-   "key": "interior",
-   "side": "R",
-   "end": null,
-   "source": "leather_all_leather_perforated_0",
-   "material": "leather_perforated",
-   "center": [
-    0.325,
-    0.489,
-    -0.51
-   ],
-   "size": [
-    0.207,
-    0.447,
-    0.085
-   ],
-   "faces": 163
-  },
-  {
-   "id": "cabin_0222",
-   "part": "cabin",
-   "key": "interior",
-   "side": "L",
-   "end": null,
-   "source": "leather_all_leather_perforated_0",
-   "material": "leather_perforated",
-   "center": [
-    0.325,
-    0.489,
-    0.51
-   ],
-   "size": [
-    0.207,
-    0.447,
-    0.085
-   ],
-   "faces": 163
-  },
-  {
-   "id": "cabin_0223",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": null,
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    0.199,
-    0.505,
-    0
-   ],
-   "size": [
-    0.39,
-    0.02,
-    0.143
-   ],
-   "faces": 422
-  },
-  {
-   "id": "body_0224",
-   "part": "body",
-   "key": "trim.lower",
-   "side": "R",
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    -2.027,
-    0.349,
-    -0.581
-   ],
-   "size": [
-    0.236,
-    0.016,
-    0.418
-   ],
-   "faces": 184
-  },
-  {
-   "id": "body_0225",
-   "part": "body",
-   "key": "trim.lower",
-   "side": "L",
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    -2.027,
-    0.349,
-    0.581
-   ],
-   "size": [
-    0.236,
-    0.016,
-    0.418
-   ],
-   "faces": 184
-  },
-  {
-   "id": "cabin_0226",
-   "part": "cabin",
-   "key": "interior",
-   "side": null,
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    -0.017,
-    0.358,
-    -0.143
-   ],
-   "size": [
-    0.387,
-    0.157,
-    0.095
-   ],
-   "faces": 331
-  },
-  {
-   "id": "cabin_0227",
-   "part": "cabin",
-   "key": "interior",
-   "side": null,
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    -0.017,
-    0.358,
-    0.143
-   ],
-   "size": [
-    0.387,
-    0.157,
-    0.095
-   ],
-   "faces": 331
-  },
-  {
-   "id": "cabin_0228",
-   "part": "cabin",
-   "key": "interior",
-   "side": "R",
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    -0.017,
-    0.358,
-    -0.537
-   ],
-   "size": [
-    0.387,
-    0.157,
-    0.095
-   ],
-   "faces": 328
-  },
-  {
-   "id": "cabin_0229",
-   "part": "cabin",
-   "key": "interior",
-   "side": "L",
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    -0.017,
-    0.358,
-    0.537
-   ],
-   "size": [
-    0.387,
-    0.157,
-    0.095
-   ],
-   "faces": 328
-  },
-  {
-   "id": "body_0230",
-   "part": "body",
-   "key": "trim.lower",
-   "side": "L",
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    -2.015,
-    0.31,
-    0.588
-   ],
-   "size": [
-    0.232,
-    0.016,
-    0.412
-   ],
-   "faces": 184
-  },
-  {
-   "id": "body_0231",
-   "part": "body",
-   "key": "trim.lower",
-   "side": "R",
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    -2.015,
-    0.31,
-    -0.588
-   ],
-   "size": [
-    0.232,
-    0.016,
-    0.412
-   ],
-   "faces": 184
-  },
-  {
-   "id": "body_0232",
-   "part": "body",
-   "key": "mirror",
-   "side": "R",
-   "end": null,
-   "source": "body__door_1_body_main_0",
-   "material": "body_main",
-   "center": [
-    -0.351,
-    0.941,
-    -0.912
-   ],
-   "size": [
-    0.24,
-    0.139,
-    0.202
-   ],
-   "faces": 1330
-  },
-  {
-   "id": "body_0233",
-   "part": "body",
-   "key": "trim",
-   "side": "L",
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    -2.045,
-    0.485,
-    0.623
-   ],
-   "size": [
-    0.226,
-    0.038,
-    0.348
-   ],
-   "faces": 350
-  },
-  {
-   "id": "body_0234",
-   "part": "body",
-   "key": "trim",
-   "side": "R",
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    -2.045,
-    0.485,
-    -0.623
-   ],
-   "size": [
-    0.226,
-    0.038,
-    0.348
-   ],
-   "faces": 350
-  },
-  {
-   "id": "cabin_0235",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "R",
-   "end": null,
-   "source": "plast_leather_all_pl_leather_int_0",
-   "material": "pl_leather_int",
-   "center": [
-    0.557,
-    1.021,
-    -0.591
-   ],
-   "size": [
-    0.21,
-    0.267,
-    0.179
-   ],
-   "faces": 578
-  },
-  {
-   "id": "wheels_0236",
+   "id": "wheels_0189",
    "part": "wheels",
    "key": "wheel.part",
    "side": "R",
@@ -4794,7 +3856,7 @@
    "faces": 508
   },
   {
-   "id": "wheels_0237",
+   "id": "wheels_0190",
    "part": "wheels",
    "key": "wheel.part",
    "side": "L",
@@ -4814,747 +3876,7 @@
    "faces": 508
   },
   {
-   "id": "body_0238",
-   "part": "body",
-   "key": "trim.lower",
-   "side": "R",
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    -2.039,
-    0.388,
-    -0.568
-   ],
-   "size": [
-    0.228,
-    0.015,
-    0.403
-   ],
-   "faces": 184
-  },
-  {
-   "id": "body_0239",
-   "part": "body",
-   "key": "trim.lower",
-   "side": "L",
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    -2.039,
-    0.388,
-    0.568
-   ],
-   "size": [
-    0.228,
-    0.015,
-    0.403
-   ],
-   "faces": 184
-  },
-  {
-   "id": "cabin_0240",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "L",
-   "end": null,
-   "source": "chrome_int_chrom_int_0",
-   "material": "chrom_int",
-   "center": [
-    -1.759,
-    0.723,
-    0.695
-   ],
-   "size": [
-    0.254,
-    0.201,
-    0.215
-   ],
-   "faces": 492
-  },
-  {
-   "id": "cabin_0241",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "R",
-   "end": null,
-   "source": "chrome_int_chrom_int_0",
-   "material": "chrom_int",
-   "center": [
-    -1.759,
-    0.723,
-    -0.695
-   ],
-   "size": [
-    0.254,
-    0.201,
-    0.215
-   ],
-   "faces": 492
-  },
-  {
-   "id": "cabin_0242",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "L",
-   "end": null,
-   "source": "plast_leather_all_pl_leather_int_0",
-   "material": "pl_leather_int",
-   "center": [
-    0.557,
-    1.021,
-    0.591
-   ],
-   "size": [
-    0.21,
-    0.267,
-    0.179
-   ],
-   "faces": 505
-  },
-  {
-   "id": "cabin_0243",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": null,
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    -0.508,
-    0.621,
-    0
-   ],
-   "size": [
-    0.203,
-    0.156,
-    0.247
-   ],
-   "faces": 795
-  },
-  {
-   "id": "cabin_0244",
-   "part": "cabin",
-   "key": "interior",
-   "side": "R",
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    0.681,
-    0.428,
-    -0.505
-   ],
-   "size": [
-    0.418,
-    0.076,
-    0.123
-   ],
-   "faces": 197
-  },
-  {
-   "id": "cabin_0245",
-   "part": "cabin",
-   "key": "interior",
-   "side": "L",
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    0.681,
-    0.428,
-    0.505
-   ],
-   "size": [
-    0.418,
-    0.076,
-    0.123
-   ],
-   "faces": 197
-  },
-  {
-   "id": "cabin_0246",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "L",
-   "end": null,
-   "source": "plast_leather_all_pl_leather_int_0",
-   "material": "pl_leather_int",
-   "center": [
-    1.349,
-    0.866,
-    0.467
-   ],
-   "size": [
-    0.445,
-    0.097,
-    0.068
-   ],
-   "faces": 159
-  },
-  {
-   "id": "body_0247",
-   "part": "body",
-   "key": "trim.lower",
-   "side": "R",
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    2.181,
-    0.316,
-    -0.415
-   ],
-   "size": [
-    0.144,
-    0.127,
-    0.297
-   ],
-   "faces": 741
-  },
-  {
-   "id": "body_0248",
-   "part": "body",
-   "key": "trim.lower",
-   "side": "L",
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    2.181,
-    0.316,
-    0.415
-   ],
-   "size": [
-    0.144,
-    0.127,
-    0.297
-   ],
-   "faces": 741
-  },
-  {
-   "id": "cabin_0249",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "R",
-   "end": null,
-   "source": "plast_leather_all_pl_leather_int_0",
-   "material": "pl_leather_int",
-   "center": [
-    1.349,
-    0.867,
-    -0.467
-   ],
-   "size": [
-    0.445,
-    0.094,
-    0.068
-   ],
-   "faces": 155
-  },
-  {
-   "id": "cabin_0250",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "L",
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    -0.453,
-    0.685,
-    0.34
-   ],
-   "size": [
-    0.246,
-    0.159,
-    0.175
-   ],
-   "faces": 862
-  },
-  {
-   "id": "cabin_0251",
-   "part": "cabin",
-   "key": "interior",
-   "side": "L",
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    1.012,
-    0.77,
-    0.461
-   ],
-   "size": [
-    0.108,
-    0.333,
-    0.066
-   ],
-   "faces": 654
-  },
-  {
-   "id": "cabin_0252",
-   "part": "cabin",
-   "key": "interior",
-   "side": null,
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    0.215,
-    0.536,
-    0
-   ],
-   "size": [
-    0.356,
-    0.067,
-    0.122
-   ],
-   "faces": 404
-  },
-  {
-   "id": "cabin_0253",
-   "part": "cabin",
-   "key": "interior",
-   "side": "R",
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    1.012,
-    0.769,
-    -0.461
-   ],
-   "size": [
-    0.108,
-    0.334,
-    0.066
-   ],
-   "faces": 575
-  },
-  {
-   "id": "cabin_0254",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "R",
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    -0.628,
-    0.856,
-    -0.587
-   ],
-   "size": [
-    0.285,
-    0.087,
-    0.154
-   ],
-   "faces": 856
-  },
-  {
-   "id": "cabin_0255",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "L",
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    -0.628,
-    0.856,
-    0.587
-   ],
-   "size": [
-    0.285,
-    0.087,
-    0.154
-   ],
-   "faces": 855
-  },
-  {
-   "id": "glass_0256",
-   "part": "glass",
-   "key": "lens.front",
-   "side": null,
-   "end": null,
-   "source": "trans_covers_lights_0",
-   "material": "lights",
-   "center": [
-    -2.05,
-    0.444,
-    -0.649
-   ],
-   "size": [
-    0.222,
-    0.058,
-    0.289
-   ],
-   "faces": 462
-  },
-  {
-   "id": "glass_0257",
-   "part": "glass",
-   "key": "lens.front",
-   "side": null,
-   "end": null,
-   "source": "trans_covers_lights_0",
-   "material": "lights",
-   "center": [
-    -2.05,
-    0.444,
-    0.649
-   ],
-   "size": [
-    0.222,
-    0.058,
-    0.289
-   ],
-   "faces": 462
-  },
-  {
-   "id": "cabin_0258",
-   "part": "cabin",
-   "key": "interior",
-   "side": null,
-   "end": null,
-   "source": "leather_all_leather_perforated_0",
-   "material": "leather_perforated",
-   "center": [
-    0.016,
-    0.342,
-    0.154
-   ],
-   "size": [
-    0.406,
-    0.193,
-    0.055
-   ],
-   "faces": 136
-  },
-  {
-   "id": "cabin_0259",
-   "part": "cabin",
-   "key": "interior",
-   "side": "L",
-   "end": null,
-   "source": "leather_all_leather_perforated_0",
-   "material": "leather_perforated",
-   "center": [
-    0.016,
-    0.342,
-    0.526
-   ],
-   "size": [
-    0.406,
-    0.193,
-    0.055
-   ],
-   "faces": 136
-  },
-  {
-   "id": "cabin_0260",
-   "part": "cabin",
-   "key": "interior",
-   "side": null,
-   "end": null,
-   "source": "leather_all_leather_perforated_0",
-   "material": "leather_perforated",
-   "center": [
-    0.016,
-    0.342,
-    -0.154
-   ],
-   "size": [
-    0.406,
-    0.193,
-    0.055
-   ],
-   "faces": 136
-  },
-  {
-   "id": "cabin_0261",
-   "part": "cabin",
-   "key": "interior",
-   "side": "R",
-   "end": null,
-   "source": "leather_all_leather_perforated_0",
-   "material": "leather_perforated",
-   "center": [
-    0.016,
-    0.342,
-    -0.526
-   ],
-   "size": [
-    0.406,
-    0.193,
-    0.055
-   ],
-   "faces": 136
-  },
-  {
-   "id": "body_0262",
-   "part": "body",
-   "key": "trim",
-   "side": "R",
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    0.81,
-    0.706,
-    -0.87
-   ],
-   "size": [
-    0.245,
-    0.263,
-    0.088
-   ],
-   "faces": 414
-  },
-  {
-   "id": "body_0263",
-   "part": "body",
-   "key": "trim",
-   "side": "L",
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    0.81,
-    0.706,
-    0.87
-   ],
-   "size": [
-    0.245,
-    0.263,
-    0.088
-   ],
-   "faces": 414
-  },
-  {
-   "id": "cabin_0264",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": null,
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    -0.655,
-    0.467,
-    0.088
-   ],
-   "size": [
-    0.313,
-    0.149,
-    0.033
-   ],
-   "faces": 537
-  },
-  {
-   "id": "cabin_0265",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": null,
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    -0.655,
-    0.467,
-    -0.088
-   ],
-   "size": [
-    0.313,
-    0.149,
-    0.033
-   ],
-   "faces": 537
-  },
-  {
-   "id": "cabin_0266",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "L",
-   "end": null,
-   "source": "carbon_all_carbon_int_0",
-   "material": "carbon_int",
-   "center": [
-    -0.279,
-    0.796,
-    0.34
-   ],
-   "size": [
-    0.086,
-    0.078,
-    0.295
-   ],
-   "faces": 984
-  },
-  {
-   "id": "cabin_0267",
-   "part": "cabin",
-   "key": "interior",
-   "side": null,
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    1.018,
-    0.782,
-    0
-   ],
-   "size": [
-    0.1,
-    0.343,
-    0.055
-   ],
-   "faces": 406
-  },
-  {
-   "id": "cabin_0268",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": null,
-   "end": null,
-   "source": "plast_leather_all_pl_leather_int_0",
-   "material": "pl_leather_int",
-   "center": [
-    -0.281,
-    1.203,
-    0
-   ],
-   "size": [
-    0.146,
-    0.055,
-    0.284
-   ],
-   "faces": 802
-  },
-  {
-   "id": "cabin_0269",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "R",
-   "end": null,
-   "source": "chrome_int_chrom_int_0",
-   "material": "chrom_int",
-   "center": [
-    -0.17,
-    0.335,
-    -0.75
-   ],
-   "size": [
-    0.469,
-    0.016,
-    0.042
-   ],
-   "faces": 88
-  },
-  {
-   "id": "cabin_0270",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "L",
-   "end": null,
-   "source": "chrome_int_chrom_int_0",
-   "material": "chrom_int",
-   "center": [
-    -0.17,
-    0.335,
-    0.75
-   ],
-   "size": [
-    0.469,
-    0.016,
-    0.042
-   ],
-   "faces": 88
-  },
-  {
-   "id": "body_0271",
-   "part": "body",
-   "key": "trim",
-   "side": null,
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    1.933,
-    0.871,
-    -0.199
-   ],
-   "size": [
-    0.158,
-    0.101,
-    0.33
-   ],
-   "faces": 253
-  },
-  {
-   "id": "body_0272",
-   "part": "body",
-   "key": "trim",
-   "side": null,
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    1.933,
-    0.871,
-    0.199
-   ],
-   "size": [
-    0.158,
-    0.101,
-    0.33
-   ],
-   "faces": 253
-  },
-  {
-   "id": "cabin_0273",
-   "part": "cabin",
-   "key": "interior",
-   "side": "L",
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    0.351,
-    0.275,
-    0.34
-   ],
-   "size": [
-    0.071,
-    0.03,
-    0.377
-   ],
-   "faces": 232
-  },
-  {
-   "id": "cabin_0274",
-   "part": "cabin",
-   "key": "interior",
-   "side": "R",
-   "end": null,
-   "source": "leather_all_leather_int_0",
-   "material": "leather_int",
-   "center": [
-    0.351,
-    0.275,
-    -0.34
-   ],
-   "size": [
-    0.071,
-    0.03,
-    0.377
-   ],
-   "faces": 232
-  },
-  {
-   "id": "wheels_0275",
+   "id": "wheels_0191",
    "part": "wheels",
    "key": "hubcap",
    "side": "L",
@@ -5574,7 +3896,7 @@
    "faces": 2993
   },
   {
-   "id": "wheels_0276",
+   "id": "wheels_0192",
    "part": "wheels",
    "key": "hubcap",
    "side": "R",
@@ -5594,7 +3916,7 @@
    "faces": 2993
   },
   {
-   "id": "wheels_0277",
+   "id": "wheels_0193",
    "part": "wheels",
    "key": "hubcap",
    "side": "L",
@@ -5614,7 +3936,7 @@
    "faces": 2993
   },
   {
-   "id": "wheels_0278",
+   "id": "wheels_0194",
    "part": "wheels",
    "key": "hubcap",
    "side": "R",
@@ -5634,69 +3956,49 @@
    "faces": 2993
   },
   {
-   "id": "cabin_0279",
-   "part": "cabin",
-   "key": "trim.interior",
-   "side": "L",
-   "end": null,
-   "source": "glossy_plastic_bl_pl__GL_int_ext_0",
-   "material": "bl_pl__GL_int_ext",
-   "center": [
-    -1.663,
-    0.725,
-    0.699
-   ],
-   "size": [
-    0.106,
-    0.162,
-    0.177
-   ],
-   "faces": 2533
-  },
-  {
-   "id": "cabin_0280",
-   "part": "cabin",
-   "key": "trim.interior",
+   "id": "wheels_0195",
+   "part": "wheels",
+   "key": "wheel.part",
    "side": "R",
-   "end": null,
+   "end": "F",
    "source": "glossy_plastic_bl_pl__GL_int_ext_0",
    "material": "bl_pl__GL_int_ext",
    "center": [
-    -1.663,
-    0.725,
-    -0.698
+    -1.614,
+    0.621,
+    -0.886
    ],
    "size": [
-    0.106,
-    0.162,
-    0.177
+    0.228,
+    0.045,
+    0.06
    ],
-   "faces": 2533
+   "faces": 283
   },
   {
-   "id": "cabin_0281",
-   "part": "cabin",
-   "key": "trim.interior",
+   "id": "wheels_0196",
+   "part": "wheels",
+   "key": "wheel.part",
    "side": "L",
-   "end": null,
-   "source": "carbon__door_2_carbon_int_0",
-   "material": "carbon_int",
+   "end": "F",
+   "source": "glossy_plastic_bl_pl__GL_int_ext_0",
+   "material": "bl_pl__GL_int_ext",
    "center": [
-    0.026,
-    0.819,
-    1.313
+    -1.614,
+    0.621,
+    0.886
    ],
    "size": [
-    0.372,
-    0.022,
-    0.36
+    0.228,
+    0.045,
+    0.06
    ],
-   "faces": 50
+   "faces": 283
   },
   {
-   "id": "body_0282",
+   "id": "body_0197",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": null,
    "end": null,
    "source": "plastic_exterior_bl_pl_M_ext_0",
@@ -5714,29 +4016,29 @@
    "faces": 312
   },
   {
-   "id": "body_0283",
+   "id": "body_0198",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": "L",
    "end": null,
    "source": "plastic_exterior_bl_pl_M_ext_0",
    "material": "bl_pl_M_ext",
    "center": [
-    -0.875,
-    0.865,
-    0.469
+    -0.897,
+    0.869,
+    0.391
    ],
    "size": [
-    0.058,
-    0.096,
-    0.334
+    0.101,
+    0.104,
+    0.49
    ],
-   "faces": 1180
+   "faces": 1765
   },
   {
-   "id": "body_0284",
+   "id": "body_0199",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": null,
    "end": null,
    "source": "plastic_exterior_bl_pl_M_ext_0",
@@ -5754,207 +4056,167 @@
    "faces": 1090
   },
   {
-   "id": "body_0285",
+   "id": "body_0200",
    "part": "body",
-   "key": "small",
-   "side": null,
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    -0.916,
-    0.907,
-    0.278
-   ],
-   "size": [
-    0.063,
-    0.028,
-    0.264
-   ],
-   "faces": 585
-  },
-  {
-   "id": "body_0286",
-   "part": "body",
-   "key": "small",
-   "side": null,
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    -0.956,
-    0.889,
-    -0.221
-   ],
-   "size": [
-    0.138,
-    0.042,
-    0.309
-   ],
-   "faces": 733
-  },
-  {
-   "id": "body_0287",
-   "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": "R",
    "end": null,
    "source": "plastic_exterior_bl_pl_M_ext_0",
    "material": "bl_pl_M_ext",
    "center": [
-    -0.807,
-    0.889,
-    -0.518
+    -0.901,
+    0.891,
+    -0.314
    ],
    "size": [
-    0.201,
-    0.05,
-    0.34
+    0.249,
+    0.045,
+    0.495
    ],
-   "faces": 836
+   "faces": 1397
   },
   {
-   "id": "body_0288",
+   "id": "body_0201",
    "part": "body",
-   "key": "small",
-   "side": "L",
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    -1.853,
-    0.546,
-    0.664
-   ],
-   "size": [
-    0.609,
-    0.567,
-    0.348
-   ],
-   "faces": 1548
-  },
-  {
-   "id": "body_0289",
-   "part": "body",
-   "key": "small",
-   "side": "L",
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    -2.17,
-    0.36,
-    0.354
-   ],
-   "size": [
-    0.139,
-    0.129,
-    0.134
-   ],
-   "faces": 267
-  },
-  {
-   "id": "body_0290",
-   "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": "R",
    "end": null,
    "source": "plastic_exterior_bl_pl_M_ext_0",
    "material": "bl_pl_M_ext",
    "center": [
-    -1.853,
-    0.546,
-    -0.664
+    -0.717,
+    0.873,
+    -0.675
    ],
    "size": [
-    0.609,
-    0.567,
-    0.348
-   ],
-   "faces": 1548
-  },
-  {
-   "id": "body_0291",
-   "part": "body",
-   "key": "small",
-   "side": "R",
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    -2.17,
-    0.36,
-    -0.354
-   ],
-   "size": [
-    0.139,
-    0.129,
-    0.134
-   ],
-   "faces": 267
-  },
-  {
-   "id": "body_0292",
-   "part": "body",
-   "key": "small",
-   "side": null,
-   "end": null,
-   "source": "plastic_exterior_bl_pl_M_ext_0",
-   "material": "bl_pl_M_ext",
-   "center": [
-    2.198,
-    0.27,
-    0.214
-   ],
-   "size": [
-    0.013,
-    0.024,
+    0.023,
+    0.019,
     0.025
    ],
-   "faces": 108
+   "faces": 172
   },
   {
-   "id": "body_0293",
+   "id": "body_0202",
    "part": "body",
-   "key": "small",
+   "key": "trim.lower",
    "side": "L",
    "end": null,
    "source": "plastic_exterior_bl_pl_M_ext_0",
    "material": "bl_pl_M_ext",
    "center": [
-    1.862,
-    0.625,
-    0.464
+    -2.065,
+    0.383,
+    0.562
    ],
    "size": [
-    0.343,
-    0.705,
-    0.783
+    0.348,
+    0.241,
+    0.551
    ],
-   "faces": 2357
+   "faces": 2594
   },
   {
-   "id": "body_0294",
+   "id": "body_0203",
    "part": "body",
-   "key": "small",
+   "key": "trim.lower",
    "side": "R",
    "end": null,
    "source": "plastic_exterior_bl_pl_M_ext_0",
    "material": "bl_pl_M_ext",
    "center": [
-    1.862,
-    0.625,
-    -0.464
+    -2.065,
+    0.383,
+    -0.562
    ],
    "size": [
-    0.343,
-    0.705,
-    0.783
+    0.348,
+    0.241,
+    0.551
    ],
-   "faces": 2357
+   "faces": 2594
   },
   {
-   "id": "body_0295",
+   "id": "body_0204",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "L",
+   "end": null,
+   "source": "plastic_exterior_bl_pl_M_ext_0",
+   "material": "bl_pl_M_ext",
+   "center": [
+    2.002,
+    0.322,
+    0.528
+   ],
+   "size": [
+    0.502,
+    0.14,
+    0.654
+   ],
+   "faces": 1006
+  },
+  {
+   "id": "body_0205",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "plastic_exterior_bl_pl_M_ext_0",
+   "material": "bl_pl_M_ext",
+   "center": [
+    -1.705,
+    0.723,
+    0.696
+   ],
+   "size": [
+    0.313,
+    0.213,
+    0.237
+   ],
+   "faces": 123
+  },
+  {
+   "id": "body_0206",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "plastic_exterior_bl_pl_M_ext_0",
+   "material": "bl_pl_M_ext",
+   "center": [
+    -1.705,
+    0.723,
+    -0.696
+   ],
+   "size": [
+    0.313,
+    0.213,
+    0.237
+   ],
+   "faces": 123
+  },
+  {
+   "id": "body_0207",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "R",
+   "end": null,
+   "source": "plastic_exterior_bl_pl_M_ext_0",
+   "material": "bl_pl_M_ext",
+   "center": [
+    2.002,
+    0.322,
+    -0.561
+   ],
+   "size": [
+    0.502,
+    0.14,
+    0.589
+   ],
+   "faces": 898
+  },
+  {
+   "id": "body_0208",
    "part": "body",
    "key": "small",
    "side": "L",
@@ -5974,7 +4236,7 @@
    "faces": 282
   },
   {
-   "id": "body_0296",
+   "id": "body_0209",
    "part": "body",
    "key": "small",
    "side": "R",
@@ -5994,9 +4256,9 @@
    "faces": 282
   },
   {
-   "id": "cabin_0297",
+   "id": "cabin_0210",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "L",
    "end": null,
    "source": "carbon_all_carbon_int_0",
@@ -6014,49 +4276,49 @@
    "faces": 412
   },
   {
-   "id": "glass_0298",
+   "id": "glass_0211",
    "part": "glass",
-   "key": "small",
+   "key": "lens.front",
    "side": "R",
    "end": null,
    "source": "lights_pattern_all_headlights_pattern_0",
    "material": "headlights_pattern",
    "center": [
-    -1.835,
-    0.608,
-    -0.715
+    -1.663,
+    0.777,
+    -0.697
    ],
    "size": [
-    0.624,
-    0.362,
-    0.398
+    0.1,
+    0.025,
+    0.15
    ],
-   "faces": 182
+   "faces": 38
   },
   {
-   "id": "glass_0299",
+   "id": "glass_0212",
    "part": "glass",
-   "key": "small",
+   "key": "lens.front",
    "side": "L",
    "end": null,
    "source": "lights_pattern_all_headlights_pattern_0",
    "material": "headlights_pattern",
    "center": [
-    -1.835,
-    0.608,
-    0.715
+    -1.663,
+    0.777,
+    0.697
    ],
    "size": [
-    0.624,
-    0.362,
-    0.398
+    0.1,
+    0.025,
+    0.15
    ],
-   "faces": 182
+   "faces": 38
   },
   {
-   "id": "glass_0300",
+   "id": "glass_0213",
    "part": "glass",
-   "key": "small",
+   "key": "lens.rear",
    "side": "L",
    "end": null,
    "source": "lights_pattern_all_headlights_pattern_0",
@@ -6064,19 +4326,39 @@
    "center": [
     1.931,
     0.747,
-    0.616
+    0.62
    ],
    "size": [
     0.371,
     0.046,
-    0.301
+    0.293
    ],
-   "faces": 224
+   "faces": 169
   },
   {
-   "id": "glass_0301",
+   "id": "glass_0214",
    "part": "glass",
-   "key": "small",
+   "key": "lens.rear",
+   "side": "L",
+   "end": null,
+   "source": "lights_pattern_all_headlights_pattern_0",
+   "material": "headlights_pattern",
+   "center": [
+    2.061,
+    0.751,
+    0.489
+   ],
+   "size": [
+    0.026,
+    0.007,
+    0.048
+   ],
+   "faces": 55
+  },
+  {
+   "id": "glass_0215",
+   "part": "glass",
+   "key": "lens.rear",
    "side": "R",
    "end": null,
    "source": "lights_pattern_all_headlights_pattern_0",
@@ -6084,97 +4366,117 @@
    "center": [
     1.931,
     0.747,
-    -0.616
+    -0.62
    ],
    "size": [
     0.371,
     0.046,
-    0.301
+    0.293
    ],
-   "faces": 224
+   "faces": 169
   },
   {
-   "id": "body_0302",
+   "id": "glass_0216",
+   "part": "glass",
+   "key": "lens.rear",
+   "side": "R",
+   "end": null,
+   "source": "lights_pattern_all_headlights_pattern_0",
+   "material": "headlights_pattern",
+   "center": [
+    2.061,
+    0.751,
+    -0.489
+   ],
+   "size": [
+    0.026,
+    0.007,
+    0.048
+   ],
+   "faces": 55
+  },
+  {
+   "id": "glass_0217",
+   "part": "glass",
+   "key": "lens.front",
+   "side": "R",
+   "end": null,
+   "source": "lights_pattern_all_headlights_pattern_0",
+   "material": "headlights_pattern",
+   "center": [
+    -1.619,
+    0.653,
+    -0.769
+   ],
+   "size": [
+    0.193,
+    0.08,
+    0.29
+   ],
+   "faces": 104
+  },
+  {
+   "id": "glass_0218",
+   "part": "glass",
+   "key": "lens.front",
+   "side": "L",
+   "end": null,
+   "source": "lights_pattern_all_headlights_pattern_0",
+   "material": "headlights_pattern",
+   "center": [
+    -1.619,
+    0.653,
+    0.769
+   ],
+   "size": [
+    0.193,
+    0.08,
+    0.29
+   ],
+   "faces": 104
+  },
+  {
+   "id": "body_0219",
    "part": "body",
-   "key": "small",
+   "key": "light.rear",
    "side": "R",
    "end": null,
    "source": "body_circles_body_main_0",
    "material": "body_main",
    "center": [
-    2.202,
-    0.513,
-    -0.36
+    2.146,
+    0.508,
+    -0.504
    ],
    "size": [
-    0.009,
-    0.107,
-    0.118
+    0.122,
+    0.117,
+    0.406
    ],
-   "faces": 336
+   "faces": 384
   },
   {
-   "id": "body_0303",
+   "id": "body_0220",
    "part": "body",
-   "key": "small",
+   "key": "light.rear",
    "side": "L",
    "end": null,
    "source": "body_circles_body_main_0",
    "material": "body_main",
    "center": [
-    2.206,
-    0.556,
-    0.311
+    2.146,
+    0.508,
+    0.504
    ],
    "size": [
-    0.002,
-    0.02,
-    0.02
+    0.122,
+    0.117,
+    0.406
    ],
-   "faces": 48
+   "faces": 96
   },
   {
-   "id": "body_0304",
-   "part": "body",
-   "key": "small",
-   "side": "L",
-   "end": null,
-   "source": "body_circles_body_main_0",
-   "material": "body_main",
-   "center": [
-    2.091,
-    0.459,
-    0.7
-   ],
-   "size": [
-    0.014,
-    0.02,
-    0.015
-   ],
-   "faces": 48
-  },
-  {
-   "id": "body_0305",
-   "part": "body",
-   "key": "small",
-   "side": "R",
-   "end": null,
-   "source": "body_circles_body_main_0",
-   "material": "body_main",
-   "center": [
-    2.091,
-    0.459,
-    -0.7
-   ],
-   "size": [
-    0.014,
-    0.02,
-    0.015
-   ],
-   "faces": 48
-  },
-  {
-   "id": "body_0306",
+   "id": "body_0221",
    "part": "body",
    "key": "small",
    "side": "R",
@@ -6194,9 +4496,9 @@
    "faces": 252
   },
   {
-   "id": "glass_0307",
-   "part": "glass",
-   "key": "small",
+   "id": "cabin_0222",
+   "part": "cabin",
+   "key": "display",
    "side": "L",
    "end": null,
    "source": "monitors_seconds_monitor_0",
@@ -6214,129 +4516,209 @@
    "faces": 83
   },
   {
-   "id": "cabin_0308",
+   "id": "cabin_0223",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": null,
    "end": null,
    "source": "glossy_plastic_bl_pl__GL_int_ext_0",
    "material": "bl_pl__GL_int_ext",
    "center": [
-    -0.503,
-    0.769,
+    -0.369,
+    0.675,
     0
    ],
    "size": [
-    0.335,
-    0.308,
+    0.069,
+    0.12,
     0.207
    ],
-   "faces": 2594
+   "faces": 2434
   },
   {
-   "id": "cabin_0309",
+   "id": "cabin_0224",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "L",
    "end": null,
    "source": "glossy_plastic_bl_pl__GL_int_ext_0",
    "material": "bl_pl__GL_int_ext",
    "center": [
-    -0.398,
-    0.8,
+    -0.408,
+    0.841,
     0.34
    ],
    "size": [
-    0.194,
-    0.174,
+    0.172,
+    0.091,
     0.358
    ],
-   "faces": 353
+   "faces": 292
   },
   {
-   "id": "cabin_0310",
-   "part": "cabin",
-   "key": "small",
+   "id": "body_0225",
+   "part": "body",
+   "key": "trim",
    "side": "L",
    "end": null,
    "source": "glossy_plastic_bl_pl__GL_int_ext_0",
    "material": "bl_pl__GL_int_ext",
    "center": [
-    -1.658,
-    0.723,
-    0.702
+    -1.652,
+    0.79,
+    0.697
    ],
    "size": [
-    0.117,
-    0.175,
-    0.176
+    0.105,
+    0.041,
+    0.085
    ],
-   "faces": 1640
+   "faces": 391
   },
   {
-   "id": "cabin_0311",
-   "part": "cabin",
-   "key": "small",
-   "side": "R",
-   "end": null,
-   "source": "glossy_plastic_bl_pl__GL_int_ext_0",
-   "material": "bl_pl__GL_int_ext",
-   "center": [
-    -1.658,
-    0.723,
-    -0.701
-   ],
-   "size": [
-    0.117,
-    0.175,
-    0.176
-   ],
-   "faces": 1640
-  },
-  {
-   "id": "cabin_0312",
-   "part": "cabin",
-   "key": "small",
+   "id": "body_0226",
+   "part": "body",
+   "key": "trim",
    "side": "L",
    "end": null,
    "source": "glossy_plastic_bl_pl__GL_int_ext_0",
    "material": "bl_pl__GL_int_ext",
    "center": [
-    1.868,
-    0.751,
-    0.628
+    -1.734,
+    0.725,
+    0.696
    ],
    "size": [
-    0.427,
-    0.063,
-    0.337
+    0.337,
+    0.231,
+    0.255
    ],
-   "faces": 1441
+   "faces": 4052
   },
   {
-   "id": "cabin_0313",
-   "part": "cabin",
-   "key": "small",
+   "id": "body_0227",
+   "part": "body",
+   "key": "trim",
    "side": "R",
    "end": null,
    "source": "glossy_plastic_bl_pl__GL_int_ext_0",
    "material": "bl_pl__GL_int_ext",
    "center": [
-    1.868,
-    0.751,
-    -0.628
+    -1.652,
+    0.79,
+    -0.696
    ],
    "size": [
-    0.427,
-    0.063,
-    0.337
+    0.105,
+    0.041,
+    0.085
    ],
-   "faces": 1441
+   "faces": 391
   },
   {
-   "id": "cabin_0314",
+   "id": "body_0228",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "glossy_plastic_bl_pl__GL_int_ext_0",
+   "material": "bl_pl__GL_int_ext",
+   "center": [
+    -1.734,
+    0.725,
+    -0.696
+   ],
+   "size": [
+    0.337,
+    0.231,
+    0.255
+   ],
+   "faces": 4052
+  },
+  {
+   "id": "body_0229",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "glossy_plastic_bl_pl__GL_int_ext_0",
+   "material": "bl_pl__GL_int_ext",
+   "center": [
+    1.773,
+    0.76,
+    0.735
+   ],
+   "size": [
+    0.072,
+    0.044,
+    0.065
+   ],
+   "faces": 120
+  },
+  {
+   "id": "body_0230",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "glossy_plastic_bl_pl__GL_int_ext_0",
+   "material": "bl_pl__GL_int_ext",
+   "center": [
+    1.773,
+    0.76,
+    -0.735
+   ],
+   "size": [
+    0.072,
+    0.044,
+    0.065
+   ],
+   "faces": 120
+  },
+  {
+   "id": "cabin_0231",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
+   "side": null,
+   "end": null,
+   "source": "glossy_plastic_bl_pl__GL_int_ext_0",
+   "material": "bl_pl__GL_int_ext",
+   "center": [
+    -0.665,
+    0.908,
+    0
+   ],
+   "size": [
+    0.011,
+    0.03,
+    0.032
+   ],
+   "faces": 160
+  },
+  {
+   "id": "cabin_0232",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "L",
+   "end": null,
+   "source": "glossy_plastic_bl_pl__GL_int_ext_0",
+   "material": "bl_pl__GL_int_ext",
+   "center": [
+    -0.31,
+    0.724,
+    0.471
+   ],
+   "size": [
+    0.019,
+    0.023,
+    0.047
+   ],
+   "faces": 61
+  },
+  {
+   "id": "cabin_0233",
+   "part": "cabin",
+   "key": "trim.interior",
    "side": "L",
    "end": null,
    "source": "chrome_int_chrom_int_0",
@@ -6354,9 +4736,9 @@
    "faces": 917
   },
   {
-   "id": "cabin_0315",
+   "id": "cabin_0234",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": null,
    "end": null,
    "source": "chrome_int_chrom_int_0",
@@ -6374,149 +4756,229 @@
    "faces": 156
   },
   {
-   "id": "cabin_0316",
+   "id": "cabin_0235",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "L",
    "end": null,
    "source": "chrome_int_chrom_int_0",
    "material": "chrom_int",
    "center": [
     -0.17,
-    0.581,
-    0.529
+    0.335,
+    0.75
    ],
    "size": [
-    0.221,
-    0.497,
-    0.467
+    0.469,
+    0.016,
+    0.042
    ],
-   "faces": 1892
+   "faces": 1260
   },
   {
-   "id": "cabin_0317",
+   "id": "cabin_0236",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "R",
    "end": null,
    "source": "chrome_int_chrom_int_0",
    "material": "chrom_int",
    "center": [
-    -0.171,
-    0.337,
-    -0.751
+    -0.259,
+    0.336,
+    -0.753
    ],
    "size": [
-    0.221,
-    0.009,
-    0.024
+    0.045,
+    0.007,
+    0.02
    ],
-   "faces": 1172
+   "faces": 112
   },
   {
-   "id": "glass_0318",
-   "part": "glass",
-   "key": "small",
+   "id": "cabin_0237",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "R",
+   "end": null,
+   "source": "chrome_int_chrom_int_0",
+   "material": "chrom_int",
+   "center": [
+    -0.17,
+    0.335,
+    -0.75
+   ],
+   "size": [
+    0.469,
+    0.016,
+    0.042
+   ],
+   "faces": 1148
+  },
+  {
+   "id": "body_0238",
+   "part": "body",
+   "key": "light.front",
    "side": "R",
    "end": null,
    "source": "headlights_flash_lights_0",
    "material": "lights",
    "center": [
-    -1.688,
-    0.729,
+    -1.686,
+    0.762,
+    -0.698
+   ],
+   "size": [
+    0.051,
+    0.026,
+    0.161
+   ],
+   "faces": 154
+  },
+  {
+   "id": "body_0239",
+   "part": "body",
+   "key": "light.front",
+   "side": "R",
+   "end": null,
+   "source": "headlights_flash_lights_0",
+   "material": "lights",
+   "center": [
+    -1.689,
+    0.722,
     -0.699
    ],
    "size": [
-    0.056,
-    0.092,
-    0.163
+    0.053,
+    0.079,
+    0.162
    ],
-   "faces": 412
+   "faces": 258
   },
   {
-   "id": "glass_0319",
-   "part": "glass",
-   "key": "small",
+   "id": "body_0240",
+   "part": "body",
+   "key": "light.front",
    "side": "L",
    "end": null,
    "source": "headlights_flash_lights_0",
    "material": "lights",
    "center": [
-    -1.688,
-    0.729,
+    -1.686,
+    0.762,
+    0.698
+   ],
+   "size": [
+    0.051,
+    0.026,
+    0.161
+   ],
+   "faces": 154
+  },
+  {
+   "id": "body_0241",
+   "part": "body",
+   "key": "light.front",
+   "side": "L",
+   "end": null,
+   "source": "headlights_flash_lights_0",
+   "material": "lights",
+   "center": [
+    -1.689,
+    0.722,
     0.699
    ],
    "size": [
-    0.056,
-    0.092,
-    0.163
+    0.053,
+    0.079,
+    0.162
    ],
-   "faces": 412
+   "faces": 258
   },
   {
-   "id": "cabin_0320",
+   "id": "cabin_0242",
    "part": "cabin",
-   "key": "small",
+   "key": "steering",
+   "side": "L",
+   "end": null,
+   "source": "steering_wheel_signs_pl_leather_int_0",
+   "material": "pl_leather_int",
+   "center": [
+    -0.227,
+    0.774,
+    0.34
+   ],
+   "size": [
+    0.009,
+    0.032,
+    0.063
+   ],
+   "faces": 774
+  },
+  {
+   "id": "cabin_0243",
+   "part": "cabin",
+   "key": "trim.interior",
    "side": null,
    "end": null,
    "source": "plast_leather_all_pl_leather_int_0",
    "material": "pl_leather_int",
    "center": [
-    -0.34,
-    1.152,
+    -0.301,
+    1.169,
     0
    ],
    "size": [
-    0.109,
-    0.07,
-    0.07
+    0.186,
+    0.122,
+    0.284
    ],
-   "faces": 1890
+   "faces": 4072
   },
   {
-   "id": "cabin_0321",
+   "id": "cabin_0244",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "L",
    "end": null,
    "source": "plast_leather_all_pl_leather_int_0",
    "material": "pl_leather_int",
    "center": [
-    0.648,
-    0.821,
-    0.59
+    0.557,
+    1.021,
+    0.591
    ],
    "size": [
-    0.345,
-    0.41,
-    0.076
+    0.21,
+    0.267,
+    0.179
    ],
-   "faces": 1995
+   "faces": 1841
   },
   {
-   "id": "cabin_0322",
+   "id": "cabin_0245",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "R",
    "end": null,
    "source": "plast_leather_all_pl_leather_int_0",
    "material": "pl_leather_int",
    "center": [
-    0.648,
-    0.821,
-    -0.59
+    0.557,
+    1.021,
+    -0.591
    ],
    "size": [
-    0.345,
-    0.41,
-    0.076
+    0.21,
+    0.267,
+    0.179
    ],
-   "faces": 1816
+   "faces": 1735
   },
   {
-   "id": "cabin_0323",
+   "id": "cabin_0246",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "L",
    "end": null,
    "source": "plast_leather_all_pl_leather_int_0",
@@ -6534,9 +4996,9 @@
    "faces": 2211
   },
   {
-   "id": "cabin_0324",
+   "id": "cabin_0247",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "R",
    "end": null,
    "source": "plast_leather_all_pl_leather_int_0",
@@ -6554,29 +5016,29 @@
    "faces": 785
   },
   {
-   "id": "cabin_0325",
+   "id": "cabin_0248",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": null,
    "end": null,
    "source": "plast_leather_all_pl_leather_int_0",
    "material": "pl_leather_int",
    "center": [
-    -0.21,
-    1.164,
+    -0.162,
+    1.199,
     0
    ],
    "size": [
-    0.194,
-    0.112,
-    0.218
+    0.099,
+    0.042,
+    0.214
    ],
-   "faces": 2796
+   "faces": 1416
   },
   {
-   "id": "cabin_0326",
+   "id": "cabin_0249",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "R",
    "end": null,
    "source": "plast_leather_all_pl_leather_int_0",
@@ -6594,9 +5056,9 @@
    "faces": 403
   },
   {
-   "id": "body_0327",
-   "part": "body",
-   "key": "small",
+   "id": "cabin_0250",
+   "part": "cabin",
+   "key": "speaker",
    "side": null,
    "end": null,
    "source": "dynamics_all_dynamics_0",
@@ -6614,9 +5076,9 @@
    "faces": 144
   },
   {
-   "id": "glass_0328",
+   "id": "glass_0251",
    "part": "glass",
-   "key": "small",
+   "key": "lens.front",
    "side": null,
    "end": null,
    "source": "trans_covers_lights_0",
@@ -6634,9 +5096,9 @@
    "faces": 182
   },
   {
-   "id": "glass_0329",
+   "id": "glass_0252",
    "part": "glass",
-   "key": "small",
+   "key": "lens.rear",
    "side": null,
    "end": null,
    "source": "trans_covers_lights_0",
@@ -6654,9 +5116,9 @@
    "faces": 84
   },
   {
-   "id": "glass_0330",
+   "id": "glass_0253",
    "part": "glass",
-   "key": "small",
+   "key": "lens.front",
    "side": "L",
    "end": null,
    "source": "trans_covers_lights_0",
@@ -6674,9 +5136,9 @@
    "faces": 82
   },
   {
-   "id": "glass_0331",
+   "id": "glass_0254",
    "part": "glass",
-   "key": "small",
+   "key": "lens.front",
    "side": null,
    "end": null,
    "source": "trans_covers_lights_0",
@@ -6694,69 +5156,69 @@
    "faces": 26
   },
   {
-   "id": "cabin_0332",
+   "id": "cabin_0255",
    "part": "cabin",
-   "key": "small",
-   "side": null,
+   "key": "headliner",
+   "side": "L",
    "end": null,
    "source": "upholstery_all_upholstery_0",
    "material": "upholstery",
    "center": [
-    -0.129,
-    1.195,
-    0.182
+    -0.074,
+    1.191,
+    0.312
    ],
    "size": [
-    0.009,
-    0.006,
-    0.012
+    0.147,
+    0.054,
+    0.375
    ],
-   "faces": 30
+   "faces": 800
   },
   {
-   "id": "cabin_0333",
+   "id": "cabin_0256",
    "part": "cabin",
-   "key": "small",
-   "side": null,
+   "key": "headliner",
+   "side": "R",
    "end": null,
    "source": "upholstery_all_upholstery_0",
    "material": "upholstery",
    "center": [
-    -0.129,
-    1.195,
-    -0.182
+    -0.074,
+    1.191,
+    -0.312
    ],
    "size": [
-    0.009,
-    0.006,
-    0.012
+    0.147,
+    0.054,
+    0.375
    ],
-   "faces": 30
+   "faces": 800
   },
   {
-   "id": "body_0334",
+   "id": "body_0257",
    "part": "body",
-   "key": "small",
+   "key": "logo",
    "side": null,
    "end": null,
    "source": "logo_all_LOGO1_0",
    "material": "LOGO1",
    "center": [
-    -0.074,
-    0.81,
+    -0.051,
+    0.509,
     0
    ],
    "size": [
-    0.434,
-    0.757,
+    0.388,
+    0.155,
     0.222
    ],
-   "faces": 1149
+   "faces": 386
   },
   {
-   "id": "body_0335",
+   "id": "body_0258",
    "part": "body",
-   "key": "small",
+   "key": "logo",
    "side": null,
    "end": null,
    "source": "logo_all_LOGO1_0",
@@ -6774,9 +5236,9 @@
    "faces": 240
   },
   {
-   "id": "body_0336",
+   "id": "body_0259",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": null,
    "end": null,
    "source": "logo_all_LOGO1_0",
@@ -6794,129 +5256,309 @@
    "faces": 2490
   },
   {
-   "id": "body_0337",
+   "id": "body_0260",
    "part": "body",
-   "key": "small",
+   "key": "logo",
    "side": "L",
    "end": null,
    "source": "logo_all_LOGO1_0",
    "material": "LOGO1",
    "center": [
-    -0.18,
-    0.593,
-    0.445
+    -0.235,
+    0.791,
+    0.34
    ],
    "size": [
-    0.152,
-    0.437,
-    0.452
+    0.022,
+    0.04,
+    0.241
    ],
-   "faces": 2880
+   "faces": 2603
   },
   {
-   "id": "body_0338",
+   "id": "body_0261",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": "L",
    "end": null,
    "source": "logo_all_LOGO1_0",
    "material": "LOGO1",
    "center": [
-    -1.709,
-    0.744,
-    0.656
+    -1.762,
+    0.713,
+    0.595
    ],
    "size": [
-    0.133,
-    0.07,
-    0.128
+    0.027,
+    0.008,
+    0.006
    ],
-   "faces": 408
+   "faces": 136
   },
   {
-   "id": "body_0339",
+   "id": "body_0262",
    "part": "body",
-   "key": "small",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "logo_all_LOGO1_0",
+   "material": "LOGO1",
+   "center": [
+    -1.73,
+    0.714,
+    0.6
+   ],
+   "size": [
+    0.037,
+    0.008,
+    0.008
+   ],
+   "faces": 182
+  },
+  {
+   "id": "body_0263",
+   "part": "body",
+   "key": "trim",
    "side": "R",
    "end": null,
    "source": "logo_all_LOGO1_0",
    "material": "LOGO1",
    "center": [
-    -1.71,
-    0.745,
-    -0.656
+    -1.729,
+    0.714,
+    -0.6
    ],
    "size": [
-    0.132,
-    0.071,
-    0.128
+    0.037,
+    0.008,
+    0.008
    ],
-   "faces": 408
+   "faces": 200
   },
   {
-   "id": "body_0340",
+   "id": "body_0264",
    "part": "body",
-   "key": "small",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "logo_all_LOGO1_0",
+   "material": "LOGO1",
+   "center": [
+    -1.763,
+    0.713,
+    -0.595
+   ],
+   "size": [
+    0.027,
+    0.008,
+    0.006
+   ],
+   "faces": 118
+  },
+  {
+   "id": "body_0265",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "logo_all_LOGO1_0",
+   "material": "LOGO1",
+   "center": [
+    -1.67,
+    0.777,
+    -0.697
+   ],
+   "size": [
+    0.053,
+    0.006,
+    0.047
+   ],
+   "faces": 90
+  },
+  {
+   "id": "body_0266",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "logo_all_LOGO1_0",
+   "material": "LOGO1",
+   "center": [
+    -1.669,
+    0.777,
+    0.697
+   ],
+   "size": [
+    0.053,
+    0.005,
+    0.047
+   ],
+   "faces": 90
+  },
+  {
+   "id": "body_0267",
+   "part": "body",
+   "key": "logo",
    "side": "R",
    "end": null,
    "source": "logo_all_LOGO1_0",
    "material": "LOGO1",
    "center": [
     -0.418,
-    0.523,
-    -0.534
+    0.232,
+    -0.501
    ],
    "size": [
     0.104,
-    0.582,
-    0.073
+    0,
+    0.007
    ],
-   "faces": 173
+   "faces": 135
   },
   {
-   "id": "body_0341",
+   "id": "body_0268",
    "part": "body",
-   "key": "small",
+   "key": "logo",
    "side": "L",
    "end": null,
    "source": "logo_all_LOGO1_0",
    "material": "LOGO1",
    "center": [
-    -0.4,
-    0.568,
-    0.393
+    -0.418,
+    0.232,
+    0.501
    ],
    "size": [
-    0.196,
-    0.672,
-    0.439
+    0.104,
+    0,
+    0.007
    ],
-   "faces": 3324
+   "faces": 135
   },
   {
-   "id": "body_0342",
+   "id": "body_0269",
    "part": "body",
-   "key": "small",
+   "key": "logo",
+   "side": "L",
+   "end": null,
+   "source": "logo_all_LOGO1_0",
+   "material": "LOGO1",
+   "center": [
+    -0.374,
+    0.848,
+    0.372
+   ],
+   "size": [
+    0.248,
+    0.114,
+    0.397
+   ],
+   "faces": 2516
+  },
+  {
+   "id": "body_0270",
+   "part": "body",
+   "key": "trim",
    "side": null,
    "end": null,
    "source": "logo_all_LOGO1_0",
    "material": "LOGO1",
    "center": [
-    -0.507,
-    0.767,
+    -0.663,
+    0.909,
     0
    ],
    "size": [
-    0.332,
-    0.334,
-    0.217
+    0.02,
+    0.051,
+    0.054
    ],
-   "faces": 2087
+   "faces": 1077
   },
   {
-   "id": "body_0343",
+   "id": "body_0271",
    "part": "body",
-   "key": "small",
+   "key": "logo",
+   "side": "L",
+   "end": null,
+   "source": "logo_all_LOGO1_0",
+   "material": "LOGO1",
+   "center": [
+    -0.35,
+    0.728,
+    0.53
+   ],
+   "size": [
+    0.097,
+    0.019,
+    0.165
+   ],
+   "faces": 723
+  },
+  {
+   "id": "body_0272",
+   "part": "body",
+   "key": "logo",
+   "side": "L",
+   "end": null,
+   "source": "logo_all_LOGO1_0",
+   "material": "LOGO1",
+   "center": [
+    -0.17,
+    0.56,
+    0.458
+   ],
+   "size": [
+    0.132,
+    0.371,
+    0.427
+   ],
+   "faces": 227
+  },
+  {
+   "id": "body_0273",
+   "part": "body",
+   "key": "logo",
+   "side": null,
+   "end": null,
+   "source": "logo_all_LOGO1_0",
+   "material": "LOGO1",
+   "center": [
+    -0.332,
+    0.661,
+    0
+   ],
+   "size": [
+    0.153,
+    0.144,
+    0.217
+   ],
+   "faces": 1067
+  },
+  {
+   "id": "body_0274",
+   "part": "body",
+   "key": "logo",
+   "side": null,
+   "end": null,
+   "source": "logo_all_LOGO1_0",
+   "material": "LOGO1",
+   "center": [
+    -0.18,
+    1.185,
+    0.001
+   ],
+   "size": [
+    0.037,
+    0.008,
+    0.116
+   ],
+   "faces": 706
+  },
+  {
+   "id": "body_0275",
+   "part": "body",
+   "key": "trim",
    "side": "R",
    "end": null,
    "source": "logo_all_LOGO1_0",
@@ -6934,9 +5576,29 @@
    "faces": 86
   },
   {
-   "id": "cabin_0344",
+   "id": "body_0276",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "logo_all_LOGO1_0",
+   "material": "LOGO1",
+   "center": [
+    -0.455,
+    0.802,
+    -0.563
+   ],
+   "size": [
+    0.006,
+    0.023,
+    0.016
+   ],
+   "faces": 38
+  },
+  {
+   "id": "cabin_0277",
    "part": "cabin",
-   "key": "small",
+   "key": "belt",
    "side": "R",
    "end": null,
    "source": "belts_all_belts_0",
@@ -6954,9 +5616,9 @@
    "faces": 390
   },
   {
-   "id": "cabin_0345",
+   "id": "cabin_0278",
    "part": "cabin",
-   "key": "small",
+   "key": "belt",
    "side": "L",
    "end": null,
    "source": "belts_all_belts_0",
@@ -6974,369 +5636,769 @@
    "faces": 390
   },
   {
-   "id": "cabin_0346",
+   "id": "cabin_0279",
    "part": "cabin",
-   "key": "small",
+   "key": "interior",
    "side": "L",
    "end": null,
    "source": "leather_all_leather_int_0",
    "material": "leather_int",
    "center": [
-    0.02,
-    0.593,
-    0.344
+    -0.286,
+    0.946,
+    0.34
    ],
    "size": [
-    0.655,
-    0.765,
-    0.466
+    0.043,
+    0.06,
+    0.26
    ],
-   "faces": 2244
+   "faces": 758
   },
   {
-   "id": "cabin_0347",
+   "id": "cabin_0280",
    "part": "cabin",
-   "key": "small",
+   "key": "interior",
    "side": "L",
    "end": null,
    "source": "leather_all_leather_seam_0",
    "material": "leather_seam",
    "center": [
-    -0.064,
-    0.633,
-    0.387
+    -0.045,
+    0.549,
+    0.388
    ],
    "size": [
-    0.457,
-    0.631,
-    0.383
+    0.419,
+    0.463,
+    0.381
    ],
-   "faces": 340
+   "faces": 230
   },
   {
-   "id": "cabin_0348",
+   "id": "cabin_0281",
    "part": "cabin",
-   "key": "small",
+   "key": "interior",
    "side": "L",
    "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
+   "source": "leather_all_leather_seam_0",
+   "material": "leather_seam",
    "center": [
-    0.038,
-    0.522,
-    0.413
-   ],
-   "size": [
-    0.702,
-    0.646,
-    0.565
-   ],
-   "faces": 9454
-  },
-  {
-   "id": "cabin_0349",
-   "part": "cabin",
-   "key": "small",
-   "side": "R",
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    -0.636,
-    0.572,
-    -0.439
-   ],
-   "size": [
-    0.475,
-    0.677,
-    0.548
-   ],
-   "faces": 3990
-  },
-  {
-   "id": "cabin_0350",
-   "part": "cabin",
-   "key": "small",
-   "side": "L",
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    -0.61,
-    0.568,
-    0.411
-   ],
-   "size": [
-    0.659,
-    0.691,
-    0.604
-   ],
-   "faces": 19146
-  },
-  {
-   "id": "cabin_0351",
-   "part": "cabin",
-   "key": "small",
-   "side": null,
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    -0.603,
-    0.749,
-    0
-   ],
-   "size": [
-    0.608,
-    0.413,
-    0.307
-   ],
-   "faces": 10869
-  },
-  {
-   "id": "cabin_0352",
-   "part": "cabin",
-   "key": "small",
-   "side": null,
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    0.005,
-    0.705,
-    0
-   ],
-   "size": [
-    0.688,
-    0.99,
-    0.336
-   ],
-   "faces": 11780
-  },
-  {
-   "id": "cabin_0353",
-   "part": "cabin",
-   "key": "small",
-   "side": "R",
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    0.041,
-    0.299,
-    -0.413
-   ],
-   "size": [
-    0.698,
-    0.199,
-    0.565
-   ],
-   "faces": 3138
-  },
-  {
-   "id": "cabin_0354",
-   "part": "cabin",
-   "key": "small",
-   "side": "L",
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    0.577,
-    0.684,
-    0.38
-   ],
-   "size": [
-    0.574,
-    0.81,
-    0.457
-   ],
-   "faces": 1581
-  },
-  {
-   "id": "cabin_0355",
-   "part": "cabin",
-   "key": "small",
-   "side": "R",
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    0.577,
-    0.652,
-    -0.383
-   ],
-   "size": [
-    0.574,
-    0.886,
-    0.463
-   ],
-   "faces": 1843
-  },
-  {
-   "id": "cabin_0356",
-   "part": "cabin",
-   "key": "small",
-   "side": null,
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    0.98,
-    0.615,
-    0
-   ],
-   "size": [
-    0.067,
-    0.064,
-    0.055
-   ],
-   "faces": 620
-  },
-  {
-   "id": "cabin_0357",
-   "part": "cabin",
-   "key": "small",
-   "side": null,
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    0.554,
-    0.487,
-    0
-   ],
-   "size": [
-    0.62,
-    0.512,
-    0.322
-   ],
-   "faces": 2520
-  },
-  {
-   "id": "cabin_0358",
-   "part": "cabin",
-   "key": "small",
-   "side": "R",
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    1.061,
-    0.787,
-    -0.328
-   ],
-   "size": [
-    0.317,
-    0.495,
-    0.399
-   ],
-   "faces": 2292
-  },
-  {
-   "id": "cabin_0359",
-   "part": "cabin",
-   "key": "small",
-   "side": "L",
-   "end": null,
-   "source": "plastic_all_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    1.061,
-    0.787,
-    0.328
-   ],
-   "size": [
-    0.317,
-    0.495,
-    0.399
-   ],
-   "faces": 2291
-  },
-  {
-   "id": "cabin_0360",
-   "part": "cabin",
-   "key": "small",
-   "side": null,
-   "end": null,
-   "source": "plastic_all_interior_grid_0",
-   "material": "interior_grid",
-   "center": [
-    -0.468,
-    0.758,
-    0
-   ],
-   "size": [
-    0.264,
-    0.279,
-    0.228
-   ],
-   "faces": 390
-  },
-  {
-   "id": "cabin_0361",
-   "part": "cabin",
-   "key": "small",
-   "side": null,
-   "end": null,
-   "source": "plastic_all_interior_grid_0",
-   "material": "interior_grid",
-   "center": [
-    -0.3,
-    0.649,
-    0
-   ],
-   "size": [
-    0.018,
-    0.009,
-    0.022
-   ],
-   "faces": 120
-  },
-  {
-   "id": "cabin_0362",
-   "part": "cabin",
-   "key": "small",
-   "side": "L",
-   "end": null,
-   "source": "plastic_all_interior_grid_0",
-   "material": "interior_grid",
-   "center": [
-    -0.244,
-    0.764,
+    -0.279,
+    0.883,
     0.34
    ],
    "size": [
-    0.027,
-    0.092,
-    0.22
+    0.028,
+    0.13,
+    0.288
    ],
-   "faces": 64
+   "faces": 110
   },
   {
-   "id": "cabin_0363",
+   "id": "cabin_0282",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
+   "side": "L",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    0.007,
+    0.488,
+    0.446
+   ],
+   "size": [
+    0.495,
+    0.522,
+    0.499
+   ],
+   "faces": 2295
+  },
+  {
+   "id": "cabin_0283",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "L",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    -0.503,
+    0.564,
+    0.467
+   ],
+   "size": [
+    0.527,
+    0.548,
+    0.492
+   ],
+   "faces": 7431
+  },
+  {
+   "id": "cabin_0284",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "R",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    -0.597,
+    0.831,
+    -0.441
+   ],
+   "size": [
+    0.348,
+    0.154,
+    0.48
+   ],
+   "faces": 3436
+  },
+  {
+   "id": "cabin_0285",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "L",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    -0.504,
+    0.804,
+    0.4
+   ],
+   "size": [
+    0.535,
+    0.219,
+    0.571
+   ],
+   "faces": 17069
+  },
+  {
+   "id": "cabin_0286",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": null,
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    -0.651,
+    0.906,
+    0
+   ],
+   "size": [
+    0.174,
+    0.099,
+    0.307
+   ],
+   "faces": 4238
+  },
+  {
+   "id": "cabin_0287",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": null,
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    -0.498,
+    0.566,
+    0
+   ],
+   "size": [
+    0.628,
+    0.347,
+    0.247
+   ],
+   "faces": 10488
+  },
+  {
+   "id": "cabin_0288",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": null,
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    0.036,
+    0.406,
+    0
+   ],
+   "size": [
+    0.715,
+    0.363,
+    0.336
+   ],
+   "faces": 8461
+  },
+  {
+   "id": "body_0289",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "R",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    -0.288,
+    0.235,
+    -0.34
+   ],
+   "size": [
+    0.04,
+    0.007,
+    0.42
+   ],
+   "faces": 260
+  },
+  {
+   "id": "cabin_0290",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": null,
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    -0.168,
+    1.189,
+    0
+   ],
+   "size": [
+    0.078,
+    0.021,
+    0.187
+   ],
+   "faces": 766
+  },
+  {
+   "id": "cabin_0291",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "L",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    -0.801,
+    0.895,
+    0.325
+   ],
+   "size": [
+    0.129,
+    0.032,
+    0.32
+   ],
+   "faces": 138
+  },
+  {
+   "id": "cabin_0292",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "R",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    -0.801,
+    0.895,
+    -0.325
+   ],
+   "size": [
+    0.129,
+    0.032,
+    0.32
+   ],
+   "faces": 138
+  },
+  {
+   "id": "cabin_0293",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "R",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    -0.62,
+    0.565,
+    -0.496
+   ],
+   "size": [
+    0.443,
+    0.548,
+    0.435
+   ],
+   "faces": 1883
+  },
+  {
+   "id": "body_0294",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "L",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    0.24,
+    0.243,
+    0.618
+   ],
+   "size": [
+    0.045,
+    0.055,
+    0.025
+   ],
+   "faces": 457
+  },
+  {
+   "id": "cabin_0295",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "L",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    0.319,
+    0.442,
+    0.564
+   ],
+   "size": [
+    0.294,
+    0.486,
+    0.09
+   ],
+   "faces": 1883
+  },
+  {
+   "id": "body_0296",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "R",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    0.224,
+    0.241,
+    -0.6
+   ],
+   "size": [
+    0.079,
+    0.079,
+    0.061
+   ],
+   "faces": 463
+  },
+  {
+   "id": "cabin_0297",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "R",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    0.364,
+    0.51,
+    -0.425
+   ],
+   "size": [
+    0.383,
+    0.622,
+    0.379
+   ],
+   "faces": 1878
+  },
+  {
+   "id": "cabin_0298",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": null,
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    0.881,
+    0.537,
+    0
+   ],
+   "size": [
+    0.266,
+    0.222,
+    0.317
+   ],
+   "faces": 1990
+  },
+  {
+   "id": "cabin_0299",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "R",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    1.098,
+    0.866,
+    -0.328
+   ],
+   "size": [
+    0.244,
+    0.337,
+    0.399
+   ],
+   "faces": 1567
+  },
+  {
+   "id": "cabin_0300",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "L",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    1.098,
+    0.866,
+    0.328
+   ],
+   "size": [
+    0.244,
+    0.337,
+    0.399
+   ],
+   "faces": 1567
+  },
+  {
+   "id": "cabin_0301",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "R",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    0.542,
+    0.88,
+    -0.428
+   ],
+   "size": [
+    0.071,
+    0.431,
+    0.373
+   ],
+   "faces": 931
+  },
+  {
+   "id": "cabin_0302",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "R",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    0.007,
+    0.313,
+    -0.446
+   ],
+   "size": [
+    0.495,
+    0.172,
+    0.499
+   ],
+   "faces": 1430
+  },
+  {
+   "id": "cabin_0303",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "L",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    0.552,
+    0.961,
+    0.415
+   ],
+   "size": [
+    0.039,
+    0.254,
+    0.181
+   ],
+   "faces": 777
+  },
+  {
+   "id": "body_0304",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "L",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    -0.288,
+    0.235,
+    0.34
+   ],
+   "size": [
+    0.04,
+    0.007,
+    0.419
+   ],
+   "faces": 260
+  },
+  {
+   "id": "cabin_0305",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "R",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    0.899,
+    0.544,
+    -0.33
+   ],
+   "size": [
+    0.259,
+    0.236,
+    0.355
+   ],
+   "faces": 743
+  },
+  {
+   "id": "cabin_0306",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "L",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    0.899,
+    0.537,
+    0.33
+   ],
+   "size": [
+    0.259,
+    0.223,
+    0.355
+   ],
+   "faces": 742
+  },
+  {
+   "id": "cabin_0307",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "L",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    -0.246,
+    0.809,
+    0.34
+   ],
+   "size": [
+    0.017,
+    0.029,
+    0.286
+   ],
+   "faces": 606
+  },
+  {
+   "id": "cabin_0308",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": null,
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    -0.865,
+    0.905,
+    0
+   ],
+   "size": [
+    0.084,
+    0.022,
+    0.3
+   ],
+   "faces": 108
+  },
+  {
+   "id": "cabin_0309",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "L",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    -0.857,
+    0.475,
+    0.327
+   ],
+   "size": [
+    0.165,
+    0.506,
+    0.436
+   ],
+   "faces": 964
+  },
+  {
+   "id": "cabin_0310",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": null,
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    0.461,
+    0.476,
+    0
+   ],
+   "size": [
+    0.579,
+    0.533,
+    0.322
+   ],
+   "faces": 2025
+  },
+  {
+   "id": "body_0311",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "R",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    0.309,
+    0.211,
+    -0.574
+   ],
+   "size": [
+    0.007,
+    0.003,
+    0.003
+   ],
+   "faces": 1
+  },
+  {
+   "id": "body_0312",
+   "part": "body",
+   "key": "trim.lower",
+   "side": null,
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    0.229,
+    0.235,
+    0
+   ],
+   "size": [
+    0.003,
+    0.004,
+    0.234
+   ],
+   "faces": 4
+  },
+  {
+   "id": "cabin_0313",
+   "part": "cabin",
+   "key": "dashboard",
+   "side": null,
+   "end": null,
+   "source": "plastic_all_interior_grid_0",
+   "material": "interior_grid",
+   "center": [
+    -0.367,
+    0.674,
+    0
+   ],
+   "size": [
+    0.152,
+    0.109,
+    0.228
+   ],
+   "faces": 478
+  },
+  {
+   "id": "cabin_0314",
+   "part": "cabin",
+   "key": "dashboard",
+   "side": null,
+   "end": null,
+   "source": "plastic_all_interior_grid_0",
+   "material": "interior_grid",
+   "center": [
+    -0.597,
+    0.896,
+    0
+   ],
+   "size": [
+    0.007,
+    0.003,
+    0.189
+   ],
+   "faces": 32
+  },
+  {
+   "id": "cabin_0315",
+   "part": "cabin",
+   "key": "dashboard",
    "side": "L",
    "end": null,
    "source": "plastic_all_interior_grid_0",
    "material": "interior_grid",
    "center": [
-    -0.435,
-    0.759,
-    0.557
+    -0.369,
+    0.802,
+    0.402
    ],
    "size": [
-    0.112,
-    0.126,
-    0.035
+    0.245,
+    0.041,
+    0.345
    ],
-   "faces": 106
+   "faces": 78
   },
   {
-   "id": "cabin_0364",
+   "id": "cabin_0316",
    "part": "cabin",
-   "key": "small",
+   "key": "dashboard",
+   "side": "L",
+   "end": null,
+   "source": "plastic_all_interior_grid_0",
+   "material": "interior_grid",
+   "center": [
+    -0.388,
+    0.705,
+    0.564
+   ],
+   "size": [
+    0.017,
+    0.018,
+    0.016
+   ],
+   "faces": 60
+  },
+  {
+   "id": "cabin_0317",
+   "part": "cabin",
+   "key": "dashboard",
    "side": "R",
    "end": null,
    "source": "plastic_all_interior_grid_0",
@@ -7354,9 +6416,189 @@
    "faces": 46
   },
   {
-   "id": "body_0365",
-   "part": "body",
-   "key": "small",
+   "id": "cabin_0318",
+   "part": "cabin",
+   "key": "dashboard",
+   "side": null,
+   "end": null,
+   "source": "plastic_all_interior_grid_0",
+   "material": "interior_grid",
+   "center": [
+    -0.239,
+    0.734,
+    0.253
+   ],
+   "size": [
+    0.017,
+    0.031,
+    0.03
+   ],
+   "faces": 32
+  },
+  {
+   "id": "engine_0319",
+   "part": "engine",
+   "key": "engine",
+   "side": "L",
+   "end": null,
+   "source": "metal_parts_rim_chrome_0",
+   "material": "rim_chrome",
+   "center": [
+    0.915,
+    0.53,
+    0.451
+   ],
+   "size": [
+    0.039,
+    0.038,
+    0.038
+   ],
+   "faces": 210
+  },
+  {
+   "id": "engine_0320",
+   "part": "engine",
+   "key": "engine",
+   "side": "R",
+   "end": null,
+   "source": "metal_parts_rim_chrome_0",
+   "material": "rim_chrome",
+   "center": [
+    0.915,
+    0.53,
+    -0.451
+   ],
+   "size": [
+    0.039,
+    0.038,
+    0.038
+   ],
+   "faces": 210
+  },
+  {
+   "id": "engine_0321",
+   "part": "engine",
+   "key": "engine",
+   "side": "R",
+   "end": null,
+   "source": "metal_parts_rim_chrome_0",
+   "material": "rim_chrome",
+   "center": [
+    0.441,
+    0.618,
+    -0.672
+   ],
+   "size": [
+    0.081,
+    0.078,
+    0.176
+   ],
+   "faces": 940
+  },
+  {
+   "id": "engine_0322",
+   "part": "engine",
+   "key": "engine",
+   "side": "L",
+   "end": null,
+   "source": "metal_parts_rim_chrome_0",
+   "material": "rim_chrome",
+   "center": [
+    0.441,
+    0.618,
+    0.672
+   ],
+   "size": [
+    0.081,
+    0.078,
+    0.176
+   ],
+   "faces": 940
+  },
+  {
+   "id": "engine_0323",
+   "part": "engine",
+   "key": "engine",
+   "side": null,
+   "end": null,
+   "source": "metal_parts_rim_chrome_0",
+   "material": "rim_chrome",
+   "center": [
+    2.223,
+    0.713,
+    -0.003
+   ],
+   "size": [
+    0.022,
+    0.018,
+    0.237
+   ],
+   "faces": 3508
+  },
+  {
+   "id": "engine_0324",
+   "part": "engine",
+   "key": "engine",
+   "side": null,
+   "end": null,
+   "source": "metal_parts_rim_chrome_0",
+   "material": "rim_chrome",
+   "center": [
+    2.158,
+    0.758,
+    0.204
+   ],
+   "size": [
+    0.021,
+    0.022,
+    0.122
+   ],
+   "faces": 273
+  },
+  {
+   "id": "engine_0325",
+   "part": "engine",
+   "key": "engine",
+   "side": null,
+   "end": null,
+   "source": "metal_parts_rim_chrome_0",
+   "material": "rim_chrome",
+   "center": [
+    2.169,
+    0.759,
+    -0.001
+   ],
+   "size": [
+    0.012,
+    0.022,
+    0.204
+   ],
+   "faces": 415
+  },
+  {
+   "id": "engine_0326",
+   "part": "engine",
+   "key": "engine",
+   "side": null,
+   "end": null,
+   "source": "metal_parts_rim_chrome_0",
+   "material": "rim_chrome",
+   "center": [
+    2.158,
+    0.758,
+    -0.205
+   ],
+   "size": [
+    0.022,
+    0.022,
+    0.123
+   ],
+   "faces": 131
+  },
+  {
+   "id": "doors_0327",
+   "part": "doors",
+   "key": "door",
    "side": "R",
    "end": null,
    "source": "reisin__door_1_reisin_0",
@@ -7374,9 +6616,9 @@
    "faces": 19
   },
   {
-   "id": "body_0366",
-   "part": "body",
-   "key": "small",
+   "id": "doors_0328",
+   "part": "doors",
+   "key": "door",
    "side": "R",
    "end": null,
    "source": "plastic_exterior_door_1_bl_pl_M_ext_0",
@@ -7394,9 +6636,9 @@
    "faces": 1355
   },
   {
-   "id": "body_0367",
-   "part": "body",
-   "key": "small",
+   "id": "doors_0329",
+   "part": "doors",
+   "key": "door",
    "side": "R",
    "end": null,
    "source": "screw_door_1_black_metal_0",
@@ -7414,89 +6656,89 @@
    "faces": 650
   },
   {
-   "id": "body_0368",
+   "id": "body_0330",
    "part": "body",
-   "key": "small",
+   "key": "logo",
    "side": "R",
    "end": null,
    "source": "logo_door_1_LOGO1_0",
    "material": "LOGO1",
    "center": [
-    -0.193,
-    0.716,
+    -0.287,
+    0.825,
+    -0.677
+   ],
+   "size": [
+    0.06,
+    0.044,
+    0.009
+   ],
+   "faces": 172
+  },
+  {
+   "id": "body_0331",
+   "part": "body",
+   "key": "logo",
+   "side": "R",
+   "end": null,
+   "source": "logo_door_1_LOGO1_0",
+   "material": "LOGO1",
+   "center": [
+    -0.125,
+    0.586,
     -0.686
    ],
    "size": [
-    0.212,
-    0.262,
+    0.075,
+    0.003,
     0.031
    ],
-   "faces": 360
+   "faces": 228
   },
   {
-   "id": "body_0369",
-   "part": "body",
-   "key": "small",
-   "side": "R",
-   "end": null,
-   "source": "logo_door_1_LOGO1_0",
-   "material": "LOGO1",
-   "center": [
-    -0.315,
-    0.839,
-    -0.681
-   ],
-   "size": [
-    0.005,
-    0.007,
-    0.001
-   ],
-   "faces": 40
-  },
-  {
-   "id": "cabin_0370",
+   "id": "cabin_0332",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "R",
    "end": null,
    "source": "plastic_door_1_bl_pl_M_int_0",
    "material": "bl_pl_M_int",
    "center": [
-    -0.082,
-    0.637,
+    -0.343,
+    0.875,
+    -0.697
+   ],
+   "size": [
+    0.234,
+    0.171,
+    0.049
+   ],
+   "faces": 901
+  },
+  {
+   "id": "cabin_0333",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "R",
+   "end": null,
+   "source": "plastic_door_1_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    -0.006,
+    0.501,
     -0.68
    ],
    "size": [
-    0.529,
-    0.449,
+    0.377,
+    0.178,
     0.075
    ],
-   "faces": 1923
+   "faces": 1105
   },
   {
-   "id": "cabin_0371",
+   "id": "cabin_0334",
    "part": "cabin",
-   "key": "small",
-   "side": "R",
-   "end": null,
-   "source": "plastic_door_1_bl_pl_M_int_0",
-   "material": "bl_pl_M_int",
-   "center": [
-    -0.376,
-    0.893,
-    -0.699
-   ],
-   "size": [
-    0.167,
-    0.135,
-    0.044
-   ],
-   "faces": 261
-  },
-  {
-   "id": "cabin_0372",
-   "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "R",
    "end": null,
    "source": "plastic_door_1_bl_pl_M_int_0",
@@ -7514,9 +6756,9 @@
    "faces": 164
   },
   {
-   "id": "cabin_0373",
+   "id": "cabin_0335",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "R",
    "end": null,
    "source": "chrome_door_1_chrom_int_0",
@@ -7534,49 +6776,49 @@
    "faces": 501
   },
   {
-   "id": "cabin_0374",
-   "part": "cabin",
-   "key": "small",
+   "id": "doors_0336",
+   "part": "doors",
+   "key": "door",
    "side": "L",
    "end": null,
    "source": "plastic_door_2_bl_pl_M_int_0",
    "material": "bl_pl_M_int",
    "center": [
-    -0.068,
-    0.637,
-    1.27
+    -0.341,
+    0.875,
+    0.955
    ],
    "size": [
-    0.552,
-    0.449,
-    0.63
+    0.19,
+    0.171,
+    0.163
    ],
-   "faces": 2087
+   "faces": 901
   },
   {
-   "id": "cabin_0375",
-   "part": "cabin",
-   "key": "small",
+   "id": "doors_0337",
+   "part": "doors",
+   "key": "door",
    "side": "L",
    "end": null,
    "source": "plastic_door_2_bl_pl_M_int_0",
    "material": "bl_pl_M_int",
    "center": [
-    -0.364,
-    0.893,
-    0.93
+    -0.016,
+    0.526,
+    1.317
    ],
    "size": [
-    0.142,
-    0.135,
-    0.112
+    0.448,
+    0.228,
+    0.536
    ],
-   "faces": 261
+   "faces": 1269
   },
   {
-   "id": "cabin_0376",
+   "id": "cabin_0338",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "L",
    "end": null,
    "source": "chrome__door_2_chrom_int_0",
@@ -7594,9 +6836,9 @@
    "faces": 501
   },
   {
-   "id": "body_0377",
+   "id": "body_0339",
    "part": "body",
-   "key": "small",
+   "key": "reflector",
    "side": "L",
    "end": null,
    "source": "reflectors__door_2_reflectors_0",
@@ -7614,49 +6856,49 @@
    "faces": 94
   },
   {
-   "id": "body_0378",
+   "id": "body_0340",
    "part": "body",
-   "key": "small",
+   "key": "logo",
    "side": "L",
    "end": null,
    "source": "logo_door_2_LOGO1_0",
    "material": "LOGO1",
    "center": [
-    -0.23,
-    0.716,
-    1.063
+    -0.289,
+    0.825,
+    0.988
    ],
    "size": [
-    0.14,
-    0.262,
-    0.165
+    0.048,
+    0.044,
+    0.037
    ],
-   "faces": 360
+   "faces": 172
   },
   {
-   "id": "body_0379",
+   "id": "body_0341",
    "part": "body",
-   "key": "small",
+   "key": "logo",
    "side": "L",
    "end": null,
    "source": "logo_door_2_LOGO1_0",
    "material": "LOGO1",
    "center": [
-    -0.311,
-    0.839,
-    0.971
+    -0.188,
+    0.586,
+    1.109
    ],
    "size": [
-    0.004,
-    0.007,
-    0.003
+    0.056,
+    0.003,
+    0.072
    ],
-   "faces": 40
+   "faces": 228
   },
   {
-   "id": "body_0380",
-   "part": "body",
-   "key": "small",
+   "id": "doors_0342",
+   "part": "doors",
+   "key": "door",
    "side": "L",
    "end": null,
    "source": "screw_door_2_black_metal_0",
@@ -7674,9 +6916,9 @@
    "faces": 650
   },
   {
-   "id": "body_0381",
-   "part": "body",
-   "key": "small",
+   "id": "doors_0343",
+   "part": "doors",
+   "key": "door",
    "side": "L",
    "end": null,
    "source": "plastic_exterior__door_2_bl_pl_M_ext_0",
@@ -7694,9 +6936,9 @@
    "faces": 1355
   },
   {
-   "id": "body_0382",
-   "part": "body",
-   "key": "small",
+   "id": "doors_0344",
+   "part": "doors",
+   "key": "door",
    "side": "L",
    "end": null,
    "source": "reisin__door_2_reisin_0",
@@ -7714,9 +6956,29 @@
    "faces": 19
   },
   {
-   "id": "body_0383",
+   "id": "cabin_0345",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "R",
+   "end": null,
+   "source": "plastic_all_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    -0.827,
+    0.365,
+    -0.486
+   ],
+   "size": [
+    0.092,
+    0.262,
+    0.082
+   ],
+   "faces": 55
+  },
+  {
+   "id": "body_0346",
    "part": "body",
-   "key": "small",
+   "key": "reflector",
    "side": "R",
    "end": null,
    "source": "reflector_door_1_reflectors_0",
@@ -7734,9 +6996,9 @@
    "faces": 94
   },
   {
-   "id": "cabin_0384",
+   "id": "cabin_0347",
    "part": "cabin",
-   "key": "small",
+   "key": "carpet",
    "side": "R",
    "end": null,
    "source": "rugs_all_rug_interior_0",
@@ -7754,9 +7016,9 @@
    "faces": 36
   },
   {
-   "id": "cabin_0385",
+   "id": "cabin_0348",
    "part": "cabin",
-   "key": "small",
+   "key": "carpet",
    "side": "L",
    "end": null,
    "source": "rugs_all_rug_interior_0",
@@ -7774,9 +7036,9 @@
    "faces": 36
   },
   {
-   "id": "cabin_0386",
-   "part": "cabin",
-   "key": "small",
+   "id": "body_0349",
+   "part": "body",
+   "key": "trim",
    "side": null,
    "end": null,
    "source": "plastic_all_bl_pl_M_int_0",
@@ -7794,9 +7056,9 @@
    "faces": 192
   },
   {
-   "id": "body_0387",
+   "id": "body_0350",
    "part": "body",
-   "key": "small",
+   "key": "trim",
    "side": null,
    "end": null,
    "source": "plastic_exterior_bl_pl_M_ext_0",
@@ -7814,9 +7076,9 @@
    "faces": 2130
   },
   {
-   "id": "body_0388",
+   "id": "body_0351",
    "part": "body",
-   "key": "small",
+   "key": "light.front",
    "side": "R",
    "end": null,
    "source": "headlights_plastics_hedlights_grid_0",
@@ -7834,9 +7096,9 @@
    "faces": 40
   },
   {
-   "id": "body_0389",
+   "id": "body_0352",
    "part": "body",
-   "key": "small",
+   "key": "light.front",
    "side": "L",
    "end": null,
    "source": "headlights_plastics_hedlights_grid_0",
@@ -7854,9 +7116,29 @@
    "faces": 40
   },
   {
-   "id": "body_0390",
+   "id": "body_0353",
    "part": "body",
-   "key": "small",
+   "key": "trim.lower",
+   "side": "L",
+   "end": null,
+   "source": "metal_parts_rim_chrome_0",
+   "material": "rim_chrome",
+   "center": [
+    -0.832,
+    0.362,
+    0.319
+   ],
+   "size": [
+    0.11,
+    0.273,
+    0.422
+   ],
+   "faces": 579
+  },
+  {
+   "id": "cabin_0354",
+   "part": "cabin",
+   "key": "speaker",
    "side": "R",
    "end": null,
    "source": "dynamics_door_1_dynamics_0",
@@ -7874,9 +7156,9 @@
    "faces": 30
   },
   {
-   "id": "body_0391",
-   "part": "body",
-   "key": "small",
+   "id": "cabin_0355",
+   "part": "cabin",
+   "key": "speaker",
    "side": "L",
    "end": null,
    "source": "dynamic_door_2_dynamics_0",
@@ -7894,29 +7176,29 @@
    "faces": 30
   },
   {
-   "id": "glass_0392",
-   "part": "glass",
-   "key": "small",
+   "id": "cabin_0356",
+   "part": "cabin",
+   "key": "display",
    "side": null,
    "end": null,
    "source": "monitors_seconds_monitor_0",
    "material": "monitor",
    "center": [
-    -0.266,
-    1.14,
-    0
+    -0.364,
+    0.961,
+    -0.048
    ],
    "size": [
-    0.003,
-    0.055,
-    0.211
+    0.198,
+    0.413,
+    0.34
    ],
-   "faces": 40
+   "faces": 49
   },
   {
-   "id": "body_0393",
-   "part": "body",
-   "key": "small",
+   "id": "cabin_0357",
+   "part": "cabin",
+   "key": "mirror",
    "side": null,
    "end": null,
    "source": "mirror_middle_Mirror_0",
@@ -7934,29 +7216,29 @@
    "faces": 40
   },
   {
-   "id": "glass_0394",
-   "part": "glass",
-   "key": "small",
-   "side": null,
+   "id": "cabin_0358",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "L",
    "end": null,
-   "source": "monitors_seconds_monitor_0",
-   "material": "monitor",
+   "source": "chrome_int_chrom_int_0",
+   "material": "chrom_int",
    "center": [
-    -0.458,
-    0.81,
-    -0.048
-   ],
-   "size": [
-    0.01,
-    0.112,
+    -0.233,
+    0.787,
     0.34
    ],
-   "faces": 9
+   "size": [
+    0.024,
+    0.085,
+    0.088
+   ],
+   "faces": 720
   },
   {
-   "id": "cabin_0395",
+   "id": "cabin_0359",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "R",
    "end": null,
    "source": "leathplast_door_1_pl_leather_int_0",
@@ -7974,9 +7256,89 @@
    "faces": 920
   },
   {
-   "id": "cabin_0396",
+   "id": "cabin_0360",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
+   "side": "R",
+   "end": null,
+   "source": "plastic_door_1_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    -0.202,
+    0.835,
+    -0.696
+   ],
+   "size": [
+    0.164,
+    0.052,
+    0.022
+   ],
+   "faces": 178
+  },
+  {
+   "id": "doors_0361",
+   "part": "doors",
+   "key": "door",
+   "side": "L",
+   "end": null,
+   "source": "plastic_door_2_bl_pl_M_int_0",
+   "material": "bl_pl_M_int",
+   "center": [
+    -0.24,
+    0.835,
+    1.059
+   ],
+   "size": [
+    0.118,
+    0.052,
+    0.116
+   ],
+   "faces": 178
+  },
+  {
+   "id": "body_0362",
+   "part": "body",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "plastic_exterior_bl_pl_M_ext_0",
+   "material": "bl_pl_M_ext",
+   "center": [
+    1.851,
+    0.899,
+    0.267
+   ],
+   "size": [
+    0.321,
+    0.158,
+    0.466
+   ],
+   "faces": 2453
+  },
+  {
+   "id": "body_0363",
+   "part": "body",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "plastic_exterior_bl_pl_M_ext_0",
+   "material": "bl_pl_M_ext",
+   "center": [
+    1.851,
+    0.899,
+    -0.267
+   ],
+   "size": [
+    0.321,
+    0.158,
+    0.466
+   ],
+   "faces": 2453
+  },
+  {
+   "id": "cabin_0364",
+   "part": "cabin",
+   "key": "trim.interior",
    "side": "L",
    "end": null,
    "source": "leath_plast_door_2_pl_leather_int_0",
@@ -7994,9 +7356,9 @@
    "faces": 920
   },
   {
-   "id": "cabin_0397",
+   "id": "cabin_0365",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "R",
    "end": null,
    "source": "plast_leather_all_pl_leather_int_0",
@@ -8014,9 +7376,9 @@
    "faces": 469
   },
   {
-   "id": "cabin_0398",
+   "id": "cabin_0366",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "L",
    "end": null,
    "source": "plast_leather_all_pl_leather_int_0",
@@ -8034,9 +7396,49 @@
    "faces": 469
   },
   {
-   "id": "glass_0399",
+   "id": "glass_0367",
    "part": "glass",
-   "key": "small",
+   "key": "lens.front",
+   "side": "R",
+   "end": null,
+   "source": "lights_pattern_all_headlights_pattern_0",
+   "material": "headlights_pattern",
+   "center": [
+    -2.047,
+    0.445,
+    -0.653
+   ],
+   "size": [
+    0.201,
+    0.036,
+    0.275
+   ],
+   "faces": 40
+  },
+  {
+   "id": "glass_0368",
+   "part": "glass",
+   "key": "lens.front",
+   "side": "L",
+   "end": null,
+   "source": "lights_pattern_all_headlights_pattern_0",
+   "material": "headlights_pattern",
+   "center": [
+    -2.047,
+    0.445,
+    0.653
+   ],
+   "size": [
+    0.201,
+    0.036,
+    0.275
+   ],
+   "faces": 40
+  },
+  {
+   "id": "glass_0369",
+   "part": "glass",
+   "key": "lens.rear",
    "side": "R",
    "end": null,
    "source": "trans_covers_lights_0",
@@ -8054,9 +7456,9 @@
    "faces": 30
   },
   {
-   "id": "glass_0400",
+   "id": "glass_0370",
    "part": "glass",
-   "key": "small",
+   "key": "lens.rear",
    "side": "L",
    "end": null,
    "source": "trans_covers_lights_0",
@@ -8074,9 +7476,9 @@
    "faces": 30
   },
   {
-   "id": "body_0401",
-   "part": "body",
-   "key": "small",
+   "id": "cabin_0371",
+   "part": "cabin",
+   "key": "speaker",
    "side": "R",
    "end": null,
    "source": "dynamics_all_dynamics_0",
@@ -8094,9 +7496,9 @@
    "faces": 58
   },
   {
-   "id": "body_0402",
-   "part": "body",
-   "key": "small",
+   "id": "cabin_0372",
+   "part": "cabin",
+   "key": "speaker",
    "side": "L",
    "end": null,
    "source": "dynamics_all_dynamics_0",
@@ -8114,69 +7516,69 @@
    "faces": 58
   },
   {
-   "id": "cabin_0403",
+   "id": "cabin_0373",
    "part": "cabin",
-   "key": "small",
+   "key": "interior",
    "side": "L",
    "end": null,
    "source": "leather_all_leather_int_0",
    "material": "leather_int",
    "center": [
-    0.502,
-    0.75,
+    0.479,
+    0.891,
     0.34
    ],
    "size": [
-    0.179,
-    0.725,
+    0.132,
+    0.444,
     0.395
    ],
-   "faces": 1072
+   "faces": 932
   },
   {
-   "id": "cabin_0404",
+   "id": "cabin_0374",
    "part": "cabin",
-   "key": "small",
+   "key": "interior",
    "side": "L",
    "end": null,
    "source": "leather_all_leather_seam_0",
    "material": "leather_seam",
    "center": [
-    0.354,
-    0.682,
+    0.45,
+    0.88,
     0.34
    ],
    "size": [
-    0.268,
-    0.817,
-    0.429
+    0.075,
+    0.421,
+    0.393
    ],
-   "faces": 234
+   "faces": 148
   },
   {
-   "id": "cabin_0405",
+   "id": "cabin_0375",
    "part": "cabin",
-   "key": "small",
+   "key": "interior",
    "side": "R",
    "end": null,
    "source": "leather_all_leather_seam_0",
    "material": "leather_seam",
    "center": [
-    0.354,
-    0.682,
+    0.45,
+    0.88,
     -0.34
    ],
    "size": [
-    0.268,
-    0.817,
-    0.429
+    0.075,
+    0.421,
+    0.393
    ],
-   "faces": 234
+   "faces": 148
   },
   {
-   "id": "cabin_0406",
+   "id": "cabin_0376",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": null,
    "end": null,
    "source": "chrome_int_chrom_int_0",
@@ -8194,49 +7596,69 @@
    "faces": 806
   },
   {
-   "id": "cabin_0407",
+   "id": "cabin_0377",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "R",
    "end": null,
    "source": "chrome_door_1_chrom_int_0",
    "material": "chrom_int",
    "center": [
-    -0.197,
+    0.075,
     0.823,
-    -0.684
+    -0.686
    ],
    "size": [
-    0.169,
+    0.712,
     0.061,
-    0.024
+    0.046
    ],
-   "faces": 327
+   "faces": 454
   },
   {
-   "id": "cabin_0408",
-   "part": "cabin",
-   "key": "small",
+   "id": "doors_0378",
+   "part": "doors",
+   "key": "door",
    "side": "L",
    "end": null,
    "source": "chrome__door_2_chrom_int_0",
    "material": "chrom_int",
    "center": [
-    -0.23,
+    -0.035,
     0.823,
-    1.06
+    1.255
    ],
    "size": [
-    0.123,
+    0.513,
     0.061,
-    0.127
+    0.516
    ],
-   "faces": 327
+   "faces": 454
   },
   {
-   "id": "body_0409",
+   "id": "cabin_0379",
+   "part": "cabin",
+   "key": "interior",
+   "side": "L",
+   "end": null,
+   "source": "leather_all_leather_int_0",
+   "material": "leather_int",
+   "center": [
+    -0.032,
+    0.495,
+    0.387
+   ],
+   "size": [
+    0.416,
+    0.43,
+    0.395
+   ],
+   "faces": 1364
+  },
+  {
+   "id": "body_0380",
    "part": "body",
-   "key": "small",
+   "key": "mirror",
    "side": "R",
    "end": null,
    "source": "mirror_door_1_Mirror_0",
@@ -8254,9 +7676,9 @@
    "faces": 171
   },
   {
-   "id": "body_0410",
+   "id": "body_0381",
    "part": "body",
-   "key": "small",
+   "key": "mirror",
    "side": "L",
    "end": null,
    "source": "mirror_door_2_Mirror_0",
@@ -8274,9 +7696,9 @@
    "faces": 171
   },
   {
-   "id": "glass_0411",
-   "part": "glass",
-   "key": "small",
+   "id": "body_0382",
+   "part": "body",
+   "key": "mirror",
    "side": "R",
    "end": null,
    "source": "mirror_cover_door_1_monitor_0",
@@ -8294,9 +7716,9 @@
    "faces": 171
   },
   {
-   "id": "glass_0412",
-   "part": "glass",
-   "key": "small",
+   "id": "body_0383",
+   "part": "body",
+   "key": "mirror",
    "side": "L",
    "end": null,
    "source": "mirror_cover_door_2_monitor_0",
@@ -8314,29 +7736,29 @@
    "faces": 171
   },
   {
-   "id": "cabin_0413",
+   "id": "cabin_0384",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "L",
    "end": null,
    "source": "carbon_all_carbon_int_0",
    "material": "carbon_int",
    "center": [
-    -0.429,
-    0.755,
-    0.536
+    -0.344,
+    0.791,
+    0.414
    ],
    "size": [
-    0.047,
-    0.015,
-    0.199
+    0.216,
+    0.087,
+    0.443
    ],
-   "faces": 287
+   "faces": 1271
   },
   {
-   "id": "body_0414",
-   "part": "body",
-   "key": "small",
+   "id": "exhaust_0385",
+   "part": "exhaust",
+   "key": "exhaust",
    "side": "L",
    "end": null,
    "source": "pipes_pipes_chrom_0",
@@ -8354,9 +7776,9 @@
    "faces": 1056
   },
   {
-   "id": "body_0415",
-   "part": "body",
-   "key": "small",
+   "id": "exhaust_0386",
+   "part": "exhaust",
+   "key": "exhaust",
    "side": "R",
    "end": null,
    "source": "pipes_pipes_chrom_0",
@@ -8374,49 +7796,49 @@
    "faces": 1056
   },
   {
-   "id": "cabin_0416",
+   "id": "cabin_0387",
    "part": "cabin",
-   "key": "small",
+   "key": "interior",
    "side": null,
    "end": null,
    "source": "leather_all_leather_int_0",
    "material": "leather_int",
    "center": [
-    0.09,
-    0.441,
+    0.091,
+    0.425,
     0
    ],
    "size": [
-    0.598,
-    0.244,
-    0.341
+    0.604,
+    0.29,
+    0.381
    ],
-   "faces": 929
+   "faces": 1995
   },
   {
-   "id": "cabin_0417",
+   "id": "cabin_0388",
    "part": "cabin",
-   "key": "small",
+   "key": "interior",
    "side": "R",
    "end": null,
    "source": "leather_all_leather_int_0",
    "material": "leather_int",
    "center": [
-    0.069,
-    0.326,
-    -0.344
+    -0.017,
+    0.36,
+    -0.537
    ],
    "size": [
-    0.556,
-    0.23,
-    0.466
+    0.387,
+    0.162,
+    0.095
    ],
-   "faces": 642
+   "faces": 520
   },
   {
-   "id": "body_0418",
-   "part": "body",
-   "key": "small",
+   "id": "doors_0389",
+   "part": "doors",
+   "key": "door",
    "side": "R",
    "end": null,
    "source": "body__door_1_body_main_0",
@@ -8434,9 +7856,9 @@
    "faces": 223
   },
   {
-   "id": "body_0419",
+   "id": "body_0390",
    "part": "body",
-   "key": "small",
+   "key": "light.front",
    "side": "L",
    "end": null,
    "source": "headlights_plastics_headlights_plastic_ring_0",
@@ -8454,9 +7876,9 @@
    "faces": 72
   },
   {
-   "id": "body_0420",
+   "id": "body_0391",
    "part": "body",
-   "key": "small",
+   "key": "light.front",
    "side": "R",
    "end": null,
    "source": "headlights_plastics_headlights_plastic_ring_0",
@@ -8474,7 +7896,7 @@
    "faces": 72
   },
   {
-   "id": "body_0421",
+   "id": "body_0392",
    "part": "body",
    "key": "small",
    "side": "L",
@@ -8494,9 +7916,9 @@
    "faces": 223
   },
   {
-   "id": "body_0422",
-   "part": "body",
-   "key": "small",
+   "id": "cabin_0393",
+   "part": "cabin",
+   "key": "speaker",
    "side": "L",
    "end": null,
    "source": "dynamic_door_2_dynamics_0",
@@ -8514,9 +7936,9 @@
    "faces": 43
   },
   {
-   "id": "body_0423",
-   "part": "body",
-   "key": "small",
+   "id": "cabin_0394",
+   "part": "cabin",
+   "key": "speaker",
    "side": "R",
    "end": null,
    "source": "dynamics_door_1_dynamics_0",
@@ -8534,9 +7956,9 @@
    "faces": 43
   },
   {
-   "id": "cabin_0424",
+   "id": "cabin_0395",
    "part": "cabin",
-   "key": "small",
+   "key": "interior",
    "side": null,
    "end": null,
    "source": "leather_all_leather_seam_0",
@@ -8554,9 +7976,9 @@
    "faces": 372
   },
   {
-   "id": "cabin_0425",
+   "id": "cabin_0396",
    "part": "cabin",
-   "key": "small",
+   "key": "interior",
    "side": null,
    "end": null,
    "source": "leather_all_leather_seam_0",
@@ -8574,9 +7996,49 @@
    "faces": 76
   },
   {
-   "id": "glass_0426",
+   "id": "cabin_0397",
+   "part": "cabin",
+   "key": "interior",
+   "side": "L",
+   "end": null,
+   "source": "leather_all_leather_int_0",
+   "material": "leather_int",
+   "center": [
+    0.522,
+    0.47,
+    0.347
+   ],
+   "size": [
+    0.735,
+    0.519,
+    0.473
+   ],
+   "faces": 1516
+  },
+  {
+   "id": "cabin_0398",
+   "part": "cabin",
+   "key": "interior",
+   "side": "R",
+   "end": null,
+   "source": "leather_all_leather_int_0",
+   "material": "leather_int",
+   "center": [
+    0.522,
+    0.47,
+    -0.347
+   ],
+   "size": [
+    0.735,
+    0.519,
+    0.473
+   ],
+   "faces": 1516
+  },
+  {
+   "id": "glass_0399",
    "part": "glass",
-   "key": "small",
+   "key": "lens.front",
    "side": "L",
    "end": null,
    "source": "trans_covers_lights_0",
@@ -8594,7 +8056,47 @@
    "faces": 266
   },
   {
-   "id": "body_0427",
+   "id": "body_0400",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "glossy_plastic_bl_pl__GL_int_ext_0",
+   "material": "bl_pl__GL_int_ext",
+   "center": [
+    1.746,
+    0.747,
+    0.774
+   ],
+   "size": [
+    0.182,
+    0.056,
+    0.045
+   ],
+   "faces": 1092
+  },
+  {
+   "id": "body_0401",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "glossy_plastic_bl_pl__GL_int_ext_0",
+   "material": "bl_pl__GL_int_ext",
+   "center": [
+    1.746,
+    0.747,
+    -0.774
+   ],
+   "size": [
+    0.182,
+    0.056,
+    0.045
+   ],
+   "faces": 1092
+  },
+  {
+   "id": "body_0402",
    "part": "body",
    "key": "small",
    "side": "R",
@@ -8614,9 +8116,9 @@
    "faces": 528
   },
   {
-   "id": "glass_0428",
+   "id": "glass_0403",
    "part": "glass",
-   "key": "small",
+   "key": "lens.front",
    "side": "R",
    "end": null,
    "source": "trans_covers_lights_0",
@@ -8634,49 +8136,69 @@
    "faces": 342
   },
   {
-   "id": "cabin_0429",
+   "id": "cabin_0404",
    "part": "cabin",
-   "key": "small",
+   "key": "interior",
    "side": "R",
    "end": null,
    "source": "leather_all_leather_int_0",
    "material": "leather_int",
    "center": [
-    0.981,
-    0.686,
-    -0.313
+    1.015,
+    0.781,
+    -0.319
    ],
    "size": [
-    0.185,
-    0.548,
-    0.337
+    0.115,
+    0.357,
+    0.349
    ],
-   "faces": 654
+   "faces": 969
   },
   {
-   "id": "cabin_0430",
+   "id": "cabin_0405",
    "part": "cabin",
-   "key": "small",
+   "key": "interior",
    "side": "L",
    "end": null,
    "source": "leather_all_leather_int_0",
    "material": "leather_int",
    "center": [
-    0.981,
-    0.686,
-    0.313
+    1.015,
+    0.781,
+    0.319
    ],
    "size": [
-    0.185,
-    0.548,
-    0.338
+    0.115,
+    0.356,
+    0.349
    ],
-   "faces": 780
+   "faces": 1048
   },
   {
-   "id": "cabin_0431",
+   "id": "body_0406",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "R",
+   "end": null,
+   "source": "metal_parts_rim_chrome_0",
+   "material": "rim_chrome",
+   "center": [
+    -0.834,
+    0.362,
+    -0.486
+   ],
+   "size": [
+    0.107,
+    0.273,
+    0.088
+   ],
+   "faces": 108
+  },
+  {
+   "id": "cabin_0407",
    "part": "cabin",
-   "key": "small",
+   "key": "interior",
    "side": "R",
    "end": null,
    "source": "leather_all_leather_seam_0",
@@ -8694,49 +8216,89 @@
    "faces": 154
   },
   {
-   "id": "body_0432",
+   "id": "body_0408",
    "part": "body",
-   "key": "small",
+   "key": "plate",
    "side": null,
    "end": null,
    "source": "number_plate_number_plate1_0",
    "material": "number_plate1",
    "center": [
-    2.218,
+    2.217,
     0.552,
     0
    ],
    "size": [
-    0.014,
-    0.094,
-    0.512
+    0.017,
+    0.101,
+    0.518
    ],
-   "faces": 16
+   "faces": 192
   },
   {
-   "id": "cabin_0433",
+   "id": "cabin_0409",
    "part": "cabin",
-   "key": "small",
+   "key": "interior",
    "side": "R",
    "end": null,
    "source": "leather_all_leather_int_0",
    "material": "leather_int",
    "center": [
-    0.502,
-    0.75,
+    0.479,
+    0.891,
     -0.34
    ],
    "size": [
-    0.179,
-    0.725,
+    0.132,
+    0.444,
     0.395
    ],
-   "faces": 1076
+   "faces": 936
   },
   {
-   "id": "cabin_0434",
+   "id": "body_0410",
+   "part": "body",
+   "key": "light.rear",
+   "side": "L",
+   "end": null,
+   "source": "glossy_plastic_bl_pl__GL_int_ext_0",
+   "material": "bl_pl__GL_int_ext",
+   "center": [
+    1.912,
+    0.747,
+    0.613
+   ],
+   "size": [
+    0.409,
+    0.047,
+    0.307
+   ],
+   "faces": 459
+  },
+  {
+   "id": "body_0411",
+   "part": "body",
+   "key": "light.rear",
+   "side": "R",
+   "end": null,
+   "source": "glossy_plastic_bl_pl__GL_int_ext_0",
+   "material": "bl_pl__GL_int_ext",
+   "center": [
+    1.912,
+    0.747,
+    -0.613
+   ],
+   "size": [
+    0.409,
+    0.047,
+    0.307
+   ],
+   "faces": 459
+  },
+  {
+   "id": "cabin_0412",
    "part": "cabin",
-   "key": "small",
+   "key": "interior",
    "side": "L",
    "end": null,
    "source": "leather_all_leather_perforated_0",
@@ -8754,89 +8316,109 @@
    "faces": 1058
   },
   {
-   "id": "body_0435",
-   "part": "body",
-   "key": "small",
+   "id": "doors_0413",
+   "part": "doors",
+   "key": "door",
    "side": "L",
    "end": null,
    "source": "body_door_2_body_main_0",
    "material": "body_main",
    "center": [
-    -0.484,
-    0.908,
-    1.143
+    -0.479,
+    0.941,
+    1.113
    ],
    "size": [
-    0.143,
-    0.066,
-    0.218
+    0.158,
+    0.139,
+    0.296
    ],
-   "faces": 455
+   "faces": 1785
   },
   {
-   "id": "cabin_0436",
+   "id": "cabin_0414",
    "part": "cabin",
-   "key": "small",
+   "key": "interior",
    "side": null,
    "end": null,
    "source": "leather_all_leather_int_0",
    "material": "leather_int",
    "center": [
-    0.4,
-    0.479,
+    0.337,
+    0.498,
     0
    ],
    "size": [
-    0.108,
-    0.156,
-    0.191
+    0.234,
+    0.465,
+    0.373
    ],
-   "faces": 454
+   "faces": 832
   },
   {
-   "id": "cabin_0437",
-   "part": "cabin",
-   "key": "small",
+   "id": "body_0415",
+   "part": "body",
+   "key": "trim",
    "side": "R",
    "end": null,
    "source": "chrome_int_chrom_int_0",
    "material": "chrom_int",
    "center": [
-    -2.038,
-    0.459,
-    -0.656
+    -1.89,
+    0.636,
+    -0.659
    ],
    "size": [
-    0.218,
-    0.019,
-    0.282
+    0.515,
+    0.374,
+    0.288
    ],
-   "faces": 99
+   "faces": 591
   },
   {
-   "id": "cabin_0438",
-   "part": "cabin",
-   "key": "small",
+   "id": "body_0416",
+   "part": "body",
+   "key": "trim",
    "side": "L",
    "end": null,
    "source": "chrome_int_chrom_int_0",
    "material": "chrom_int",
    "center": [
-    -2.038,
-    0.459,
-    0.656
+    -1.89,
+    0.636,
+    0.659
    ],
    "size": [
-    0.218,
-    0.019,
-    0.282
+    0.515,
+    0.374,
+    0.288
    ],
-   "faces": 99
+   "faces": 591
   },
   {
-   "id": "cabin_0439",
+   "id": "cabin_0417",
    "part": "cabin",
-   "key": "small",
+   "key": "interior",
+   "side": "R",
+   "end": null,
+   "source": "leather_all_leather_int_0",
+   "material": "leather_int",
+   "center": [
+    0.943,
+    0.594,
+    -0.313
+   ],
+   "size": [
+    0.11,
+    0.364,
+    0.337
+   ],
+   "faces": 260
+  },
+  {
+   "id": "cabin_0418",
+   "part": "cabin",
+   "key": "trim.interior",
    "side": null,
    "end": null,
    "source": "carbon_all_carbon_int_0",
@@ -8854,9 +8436,9 @@
    "faces": 538
   },
   {
-   "id": "cabin_0440",
+   "id": "cabin_0419",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "R",
    "end": null,
    "source": "leathplast_door_1_pl_leather_int_0",
@@ -8874,9 +8456,9 @@
    "faces": 132
   },
   {
-   "id": "cabin_0441",
+   "id": "cabin_0420",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "L",
    "end": null,
    "source": "leath_plast_door_2_pl_leather_int_0",
@@ -8894,27 +8476,127 @@
    "faces": 132
   },
   {
-   "id": "body_0442",
-   "part": "body",
-   "key": "small",
+   "id": "doors_0421",
+   "part": "doors",
+   "key": "door",
    "side": "R",
    "end": null,
    "source": "body__door_1_body_main_0",
    "material": "body_main",
    "center": [
-    -0.34,
-    0.908,
-    -0.917
+    -0.351,
+    0.941,
+    -0.912
    ],
    "size": [
-    0.187,
-    0.066,
-    0.19
+    0.24,
+    0.139,
+    0.202
    ],
-   "faces": 455
+   "faces": 1785
   },
   {
-   "id": "body_0443",
+   "id": "cabin_0422",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "L",
+   "end": null,
+   "source": "plast_leather_all_pl_leather_int_0",
+   "material": "pl_leather_int",
+   "center": [
+    0.701,
+    0.68,
+    0.617
+   ],
+   "size": [
+    0.238,
+    0.127,
+    0.022
+   ],
+   "faces": 659
+  },
+  {
+   "id": "cabin_0423",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "R",
+   "end": null,
+   "source": "plast_leather_all_pl_leather_int_0",
+   "material": "pl_leather_int",
+   "center": [
+    0.701,
+    0.68,
+    -0.617
+   ],
+   "size": [
+    0.238,
+    0.127,
+    0.022
+   ],
+   "faces": 659
+  },
+  {
+   "id": "cabin_0424",
+   "part": "cabin",
+   "key": "interior",
+   "side": "L",
+   "end": null,
+   "source": "leather_all_leather_int_0",
+   "material": "leather_int",
+   "center": [
+    0.947,
+    0.594,
+    0.313
+   ],
+   "size": [
+    0.117,
+    0.364,
+    0.338
+   ],
+   "faces": 386
+  },
+  {
+   "id": "cabin_0425",
+   "part": "cabin",
+   "key": "interior",
+   "side": "R",
+   "end": null,
+   "source": "leather_all_leather_seam_0",
+   "material": "leather_seam",
+   "center": [
+    0.315,
+    0.494,
+    -0.34
+   ],
+   "size": [
+    0.19,
+    0.44,
+    0.429
+   ],
+   "faces": 86
+  },
+  {
+   "id": "cabin_0426",
+   "part": "cabin",
+   "key": "interior",
+   "side": "L",
+   "end": null,
+   "source": "leather_all_leather_seam_0",
+   "material": "leather_seam",
+   "center": [
+    0.315,
+    0.494,
+    0.34
+   ],
+   "size": [
+    0.19,
+    0.44,
+    0.429
+   ],
+   "faces": 86
+  },
+  {
+   "id": "body_0427",
    "part": "body",
    "key": "small",
    "side": "R",
@@ -8934,7 +8616,7 @@
    "faces": 16
   },
   {
-   "id": "body_0444",
+   "id": "body_0428",
    "part": "body",
    "key": "small",
    "side": "L",
@@ -8954,9 +8636,9 @@
    "faces": 16
   },
   {
-   "id": "cabin_0445",
+   "id": "cabin_0429",
    "part": "cabin",
-   "key": "small",
+   "key": "interior",
    "side": null,
    "end": null,
    "source": "leather_all_leather_int_0",
@@ -8974,9 +8656,9 @@
    "faces": 912
   },
   {
-   "id": "cabin_0446",
+   "id": "cabin_0430",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": null,
    "end": null,
    "source": "glossy_plastic_bl_pl__GL_int_ext_0",
@@ -8994,9 +8676,9 @@
    "faces": 606
   },
   {
-   "id": "cabin_0447",
+   "id": "cabin_0431",
    "part": "cabin",
-   "key": "small",
+   "key": "trim.interior",
    "side": "R",
    "end": null,
    "source": "carbon__door_1_carbon_int_0",
@@ -9014,7 +8696,7 @@
    "faces": 50
   },
   {
-   "id": "glass_0448",
+   "id": "glass_0432",
    "part": "glass",
    "key": "small",
    "side": "L",
@@ -9034,7 +8716,7 @@
    "faces": 59
   },
   {
-   "id": "glass_0449",
+   "id": "glass_0433",
    "part": "glass",
    "key": "small",
    "side": "R",
@@ -9052,6 +8734,326 @@
     0.091
    ],
    "faces": 59
+  },
+  {
+   "id": "doors_0434",
+   "part": "doors",
+   "key": "door",
+   "side": "L",
+   "end": null,
+   "source": "carbon__door_2_carbon_int_0",
+   "material": "carbon_int",
+   "center": [
+    0.026,
+    0.819,
+    1.313
+   ],
+   "size": [
+    0.372,
+    0.022,
+    0.36
+   ],
+   "faces": 50
+  },
+  {
+   "id": "cabin_0435",
+   "part": "cabin",
+   "key": "interior",
+   "side": null,
+   "end": null,
+   "source": "leather_all_leather_int_0",
+   "material": "leather_int",
+   "center": [
+    1.016,
+    0.783,
+    0
+   ],
+   "size": [
+    0.113,
+    0.356,
+    0.294
+   ],
+   "faces": 2264
+  },
+  {
+   "id": "body_0436",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "plastic_exterior_bl_pl_M_ext_0",
+   "material": "bl_pl_M_ext",
+   "center": [
+    0.81,
+    0.706,
+    0.87
+   ],
+   "size": [
+    0.245,
+    0.263,
+    0.088
+   ],
+   "faces": 414
+  },
+  {
+   "id": "body_0437",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "plastic_exterior_bl_pl_M_ext_0",
+   "material": "bl_pl_M_ext",
+   "center": [
+    0.81,
+    0.706,
+    -0.87
+   ],
+   "size": [
+    0.245,
+    0.263,
+    0.088
+   ],
+   "faces": 414
+  },
+  {
+   "id": "cabin_0438",
+   "part": "cabin",
+   "key": "interior",
+   "side": "R",
+   "end": null,
+   "source": "leather_all_leather_perforated_0",
+   "material": "leather_perforated",
+   "center": [
+    0.016,
+    0.342,
+    -0.34
+   ],
+   "size": [
+    0.406,
+    0.193,
+    0.427
+   ],
+   "faces": 272
+  },
+  {
+   "id": "cabin_0439",
+   "part": "cabin",
+   "key": "interior",
+   "side": "L",
+   "end": null,
+   "source": "leather_all_leather_perforated_0",
+   "material": "leather_perforated",
+   "center": [
+    0.016,
+    0.342,
+    0.34
+   ],
+   "size": [
+    0.406,
+    0.193,
+    0.427
+   ],
+   "faces": 272
+  },
+  {
+   "id": "glass_0440",
+   "part": "glass",
+   "key": "lens.front",
+   "side": "L",
+   "end": null,
+   "source": "trans_covers_lights_0",
+   "material": "lights",
+   "center": [
+    -2.05,
+    0.444,
+    0.649
+   ],
+   "size": [
+    0.222,
+    0.058,
+    0.289
+   ],
+   "faces": 462
+  },
+  {
+   "id": "glass_0441",
+   "part": "glass",
+   "key": "lens.front",
+   "side": "R",
+   "end": null,
+   "source": "trans_covers_lights_0",
+   "material": "lights",
+   "center": [
+    -2.05,
+    0.444,
+    -0.649
+   ],
+   "size": [
+    0.222,
+    0.058,
+    0.289
+   ],
+   "faces": 462
+  },
+  {
+   "id": "cabin_0442",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "R",
+   "end": null,
+   "source": "plast_leather_all_pl_leather_int_0",
+   "material": "pl_leather_int",
+   "center": [
+    1.349,
+    0.867,
+    -0.467
+   ],
+   "size": [
+    0.445,
+    0.094,
+    0.068
+   ],
+   "faces": 155
+  },
+  {
+   "id": "cabin_0443",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "L",
+   "end": null,
+   "source": "plast_leather_all_pl_leather_int_0",
+   "material": "pl_leather_int",
+   "center": [
+    1.349,
+    0.866,
+    0.467
+   ],
+   "size": [
+    0.445,
+    0.097,
+    0.068
+   ],
+   "faces": 159
+  },
+  {
+   "id": "cabin_0444",
+   "part": "cabin",
+   "key": "interior",
+   "side": "L",
+   "end": null,
+   "source": "leather_all_leather_perforated_0",
+   "material": "leather_perforated",
+   "center": [
+    0.356,
+    0.55,
+    0.34
+   ],
+   "size": [
+    0.268,
+    0.57,
+    0.425
+   ],
+   "faces": 828
+  },
+  {
+   "id": "cabin_0445",
+   "part": "cabin",
+   "key": "interior",
+   "side": "R",
+   "end": null,
+   "source": "leather_all_leather_perforated_0",
+   "material": "leather_perforated",
+   "center": [
+    0.356,
+    0.55,
+    -0.34
+   ],
+   "size": [
+    0.268,
+    0.57,
+    0.425
+   ],
+   "faces": 828
+  },
+  {
+   "id": "body_0446",
+   "part": "body",
+   "key": "small",
+   "side": null,
+   "end": null,
+   "source": "reisin_all_reisin_0",
+   "material": "reisin",
+   "center": [
+    -0.919,
+    0.891,
+    0.165
+   ],
+   "size": [
+    0.127,
+    0.036,
+    0.486
+   ],
+   "faces": 210
+  },
+  {
+   "id": "body_0447",
+   "part": "body",
+   "key": "reflector",
+   "side": "R",
+   "end": null,
+   "source": "reflectors_all_reflectors_0",
+   "material": "reflectors",
+   "center": [
+    1.974,
+    0.411,
+    -0.727
+   ],
+   "size": [
+    0.34,
+    0.052,
+    0.273
+   ],
+   "faces": 476
+  },
+  {
+   "id": "body_0448",
+   "part": "body",
+   "key": "reflector",
+   "side": "L",
+   "end": null,
+   "source": "reflectors_all_reflectors_0",
+   "material": "reflectors",
+   "center": [
+    1.974,
+    0.411,
+    0.727
+   ],
+   "size": [
+    0.34,
+    0.052,
+    0.273
+   ],
+   "faces": 476
+  },
+  {
+   "id": "body_0449",
+   "part": "body",
+   "key": "reflector",
+   "side": null,
+   "end": null,
+   "source": "reflectors_all_reflectors_0",
+   "material": "reflectors",
+   "center": [
+    2.126,
+    0.947,
+    0
+   ],
+   "size": [
+    0.051,
+    0.017,
+    0.474
+   ],
+   "faces": 340
   }
  ]
 }

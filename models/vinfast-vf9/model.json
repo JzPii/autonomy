@@ -4,9 +4,18 @@
   "name": "VF 9",
   "type": "car",
   "year": "2023–",
-  "tagline": { "vi": "SUV điện 7 chỗ cỡ lớn", "en": "Full-size 7-seat electric SUV" },
+  "tagline": {
+    "vi": "SUV điện 7 chỗ cỡ lớn",
+    "en": "Full-size 7-seat electric SUV"
+  },
   "powertrain": "ev",
-  "dimensions": { "length": 5.118, "width": 1.998, "height": 1.696, "wheelbase": 3.15, "track": 1.65 },
+  "dimensions": {
+    "length": 5.118,
+    "width": 1.998,
+    "height": 1.696,
+    "wheelbase": 3.15,
+    "track": 1.65
+  },
   "attribution": {
     "title": "Vinfast VF9 model (no interior)",
     "creator": "Giang Trần",
@@ -15,10 +24,111 @@
     "license": "CC BY 4.0",
     "licenseUrl": "http://creativecommons.org/licenses/by/4.0/"
   },
-  "pipeline": { "simplify": 0.35, "textures": null, "flip": false, "maxPieces": 500, "ignore": [], "hints": [] },
-  "systemFallback": { "brakes": "wheels", "exhaust": "body", "engine": "body" },
+  "pipeline": {
+    "simplify": 0.35,
+    "textures": null,
+    "flip": false,
+    "maxPieces": 500,
+    "ignore": [
+      "plane\\.04[678]_material\\.022"
+    ],
+    "hints": [
+      {
+        "match": "material\\.010",
+        "part": "doors",
+        "key": "door.handle"
+      },
+      {
+        "match": "plane\\.(009|034)_plastic",
+        "part": "body",
+        "key": "trim"
+      },
+      {
+        "match": "plane\\.(016|043|044|045)_lop",
+        "part": "body",
+        "key": "trim.lower"
+      },
+      {
+        "match": "cube\\.00[68]_car paint",
+        "part": "body",
+        "key": "mirror"
+      },
+      {
+        "match": "material\\.001",
+        "part": "glass",
+        "key": "lens.front"
+      },
+      {
+        "match": "cube\\.01[2-5]_glass",
+        "part": "glass",
+        "key": "lens.front"
+      },
+      {
+        "match": "cube\\.01[2-5]_(plastic|light)",
+        "part": "body",
+        "key": "light.front"
+      },
+      {
+        "match": "plane\\.04[01]_glass",
+        "part": "glass",
+        "key": "lens.rear"
+      },
+      {
+        "match": "plane\\.030_car paint",
+        "part": "body",
+        "key": "grille"
+      },
+      {
+        "match": "material\\.012",
+        "part": "body",
+        "key": "grille"
+      },
+      {
+        "match": "plane\\.(021|042)_",
+        "part": "body",
+        "key": "plate"
+      },
+      {
+        "match": "plane\\.019_plastic",
+        "part": "body",
+        "key": "light.front"
+      },
+      {
+        "match": "plane\\.013_logo",
+        "part": "body",
+        "key": "logo"
+      },
+      {
+        "match": "carlight triangle",
+        "part": "body",
+        "key": "reflector"
+      },
+      {
+        "match": "den xe",
+        "part": "body",
+        "key": "light.front"
+      },
+      {
+        "match": "cylinder\\.0(11|0[2-4])_material\\.004",
+        "part": "wheels",
+        "key": "rim"
+      },
+      {
+        "match": "cylinder(\\.00[156])?_(car paint|plastic)",
+        "part": "body",
+        "key": "sensor"
+      }
+    ]
+  },
+  "systemFallback": {
+    "brakes": "wheels",
+    "exhaust": "body",
+    "engine": "body"
+  },
   "links": {
     "specs": "https://vinfastauto.com/vn_vi/thong-so-ky-thuat-vinfast-vf9",
     "manual": "https://om.vinfastauto.com/"
-  }
+  },
+  "layout": "ev",
+  "doors": 5
 }

@@ -30,10 +30,75 @@
     "flip": false,
     "maxPieces": 400,
     "ignore": [
-      "object_74",
+      "material_0",
       "coat"
     ],
     "hints": [
+      {
+        "match": "object_55[ _]",
+        "part": "body",
+        "key": "spoiler"
+      },
+      {
+        "match": "object_18[ _]",
+        "part": "glass",
+        "key": "glass.rear"
+      },
+      {
+        "match": "object_30[ _]",
+        "part": "exhaust",
+        "key": "exhaust"
+      },
+      {
+        "match": "object_26[ _]",
+        "part": "body",
+        "key": "light.front"
+      },
+      {
+        "match": "object_14[ _]",
+        "part": "body",
+        "key": "trim"
+      },
+      {
+        "match": "object_22[ _]",
+        "part": "body",
+        "key": "bumper.front"
+      },
+      {
+        "match": "object_58[ _]",
+        "part": "body",
+        "key": "reflector"
+      },
+      {
+        "match": "object_38[ _]",
+        "part": "body",
+        "key": "grille"
+      },
+      {
+        "match": "object_(8|33|34|72)[ _]",
+        "part": "body",
+        "key": "logo"
+      },
+      {
+        "match": "object_(10|11|45|66)[ _]",
+        "part": "glass",
+        "key": "lens.rear"
+      },
+      {
+        "match": "object_52[ _]",
+        "part": "glass",
+        "key": "lens.front"
+      },
+      {
+        "match": "object_(29|35|61)[ _]",
+        "part": "body",
+        "key": "mirror"
+      },
+      {
+        "match": "object_44[ _]",
+        "part": "body",
+        "key": "hood"
+      },
       {
         "match": "wunderbaum",
         "part": "cabin",
@@ -45,12 +110,12 @@
         "key": "trim"
       },
       {
-        "match": "object_28",
+        "match": "object_28[ _]",
         "part": "cabin",
         "key": "interior"
       },
       {
-        "match": "object_25",
+        "match": "object_25[ _]",
         "part": "body",
         "key": "antenna"
       }
@@ -64,5 +129,7 @@
   "links": {
     "specs": "https://www.porsche.com/international/accessoriesandservice/classic/models/911-1974-1989/",
     "manual": "https://www.porsche.com/international/accessoriesandservice/classic/"
-  }
+  },
+  "layout": "rear-engine",
+  "doors": 2
 }

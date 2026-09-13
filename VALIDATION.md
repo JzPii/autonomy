@@ -19,3 +19,16 @@
   chưa xác nhận lại trên máy thật.
 - Chưa kiểm tra bằng tay trên điện thoại thật. Nhãn hình học ở mảnh nhỏ có thể sai; xem `public/models/<id>/review.md`.
 - Thông số kỹ thuật lấy từ nguồn công khai (trang hãng, Wikipedia); nên đối chiếu trước khi công bố.
+
+## Kiểm toán nhãn (2026-09-13)
+
+Ba tác nhân độc lập (một xe/tác nhân) đối chiếu review.md + manifest + scene.gltf. Phát hiện hai lỗi pipeline: cụm bánh
+bị vứt khi vượt giới hạn mảnh (mất vô-lăng và một góc mâm của 992), và nhóm "chi tiết nhỏ" không được phân tích tên.
+Khoảng trống bộ phân loại: xe động cơ sau bị gán "cửa cốp"; cánh gió/nắp khoang máy; gương và tay nắm nhầm; vùng đèn;
+nội thất bị kéo bởi hậu tố "_int" của vật liệu ngoại thất. Đã sửa: bộ phân loại nhận `layout` (ev/rear-engine) và
+`doors`; nhóm gộp đi qua luật tên; vùng đèn và nội thất cơ bản (ghế, vô-lăng, táp-lô, bệ trung tâm) theo hình học;
+hints riêng cho từng xe (VF 9: 17, 930: 17, 992: 16); thêm khóa sensor, camera, speaker, engine.lid.
+
+Kết quả: VF 9 "chi tiết ngoại thất" 111 → 52 và không còn mảnh nào bị vứt; 930 không còn mảnh chung; 992 "chi tiết nhỏ"
+168 → 10, có vô-lăng, ghế, táp-lô, bệ trung tâm, loa, dây an toàn, thảm, màn hình, ống xả. Còn ~50 mảnh VF 9 từ lưới
+thân xe liền khối không gọi tên được bằng regex; các luật hình học chung có thể còn gán sai ở mảnh nhỏ.

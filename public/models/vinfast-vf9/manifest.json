@@ -1,20 +1,20 @@
 {
  "id": "vinfast-vf9",
  "file": "model.glb",
- "version": "430a9c9f6b",
+ "version": "5b937173f6",
  "files": {
   "full": {
    "file": "model.glb",
-   "bytes": 4179508,
-   "faces": 423156
+   "bytes": 4204516,
+   "faces": 423303
   },
   "light": {
    "file": "model.light.glb",
-   "bytes": 2879296,
-   "faces": 240577
+   "bytes": 2904800,
+   "faces": 240701
   }
  },
- "generated": "2026-09-13T09:59:59.480Z",
+ "generated": "2026-09-13T10:31:05.881Z",
  "input": "source/vinfast-vf9/scene.gltf",
  "lengthMeters": 5.118,
  "bounds": {
@@ -47,9 +47,9 @@
  "counts": {
   "cabin": 1,
   "glass": 18,
-  "body": 230,
-  "doors": 10,
-  "wheels": 20
+  "body": 251,
+  "doors": 11,
+  "wheels": 16
  },
  "objects": [
   {
@@ -215,8 +215,8 @@
   {
    "id": "body_0008",
    "part": "body",
-   "key": "exterior",
-   "side": "R",
+   "key": "roof",
+   "side": null,
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
    "material": "Car_Paint.002",
@@ -755,7 +755,7 @@
   {
    "id": "body_0035",
    "part": "body",
-   "key": "exterior",
+   "key": "grille",
    "side": null,
    "end": null,
    "source": "Plane.030_Car Paint.002_0",
@@ -915,7 +915,7 @@
   {
    "id": "body_0043",
    "part": "body",
-   "key": "roof.rail",
+   "key": "trim",
    "side": "R",
    "end": null,
    "source": "Plane.009_plastic_0",
@@ -935,7 +935,7 @@
   {
    "id": "body_0044",
    "part": "body",
-   "key": "roof.rail",
+   "key": "trim",
    "side": "L",
    "end": null,
    "source": "Plane.009_plastic_0",
@@ -955,7 +955,7 @@
   {
    "id": "body_0045",
    "part": "body",
-   "key": "exterior",
+   "key": "trim.lower",
    "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -995,7 +995,7 @@
   {
    "id": "body_0047",
    "part": "body",
-   "key": "exterior",
+   "key": "trim.lower",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -1013,9 +1013,9 @@
    "faces": 1973
   },
   {
-   "id": "doors_0048",
-   "part": "doors",
-   "key": "tailgate",
+   "id": "body_0048",
+   "part": "body",
+   "key": "spoiler",
    "side": null,
    "end": null,
    "source": "Plane.012_Car Paint.002_0",
@@ -1075,7 +1075,7 @@
   {
    "id": "body_0051",
    "part": "body",
-   "key": "grille",
+   "key": "light.front",
    "side": null,
    "end": null,
    "source": "Plane.019_plastic_0",
@@ -1315,7 +1315,7 @@
   {
    "id": "body_0063",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": null,
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -1355,7 +1355,7 @@
   {
    "id": "body_0065",
    "part": "body",
-   "key": "exterior",
+   "key": "trim.lower",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -1455,7 +1455,7 @@
   {
    "id": "body_0070",
    "part": "body",
-   "key": "exterior",
+   "key": "trim.lower",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -1475,7 +1475,7 @@
   {
    "id": "body_0071",
    "part": "body",
-   "key": "exterior",
+   "key": "trim.lower",
    "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -1515,7 +1515,7 @@
   {
    "id": "body_0073",
    "part": "body",
-   "key": "exterior",
+   "key": "roof.rail",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -1575,7 +1575,7 @@
   {
    "id": "body_0076",
    "part": "body",
-   "key": "exterior",
+   "key": "roof.rail",
    "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -1595,7 +1595,7 @@
   {
    "id": "body_0077",
    "part": "body",
-   "key": "exterior",
+   "key": "roof.rail",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -1655,7 +1655,7 @@
   {
    "id": "body_0080",
    "part": "body",
-   "key": "exterior",
+   "key": "trim.lower",
    "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -1675,7 +1675,7 @@
   {
    "id": "wheels_0081",
    "part": "wheels",
-   "key": "tire",
+   "key": "rim",
    "side": "R",
    "end": "F",
    "source": "Cylinder.011_Material.004_0",
@@ -1695,7 +1695,7 @@
   {
    "id": "wheels_0082",
    "part": "wheels",
-   "key": "tire",
+   "key": "rim",
    "side": "R",
    "end": "R",
    "source": "Cylinder.011_Material.004_0",
@@ -1715,7 +1715,7 @@
   {
    "id": "wheels_0083",
    "part": "wheels",
-   "key": "tire",
+   "key": "rim",
    "side": "L",
    "end": "F",
    "source": "Cylinder.011_Material.004_0",
@@ -1735,7 +1735,7 @@
   {
    "id": "wheels_0084",
    "part": "wheels",
-   "key": "tire",
+   "key": "rim",
    "side": "L",
    "end": "R",
    "source": "Cylinder.011_Material.004_0",
@@ -1755,7 +1755,7 @@
   {
    "id": "body_0085",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -1775,9 +1775,9 @@
   {
    "id": "glass_0086",
    "part": "glass",
-   "key": "glass.side",
+   "key": "lens.rear",
    "side": "R",
-   "end": "R",
+   "end": null,
    "source": "Plane.029_kinh xe_0",
    "material": "kinh_xe",
    "center": [
@@ -1795,9 +1795,9 @@
   {
    "id": "glass_0087",
    "part": "glass",
-   "key": "glass.side",
+   "key": "lens.rear",
    "side": "L",
-   "end": "R",
+   "end": null,
    "source": "Plane.029_kinh xe_0",
    "material": "kinh_xe",
    "center": [
@@ -1813,11 +1813,11 @@
    "faces": 514
   },
   {
-   "id": "wheels_0088",
-   "part": "wheels",
-   "key": "tire",
+   "id": "body_0088",
+   "part": "body",
+   "key": "trim.lower",
    "side": "R",
-   "end": "F",
+   "end": null,
    "source": "Plane.044_lop xe_0",
    "material": "lop_xe",
    "center": [
@@ -1833,11 +1833,11 @@
    "faces": 144
   },
   {
-   "id": "wheels_0089",
-   "part": "wheels",
-   "key": "tire",
+   "id": "body_0089",
+   "part": "body",
+   "key": "trim.lower",
    "side": "L",
-   "end": "F",
+   "end": null,
    "source": "Plane.044_lop xe_0",
    "material": "lop_xe",
    "center": [
@@ -1915,7 +1915,7 @@
   {
    "id": "body_0093",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -1975,7 +1975,7 @@
   {
    "id": "body_0096",
    "part": "body",
-   "key": "exterior",
+   "key": "light.rear",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -2053,11 +2053,11 @@
    "faces": 36
   },
   {
-   "id": "wheels_0100",
-   "part": "wheels",
-   "key": "tire",
+   "id": "body_0100",
+   "part": "body",
+   "key": "trim.lower",
    "side": "L",
-   "end": "R",
+   "end": null,
    "source": "Plane.043_lop xe_0",
    "material": "lop_xe",
    "center": [
@@ -2073,11 +2073,11 @@
    "faces": 208
   },
   {
-   "id": "wheels_0101",
-   "part": "wheels",
-   "key": "tire",
+   "id": "body_0101",
+   "part": "body",
+   "key": "trim.lower",
    "side": "R",
-   "end": "R",
+   "end": null,
    "source": "Plane.043_lop xe_0",
    "material": "lop_xe",
    "center": [
@@ -2135,7 +2135,7 @@
   {
    "id": "glass_0104",
    "part": "glass",
-   "key": "glass",
+   "key": "lens.rear",
    "side": "R",
    "end": null,
    "source": "Plane.041_glass_0",
@@ -2155,7 +2155,7 @@
   {
    "id": "glass_0105",
    "part": "glass",
-   "key": "glass",
+   "key": "lens.rear",
    "side": "L",
    "end": null,
    "source": "Plane.041_glass_0",
@@ -2215,7 +2215,7 @@
   {
    "id": "body_0108",
    "part": "body",
-   "key": "exterior",
+   "key": "roof.rail",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -2255,7 +2255,7 @@
   {
    "id": "body_0110",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -2275,7 +2275,7 @@
   {
    "id": "body_0111",
    "part": "body",
-   "key": "exterior",
+   "key": "spoiler",
    "side": null,
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -2335,7 +2335,7 @@
   {
    "id": "body_0114",
    "part": "body",
-   "key": "exterior",
+   "key": "light.rear",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -2395,7 +2395,7 @@
   {
    "id": "body_0117",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -2415,7 +2415,7 @@
   {
    "id": "glass_0118",
    "part": "glass",
-   "key": "glass",
+   "key": "lens.front",
    "side": "R",
    "end": null,
    "source": "Cube.002_Material.001_0",
@@ -2435,7 +2435,7 @@
   {
    "id": "glass_0119",
    "part": "glass",
-   "key": "glass",
+   "key": "lens.front",
    "side": "L",
    "end": null,
    "source": "Cube.002_Material.001_0",
@@ -2455,7 +2455,7 @@
   {
    "id": "body_0120",
    "part": "body",
-   "key": "trim",
+   "key": "plate",
    "side": null,
    "end": null,
    "source": "Plane.021_plastic_0",
@@ -2475,7 +2475,7 @@
   {
    "id": "body_0121",
    "part": "body",
-   "key": "trim",
+   "key": "plate",
    "side": null,
    "end": null,
    "source": "Plane.021_plastic_0",
@@ -2555,7 +2555,7 @@
   {
    "id": "body_0125",
    "part": "body",
-   "key": "exterior",
+   "key": "light.rear",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -2575,7 +2575,7 @@
   {
    "id": "body_0126",
    "part": "body",
-   "key": "exterior",
+   "key": "light.rear",
    "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -2595,7 +2595,7 @@
   {
    "id": "body_0127",
    "part": "body",
-   "key": "exterior",
+   "key": "light.rear",
    "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -2615,7 +2615,7 @@
   {
    "id": "body_0128",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -2675,7 +2675,7 @@
   {
    "id": "body_0131",
    "part": "body",
-   "key": "exterior",
+   "key": "mirror",
    "side": "L",
    "end": null,
    "source": "Cube.006_Car Paint.002_0",
@@ -2695,7 +2695,7 @@
   {
    "id": "body_0132",
    "part": "body",
-   "key": "exterior",
+   "key": "mirror",
    "side": "R",
    "end": null,
    "source": "Cube.006_Car Paint.002_0",
@@ -2715,7 +2715,7 @@
   {
    "id": "body_0133",
    "part": "body",
-   "key": "exterior",
+   "key": "trim.lower",
    "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -2735,7 +2735,7 @@
   {
    "id": "body_0134",
    "part": "body",
-   "key": "exterior",
+   "key": "roof.rail",
    "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -2755,8 +2755,8 @@
   {
    "id": "body_0135",
    "part": "body",
-   "key": "exterior",
-   "side": "R",
+   "key": "spoiler",
+   "side": null,
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
    "material": "Car_Paint.002",
@@ -2775,8 +2775,8 @@
   {
    "id": "body_0136",
    "part": "body",
-   "key": "exterior",
-   "side": "L",
+   "key": "spoiler",
+   "side": null,
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
    "material": "Car_Paint.002",
@@ -2795,7 +2795,7 @@
   {
    "id": "body_0137",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -2856,46 +2856,6 @@
    "id": "body_0140",
    "part": "body",
    "key": "exterior",
-   "side": "L",
-   "end": null,
-   "source": "Plane.047_Material.022_0",
-   "material": "Material.022",
-   "center": [
-    2.483,
-    1.159,
-    0.403
-   ],
-   "size": [
-    0.055,
-    0.223,
-    0.81
-   ],
-   "faces": 6
-  },
-  {
-   "id": "body_0141",
-   "part": "body",
-   "key": "exterior",
-   "side": "R",
-   "end": null,
-   "source": "Plane.047_Material.022_0",
-   "material": "Material.022",
-   "center": [
-    2.483,
-    1.159,
-    -0.398
-   ],
-   "size": [
-    0.055,
-    0.223,
-    0.81
-   ],
-   "faces": 6
-  },
-  {
-   "id": "body_0142",
-   "part": "body",
-   "key": "exterior",
    "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -2913,7 +2873,7 @@
    "faces": 44
   },
   {
-   "id": "body_0143",
+   "id": "body_0141",
    "part": "body",
    "key": "trim",
    "side": "L",
@@ -2933,7 +2893,7 @@
    "faces": 626
   },
   {
-   "id": "body_0144",
+   "id": "body_0142",
    "part": "body",
    "key": "trim",
    "side": "R",
@@ -2953,7 +2913,7 @@
    "faces": 626
   },
   {
-   "id": "body_0145",
+   "id": "body_0143",
    "part": "body",
    "key": "exterior",
    "side": "L",
@@ -2973,7 +2933,7 @@
    "faces": 46
   },
   {
-   "id": "body_0146",
+   "id": "body_0144",
    "part": "body",
    "key": "logo",
    "side": null,
@@ -2993,7 +2953,7 @@
    "faces": 2037
   },
   {
-   "id": "body_0147",
+   "id": "body_0145",
    "part": "body",
    "key": "logo",
    "side": null,
@@ -3013,7 +2973,7 @@
    "faces": 2038
   },
   {
-   "id": "body_0148",
+   "id": "body_0146",
    "part": "body",
    "key": "exterior",
    "side": "L",
@@ -3033,7 +2993,7 @@
    "faces": 51
   },
   {
-   "id": "body_0149",
+   "id": "body_0147",
    "part": "body",
    "key": "exterior",
    "side": "L",
@@ -3053,7 +3013,7 @@
    "faces": 134
   },
   {
-   "id": "body_0150",
+   "id": "body_0148",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -3073,7 +3033,7 @@
    "faces": 47
   },
   {
-   "id": "body_0151",
+   "id": "body_0149",
    "part": "body",
    "key": "exterior",
    "side": "L",
@@ -3093,7 +3053,7 @@
    "faces": 26
   },
   {
-   "id": "body_0152",
+   "id": "body_0150",
    "part": "body",
    "key": "exterior",
    "side": "L",
@@ -3113,7 +3073,7 @@
    "faces": 332
   },
   {
-   "id": "body_0153",
+   "id": "body_0151",
    "part": "body",
    "key": "mirror",
    "side": "L",
@@ -3133,7 +3093,7 @@
    "faces": 121
   },
   {
-   "id": "body_0154",
+   "id": "body_0152",
    "part": "body",
    "key": "mirror",
    "side": "R",
@@ -3153,9 +3113,9 @@
    "faces": 121
   },
   {
-   "id": "body_0155",
-   "part": "body",
-   "key": "mirror",
+   "id": "doors_0153",
+   "part": "doors",
+   "key": "door.handle",
    "side": "R",
    "end": null,
    "source": "Cube.003_Material.010_0",
@@ -3173,9 +3133,9 @@
    "faces": 246
   },
   {
-   "id": "body_0156",
-   "part": "body",
-   "key": "mirror",
+   "id": "doors_0154",
+   "part": "doors",
+   "key": "door.handle",
    "side": "L",
    "end": null,
    "source": "Cube.003_Material.010_0",
@@ -3193,11 +3153,11 @@
    "faces": 246
   },
   {
-   "id": "doors_0157",
+   "id": "doors_0155",
    "part": "doors",
    "key": "door.handle",
    "side": "R",
-   "end": "R",
+   "end": null,
    "source": "Cube.001_Material.010_0",
    "material": "Material.010",
    "center": [
@@ -3213,11 +3173,11 @@
    "faces": 336
   },
   {
-   "id": "doors_0158",
+   "id": "doors_0156",
    "part": "doors",
    "key": "door.handle",
    "side": "L",
-   "end": "R",
+   "end": null,
    "source": "Cube.001_Material.010_0",
    "material": "Material.010",
    "center": [
@@ -3233,7 +3193,7 @@
    "faces": 336
   },
   {
-   "id": "body_0159",
+   "id": "body_0157",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -3253,7 +3213,7 @@
    "faces": 92
   },
   {
-   "id": "body_0160",
+   "id": "body_0158",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -3273,9 +3233,9 @@
    "faces": 59
   },
   {
-   "id": "body_0161",
+   "id": "body_0159",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": null,
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -3293,7 +3253,7 @@
    "faces": 8
   },
   {
-   "id": "body_0162",
+   "id": "body_0160",
    "part": "body",
    "key": "exterior",
    "side": "L",
@@ -3313,9 +3273,9 @@
    "faces": 56
   },
   {
-   "id": "body_0163",
+   "id": "body_0161",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -3333,9 +3293,9 @@
    "faces": 6
   },
   {
-   "id": "body_0164",
+   "id": "body_0162",
    "part": "body",
-   "key": "exterior",
+   "key": "roof.rail",
    "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -3353,9 +3313,9 @@
    "faces": 5
   },
   {
-   "id": "body_0165",
+   "id": "body_0163",
    "part": "body",
-   "key": "exterior",
+   "key": "grille",
    "side": null,
    "end": null,
    "source": "Plane.017_Material.012_0",
@@ -3373,7 +3333,7 @@
    "faces": 240
   },
   {
-   "id": "body_0166",
+   "id": "body_0164",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -3393,9 +3353,9 @@
    "faces": 20
   },
   {
-   "id": "body_0167",
+   "id": "body_0165",
    "part": "body",
-   "key": "exterior",
+   "key": "light.rear",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -3413,7 +3373,7 @@
    "faces": 54
   },
   {
-   "id": "body_0168",
+   "id": "body_0166",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -3433,9 +3393,9 @@
    "faces": 295
   },
   {
-   "id": "body_0169",
+   "id": "body_0167",
    "part": "body",
-   "key": "exterior",
+   "key": "light.rear",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -3453,7 +3413,7 @@
    "faces": 66
   },
   {
-   "id": "body_0170",
+   "id": "body_0168",
    "part": "body",
    "key": "exterior",
    "side": "L",
@@ -3473,9 +3433,9 @@
    "faces": 20
   },
   {
-   "id": "body_0171",
+   "id": "body_0169",
    "part": "body",
-   "key": "exterior",
+   "key": "light.rear",
    "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -3493,7 +3453,7 @@
    "faces": 60
   },
   {
-   "id": "body_0172",
+   "id": "body_0170",
    "part": "body",
    "key": "exterior",
    "side": null,
@@ -3513,7 +3473,7 @@
    "faces": 19
   },
   {
-   "id": "body_0173",
+   "id": "body_0171",
    "part": "body",
    "key": "exterior",
    "side": "L",
@@ -3533,7 +3493,7 @@
    "faces": 99
   },
   {
-   "id": "body_0174",
+   "id": "body_0172",
    "part": "body",
    "key": "mirror",
    "side": "R",
@@ -3553,7 +3513,7 @@
    "faces": 44
   },
   {
-   "id": "body_0175",
+   "id": "body_0173",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -3573,49 +3533,9 @@
    "faces": 106
   },
   {
-   "id": "body_0176",
+   "id": "body_0174",
    "part": "body",
-   "key": "exterior",
-   "side": "L",
-   "end": null,
-   "source": "Plane.046_Material.022_0",
-   "material": "Material.022",
-   "center": [
-    2.23,
-    1.151,
-    0.898
-   ],
-   "size": [
-    0.451,
-    0.184,
-    0.18
-   ],
-   "faces": 4
-  },
-  {
-   "id": "body_0177",
-   "part": "body",
-   "key": "exterior",
-   "side": "R",
-   "end": null,
-   "source": "Plane.048_Material.022_0",
-   "material": "Material.022",
-   "center": [
-    2.23,
-    1.151,
-    -0.893
-   ],
-   "size": [
-    0.451,
-    0.184,
-    0.18
-   ],
-   "faces": 4
-  },
-  {
-   "id": "body_0178",
-   "part": "body",
-   "key": "light.front",
+   "key": "reflector",
    "side": "R",
    "end": null,
    "source": "Plane.011_Carlight triangle chrome red_0",
@@ -3633,9 +3553,9 @@
    "faces": 223
   },
   {
-   "id": "body_0179",
+   "id": "body_0175",
    "part": "body",
-   "key": "light.front",
+   "key": "reflector",
    "side": "L",
    "end": null,
    "source": "Plane.011_Carlight triangle chrome red_0",
@@ -3653,9 +3573,9 @@
    "faces": 223
   },
   {
-   "id": "body_0180",
+   "id": "body_0176",
    "part": "body",
-   "key": "trim",
+   "key": "light.front",
    "side": "R",
    "end": null,
    "source": "Cube.014_plastic_0",
@@ -3673,9 +3593,9 @@
    "faces": 170
   },
   {
-   "id": "body_0181",
+   "id": "body_0177",
    "part": "body",
-   "key": "trim",
+   "key": "light.front",
    "side": "L",
    "end": null,
    "source": "Cube.014_plastic_0",
@@ -3693,7 +3613,7 @@
    "faces": 170
   },
   {
-   "id": "body_0182",
+   "id": "body_0178",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -3713,7 +3633,7 @@
    "faces": 22
   },
   {
-   "id": "body_0183",
+   "id": "body_0179",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -3733,7 +3653,7 @@
    "faces": 5
   },
   {
-   "id": "body_0184",
+   "id": "body_0180",
    "part": "body",
    "key": "exterior",
    "side": "L",
@@ -3753,9 +3673,9 @@
    "faces": 276
   },
   {
-   "id": "body_0185",
+   "id": "body_0181",
    "part": "body",
-   "key": "trim",
+   "key": "light.front",
    "side": "R",
    "end": null,
    "source": "Cube.013_plastic_0",
@@ -3773,9 +3693,9 @@
    "faces": 170
   },
   {
-   "id": "body_0186",
+   "id": "body_0182",
    "part": "body",
-   "key": "trim",
+   "key": "light.front",
    "side": "L",
    "end": null,
    "source": "Cube.012_plastic_0",
@@ -3793,9 +3713,9 @@
    "faces": 170
   },
   {
-   "id": "body_0187",
+   "id": "body_0183",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": null,
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -3813,9 +3733,9 @@
    "faces": 52
   },
   {
-   "id": "body_0188",
+   "id": "body_0184",
    "part": "body",
-   "key": "exterior",
+   "key": "plate",
    "side": null,
    "end": null,
    "source": "Plane.021_Material.006_0",
@@ -3833,9 +3753,9 @@
    "faces": 2
   },
   {
-   "id": "body_0189",
+   "id": "body_0185",
    "part": "body",
-   "key": "exterior",
+   "key": "plate",
    "side": null,
    "end": null,
    "source": "Plane.021_Material.006_0",
@@ -3853,9 +3773,9 @@
    "faces": 2
   },
   {
-   "id": "body_0190",
+   "id": "body_0186",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": null,
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -3873,9 +3793,9 @@
    "faces": 70
   },
   {
-   "id": "body_0191",
+   "id": "body_0187",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": null,
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -3893,9 +3813,9 @@
    "faces": 25
   },
   {
-   "id": "body_0192",
+   "id": "body_0188",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -3913,9 +3833,9 @@
    "faces": 17
   },
   {
-   "id": "body_0193",
+   "id": "body_0189",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": null,
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -3933,9 +3853,9 @@
    "faces": 58
   },
   {
-   "id": "body_0194",
+   "id": "body_0190",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -3953,7 +3873,7 @@
    "faces": 186
   },
   {
-   "id": "body_0195",
+   "id": "body_0191",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -3973,7 +3893,7 @@
    "faces": 81
   },
   {
-   "id": "body_0196",
+   "id": "body_0192",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -3993,7 +3913,7 @@
    "faces": 37
   },
   {
-   "id": "body_0197",
+   "id": "body_0193",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -4013,7 +3933,7 @@
    "faces": 49
   },
   {
-   "id": "body_0198",
+   "id": "body_0194",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -4033,9 +3953,9 @@
    "faces": 96
   },
   {
-   "id": "body_0199",
+   "id": "body_0195",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -4053,7 +3973,7 @@
    "faces": 63
   },
   {
-   "id": "body_0200",
+   "id": "body_0196",
    "part": "body",
    "key": "exterior",
    "side": "L",
@@ -4073,9 +3993,9 @@
    "faces": 30
   },
   {
-   "id": "body_0201",
+   "id": "body_0197",
    "part": "body",
-   "key": "exterior",
+   "key": "light.rear",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -4093,9 +4013,9 @@
    "faces": 32
   },
   {
-   "id": "body_0202",
+   "id": "body_0198",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -4113,9 +4033,9 @@
    "faces": 77
   },
   {
-   "id": "body_0203",
+   "id": "body_0199",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -4133,9 +4053,9 @@
    "faces": 65
   },
   {
-   "id": "body_0204",
+   "id": "body_0200",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -4153,7 +4073,7 @@
    "faces": 57
   },
   {
-   "id": "body_0205",
+   "id": "body_0201",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -4173,7 +4093,7 @@
    "faces": 105
   },
   {
-   "id": "body_0206",
+   "id": "body_0202",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -4193,7 +4113,7 @@
    "faces": 89
   },
   {
-   "id": "body_0207",
+   "id": "body_0203",
    "part": "body",
    "key": "exterior",
    "side": "L",
@@ -4213,7 +4133,7 @@
    "faces": 15
   },
   {
-   "id": "body_0208",
+   "id": "body_0204",
    "part": "body",
    "key": "exterior",
    "side": "L",
@@ -4233,9 +4153,9 @@
    "faces": 26
   },
   {
-   "id": "body_0209",
+   "id": "body_0205",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -4253,7 +4173,7 @@
    "faces": 21
   },
   {
-   "id": "body_0210",
+   "id": "body_0206",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -4273,7 +4193,7 @@
    "faces": 20
   },
   {
-   "id": "body_0211",
+   "id": "body_0207",
    "part": "body",
    "key": "light.front",
    "side": "L",
@@ -4293,7 +4213,7 @@
    "faces": 45
   },
   {
-   "id": "body_0212",
+   "id": "body_0208",
    "part": "body",
    "key": "light.front",
    "side": "R",
@@ -4313,9 +4233,9 @@
    "faces": 45
   },
   {
-   "id": "glass_0213",
+   "id": "glass_0209",
    "part": "glass",
-   "key": "glass",
+   "key": "lens.front",
    "side": "R",
    "end": null,
    "source": "Cube.014_glass_0",
@@ -4333,9 +4253,9 @@
    "faces": 70
   },
   {
-   "id": "glass_0214",
+   "id": "glass_0210",
    "part": "glass",
-   "key": "glass",
+   "key": "lens.front",
    "side": "L",
    "end": null,
    "source": "Cube.014_glass_0",
@@ -4353,7 +4273,7 @@
    "faces": 70
   },
   {
-   "id": "body_0215",
+   "id": "body_0211",
    "part": "body",
    "key": "exterior",
    "side": null,
@@ -4373,7 +4293,7 @@
    "faces": 12
   },
   {
-   "id": "body_0216",
+   "id": "body_0212",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -4393,7 +4313,7 @@
    "faces": 24
   },
   {
-   "id": "body_0217",
+   "id": "body_0213",
    "part": "body",
    "key": "exterior",
    "side": "L",
@@ -4413,7 +4333,7 @@
    "faces": 15
   },
   {
-   "id": "body_0218",
+   "id": "body_0214",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -4433,7 +4353,7 @@
    "faces": 35
   },
   {
-   "id": "body_0219",
+   "id": "body_0215",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -4453,9 +4373,9 @@
    "faces": 44
   },
   {
-   "id": "glass_0220",
+   "id": "glass_0216",
    "part": "glass",
-   "key": "glass",
+   "key": "lens.front",
    "side": "R",
    "end": null,
    "source": "Cube.013_glass_0",
@@ -4473,9 +4393,9 @@
    "faces": 70
   },
   {
-   "id": "glass_0221",
+   "id": "glass_0217",
    "part": "glass",
-   "key": "glass",
+   "key": "lens.front",
    "side": "L",
    "end": null,
    "source": "Cube.012_glass_0",
@@ -4493,9 +4413,9 @@
    "faces": 70
   },
   {
-   "id": "body_0222",
+   "id": "body_0218",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -4513,9 +4433,9 @@
    "faces": 16
   },
   {
-   "id": "body_0223",
+   "id": "body_0219",
    "part": "body",
-   "key": "exterior",
+   "key": "light.rear",
    "side": "L",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -4533,9 +4453,9 @@
    "faces": 29
   },
   {
-   "id": "body_0224",
+   "id": "body_0220",
    "part": "body",
-   "key": "exterior",
+   "key": "bumper.rear",
    "side": null,
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
@@ -4553,7 +4473,7 @@
    "faces": 34
   },
   {
-   "id": "wheels_0225",
+   "id": "wheels_0221",
    "part": "wheels",
    "key": "hubcap",
    "side": "R",
@@ -4573,7 +4493,7 @@
    "faces": 1523
   },
   {
-   "id": "wheels_0226",
+   "id": "wheels_0222",
    "part": "wheels",
    "key": "hubcap",
    "side": "L",
@@ -4593,7 +4513,7 @@
    "faces": 1523
   },
   {
-   "id": "wheels_0227",
+   "id": "wheels_0223",
    "part": "wheels",
    "key": "hubcap",
    "side": "L",
@@ -4613,7 +4533,7 @@
    "faces": 1522
   },
   {
-   "id": "wheels_0228",
+   "id": "wheels_0224",
    "part": "wheels",
    "key": "hubcap",
    "side": "R",
@@ -4633,7 +4553,7 @@
    "faces": 1522
   },
   {
-   "id": "body_0229",
+   "id": "body_0225",
    "part": "body",
    "key": "exterior",
    "side": "L",
@@ -4653,7 +4573,7 @@
    "faces": 34
   },
   {
-   "id": "body_0230",
+   "id": "body_0226",
    "part": "body",
    "key": "exterior",
    "side": "R",
@@ -4673,7 +4593,7 @@
    "faces": 17
   },
   {
-   "id": "body_0231",
+   "id": "body_0227",
    "part": "body",
    "key": "exterior",
    "side": "L",
@@ -4693,7 +4613,7 @@
    "faces": 11
   },
   {
-   "id": "body_0232",
+   "id": "body_0228",
    "part": "body",
    "key": "exterior",
    "side": null,
@@ -4713,7 +4633,7 @@
    "faces": 8
   },
   {
-   "id": "body_0233",
+   "id": "body_0229",
    "part": "body",
    "key": "small",
    "side": "L",
@@ -4721,36 +4641,116 @@
    "source": "Plane.014_Car Paint.002_0",
    "material": "Car_Paint.002",
    "center": [
-    2.33,
-    1.058,
+    2.44,
+    0.583,
     0.556
    ],
    "size": [
-    0.428,
-    1.219,
+    0.207,
+    0.27,
     0.95
    ],
-   "faces": 453
+   "faces": 268
+  },
+  {
+   "id": "body_0230",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    0.135,
+    1.752,
+    0.562
+   ],
+   "size": [
+    0.01,
+    0.002,
+    0.003
+   ],
+   "faces": 1
+  },
+  {
+   "id": "body_0231",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    0.098,
+    1.709,
+    0.622
+   ],
+   "size": [
+    0.239,
+    0.082,
+    0.117
+   ],
+   "faces": 9
+  },
+  {
+   "id": "body_0232",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    -0.293,
+    1.699,
+    -0.624
+   ],
+   "size": [
+    0.06,
+    0.09,
+    0.136
+   ],
+   "faces": 27
+  },
+  {
+   "id": "body_0233",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    -1.253,
+    1.265,
+    -0.848
+   ],
+   "size": [
+    0,
+    0.002,
+    0.006
+   ],
+   "faces": 1
   },
   {
    "id": "body_0234",
    "part": "body",
    "key": "small",
-   "side": "L",
+   "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
    "material": "Car_Paint.002",
    "center": [
-    0.011,
-    1.07,
-    0.816
+    -1.185,
+    1.306,
+    -0.795
    ],
    "size": [
-    0.58,
-    1.367,
-    0.512
+    0.09,
+    0.039,
+    0.027
    ],
-   "faces": 29
+   "faces": 12
   },
   {
    "id": "body_0235",
@@ -4761,16 +4761,16 @@
    "source": "Plane.014_Car Paint.002_0",
    "material": "Car_Paint.002",
    "center": [
-    -0.319,
-    1.661,
-    -0.68
+    0.086,
+    0.452,
+    -1.06
    ],
    "size": [
-    0.005,
-    0.014,
-    0.023
+    0.164,
+    0.129,
+    0.016
    ],
-   "faces": 9
+   "faces": 17
   },
   {
    "id": "body_0236",
@@ -4781,59 +4781,19 @@
    "source": "Plane.014_Car Paint.002_0",
    "material": "Car_Paint.002",
    "center": [
-    -1.217,
-    0.851,
-    -0.923
+    2.083,
+    0.507,
+    -1.016
    ],
    "size": [
-    0.288,
-    0.948,
-    0.284
+    0.219,
+    0.279,
+    0.08
    ],
-   "faces": 126
+   "faces": 15
   },
   {
    "id": "body_0237",
-   "part": "body",
-   "key": "small",
-   "side": "R",
-   "end": null,
-   "source": "Plane.014_Car Paint.002_0",
-   "material": "Car_Paint.002",
-   "center": [
-    -0.047,
-    1.078,
-    -0.799
-   ],
-   "size": [
-    0.552,
-    1.381,
-    0.536
-   ],
-   "faces": 46
-  },
-  {
-   "id": "body_0238",
-   "part": "body",
-   "key": "small",
-   "side": "R",
-   "end": null,
-   "source": "Plane.014_Car Paint.002_0",
-   "material": "Car_Paint.002",
-   "center": [
-    2.313,
-    1.013,
-    -0.606
-   ],
-   "size": [
-    0.421,
-    1.292,
-    0.896
-   ],
-   "faces": 183
-  },
-  {
-   "id": "body_0239",
    "part": "body",
    "key": "small",
    "side": null,
@@ -4853,6 +4813,46 @@
    "faces": 67
   },
   {
+   "id": "body_0238",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    2.452,
+    0.592,
+    -0.573
+   ],
+   "size": [
+    0.143,
+    0.262,
+    0.83
+   ],
+   "faces": 104
+  },
+  {
+   "id": "body_0239",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    2.011,
+    1.649,
+    -0.633
+   ],
+   "size": [
+    0.246,
+    0.022,
+    0.03
+   ],
+   "faces": 26
+  },
+  {
    "id": "body_0240",
    "part": "body",
    "key": "small",
@@ -4861,16 +4861,16 @@
    "source": "Plane.014_Car Paint.002_0",
    "material": "Car_Paint.002",
    "center": [
-    1.812,
-    1.104,
-    -0.848
+    -1.147,
+    1.125,
+    -0.964
    ],
    "size": [
-    0.595,
-    1.112,
-    0.435
+    0.149,
+    0.265,
+    0.192
    ],
-   "faces": 17
+   "faces": 9
   },
   {
    "id": "body_0241",
@@ -4881,19 +4881,159 @@
    "source": "Plane.014_Car Paint.002_0",
    "material": "Car_Paint.002",
    "center": [
-    1.308,
-    1.43,
-    -0.804
+    -1.348,
+    1.17,
+    -0.983
    ],
    "size": [
-    0.356,
-    0.665,
-    0.508
+    0.025,
+    0.003,
+    0.006
    ],
-   "faces": 26
+   "faces": 11
   },
   {
    "id": "body_0242",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    0.017,
+    1.687,
+    -0.648
+   ],
+   "size": [
+    0.424,
+    0.038,
+    0.054
+   ],
+   "faces": 13
+  },
+  {
+   "id": "body_0243",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    1.163,
+    1.693,
+    -0.64
+   ],
+   "size": [
+    0.066,
+    0.035,
+    0.02
+   ],
+   "faces": 27
+  },
+  {
+   "id": "body_0244",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    -1.117,
+    0.505,
+    -1.057
+   ],
+   "size": [
+    0.07,
+    0.256,
+    0.015
+   ],
+   "faces": 108
+  },
+  {
+   "id": "body_0245",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    1.479,
+    1.52,
+    -0.756
+   ],
+   "size": [
+    0.269,
+    0.461,
+    0.413
+   ],
+   "faces": 12
+  },
+  {
+   "id": "body_0246",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    1.609,
+    1.12,
+    -1.047
+   ],
+   "size": [
+    0.354,
+    0.161,
+    0.036
+   ],
+   "faces": 9
+  },
+  {
+   "id": "body_0247",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    2.441,
+    1.293,
+    -0.816
+   ],
+   "size": [
+    0.007,
+    0.003,
+    0.002
+   ],
+   "faces": 1
+  },
+  {
+   "id": "body_0248",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    2.428,
+    0.993,
+    -0.904
+   ],
+   "size": [
+    0.064,
+    0.491,
+    0.158
+   ],
+   "faces": 48
+  },
+  {
+   "id": "body_0249",
    "part": "body",
    "key": "small",
    "side": null,
@@ -4913,27 +5053,27 @@
    "faces": 11
   },
   {
-   "id": "body_0243",
+   "id": "body_0250",
    "part": "body",
    "key": "small",
-   "side": "L",
+   "side": "R",
    "end": null,
    "source": "Plane.014_Car Paint.002_0",
    "material": "Car_Paint.002",
    "center": [
-    -1.823,
-    1.068,
-    0.998
+    -0.005,
+    1.759,
+    -0.546
    ],
    "size": [
-    0.314,
-    0.224,
-    0.114
+    0.455,
+    0.018,
+    0.031
    ],
-   "faces": 15
+   "faces": 6
   },
   {
-   "id": "body_0244",
+   "id": "body_0251",
    "part": "body",
    "key": "small",
    "side": "L",
@@ -4941,19 +5081,19 @@
    "source": "Plane.014_Car Paint.002_0",
    "material": "Car_Paint.002",
    "center": [
-    -1.236,
-    0.85,
-    0.935
+    -1.563,
+    1.072,
+    0.995
    ],
    "size": [
-    0.506,
-    0.928,
-    0.274
+    0.454,
+    0.25,
+    0.14
    ],
-   "faces": 106
+   "faces": 29
   },
   {
-   "id": "body_0245",
+   "id": "body_0252",
    "part": "body",
    "key": "small",
    "side": "L",
@@ -4961,19 +5101,19 @@
    "source": "Plane.014_Car Paint.002_0",
    "material": "Car_Paint.002",
    "center": [
-    1.809,
-    1.004,
-    0.835
+    1.999,
+    1.655,
+    0.623
    ],
    "size": [
-    0.607,
-    1.344,
-    0.485
+    0.268,
+    0.043,
+    0.061
    ],
-   "faces": 44
+   "faces": 32
   },
   {
-   "id": "body_0246",
+   "id": "body_0253",
    "part": "body",
    "key": "small",
    "side": "L",
@@ -4981,19 +5121,19 @@
    "source": "Plane.014_Car Paint.002_0",
    "material": "Car_Paint.002",
    "center": [
-    1.258,
-    1.165,
-    0.816
+    -1.068,
+    0.508,
+    1.064
    ],
    "size": [
-    0.423,
-    1.199,
-    0.523
+    0.17,
+    0.245,
+    0.017
    ],
    "faces": 28
   },
   {
-   "id": "body_0247",
+   "id": "body_0254",
    "part": "body",
    "key": "small",
    "side": "L",
@@ -5001,19 +5141,219 @@
    "source": "Plane.014_Car Paint.002_0",
    "material": "Car_Paint.002",
    "center": [
-    -0.323,
+    1.496,
+    1.456,
+    0.837
+   ],
+   "size": [
+    0.075,
+    0.009,
+    0.017
+   ],
+   "faces": 5
+  },
+  {
+   "id": "body_0255",
+   "part": "body",
+   "key": "light.rear",
+   "side": "L",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    2.42,
+    0.943,
+    0.906
+   ],
+   "size": [
+    0.175,
+    0.397,
+    0.19
+   ],
+   "faces": 112
+  },
+  {
+   "id": "body_0256",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    1.102,
+    1.762,
+    0.558
+   ],
+   "size": [
+    0.112,
+    0.005,
+    0.006
+   ],
+   "faces": 6
+  },
+  {
+   "id": "body_0257",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    2.388,
+    1.307,
+    0.852
+   ],
+   "size": [
+    0.13,
+    0.06,
+    0.095
+   ],
+   "faces": 93
+  },
+  {
+   "id": "body_0258",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    1.537,
+    1.034,
+    1.061
+   ],
+   "size": [
+    0.329,
+    0.138,
+    0.031
+   ],
+   "faces": 9
+  },
+  {
+   "id": "body_0259",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    -1.125,
+    1.005,
+    1.057
+   ],
+   "size": [
+    0.029,
+    0.03,
+    0.016
+   ],
+   "faces": 5
+  },
+  {
+   "id": "body_0260",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    0.984,
+    0.523,
+    1.065
+   ],
+   "size": [
+    0.292,
+    0.199,
+    0.025
+   ],
+   "faces": 15
+  },
+  {
+   "id": "body_0261",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    0.076,
+    0.453,
+    1.064
+   ],
+   "size": [
+    0.156,
+    0.134,
+    0.016
+   ],
+   "faces": 41
+  },
+  {
+   "id": "body_0262",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    -1.161,
+    1.282,
+    0.849
+   ],
+   "size": [
+    0.176,
+    0.064,
+    0.102
+   ],
+   "faces": 67
+  },
+  {
+   "id": "body_0263",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    -0.301,
     1.686,
     0.644
    ],
    "size": [
-    0.015,
+    0.059,
     0.053,
     0.082
    ],
-   "faces": 37
+   "faces": 38
   },
   {
-   "id": "body_0248",
+   "id": "body_0264",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    1.149,
+    1.761,
+    -0.553
+   ],
+   "size": [
+    0.018,
+    0.003,
+    0.006
+   ],
+   "faces": 1
+  },
+  {
+   "id": "body_0265",
    "part": "body",
    "key": "small",
    "side": "R",
@@ -5033,7 +5373,7 @@
    "faces": 8
   },
   {
-   "id": "body_0249",
+   "id": "body_0266",
    "part": "body",
    "key": "small",
    "side": "L",
@@ -5041,19 +5381,59 @@
    "source": "Plane.014_Car Paint.002_0",
    "material": "Car_Paint.002",
    "center": [
-    0.603,
-    1.057,
-    0.853
+    1.131,
+    1.691,
+    0.635
    ],
    "size": [
-    0.625,
-    1.268,
-    0.401
+    0.03,
+    0.005,
+    0.002
    ],
-   "faces": 3
+   "faces": 5
   },
   {
-   "id": "body_0250",
+   "id": "body_0267",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    2.052,
+    0.465,
+    1.011
+   ],
+   "size": [
+    0.121,
+    0.266,
+    0.081
+   ],
+   "faces": 42
+  },
+  {
+   "id": "body_0268",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    -1.973,
+    0.969,
+    1.053
+   ],
+   "size": [
+    0.013,
+    0.026,
+    0.003
+   ],
+   "faces": 33
+  },
+  {
+   "id": "body_0269",
    "part": "body",
    "key": "small",
    "side": null,
@@ -5073,9 +5453,29 @@
    "faces": 8
   },
   {
-   "id": "body_0251",
+   "id": "body_0270",
    "part": "body",
    "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Plane.014_Car Paint.002_0",
+   "material": "Car_Paint.002",
+   "center": [
+    0.28,
+    1.691,
+    0.654
+   ],
+   "size": [
+    0.062,
+    0.003,
+    0.003
+   ],
+   "faces": 4
+  },
+  {
+   "id": "body_0271",
+   "part": "body",
+   "key": "sensor",
    "side": "L",
    "end": null,
    "source": "Cylinder_Car Paint.002_0",
@@ -5093,9 +5493,9 @@
    "faces": 380
   },
   {
-   "id": "body_0252",
+   "id": "body_0272",
    "part": "body",
-   "key": "small",
+   "key": "sensor",
    "side": "R",
    "end": null,
    "source": "Cylinder_Car Paint.002_0",
@@ -5113,9 +5513,9 @@
    "faces": 378
   },
   {
-   "id": "body_0253",
+   "id": "body_0273",
    "part": "body",
-   "key": "small",
+   "key": "sensor",
    "side": "L",
    "end": null,
    "source": "Cylinder_plastic_0",
@@ -5133,9 +5533,9 @@
    "faces": 64
   },
   {
-   "id": "body_0254",
+   "id": "body_0274",
    "part": "body",
-   "key": "small",
+   "key": "sensor",
    "side": "R",
    "end": null,
    "source": "Cylinder_plastic_0",
@@ -5153,89 +5553,49 @@
    "faces": 64
   },
   {
-   "id": "body_0255",
+   "id": "body_0275",
    "part": "body",
-   "key": "small",
+   "key": "light.front",
    "side": "R",
    "end": null,
    "source": "Cube.023_den xe_0",
    "material": "den_xe",
    "center": [
-    -2.055,
-    1.054,
-    -0.936
+    -2.148,
+    1.038,
+    -0.729
    ],
    "size": [
-    0.037,
-    0.032,
-    0.093
+    0.222,
+    0.064,
+    0.507
    ],
-   "faces": 80
+   "faces": 340
   },
   {
-   "id": "body_0256",
+   "id": "body_0276",
    "part": "body",
-   "key": "small",
-   "side": "R",
-   "end": null,
-   "source": "Cube.023_den xe_0",
-   "material": "den_xe",
-   "center": [
-    -2.179,
-    1.035,
-    -0.647
-   ],
-   "size": [
-    0.16,
-    0.056,
-    0.341
-   ],
-   "faces": 260
-  },
-  {
-   "id": "body_0257",
-   "part": "body",
-   "key": "small",
+   "key": "light.front",
    "side": "L",
    "end": null,
    "source": "Cube.023_den xe_0",
    "material": "den_xe",
    "center": [
-    -2.055,
-    1.054,
-    0.95
+    -2.148,
+    1.038,
+    0.743
    ],
    "size": [
-    0.037,
-    0.032,
-    0.093
+    0.222,
+    0.064,
+    0.507
    ],
-   "faces": 80
+   "faces": 340
   },
   {
-   "id": "body_0258",
+   "id": "body_0277",
    "part": "body",
-   "key": "small",
-   "side": "L",
-   "end": null,
-   "source": "Cube.023_den xe_0",
-   "material": "den_xe",
-   "center": [
-    -2.179,
-    1.035,
-    0.661
-   ],
-   "size": [
-    0.16,
-    0.056,
-    0.341
-   ],
-   "faces": 260
-  },
-  {
-   "id": "body_0259",
-   "part": "body",
-   "key": "small",
+   "key": "mirror",
    "side": "L",
    "end": null,
    "source": "Cube.006_Car Paint.002_0",
@@ -5253,9 +5613,9 @@
    "faces": 8
   },
   {
-   "id": "body_0260",
+   "id": "body_0278",
    "part": "body",
-   "key": "small",
+   "key": "sensor",
    "side": "L",
    "end": null,
    "source": "Cylinder.001_Car Paint.002_0",
@@ -5273,9 +5633,9 @@
    "faces": 380
   },
   {
-   "id": "body_0261",
+   "id": "body_0279",
    "part": "body",
-   "key": "small",
+   "key": "sensor",
    "side": "R",
    "end": null,
    "source": "Cylinder.001_Car Paint.002_0",
@@ -5293,9 +5653,9 @@
    "faces": 380
   },
   {
-   "id": "body_0262",
+   "id": "body_0280",
    "part": "body",
-   "key": "small",
+   "key": "sensor",
    "side": "L",
    "end": null,
    "source": "Cylinder.001_plastic_0",
@@ -5313,9 +5673,9 @@
    "faces": 64
   },
   {
-   "id": "body_0263",
+   "id": "body_0281",
    "part": "body",
-   "key": "small",
+   "key": "sensor",
    "side": "R",
    "end": null,
    "source": "Cylinder.001_plastic_0",
@@ -5333,9 +5693,9 @@
    "faces": 64
   },
   {
-   "id": "body_0264",
+   "id": "body_0282",
    "part": "body",
-   "key": "small",
+   "key": "logo",
    "side": "L",
    "end": null,
    "source": "Plane.013_logo color_0",
@@ -5353,9 +5713,9 @@
    "faces": 1547
   },
   {
-   "id": "body_0265",
+   "id": "body_0283",
    "part": "body",
-   "key": "small",
+   "key": "logo",
    "side": "R",
    "end": null,
    "source": "Plane.013_logo color_0",
@@ -5373,9 +5733,9 @@
    "faces": 1547
   },
   {
-   "id": "body_0266",
+   "id": "body_0284",
    "part": "body",
-   "key": "small",
+   "key": "mirror",
    "side": "R",
    "end": null,
    "source": "Cube.006_Car Paint.002_0",
@@ -5393,9 +5753,9 @@
    "faces": 8
   },
   {
-   "id": "body_0267",
+   "id": "body_0285",
    "part": "body",
-   "key": "small",
+   "key": "sensor",
    "side": null,
    "end": null,
    "source": "Cylinder.005_Car Paint.002_0",
@@ -5413,9 +5773,9 @@
    "faces": 380
   },
   {
-   "id": "body_0268",
+   "id": "body_0286",
    "part": "body",
-   "key": "small",
+   "key": "sensor",
    "side": null,
    "end": null,
    "source": "Cylinder.005_Car Paint.002_0",
@@ -5433,9 +5793,9 @@
    "faces": 380
   },
   {
-   "id": "body_0269",
+   "id": "body_0287",
    "part": "body",
-   "key": "small",
+   "key": "sensor",
    "side": null,
    "end": null,
    "source": "Cylinder.005_plastic_0",
@@ -5453,9 +5813,9 @@
    "faces": 64
   },
   {
-   "id": "body_0270",
+   "id": "body_0288",
    "part": "body",
-   "key": "small",
+   "key": "sensor",
    "side": null,
    "end": null,
    "source": "Cylinder.005_plastic_0",
@@ -5473,9 +5833,9 @@
    "faces": 64
   },
   {
-   "id": "body_0271",
+   "id": "body_0289",
    "part": "body",
-   "key": "small",
+   "key": "sensor",
    "side": "L",
    "end": null,
    "source": "Cylinder.006_Car Paint.002_0",
@@ -5493,9 +5853,9 @@
    "faces": 380
   },
   {
-   "id": "body_0272",
+   "id": "body_0290",
    "part": "body",
-   "key": "small",
+   "key": "sensor",
    "side": "R",
    "end": null,
    "source": "Cylinder.006_Car Paint.002_0",
@@ -5513,9 +5873,9 @@
    "faces": 380
   },
   {
-   "id": "body_0273",
+   "id": "body_0291",
    "part": "body",
-   "key": "small",
+   "key": "sensor",
    "side": "L",
    "end": null,
    "source": "Cylinder.006_plastic_0",
@@ -5533,9 +5893,9 @@
    "faces": 64
   },
   {
-   "id": "body_0274",
+   "id": "body_0292",
    "part": "body",
-   "key": "small",
+   "key": "sensor",
    "side": "R",
    "end": null,
    "source": "Cylinder.006_plastic_0",
@@ -5553,9 +5913,9 @@
    "faces": 64
   },
   {
-   "id": "body_0275",
+   "id": "body_0293",
    "part": "body",
-   "key": "small",
+   "key": "light.front",
    "side": "R",
    "end": null,
    "source": "Cube.013_light_0",
@@ -5573,9 +5933,9 @@
    "faces": 22
   },
   {
-   "id": "body_0276",
+   "id": "body_0294",
    "part": "body",
-   "key": "small",
+   "key": "light.front",
    "side": "R",
    "end": null,
    "source": "Cube.014_light_0",
@@ -5593,9 +5953,9 @@
    "faces": 22
   },
   {
-   "id": "body_0277",
+   "id": "body_0295",
    "part": "body",
-   "key": "small",
+   "key": "light.front",
    "side": "L",
    "end": null,
    "source": "Cube.012_light_0",
@@ -5613,9 +5973,9 @@
    "faces": 22
   },
   {
-   "id": "body_0278",
+   "id": "body_0296",
    "part": "body",
-   "key": "small",
+   "key": "light.front",
    "side": "L",
    "end": null,
    "source": "Cube.014_light_0",

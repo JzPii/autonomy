@@ -90,7 +90,7 @@ for(const s of sources){
 log(`${islands.length} đảo lưới từ ${sources.length} primitive, ${islands.reduce((s,i)=>s+i.faces,0)} mặt`);
 
 // ---- Pass 3: group islands into pieces ----------------------------------------------------------
-const wheelish=t=>/tire|tyre|wheel|rim\b|_rim|rim_|brake|disc|disk|caliper|lốp|lop[ _.]|bánh|banh|mâm|mam[ _.]/.test(t);
+const wheelish=t=>!/steering/.test(t)&&/tire|tyre|wheel|rim\b|_rim|rim_|brake|disc|disk|caliper|lốp|lop[ _.]|bánh|banh|mâm|mam[ _.]/.test(t);
 const corner=c=>type==='car'?`${c[0]<0?'F':'R'}${c[2]<0?'R':'L'}`:(c[0]<0?'F':'R');
 const wheelCenters={};
 for(const i of islands){if(!wheelish(i.text)||Math.max(...i.size)<.5*(LENGTH/5)||!isRound(i))continue;const k=corner(i.center);(wheelCenters[k]||=[]).push(i.center)}
@@ -103,19 +103,22 @@ log('Tâm bánh: '+Object.entries(wheelCenters).map(([k,c])=>`${k}(${c.map(v=>v.
 const wheelR=Math.max(.25,...Object.values(wheelCenters).map(c=>c[1]));
 const nearestWheel=c=>Math.min(...Object.values(wheelCenters).map(w=>Math.hypot(c[0]-w[0],c[1]-w[1],c[2]-w[2])));
 const pieces=[];const wheelBuckets=new Map();const leftovers=new Map();
-const leftoverKey=i=>`${i.name}|${i.matName}|${Math.round(i.center[0]/.6)}|${i.center[2]>.15?'L':i.center[2]<-.15?'R':'C'}`;
+const leftoverKey=i=>`${i.name}|${i.matName}|${Math.round(i.center[0]/.5)}|${Math.round(i.center[1]/.5)}|${i.center[2]>.15?'L':i.center[2]<-.15?'R':'C'}`;
 for(const i of islands){
  const maxDim=Math.max(...i.size);
  const hinted=hints.find(h=>h.re.test(i.text));
- const wheelPart=!hinted&&((wheelish(i.text)&&maxDim<wheelR*3.2)||(nearestWheel(i.center)<wheelR*1.3&&maxDim<wheelR*2.4&&!/glass|kính|kinh|light|đèn|den[ _.]|body|door|fender|paint|coat/.test(i.text)));
- if(wheelPart){merge(wheelBuckets,`${i.name}|${i.matName}|${corner(i.center)}`,i).wheel=true;continue}
+ // Bánh xe: từ khóa HOẶC gần tâm bánh — nhưng luôn phải ở gần bánh (dải cao su cửa 'lop xe' hay 'rim_chrome' trong khoang máy không phải bánh).
+ const nearW=nearestWheel(i.center);
+ const wheelPart=!hinted&&((wheelish(i.text)&&maxDim<wheelR*3.2&&nearW<wheelR*2.2)||(nearW<wheelR*1.3&&maxDim<wheelR*2.4&&!/glass|kính|kinh|light|đèn|den[ _.]|body|door|fender|paint|coat/.test(i.text)));
+ if(wheelPart||(hinted&&(hinted.part==='wheels'||hinted.part==='brakes'))){const b=merge(wheelBuckets,`${i.name}|${i.matName}|${corner(i.center)}`,i);b.wheel=true;if(hinted)b.hint=hinted;continue}
  const tiny=maxDim<.08,smallLowPoly=i.faces<cfg.minFaces&&maxDim<.25;
  if(tiny||smallLowPoly){const m=merge(leftovers,leftoverKey(i),i);m.leftover=true;m.hint=hinted;continue}
  i.hint=hinted;pieces.push(i);
 }
 for(const w of wheelBuckets.values())pieces.push(w);
 pieces.sort((a,b)=>score(b)-score(a));
-while(pieces.length+leftovers.size>cfg.maxPieces&&pieces.length){const p=pieces.pop();if(p.wheel||p.leftover)continue;merge(leftovers,leftoverKey(p),p).leftover=true}
+// Vượt giới hạn: gộp các mảnh RIÊNG nhỏ nhất vào nhóm chi tiết nhỏ; không bao giờ bỏ mất cụm bánh hay nhóm đã gộp.
+for(let i=pieces.length-1;i>=0&&pieces.length+leftovers.size>cfg.maxPieces;i--){const p=pieces[i];if(p.wheel||p.leftover)continue;pieces.splice(i,1);merge(leftovers,leftoverKey(p),p).leftover=true}
 for(const lo of leftovers.values())pieces.push(lo);
 log(`${pieces.length} mảnh: ${wheelBuckets.size} cụm bánh, ${leftovers.size} nhóm chi tiết nhỏ, ${pieces.length-wheelBuckets.size-leftovers.size} mảnh riêng`);
 
@@ -160,15 +163,19 @@ function classify(piece){
  const t=piece.text;const m=piece.material;const [cx,cy,cz]=piece.center;const [sx,sy,sz]=piece.size;const maxDim=Math.max(sx,sy,sz);
  const has=(...words)=>words.some(w=>t.includes(w));
  const side=Math.abs(cz);const sideOf=()=>type==='car'&&side>.3?(cz>0?'L':'R'):null;const endOf=()=>cx<0?'F':'R';
+ const generic=Boolean(piece.leftover); // nhóm gộp: bbox không có ý nghĩa hình học, chỉ dùng tên/vật liệu
+ const rearEngine=model.layout==='rear-engine';const twoDoor=(model.doors||4)<=2;const hatch=(model.doors||4)>=5;
  const transparent=m&&(m.getAlphaMode()==='BLEND'||m.getAlpha()<.95||m.getBaseColorFactor()[3]<.95||m.getExtension('KHR_materials_transmission'));
  const emissive=m&&m.getEmissiveFactor().some(v=>v>.05);
  const glassy=transparent||has('glass','window','windshield','windscreen','kính','kinh','crystal');
  const lighty=emissive||has('light','lamp','led','đèn','den ','den_','headl','taill','drl');
- const interiorish=has('interior','_int','int_','seat','upholster','ghế','ghe ','dashboard','dash','steering','cabin','nội thất','noi that','console','carpet','rug','pedal','cockpit','belt','monitor','screen','leather','wunderbaum');
+ const inCabinBox=Math.abs(cx)<L*.34&&side<Wb*.5&&cy>H*.2&&cy<H*.98;
+ const lampZone=Math.abs(cx)>L*.4&&cy>H*.36&&cy<H*.75&&side>Wb*.15;
+ const interiorish=has('interior','seat','upholster','ghế','ghe ','dashboard','dash','steering','cabin','nội thất','noi that','console','carpet','rug','pedal','cockpit','belt','monitor','screen','leather','wunderbaum')||(inCabinBox&&has('_int','int_'));
  if(piece.hint)return {part:piece.hint.part||'body',key:piece.hint.key||'exterior',side:sideOf(),end:type==='car'&&piece.hint.part==='wheels'?endOf():null};
- if(piece.leftover){const part=piece.wheel?'wheels':glassy?'glass':interiorish?'cabin':'body';return {part,key:'small',side:sideOf()}}
  if(piece.wheel){
   let key,part='wheels';
+  if(piece.hint)return {part:piece.hint.part||'wheels',key:piece.hint.key||'wheel.part',side:sideOf(),end:endOf()};
   if(has('logo','badge','emblem'))key='hubcap';
   else if(has('brake','disc','disk','phanh')){part='brakes';key=has('caliper')?'caliper':'disc'}
   else if(has('caliper')){part='brakes';key='caliper'}
@@ -179,60 +186,85 @@ function classify(piece){
   else key='wheel.part';
   return {part,key,side:sideOf(),end:endOf()};
  }
+ // ---- tên/vật liệu rõ nghĩa (áp dụng cho cả nhóm gộp)
  if(has('pipe','exhaust','muffler','ống xả'))return {part:'exhaust',key:'exhaust',side:sideOf()};
  if(has('plate','number'))return {part:'body',key:'plate'};
  if(has('wiper'))return {part:'body',key:'wiper'};
  if(has('antenna','aerial'))return {part:'body',key:'antenna'};
  if(has('spoiler','wing'))return {part:'body',key:'spoiler'};
+ if(has('reflector'))return {part:'body',key:'reflector',side:sideOf()};
+ if(has('mirror','gương','guong'))return inCabinBox&&side<.2?{part:'cabin',key:'mirror'}:{part:'body',key:'mirror',side:sideOf()};
+ if(has('logo','badge','emblem',model.brand.toLowerCase()))return generic&&maxDim<.1?{part:'body',key:'trim',side:sideOf()}:{part:'body',key:'logo',side:side>.3?sideOf():null};
+ if(has('belt'))return {part:'cabin',key:'belt',side:sideOf()};
+ if(has('rug','carpet'))return {part:'cabin',key:'carpet',side:sideOf()};
+ if(has('monitor','screen','display'))return {part:'cabin',key:'display'};
+ if(has('speaker','dynamic'))return {part:'cabin',key:'speaker',side:sideOf()};
+ if(has('sensor','camera'))return {part:'body',key:has('camera')?'camera':'sensor',side:sideOf()};
  // Khối đen lấp khoang lái của mô hình "no interior"
- if(sx>L*.5&&sz>Wb*.6&&cy>H*.2&&cy<H*.7&&piece.faces<2000)return {part:'cabin',key:'interior.block'};
- if(interiorish||(maxDim<.6&&side<Wb*.36&&cy>H*.22&&cy<H*.8&&Math.abs(cx)<L*.25&&!glassy&&!lighty)){
+ if(!generic&&sx>L*.5&&sz>Wb*.6&&cy>H*.2&&cy<H*.7&&piece.faces<2000)return {part:'cabin',key:'interior.block'};
+ if(lighty&&!glassy)return {part:'body',key:cx<0?'light.front':'light.rear',side:sideOf()};
+ if(interiorish||(!generic&&maxDim<.6&&side<Wb*.36&&cy>H*.22&&cy<H*.8&&Math.abs(cx)<L*.25&&!glassy&&!lighty)){
   let key='interior';
-  if(has('upholster')&&cy>H*.75)key='headliner';else if(has('seat','upholster','ghế'))key='seat';else if(has('steering','wheel_signs'))key='steering';else if(has('belt'))key='belt';else if(has('rug','carpet'))key='carpet';
-  else if(has('monitor','screen','display'))key='display';else if(has('dash'))key='dashboard';else if(has('console'))key='console';else if(has('pedal'))key='pedal';
+  if(has('upholster')&&cy>H*.75)key='headliner';else if(has('seat','upholster','ghế'))key='seat';else if(has('steering','wheel_signs'))key='steering';
+  else if(has('dash'))key='dashboard';else if(has('console'))key='console';else if(has('pedal'))key='pedal';
   else if(has('carbon','chrom','plastic','pl_','trim'))key='trim.interior';else if(has('headliner','ceiling'))key='headliner';
   if(key==='interior'&&has('door'))key='trim.interior';
+  if(!generic&&(key==='interior'||key==='trim.interior')){ // hình học nội thất cơ bản
+   const seatLike=sy>.3&&side>.2&&side<.5&&cx>-.15&&cx<.75&&sx<.85&&sz<.7;
+   const dims=[sx,sy,sz].sort((a,b)=>a-b);const discLike=dims[0]<.12&&dims[1]>.28&&dims[1]<.5&&dims[2]<.5&&side>.22&&side<.48&&cx<-.1&&cx>-.6&&cy>H*.45;
+   if(sz>Wb*.6&&cy>H*.55&&cx<-L*.03&&sx<.9)key='dashboard';else if(discLike)key='steering';else if(seatLike)key='seat';else if(side<.15&&cy<H*.5&&sx>.3&&sz<.5)key='console';
+  }
   return {part:'cabin',key,side:sideOf()};
  }
  if(glassy){
   let key;
-  if(sx>L*.4&&sz>Wb*.45&&cy>H*.6)key='windshield.roof';
-  else if(cx<-L*.05&&cx>-L*.36&&side<Wb*.2&&sz>Wb*.45&&cy>H*.55&&sx>.35)key='windshield';
-  else if(cx>L*.25&&sz>Wb*.4&&cy>H*.55&&sy>.2)key='glass.rear';
-  else if(Math.abs(cx)>L*.4&&sz>Wb*.4&&sy<.4)key=cx<0?'lens.front':'lens.rear';
-  else if(cy>H*.85&&sx>.5&&sz>Wb*.3&&side<Wb*.2)key='glass.roof';
-  else if(side>Wb*.32&&sx>.3&&sy>.2)return {part:'glass',key:'glass.side',side:sideOf(),end:endOf()};
-  else if(lighty||has('light','lamp'))key=cx<0?'lens.front':'lens.rear';
-  else key='glass';
-  return {part:'glass',key,side:key==='glass'?sideOf():null};
+  if(!generic&&sx>L*.4&&sz>Wb*.45&&cy>H*.6)key='windshield.roof';
+  else if(!generic&&cx<-L*.05&&cx>-L*.36&&side<Wb*.2&&sz>Wb*.45&&cy>H*.55&&sx>.35)key='windshield';
+  else if(!generic&&cx>L*.2&&sz>Wb*.4&&cy>H*.55&&sy>.2&&side<Wb*.2)key='glass.rear';
+  else if(Math.abs(cx)>L*.33&&(sy<.4||lighty||has('light','lamp')))key=cx<0?'lens.front':'lens.rear';
+  else if(!generic&&cy>H*.85&&sx>.5&&sz>Wb*.3&&side<Wb*.2)key='glass.roof';
+  else if(!generic&&side>Wb*.32&&sx>.3&&sy>.2&&Math.abs(cx)<L*.3)return {part:'glass',key:'glass.side',side:sideOf(),end:twoDoor?null:endOf()};
+  else if(lampZone||lighty||has('light','lamp'))key=cx<0?'lens.front':'lens.rear';
+  else key=generic?'small':'glass';
+  return {part:'glass',key,side:key==='glass'||key==='small'||key.startsWith('lens')?sideOf():null};
  }
- if(has('reflector'))return {part:'body',key:'reflector',side:sideOf()};
  if(lighty)return {part:'body',key:cx<0?'light.front':'light.rear',side:sideOf()};
- if(has('logo','badge','emblem',model.brand.toLowerCase()))return {part:'body',key:'logo',side:side>.3?sideOf():null};
- if(has('mirror','gương','guong')||(side>Wb*.45&&cy>H*.55&&cy<H*.8&&maxDim<.45&&cx<0&&cx>-L*.25))return {part:'body',key:'mirror',side:sideOf()};
- if(has('handle')||(side>Wb*.45&&cy>H*.5&&cy<H*.7&&sx>.12&&sx<.35&&sy<.09&&sz<.08&&Math.abs(cx)<L*.26))return {part:'doors',key:'door.handle',side:sideOf(),end:endOf()};
- if(has('door','cửa','cua ')||(side>Wb*.36&&sz<.4&&sx>.55&&sx<1.9&&sy>.45&&cy>H*.25&&cy<H*.75&&Math.abs(cx)<L*.26)){
-  const twoDoor=has('door_1','door_2')&&!has('door_3','door_4');
+ // cụm đèn: mảnh nhỏ nằm đúng góc đèn trước/sau (vỏ, chóa, vành chrome)
+ if(lampZone&&maxDim<.45&&side>Wb*.25)return {part:'body',key:cx<0?'light.front':'light.rear',side:sideOf()};
+ if(!generic&&side>Wb*.45&&cy>H*.55&&cy<H*.8&&maxDim<.45&&cx<0&&cx>-L*.25)return {part:'body',key:'mirror',side:sideOf()};
+ if(has('handle')||(!generic&&side>Wb*.45&&cy>H*.5&&cy<H*.7&&sx>.12&&sx<.35&&sy<.09&&sz<.08&&Math.abs(cx)<L*.26))return {part:'doors',key:'door.handle',side:sideOf(),end:twoDoor?null:endOf()};
+ if(has('door','cửa','cua ')||(!generic&&side>Wb*.36&&sz<.4&&sx>.55&&sx<1.9&&sy>.45&&cy>H*.25&&cy<H*.75&&Math.abs(cx)<L*.26)){
   return {part:'doors',key:twoDoor?'door':(cx<0?'door.front':'door.rear'),side:sideOf()};
  }
  if(has('hood','bonnet'))return {part:'body',key:'hood'};
- if(has('trunk','boot','tailgate'))return {part:'doors',key:cy>H*.4&&sz>Wb*.5?'tailgate':'trunk'};
- if(cx>L*.38&&cy>H*.4&&sz>Wb*.5&&sx<.9)return {part:'doors',key:'tailgate'};
- let key;
+ if(has('trunk','boot','tailgate'))return {part:hatch?'doors':'body',key:hatch?'tailgate':rearEngine?'engine.lid':'trunk'};
+ if(generic){ // nhóm gộp không rõ tên: giữ 'small' theo vùng
+  if(has('chrome','chrom','trim','plastic','rubber','seal','molding','sticker','decal'))return {part:'body',key:cy<H*.3?'trim.lower':'trim',side:sideOf()};
+  return {part:'body',key:'small',side:sideOf()};
+ }
+ // ---- hình học thân xe
+ const rearHigh=cx>L*.3&&cy>H*.55;
+ if(!hatch&&rearHigh&&sz>Wb*.4&&sy<.45&&sx<.7&&(cy>H*.62||sy<.2))return {part:'body',key:'spoiler'};
+ if(cx>L*.36&&cy>H*.9&&sz>Wb*.4&&sy<.25)return {part:'body',key:'spoiler'};
+ if(cx>L*.38&&cy>H*.96&&sz<.6&&maxDim>.3)return {part:'body',key:'spoiler'};
+ if(cx>L*.36&&cy>H*.4&&sz>Wb*.5&&sx<.9)return hatch?{part:'doors',key:'tailgate'}:{part:'body',key:rearEngine?'engine.lid':'trunk'};
  if(sx>L*.5&&(sz>Wb*.6||sy>H*.5))return {part:'body',key:'body.shell',side:sz>Wb*.6?null:sideOf()};
- else if(cx<-L*.2&&cy>H*.5&&sz>Wb*.6&&sx>.8&&sy<.5)key='hood';
- else if(cx>L*.25&&cy>H*.5&&sz>Wb*.5&&sx>.5&&sy<.4&&sx<1.3)key='trunk';
- else if(cx<-L*.36&&cy<H*.5&&sz>Wb*.7)key='bumper.front';
- else if(cx>L*.36&&cy<H*.5&&sz>Wb*.7)key='bumper.rear';
- else if(cx<-L*.4&&sz>Wb*.45&&sy<.35)key='grille';
- else if(cy>H*.85&&sx>1&&sz>Wb*.4)key='roof';
- else if(cy>H*.85&&sx>1.2&&sz<.3)return {part:'body',key:'roof.rail',side:sideOf()};
- else if(side>Wb*.36&&sx>.5&&sy>.3&&nearestWheel(piece.center)<wheelR*2.9)return {part:'body',key:'fender',side:sideOf(),end:endOf()};
- else if(cy<H*.25&&sx>1&&sz<.35&&side>Wb*.35)return {part:'body',key:'sill',side:sideOf()};
- else if(cy<H*.22&&sx>1)return {part:'body',key:'underbody',side:sideOf()};
- else if(has('chrome','chrom','trim','plastic','rubber','seal','molding','sticker','decal','ốp','op '))return {part:'body',key:cy<H*.3?'trim.lower':'trim',side:sideOf()};
- else return {part:'body',key:'exterior',side:sideOf()};
- return {part:'body',key};
+ if(cx<-L*.2&&cy>H*.5&&sz>Wb*.6&&sx>.8&&sy<.5)return {part:'body',key:'hood'};
+ if(cx>L*.25&&cy>H*.5&&sz>Wb*.5&&sx>.5&&sy<.4&&sx<1.3)return {part:'body',key:rearEngine?'engine.lid':'trunk'};
+ if(cx<-L*.36&&cy<H*.5&&sz>Wb*.7)return {part:'body',key:'bumper.front'};
+ if(cx>L*.36&&cy<H*.5&&sz>Wb*.7)return {part:'body',key:'bumper.rear'};
+ if(cx<-L*.4&&sz>Wb*.45&&sy<.4)return {part:'body',key:'grille'};
+ if(cy>H*.94&&side>Wb*.22&&sx>.4&&sz<.25)return {part:'body',key:'roof.rail',side:sideOf()};
+ if(cy>H*.94&&side<Wb*.25&&sx>.3&&sz>.3)return {part:'body',key:'roof'};
+ if(cy>H*.85&&sx>1&&sz>Wb*.4)return {part:'body',key:'roof'};
+ if(cx>L*.44&&cy<H*.5)return {part:'body',key:'bumper.rear',side:sideOf()};
+ if(cx<-L*.44&&cy<H*.5)return {part:'body',key:'bumper.front',side:sideOf()};
+ if(cx>L*.46&&cy>H*.4&&cy<H*.65&&side>Wb*.4)return {part:'body',key:'bumper.rear',side:sideOf()};
+ if(sx>.5&&sy>.3&&nearestWheel(piece.center)<wheelR*2.9&&(side>Wb*.33||(nearestWheel(piece.center)<wheelR*2.2&&sy>.4)))return {part:'body',key:'fender',side:sideOf(),end:endOf()};
+ if(cy<H*.3&&sx>.5&&sz<.35&&side>Wb*.35)return {part:'body',key:cy<H*.25&&sx>1?'sill':'trim.lower',side:sideOf()};
+ if(cy<H*.22&&sx>1)return {part:'body',key:'underbody',side:sideOf()};
+ if(has('chrome','chrom','trim','plastic','rubber','seal','molding','sticker','decal','ốp','op '))return {part:'body',key:cy<H*.3?'trim.lower':'trim',side:sideOf()};
+ return {part:'body',key:'exterior',side:sideOf()};
 }
 function isRound(p){const [sx,sy,sz]=p.size;return Math.abs(sy-sx)<Math.max(sx,sy)*.25&&sx>.2&&sz<sx}
 function score(p){return Math.hypot(...p.size)*Math.log2(p.faces+2)}
