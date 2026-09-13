@@ -10,12 +10,19 @@ import {manifestUrl,type Manifest} from './manifest';
 import {registerStudioTools} from './agent-tools';
 import VehicleScene, {type SceneHandle} from './vehicle-scene';
 const compactQuery='(max-width: 700px), (max-height: 500px)';
+function readUrlState(){
+ const q=typeof location==='undefined'?new URLSearchParams():new URLSearchParams(location.search);
+ const system=q.get('system');const explode=Number(q.get('explode'));
+ return {system:(parts.some(p=>p.id===system)?system:'body') as PartId,detail:parts.some(p=>p.id===system),explode:Number.isFinite(explode)?Math.min(100,Math.max(0,Math.round(explode))):0,labels:q.get('labels')==='1'};
+}
 export default function Home(){
- const [selected,setSelected]=useState<PartId>('body');
+ // Liên kết sâu: ?system=wheels&explode=100&labels=1
+ const initial=readUrlState();
+ const [selected,setSelected]=useState<PartId>(initial.system);
  const [canFullscreen,setCanFullscreen]=useState(false);
  const [compact,setCompact]=useState(false);const [toolsOpen,setToolsOpen]=useState(false);
- const [componentsOpen,setComponentsOpen]=useState(false);const [detailOpen,setDetailOpen]=useState(false);
- const [explode,setExplode]=useState(0); const [labels,setLabels]=useState(false); const [rotate,setRotate]=useState(false); const [isolated,setIsolated]=useState(false); const [help,setHelp]=useState(false);
+ const [componentsOpen,setComponentsOpen]=useState(false);const [detailOpen,setDetailOpen]=useState(initial.detail);
+ const [explode,setExplode]=useState(initial.explode); const [labels,setLabels]=useState(initial.labels); const [rotate,setRotate]=useState(false); const [isolated,setIsolated]=useState(false); const [help,setHelp]=useState(false);
  useEffect(()=>{setCanFullscreen(Boolean(document.fullscreenEnabled));const query=window.matchMedia(compactQuery);const update=()=>{setCompact(query.matches);setComponentsOpen(!query.matches);setToolsOpen(false)};update();query.addEventListener('change',update);return()=>query.removeEventListener('change',update)},[]);
  const [focusedMesh,setFocusedMesh]=useState('');
  const [manifest,setManifest]=useState<Manifest|null>(null);const [manifestError,setManifestError]=useState(false);

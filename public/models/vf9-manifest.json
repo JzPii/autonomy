@@ -1,662 +1,4204 @@
 {
  "model": "VinFast VF 9",
  "file": "vf9.glb",
- "version": "27b9cbcb2f",
- "creator": "Mô hình mẫu dựng bằng mã",
- "source": "",
- "license": "",
- "licenseUrl": "",
- "placeholder": true,
+ "version": "f7e267a78a",
+ "creator": "Giang Trần",
+ "source": "https://sketchfab.com/3d-models/vinfast-vf9-model-no-interior-cac6cb95b9084d0abee37dccb46fa10b",
+ "license": "CC BY 4.0",
+ "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+ "placeholder": false,
  "lengthMeters": 5.118,
- "generated": "2026-09-13T05:38:19.994Z",
- "input": "sample.glb",
+ "generated": "2026-09-13T06:11:55.282Z",
+ "input": "scene.gltf",
  "counts": {
-  "body": 16,
-  "glass": 7,
-  "doors": 5,
-  "cabin": 0,
-  "wheels": 12
+  "body": 191,
+  "glass": 18,
+  "doors": 12,
+  "cabin": 1,
+  "wheels": 24
  },
  "objects": [
   {
-   "id": "body_0000",
-   "part": "body",
-   "label": "Vỏ thân xe",
+   "id": "cabin_0000",
+   "part": "cabin",
+   "label": "Khối che nội thất",
+   "source": "Plane_Material.007_0",
    "center": [
-    0.01,
-    0.647,
-    0
+    -0.005,
+    0.723,
+    0.003
    ],
    "size": [
-    4.68,
-    0.597,
-    1.892
+    5.086,
+    0.854,
+    2.128
    ],
-   "faces": 12
+   "faces": 334
   },
   {
-   "id": "body_0001",
-   "part": "body",
-   "label": "Vỏ thân xe",
+   "id": "glass_0001",
+   "part": "glass",
+   "label": "Kính chắn gió & kính trần",
+   "source": "Plane.025_kinh xe_0",
    "center": [
-    0.01,
-    0.321,
-    0
+    0.4,
+    1.505,
+    0.003
    ],
    "size": [
-    4.58,
-    0.045,
-    1.792
+    3.424,
+    0.588,
+    1.689
    ],
-   "faces": 12
+   "faces": 2396
   },
   {
    "id": "body_0002",
    "part": "body",
-   "label": "Chi tiết ngoại thất",
+   "label": "Nóc xe",
+   "source": "Plane.014_Car Paint.002_0",
    "center": [
-    0.458,
-    1.317,
-    0
+    0.861,
+    1.652,
+    -0.069
    ],
    "size": [
-    2.091,
-    0.743,
-    1.892
+    2.546,
+    0.258,
+    1.409
    ],
-   "faces": 36
+   "faces": 9620
   },
   {
-   "id": "glass_0003",
-   "part": "glass",
-   "label": "Kính bên / kính trần",
+   "id": "body_0003",
+   "part": "body",
+   "label": "Nóc xe",
+   "source": "Plane.014_Car Paint.002_0",
    "center": [
-    0.458,
-    1.694,
-    0
+    0.863,
+    1.705,
+    0.032
    ],
    "size": [
-    1.892,
-    0.008,
-    1.195
+    2.541,
+    0.152,
+    1.329
    ],
-   "faces": 12
+   "faces": 11387
   },
   {
    "id": "body_0004",
    "part": "body",
+   "label": "Chi tiết ngoại thất",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.945,
+    1.047,
+    -0.045
+   ],
+   "size": [
+    1.204,
+    0.84,
+    2.057
+   ],
+   "faces": 10023
+  },
+  {
+   "id": "body_0005",
+   "part": "body",
+   "label": "Cản trước",
+   "source": "Plane.006_Car Paint.002_0",
+   "center": [
+    -2.25,
+    0.746,
+    0.003
+   ],
+   "size": [
+    0.543,
+    0.705,
+    2.146
+   ],
+   "faces": 9962
+  },
+  {
+   "id": "body_0006",
+   "part": "body",
+   "label": "Nóc xe",
+   "source": "Plane.022_plastic_0",
+   "center": [
+    0.856,
+    1.737,
+    0.003
+   ],
+   "size": [
+    2.272,
+    0.124,
+    1.183
+   ],
+   "faces": 2530
+  },
+  {
+   "id": "body_0007",
+   "part": "body",
    "label": "Nắp ca-pô",
+   "source": "Plane.008_Car Paint.002_0",
    "center": [
-    -1.782,
-    0.973,
-    0
+    -1.851,
+    1.183,
+    0.003
    ],
    "size": [
-    0.996,
-    0.045,
-    1.792
+    1.305,
+    0.256,
+    1.89
    ],
-   "faces": 12
+   "faces": 6036
   },
   {
-   "id": "wheels_0005",
-   "part": "wheels",
-   "label": "Lốp xe · phải · trước",
+   "id": "body_0008",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
    "center": [
-    -1.558,
-    0.378,
-    -0.816
+    0.901,
+    1.695,
+    -0.387
    ],
    "size": [
-    0.757,
-    0.757,
-    0.259
+    2.459,
+    0.113,
+    0.503
    ],
-   "faces": 128
-  },
-  {
-   "id": "wheels_0006",
-   "part": "wheels",
-   "label": "Lốp xe · phải · sau",
-   "center": [
-    1.578,
-    0.378,
-    -0.816
-   ],
-   "size": [
-    0.757,
-    0.757,
-    0.259
-   ],
-   "faces": 128
-  },
-  {
-   "id": "wheels_0007",
-   "part": "wheels",
-   "label": "Lốp xe · trái · trước",
-   "center": [
-    -1.558,
-    0.378,
-    0.816
-   ],
-   "size": [
-    0.757,
-    0.757,
-    0.259
-   ],
-   "faces": 128
-  },
-  {
-   "id": "wheels_0008",
-   "part": "wheels",
-   "label": "Lốp xe · trái · sau",
-   "center": [
-    1.578,
-    0.378,
-    0.816
-   ],
-   "size": [
-    0.757,
-    0.757,
-    0.259
-   ],
-   "faces": 128
+   "faces": 1887
   },
   {
    "id": "body_0009",
    "part": "body",
-   "label": "Cản trước",
+   "label": "Cản sau",
+   "source": "Plane.014_Car Paint.002_0",
    "center": [
-    -2.44,
-    0.423,
-    0
+    2.26,
+    0.523,
+    -0.049
    ],
    "size": [
-    0.199,
-    0.349,
-    1.952
+    0.573,
+    0.389,
+    2.026
    ],
-   "faces": 12
+   "faces": 4562
   },
   {
    "id": "body_0010",
    "part": "body",
    "label": "Cản sau",
+   "source": "Plane.024_Material.008_0",
    "center": [
-    2.459,
-    0.423,
-    0
+    2.476,
+    0.567,
+    0.003
    ],
    "size": [
-    0.199,
-    0.349,
-    1.952
+    0.161,
+    0.149,
+    1.945
    ],
-   "faces": 12
+   "faces": 20825
   },
   {
-   "id": "doors_0011",
-   "part": "doors",
-   "label": "Cửa cốp",
+   "id": "body_0011",
+   "part": "body",
+   "label": "Tai xe / hông xe · trái · sau",
+   "source": "Plane.014_Car Paint.002_0",
    "center": [
-    2.33,
-    1.299,
-    0
+    1.083,
+    0.701,
+    1.057
    ],
    "size": [
-    0.06,
-    0.687,
-    1.693
+    2.008,
+    0.628,
+    0.045
    ],
-   "faces": 12
+   "faces": 4485
   },
   {
-   "id": "glass_0012",
-   "part": "glass",
-   "label": "Kính chắn gió",
+   "id": "body_0012",
+   "part": "body",
+   "label": "Tai xe / hông xe · phải · sau",
+   "source": "Plane.014_Car Paint.002_0",
    "center": [
-    -0.627,
-    1.314,
-    0
+    1.083,
+    0.701,
+    -1.055
    ],
    "size": [
-    0.04,
-    0.637,
-    1.553
+    2.008,
+    0.628,
+    0.039
    ],
-   "faces": 12
+   "faces": 4427
   },
   {
-   "id": "glass_0013",
-   "part": "glass",
-   "label": "Kính sau",
+   "id": "body_0013",
+   "part": "body",
+   "label": "Cản trước",
+   "source": "Plane.007_Car Paint.002_0",
    "center": [
-    2.275,
-    1.344,
-    0
+    -2.339,
+    0.35,
+    0.003
    ],
    "size": [
-    0.03,
-    0.498,
-    1.553
+    0.441,
+    0.152,
+    2.144
    ],
-   "faces": 12
+   "faces": 2934
   },
   {
-   "id": "doors_0014",
-   "part": "doors",
-   "label": "Cửa trước · phải",
+   "id": "body_0014",
+   "part": "body",
+   "label": "Ốp bậc cửa · trái",
+   "source": "Plane.005_Car Paint.002_0",
    "center": [
-    -0.587,
-    1.021,
-    -0.971
+    -0.07,
+    0.34,
+    1.065
    ],
    "size": [
-    0.996,
-    1.145,
-    0.03
+    2.372,
+    0.097,
+    0.026
    ],
-   "faces": 12
+   "faces": 694
   },
   {
-   "id": "doors_0015",
-   "part": "doors",
-   "label": "Cửa trước · trái",
+   "id": "body_0015",
+   "part": "body",
+   "label": "Ốp bậc cửa · phải",
+   "source": "Plane.005_Car Paint.002_0",
    "center": [
-    -0.587,
-    1.021,
-    0.971
+    -0.07,
+    0.34,
+    -1.06
    ],
    "size": [
-    0.996,
-    1.145,
-    0.03
+    2.372,
+    0.097,
+    0.026
    ],
-   "faces": 12
+   "faces": 694
   },
   {
    "id": "doors_0016",
    "part": "doors",
-   "label": "Cửa sau · phải",
+   "label": "Cửa cốp",
+   "source": "Plane.012_Car Paint.002_0",
    "center": [
-    0.607,
-    1.021,
-    -0.971
+    2.512,
+    0.94,
+    0.003
    ],
    "size": [
-    0.996,
-    1.145,
-    0.03
+    0.093,
+    0.395,
+    1.622
    ],
-   "faces": 12
+   "faces": 5016
   },
   {
-   "id": "doors_0017",
-   "part": "doors",
-   "label": "Cửa sau · trái",
+   "id": "wheels_0017",
+   "part": "wheels",
+   "label": "Lốp xe · trái · trước",
+   "source": "Plane.015_lop xe_0",
    "center": [
-    0.607,
-    1.021,
-    0.971
+    -1.674,
+    0.441,
+    0.889
    ],
    "size": [
-    0.996,
-    1.145,
-    0.03
+    0.882,
+    0.882,
+    0.388
    ],
-   "faces": 12
+   "faces": 34765
   },
   {
    "id": "wheels_0018",
    "part": "wheels",
-   "label": "Mâm xe · phải · trước",
+   "label": "Lốp xe · trái · sau",
+   "source": "Plane.015_lop xe_0",
    "center": [
-    -1.558,
-    0.378,
-    -0.816
+    1.548,
+    0.441,
+    0.889
    ],
    "size": [
-    0.538,
-    0.538,
-    0.279
+    0.882,
+    0.882,
+    0.388
    ],
-   "faces": 128
+   "faces": 34764
   },
   {
    "id": "wheels_0019",
    "part": "wheels",
-   "label": "Mâm xe · phải · sau",
+   "label": "Lốp xe · phải · trước",
+   "source": "Plane.015_lop xe_0",
    "center": [
-    1.578,
-    0.378,
-    -0.816
+    -1.68,
+    0.441,
+    -0.878
    ],
    "size": [
-    0.538,
-    0.538,
-    0.279
+    0.882,
+    0.882,
+    0.388
    ],
-   "faces": 128
+   "faces": 34765
   },
   {
    "id": "wheels_0020",
    "part": "wheels",
-   "label": "Mâm xe · trái · trước",
+   "label": "Lốp xe · phải · sau",
+   "source": "Plane.015_lop xe_0",
    "center": [
-    -1.558,
-    0.378,
-    0.816
+    1.551,
+    0.441,
+    -0.878
    ],
    "size": [
-    0.538,
-    0.538,
-    0.279
+    0.882,
+    0.882,
+    0.388
    ],
-   "faces": 128
+   "faces": 34765
   },
   {
-   "id": "wheels_0021",
-   "part": "wheels",
-   "label": "Mâm xe · trái · sau",
-   "center": [
-    1.578,
-    0.378,
-    0.816
-   ],
-   "size": [
-    0.538,
-    0.538,
-    0.279
-   ],
-   "faces": 128
-  },
-  {
-   "id": "glass_0022",
-   "part": "glass",
-   "label": "Kính bên / kính trần · phải",
-   "center": [
-    -0.587,
-    1.294,
-    -0.951
-   ],
-   "size": [
-    0.956,
-    0.597,
-    0.006
-   ],
-   "faces": 12
-  },
-  {
-   "id": "glass_0023",
-   "part": "glass",
-   "label": "Kính bên / kính trần · trái",
-   "center": [
-    -0.587,
-    1.294,
-    0.951
-   ],
-   "size": [
-    0.956,
-    0.597,
-    0.006
-   ],
-   "faces": 12
-  },
-  {
-   "id": "glass_0024",
-   "part": "glass",
-   "label": "Kính bên / kính trần · phải",
-   "center": [
-    0.607,
-    1.294,
-    -0.951
-   ],
-   "size": [
-    0.956,
-    0.597,
-    0.006
-   ],
-   "faces": 12
-  },
-  {
-   "id": "glass_0025",
-   "part": "glass",
-   "label": "Kính bên / kính trần · trái",
-   "center": [
-    0.607,
-    1.294,
-    0.951
-   ],
-   "size": [
-    0.956,
-    0.597,
-    0.006
-   ],
-   "faces": 12
-  },
-  {
-   "id": "wheels_0026",
-   "part": "wheels",
-   "label": "Cụm bánh xe · phải · sau",
-   "center": [
-    1.578,
-    0.378,
-    -0.816
-   ],
-   "size": [
-    0.339,
-    0.339,
-    0.309
-   ],
-   "faces": 128
-  },
-  {
-   "id": "wheels_0027",
-   "part": "wheels",
-   "label": "Cụm bánh xe · trái · sau",
-   "center": [
-    1.578,
-    0.378,
-    0.816
-   ],
-   "size": [
-    0.339,
-    0.339,
-    0.309
-   ],
-   "faces": 128
-  },
-  {
-   "id": "wheels_0028",
-   "part": "wheels",
-   "label": "Cụm bánh xe · phải · trước",
-   "center": [
-    -1.558,
-    0.378,
-    -0.816
-   ],
-   "size": [
-    0.339,
-    0.339,
-    0.309
-   ],
-   "faces": 128
-  },
-  {
-   "id": "wheels_0029",
-   "part": "wheels",
-   "label": "Cụm bánh xe · trái · trước",
-   "center": [
-    -1.558,
-    0.378,
-    0.816
-   ],
-   "size": [
-    0.339,
-    0.339,
-    0.309
-   ],
-   "faces": 128
-  },
-  {
-   "id": "body_0030",
+   "id": "body_0021",
    "part": "body",
-   "label": "Tai xe / hông xe · phải",
+   "label": "Thanh nóc · trái",
+   "source": "Plane.014_Car Paint.002_0",
    "center": [
-    -1.583,
-    0.697,
-    -0.971
+    0.895,
+    1.688,
+    0.635
    ],
    "size": [
-    0.797,
-    0.597,
-    0.03
+    2.241,
+    0.082,
+    0.044
    ],
-   "faces": 12
+   "faces": 267
+  },
+  {
+   "id": "body_0022",
+   "part": "body",
+   "label": "Tai xe / hông xe · trái · sau",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.913,
+    1.047,
+    0.941
+   ],
+   "size": [
+    1.14,
+    0.84,
+    0.276
+   ],
+   "faces": 6315
+  },
+  {
+   "id": "doors_0023",
+   "part": "doors",
+   "label": "Cửa sau · phải",
+   "source": "Plane.010_Car Paint.002_0",
+   "center": [
+    0.726,
+    0.995,
+    -0.948
+   ],
+   "size": [
+    1.294,
+    0.945,
+    0.254
+   ],
+   "faces": 2044
+  },
+  {
+   "id": "doors_0024",
+   "part": "doors",
+   "label": "Cửa sau · trái",
+   "source": "Plane.010_Car Paint.002_0",
+   "center": [
+    0.726,
+    0.995,
+    0.952
+   ],
+   "size": [
+    1.294,
+    0.945,
+    0.254
+   ],
+   "faces": 2044
+  },
+  {
+   "id": "body_0025",
+   "part": "body",
+   "label": "Ốp bậc cửa · phải",
+   "source": "Cube.018_lop xe_0",
+   "center": [
+    -0.063,
+    0.345,
+    -1.085
+   ],
+   "size": [
+    1.907,
+    0.01,
+    0.111
+   ],
+   "faces": 1416
+  },
+  {
+   "id": "body_0026",
+   "part": "body",
+   "label": "Ốp bậc cửa · trái",
+   "source": "Cube.011_lop xe_0",
+   "center": [
+    -0.063,
+    0.345,
+    1.092
+   ],
+   "size": [
+    1.907,
+    0.01,
+    0.111
+   ],
+   "faces": 1420
+  },
+  {
+   "id": "doors_0027",
+   "part": "doors",
+   "label": "Cửa sau · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    0.878,
+    0.687,
+    1.073
+   ],
+   "size": [
+    1.595,
+    0.593,
+    0.012
+   ],
+   "faces": 880
+  },
+  {
+   "id": "body_0028",
+   "part": "body",
+   "label": "Tai xe / hông xe · trái · trước",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -1.548,
+    0.905,
+    0.927
+   ],
+   "size": [
+    1.014,
+    0.84,
+    0.287
+   ],
+   "faces": 6363
+  },
+  {
+   "id": "doors_0029",
+   "part": "doors",
+   "label": "Cửa trước · phải",
+   "source": "Plane.009_Car Paint.002_0",
+   "center": [
+    -0.484,
+    0.888,
+    -0.993
+   ],
+   "size": [
+    1.256,
+    0.806,
+    0.157
+   ],
+   "faces": 2216
+  },
+  {
+   "id": "doors_0030",
+   "part": "doors",
+   "label": "Cửa trước · trái",
+   "source": "Plane.009_Car Paint.002_0",
+   "center": [
+    -0.485,
+    0.887,
+    0.998
+   ],
+   "size": [
+    1.256,
+    0.806,
+    0.157
+   ],
+   "faces": 2216
   },
   {
    "id": "body_0031",
    "part": "body",
-   "label": "Tai xe / hông xe · phải",
+   "label": "Tai xe / hông xe · phải · trước",
+   "source": "Plane.014_Car Paint.002_0",
    "center": [
-    1.603,
-    0.697,
-    -0.971
+    -1.548,
+    0.905,
+    -0.922
    ],
    "size": [
-    0.797,
-    0.597,
-    0.03
+    1.014,
+    0.84,
+    0.287
    ],
-   "faces": 12
+   "faces": 5057
   },
   {
-   "id": "body_0032",
-   "part": "body",
-   "label": "Tai xe / hông xe · trái",
+   "id": "glass_0032",
+   "part": "glass",
+   "label": "Kính đèn sau",
+   "source": "Plane.040_glass_0",
    "center": [
-    -1.583,
-    0.697,
-    0.971
+    2.513,
+    1.157,
+    0.003
    ],
    "size": [
-    0.797,
-    0.597,
-    0.03
+    0.064,
+    0.192,
+    1.619
    ],
-   "faces": 12
+   "faces": 850
   },
   {
-   "id": "body_0033",
-   "part": "body",
-   "label": "Tai xe / hông xe · trái",
+   "id": "glass_0033",
+   "part": "glass",
+   "label": "Kính sau",
+   "source": "Plane.012_kinh xe_0",
    "center": [
-    1.603,
-    0.697,
-    0.971
+    2.272,
+    1.481,
+    0.003
    ],
    "size": [
-    0.797,
-    0.597,
-    0.03
+    0.444,
+    0.388,
+    1.7
    ],
-   "faces": 12
+   "faces": 380
   },
   {
    "id": "body_0034",
    "part": "body",
-   "label": "Đèn trước · phải",
+   "label": "Tai xe / hông xe · phải · sau",
+   "source": "Plane.014_Car Paint.002_0",
    "center": [
-    -2.342,
-    0.871,
-    -0.647
+    1.931,
+    0.938,
+    -0.869
    ],
    "size": [
-    0.015,
-    0.149,
-    0.498
+    1.136,
+    0.614,
+    0.385
    ],
-   "faces": 12
+   "faces": 3585
   },
   {
    "id": "body_0035",
    "part": "body",
-   "label": "Đèn sau · phải",
+   "label": "Chi tiết ngoại thất",
+   "source": "Plane.030_Car Paint.002_0",
    "center": [
-    2.362,
-    0.871,
-    -0.647
+    -2.375,
+    0.874,
+    0.003
    ],
    "size": [
-    0.015,
-    0.149,
-    0.498
+    0.292,
+    0.368,
+    1.176
    ],
-   "faces": 12
+   "faces": 5834
   },
   {
    "id": "body_0036",
    "part": "body",
-   "label": "Đèn trước · trái",
+   "label": "Ốp bậc cửa · trái",
+   "source": "Cube.010_Car Paint.002_0",
    "center": [
-    -2.342,
-    0.871,
-    0.647
+    -0.078,
+    0.334,
+    1.092
    ],
    "size": [
-    0.015,
-    0.149,
-    0.498
+    2.197,
+    0.029,
+    0.104
    ],
-   "faces": 12
+   "faces": 236
   },
   {
    "id": "body_0037",
    "part": "body",
-   "label": "Đèn sau · trái",
+   "label": "Ốp bậc cửa · phải",
+   "source": "Cube.017_Car Paint.002_0",
    "center": [
-    2.362,
-    0.871,
-    0.647
+    -0.078,
+    0.334,
+    -1.085
    ],
    "size": [
-    0.015,
-    0.149,
-    0.498
+    2.197,
+    0.029,
+    0.104
    ],
-   "faces": 12
+   "faces": 236
   },
   {
    "id": "body_0038",
    "part": "body",
-   "label": "Chi tiết nhỏ",
+   "label": "Tai xe / hông xe · phải · trước",
+   "source": "Plane.011_Car Paint.002_0",
    "center": [
-    -1.772,
-    0.946,
-    0
+    -1.656,
+    0.693,
+    -1.037
    ],
    "size": [
-    1.573,
-    0.498,
-    2.29
+    1.104,
+    0.635,
+    0.099
    ],
-   "faces": 36
+   "faces": 4009
   },
   {
    "id": "body_0039",
    "part": "body",
-   "label": "Chi tiết nhỏ",
+   "label": "Tai xe / hông xe · trái · trước",
+   "source": "Plane.011_Car Paint.002_0",
    "center": [
-    -1.444,
-    1.011,
-    -0.045
+    -1.656,
+    0.693,
+    1.042
+   ],
+   "size": [
+    1.104,
+    0.635,
+    0.099
+   ],
+   "faces": 4008
+  },
+  {
+   "id": "doors_0040",
+   "part": "doors",
+   "label": "Cửa cốp",
+   "source": "Plane.012_Car Paint.002_0",
+   "center": [
+    2.478,
+    1.288,
+    0.003
+   ],
+   "size": [
+    0.136,
+    0.115,
+    1.624
+   ],
+   "faces": 424
+  },
+  {
+   "id": "body_0041",
+   "part": "body",
+   "label": "Ốp trang trí · trái",
+   "source": "Plane.010_plastic_0",
+   "center": [
+    0.738,
+    1.448,
+    0.814
+   ],
+   "size": [
+    1.212,
+    0.482,
+    0.338
+   ],
+   "faces": 1286
+  },
+  {
+   "id": "body_0042",
+   "part": "body",
+   "label": "Ốp trang trí · phải",
+   "source": "Plane.010_plastic_0",
+   "center": [
+    0.738,
+    1.448,
+    -0.81
+   ],
+   "size": [
+    1.212,
+    0.482,
+    0.338
+   ],
+   "faces": 1286
+  },
+  {
+   "id": "body_0043",
+   "part": "body",
+   "label": "Ốp trang trí · phải",
+   "source": "Plane.009_plastic_0",
+   "center": [
+    -0.413,
+    1.452,
+    -0.805
+   ],
+   "size": [
+    1.257,
+    0.434,
+    0.279
+   ],
+   "faces": 1142
+  },
+  {
+   "id": "body_0044",
+   "part": "body",
+   "label": "Ốp trang trí · trái",
+   "source": "Plane.009_plastic_0",
+   "center": [
+    -0.415,
+    1.45,
+    0.809
+   ],
+   "size": [
+    1.257,
+    0.434,
+    0.279
+   ],
+   "faces": 1142
+  },
+  {
+   "id": "body_0045",
+   "part": "body",
+   "label": "Ốp bậc cửa · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -0.514,
+    0.447,
+    -1.059
+   ],
+   "size": [
+    1.182,
+    0.141,
+    0.016
+   ],
+   "faces": 2101
+  },
+  {
+   "id": "body_0046",
+   "part": "body",
+   "label": "Tai xe / hông xe · trái · sau",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.914,
+    1.278,
+    0.937
+   ],
+   "size": [
+    1.141,
+    0.377,
+    0.255
+   ],
+   "faces": 1537
+  },
+  {
+   "id": "body_0047",
+   "part": "body",
+   "label": "Ốp bậc cửa · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -0.514,
+    0.447,
+    1.064
+   ],
+   "size": [
+    1.182,
+    0.141,
+    0.016
+   ],
+   "faces": 1973
+  },
+  {
+   "id": "doors_0048",
+   "part": "doors",
+   "label": "Cửa cốp",
+   "source": "Plane.012_Car Paint.002_0",
+   "center": [
+    2.231,
+    1.662,
+    0.003
+   ],
+   "size": [
+    0.203,
+    0.07,
+    1.3
+   ],
+   "faces": 850
+  },
+  {
+   "id": "glass_0049",
+   "part": "glass",
+   "label": "Kính bên · phải · trước",
+   "source": "Plane.026_kinh xe_0",
+   "center": [
+    -0.425,
+    1.42,
+    -0.822
+   ],
+   "size": [
+    1.148,
+    0.462,
+    0.276
+   ],
+   "faces": 784
+  },
+  {
+   "id": "glass_0050",
+   "part": "glass",
+   "label": "Kính bên · trái · trước",
+   "source": "Plane.026_kinh xe_0",
+   "center": [
+    -0.425,
+    1.42,
+    0.821
+   ],
+   "size": [
+    1.148,
+    0.462,
+    0.276
+   ],
+   "faces": 784
+  },
+  {
+   "id": "body_0051",
+   "part": "body",
+   "label": "Lưới tản nhiệt / ốp đầu xe",
+   "source": "Plane.019_plastic_0",
+   "center": [
+    -2.403,
+    0.93,
+    0.003
+   ],
+   "size": [
+    0.153,
+    0.328,
+    1.075
+   ],
+   "faces": 1343
+  },
+  {
+   "id": "body_0052",
+   "part": "body",
+   "label": "Ốp trang trí · phải",
+   "source": "Plane.014_plastic_0",
+   "center": [
+    -0.723,
+    1.491,
+    -0.74
+   ],
+   "size": [
+    0.84,
+    0.476,
+    0.312
+   ],
+   "faces": 3494
+  },
+  {
+   "id": "body_0053",
+   "part": "body",
+   "label": "Ốp trang trí · trái",
+   "source": "Plane.014_plastic_0",
+   "center": [
+    -0.723,
+    1.491,
+    0.745
+   ],
+   "size": [
+    0.84,
+    0.476,
+    0.312
+   ],
+   "faces": 3494
+  },
+  {
+   "id": "glass_0054",
+   "part": "glass",
+   "label": "Kính đèn trước",
+   "source": "Plane.001_Material.001_0",
+   "center": [
+    -2.418,
+    0.929,
+    0.003
+   ],
+   "size": [
+    0.154,
+    0.328,
+    1.075
+   ],
+   "faces": 1231
+  },
+  {
+   "id": "body_0055",
+   "part": "body",
+   "label": "Ốp trang trí · phải",
+   "source": "Plane.014_plastic_0",
+   "center": [
+    1.931,
+    1.497,
+    -0.76
+   ],
+   "size": [
+    0.842,
+    0.33,
+    0.267
+   ],
+   "faces": 5912
+  },
+  {
+   "id": "body_0056",
+   "part": "body",
+   "label": "Ốp trang trí · trái",
+   "source": "Plane.014_plastic_0",
+   "center": [
+    1.931,
+    1.497,
+    0.765
+   ],
+   "size": [
+    0.842,
+    0.33,
+    0.267
+   ],
+   "faces": 5912
+  },
+  {
+   "id": "body_0057",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -1.553,
+    1.092,
+    -0.984
+   ],
+   "size": [
+    1.001,
+    0.285,
+    0.158
+   ],
+   "faces": 2151
+  },
+  {
+   "id": "glass_0058",
+   "part": "glass",
+   "label": "Kính bên · phải · sau",
+   "source": "Plane.028_kinh xe_0",
+   "center": [
+    0.765,
+    1.451,
+    -0.812
+   ],
+   "size": [
+    1.117,
+    0.401,
+    0.275
+   ],
+   "faces": 642
+  },
+  {
+   "id": "glass_0059",
+   "part": "glass",
+   "label": "Kính bên · trái · sau",
+   "source": "Plane.028_kinh xe_0",
+   "center": [
+    0.765,
+    1.451,
+    0.813
+   ],
+   "size": [
+    1.117,
+    0.401,
+    0.275
+   ],
+   "faces": 642
+  },
+  {
+   "id": "body_0060",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -1.532,
+    1.146,
+    0.97
+   ],
+   "size": [
+    0.971,
+    0.297,
+    0.188
+   ],
+   "faces": 2155
+  },
+  {
+   "id": "wheels_0061",
+   "part": "wheels",
+   "label": "Chi tiết bánh xe · trái · sau",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.529,
+    0.652,
+    1.023
+   ],
+   "size": [
+    0.964,
+    0.64,
+    0.106
+   ],
+   "faces": 795
+  },
+  {
+   "id": "body_0062",
+   "part": "body",
+   "label": "Tai xe / hông xe · phải · sau",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.548,
+    0.79,
+    -1.049
+   ],
+   "size": [
+    1.069,
+    0.445,
+    0.025
+   ],
+   "faces": 714
+  },
+  {
+   "id": "body_0063",
+   "part": "body",
+   "label": "Tai xe / hông xe · trái · sau",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.915,
+    0.844,
+    1.023
+   ],
+   "size": [
+    0.955,
+    0.433,
+    0.108
+   ],
+   "faces": 1368
+  },
+  {
+   "id": "body_0064",
+   "part": "body",
+   "label": "Chi tiết ngoại thất",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.513,
+    0.52,
+    -0.251
+   ],
+   "size": [
+    0.075,
+    0.143,
+    0.898
+   ],
+   "faces": 4890
+  },
+  {
+   "id": "body_0065",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -1.573,
+    1.068,
+    -0.986
+   ],
+   "size": [
+    0.943,
+    0.225,
+    0.127
+   ],
+   "faces": 1876
+  },
+  {
+   "id": "wheels_0066",
+   "part": "wheels",
+   "label": "Chi tiết bánh xe · phải · sau",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.516,
+    0.694,
+    -1.061
+   ],
+   "size": [
+    0.937,
+    0.555,
+    0.026
+   ],
+   "faces": 420
+  },
+  {
+   "id": "body_0067",
+   "part": "body",
+   "label": "Ốp bậc cửa · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -0.53,
+    0.443,
+    1.072
+   ],
+   "size": [
+    1.116,
+    0.115,
+    0.001
+   ],
+   "faces": 235
+  },
+  {
+   "id": "wheels_0068",
+   "part": "wheels",
+   "label": "Mâm xe · phải · sau",
+   "source": "Cylinder.011_Material.005_0",
+   "center": [
+    1.548,
+    0.441,
+    -1.016
+   ],
+   "size": [
+    0.584,
+    0.584,
+    0.08
+   ],
+   "faces": 6522
+  },
+  {
+   "id": "wheels_0069",
+   "part": "wheels",
+   "label": "Mâm xe · phải · trước",
+   "source": "Cylinder.011_Material.005_0",
+   "center": [
+    -1.68,
+    0.441,
+    -1.019
+   ],
+   "size": [
+    0.584,
+    0.584,
+    0.08
+   ],
+   "faces": 6522
+  },
+  {
+   "id": "wheels_0070",
+   "part": "wheels",
+   "label": "Mâm xe · trái · trước",
+   "source": "Cylinder.011_Material.005_0",
+   "center": [
+    -1.677,
+    0.442,
+    1.032
+   ],
+   "size": [
+    0.584,
+    0.584,
+    0.08
+   ],
+   "faces": 6522
+  },
+  {
+   "id": "wheels_0071",
+   "part": "wheels",
+   "label": "Mâm xe · trái · sau",
+   "source": "Cylinder.011_Material.005_0",
+   "center": [
+    1.547,
+    0.442,
+    1.025
+   ],
+   "size": [
+    0.584,
+    0.584,
+    0.08
+   ],
+   "faces": 6522
+  },
+  {
+   "id": "body_0072",
+   "part": "body",
+   "label": "Ốp bậc cửa · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -0.524,
+    0.443,
+    1.057
+   ],
+   "size": [
+    1.119,
+    0.096,
+    0.001
+   ],
+   "faces": 196
+  },
+  {
+   "id": "body_0073",
+   "part": "body",
+   "label": "Ốp bậc cửa · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -0.54,
+    0.437,
+    -1.067
+   ],
+   "size": [
+    1.088,
+    0.107,
+    0.001
+   ],
+   "faces": 200
+  },
+  {
+   "id": "body_0074",
+   "part": "body",
+   "label": "Tai xe / hông xe · trái · sau",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.238,
+    0.512,
+    0.871
+   ],
+   "size": [
+    0.53,
+    0.367,
+    0.394
+   ],
+   "faces": 2668
+  },
+  {
+   "id": "body_0075",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    0.651,
+    1.677,
+    0.651
+   ],
+   "size": [
+    1.038,
+    0.029,
+    0.032
+   ],
+   "faces": 190
+  },
+  {
+   "id": "body_0076",
+   "part": "body",
+   "label": "Chi tiết ngoại thất",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -0.259,
+    1.753,
+    0.085
+   ],
+   "size": [
+    0.298,
+    0.056,
+    0.867
+   ],
+   "faces": 435
+  },
+  {
+   "id": "body_0077",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    0.126,
+    1.665,
+    -0.661
+   ],
+   "size": [
+    0.89,
+    0.041,
+    0.048
+   ],
+   "faces": 402
+  },
+  {
+   "id": "body_0078",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.361,
+    1.612,
+    0.709
+   ],
+   "size": [
+    0.757,
+    0.177,
+    0.139
+   ],
+   "faces": 751
+  },
+  {
+   "id": "body_0079",
+   "part": "body",
+   "label": "Đèn sau · phải",
+   "source": "Plane.012_Material.003_0",
+   "center": [
+    2.497,
+    1.159,
+    -0.418
+   ],
+   "size": [
+    0.071,
+    0.127,
+    0.751
+   ],
+   "faces": 862
+  },
+  {
+   "id": "body_0080",
+   "part": "body",
+   "label": "Đèn sau · trái",
+   "source": "Plane.012_Material.003_0",
+   "center": [
+    2.497,
+    1.159,
+    0.423
+   ],
+   "size": [
+    0.071,
+    0.127,
+    0.751
+   ],
+   "faces": 862
+  },
+  {
+   "id": "body_0081",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    0.739,
+    0.477,
+    -1.054
+   ],
+   "size": [
+    0.775,
+    0.174,
+    0.014
+   ],
+   "faces": 569
+  },
+  {
+   "id": "wheels_0082",
+   "part": "wheels",
+   "label": "Mâm xe · phải · trước",
+   "source": "Cylinder.011_Material.004_0",
+   "center": [
+    -1.679,
+    0.438,
+    -0.996
+   ],
+   "size": [
+    0.577,
+    0.576,
+    0.142
+   ],
+   "faces": 1078
+  },
+  {
+   "id": "wheels_0083",
+   "part": "wheels",
+   "label": "Mâm xe · phải · sau",
+   "source": "Cylinder.011_Material.004_0",
+   "center": [
+    1.549,
+    0.438,
+    -0.993
+   ],
+   "size": [
+    0.577,
+    0.576,
+    0.142
+   ],
+   "faces": 1078
+  },
+  {
+   "id": "wheels_0084",
+   "part": "wheels",
+   "label": "Mâm xe · trái · trước",
+   "source": "Cylinder.011_Material.004_0",
+   "center": [
+    -1.678,
+    0.44,
+    1.009
+   ],
+   "size": [
+    0.577,
+    0.576,
+    0.142
+   ],
+   "faces": 1078
+  },
+  {
+   "id": "wheels_0085",
+   "part": "wheels",
+   "label": "Mâm xe · trái · sau",
+   "source": "Cylinder.011_Material.004_0",
+   "center": [
+    1.546,
+    0.44,
+    1.002
+   ],
+   "size": [
+    0.577,
+    0.576,
+    0.142
+   ],
+   "faces": 1078
+  },
+  {
+   "id": "body_0086",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.506,
+    0.52,
+    0.391
+   ],
+   "size": [
+    0.059,
+    0.142,
+    0.628
+   ],
+   "faces": 2404
+  },
+  {
+   "id": "glass_0087",
+   "part": "glass",
+   "label": "Kính bên · phải · sau",
+   "source": "Plane.029_kinh xe_0",
+   "center": [
+    1.828,
+    1.482,
+    -0.755
+   ],
+   "size": [
+    0.634,
+    0.355,
+    0.282
+   ],
+   "faces": 514
+  },
+  {
+   "id": "glass_0088",
+   "part": "glass",
+   "label": "Kính bên · trái · sau",
+   "source": "Plane.029_kinh xe_0",
+   "center": [
+    1.828,
+    1.482,
+    0.76
+   ],
+   "size": [
+    0.634,
+    0.355,
+    0.282
+   ],
+   "faces": 514
+  },
+  {
+   "id": "wheels_0089",
+   "part": "wheels",
+   "label": "Lốp xe · phải · trước",
+   "source": "Plane.044_lop xe_0",
+   "center": [
+    -0.482,
+    0.447,
+    -1.066
+   ],
+   "size": [
+    1.116,
+    0.072,
+    0.014
+   ],
+   "faces": 144
+  },
+  {
+   "id": "wheels_0090",
+   "part": "wheels",
+   "label": "Lốp xe · trái · trước",
+   "source": "Plane.044_lop xe_0",
+   "center": [
+    -0.482,
+    0.447,
+    1.072
+   ],
+   "size": [
+    1.116,
+    0.072,
+    0.014
+   ],
+   "faces": 144
+  },
+  {
+   "id": "body_0091",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.083,
+    1.287,
+    -0.895
+   ],
+   "size": [
+    0.759,
+    0.099,
+    0.193
+   ],
+   "faces": 404
+  },
+  {
+   "id": "body_0092",
+   "part": "body",
+   "label": "Tai xe / hông xe · phải · sau",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.002,
+    1.184,
+    -0.95
+   ],
+   "size": [
+    0.63,
+    0.338,
+    0.237
+   ],
+   "faces": 347
+  },
+  {
+   "id": "body_0093",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.508,
+    0.525,
+    0.335
+   ],
+   "size": [
+    0.064,
+    0.131,
+    0.554
+   ],
+   "faces": 1499
+  },
+  {
+   "id": "body_0094",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.18,
+    0.856,
+    -1.009
+   ],
+   "size": [
+    0.451,
+    0.386,
+    0.092
+   ],
+   "faces": 854
+  },
+  {
+   "id": "body_0095",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.456,
+    0.925,
+    0.817
+   ],
+   "size": [
+    0.106,
+    0.438,
+    0.27
+   ],
+   "faces": 1961
+  },
+  {
+   "id": "body_0096",
+   "part": "body",
+   "label": "Lưới tản nhiệt / ốp đầu xe",
+   "source": "Plane.039_Material.012_0",
+   "center": [
+    -2.433,
+    0.536,
+    0.003
+   ],
+   "size": [
+    0.14,
+    0.052,
+    1.174
+   ],
+   "faces": 36
+  },
+  {
+   "id": "body_0097",
+   "part": "body",
+   "label": "Lưới tản nhiệt / ốp đầu xe",
+   "source": "Plane.038_Material.012_0",
+   "center": [
+    -2.472,
+    0.452,
+    0.003
+   ],
+   "size": [
+    0.141,
+    0.012,
+    1.174
+   ],
+   "faces": 36
+  },
+  {
+   "id": "body_0098",
+   "part": "body",
+   "label": "Lưới tản nhiệt / ốp đầu xe",
+   "source": "Plane.031_Material.012_0",
+   "center": [
+    -2.476,
+    0.386,
+    0.003
+   ],
+   "size": [
+    0.134,
+    0.012,
+    1.174
+   ],
+   "faces": 36
+  },
+  {
+   "id": "wheels_0099",
+   "part": "wheels",
+   "label": "Lốp xe · trái · sau",
+   "source": "Plane.043_lop xe_0",
+   "center": [
+    0.474,
+    0.46,
+    1.073
+   ],
+   "size": [
+    0.789,
+    0.075,
+    0.014
+   ],
+   "faces": 208
+  },
+  {
+   "id": "wheels_0100",
+   "part": "wheels",
+   "label": "Lốp xe · phải · sau",
+   "source": "Plane.043_lop xe_0",
+   "center": [
+    0.474,
+    0.46,
+    -1.067
+   ],
+   "size": [
+    0.789,
+    0.075,
+    0.014
+   ],
+   "faces": 208
+  },
+  {
+   "id": "body_0101",
+   "part": "body",
+   "label": "Đèn trước · trái",
+   "source": "Plane.020_light_0",
+   "center": [
+    -2.163,
+    1.078,
+    0.746
+   ],
+   "size": [
+    0.284,
+    0.09,
+    0.468
+   ],
+   "faces": 436
+  },
+  {
+   "id": "body_0102",
+   "part": "body",
+   "label": "Đèn trước · phải",
+   "source": "Plane.020_light_0",
+   "center": [
+    -2.163,
+    1.078,
+    -0.741
+   ],
+   "size": [
+    0.284,
+    0.09,
+    0.468
+   ],
+   "faces": 435
+  },
+  {
+   "id": "glass_0103",
+   "part": "glass",
+   "label": "Kính · phải",
+   "source": "Plane.041_glass_0",
+   "center": [
+    2.259,
+    1.168,
+    -0.911
+   ],
+   "size": [
+    0.475,
+    0.186,
+    0.211
+   ],
+   "faces": 540
+  },
+  {
+   "id": "glass_0104",
+   "part": "glass",
+   "label": "Kính · trái",
+   "source": "Plane.041_glass_0",
+   "center": [
+    2.259,
+    1.168,
+    0.916
+   ],
+   "size": [
+    0.475,
+    0.186,
+    0.211
+   ],
+   "faces": 542
+  },
+  {
+   "id": "body_0105",
+   "part": "body",
+   "label": "Gương chiếu hậu · trái",
+   "source": "Cube.006_plastic_0",
+   "center": [
+    -0.939,
+    1.331,
+    1.032
+   ],
+   "size": [
+    0.256,
+    0.205,
+    0.365
+   ],
+   "faces": 1594
+  },
+  {
+   "id": "body_0106",
+   "part": "body",
+   "label": "Gương chiếu hậu · phải",
+   "source": "Cube.006_plastic_0",
+   "center": [
+    -0.939,
+    1.331,
+    -1.032
+   ],
+   "size": [
+    0.256,
+    0.205,
+    0.365
+   ],
+   "faces": 1596
+  },
+  {
+   "id": "body_0107",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    0.731,
+    1.702,
+    0.645
+   ],
+   "size": [
+    0.82,
+    0.018,
+    0.018
+   ],
+   "faces": 39
+  },
+  {
+   "id": "body_0108",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -1.595,
+    1.119,
+    0.983
+   ],
+   "size": [
+    0.514,
+    0.124,
+    0.11
+   ],
+   "faces": 293
+  },
+  {
+   "id": "body_0109",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.276,
+    0.516,
+    0.965
+   ],
+   "size": [
+    0.349,
+    0.282,
+    0.19
+   ],
+   "faces": 369
+  },
+  {
+   "id": "body_0110",
+   "part": "body",
+   "label": "Chi tiết ngoại thất",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.091,
+    1.694,
+    0.26
+   ],
+   "size": [
+    0.081,
+    0.024,
+    0.514
+   ],
+   "faces": 137
+  },
+  {
+   "id": "body_0111",
+   "part": "body",
+   "label": "Đèn trước",
+   "source": "Plane.003_light_0",
+   "center": [
+    -2.419,
+    0.991,
+    0.28
+   ],
+   "size": [
+    0.129,
+    0.171,
+    0.484
+   ],
+   "faces": 316
+  },
+  {
+   "id": "body_0112",
+   "part": "body",
+   "label": "Đèn trước",
+   "source": "Plane.003_light_0",
+   "center": [
+    -2.419,
+    0.991,
+    -0.275
+   ],
+   "size": [
+    0.129,
+    0.171,
+    0.484
+   ],
+   "faces": 316
+  },
+  {
+   "id": "body_0113",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.452,
+    0.773,
+    0.84
+   ],
+   "size": [
+    0.125,
+    0.162,
+    0.31
+   ],
+   "faces": 934
+  },
+  {
+   "id": "body_0114",
+   "part": "body",
+   "label": "Đèn trước · trái",
+   "source": "Plane.002_light_0",
+   "center": [
+    -2.142,
+    1.077,
+    0.745
+   ],
+   "size": [
+    0.298,
+    0.073,
+    0.428
+   ],
+   "faces": 89
+  },
+  {
+   "id": "body_0115",
+   "part": "body",
+   "label": "Đèn trước · phải",
+   "source": "Plane.002_light_0",
+   "center": [
+    -2.142,
+    1.077,
+    -0.74
+   ],
+   "size": [
+    0.298,
+    0.073,
+    0.428
+   ],
+   "faces": 88
+  },
+  {
+   "id": "body_0116",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.253,
+    0.533,
+    0.972
+   ],
+   "size": [
+    0.307,
+    0.25,
+    0.144
+   ],
+   "faces": 357
+  },
+  {
+   "id": "glass_0117",
+   "part": "glass",
+   "label": "Kính · phải",
+   "source": "Cube.002_Material.001_0",
+   "center": [
+    -2.181,
+    1.037,
+    -0.756
+   ],
+   "size": [
+    0.312,
+    0.185,
+    0.461
+   ],
+   "faces": 116
+  },
+  {
+   "id": "glass_0118",
+   "part": "glass",
+   "label": "Kính · trái",
+   "source": "Cube.002_Material.001_0",
+   "center": [
+    -2.181,
+    1.037,
+    0.761
+   ],
+   "size": [
+    0.312,
+    0.185,
+    0.461
+   ],
+   "faces": 116
+  },
+  {
+   "id": "body_0119",
+   "part": "body",
+   "label": "Ốp trang trí",
+   "source": "Plane.021_plastic_0",
+   "center": [
+    2.515,
+    0.938,
+    0.003
+   ],
+   "size": [
+    0.008,
+    0.116,
+    0.568
+   ],
+   "faces": 106
+  },
+  {
+   "id": "body_0120",
+   "part": "body",
+   "label": "Ốp trang trí",
+   "source": "Plane.021_plastic_0",
+   "center": [
+    -2.527,
+    0.595,
+    0.003
+   ],
+   "size": [
+    0.008,
+    0.116,
+    0.568
+   ],
+   "faces": 106
+  },
+  {
+   "id": "body_0121",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.223,
+    0.504,
+    -1.002
+   ],
+   "size": [
+    0.264,
+    0.276,
+    0.087
+   ],
+   "faces": 357
+  },
+  {
+   "id": "body_0122",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -1.434,
+    1.06,
+    1.03
+   ],
+   "size": [
+    0.461,
+    0.093,
+    0.036
+   ],
+   "faces": 102
+  },
+  {
+   "id": "body_0123",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -1.184,
+    0.821,
+    -1.048
+   ],
+   "size": [
+    0.133,
+    0.386,
+    0.008
+   ],
+   "faces": 155
+  },
+  {
+   "id": "body_0124",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.123,
+    1.079,
+    1.017
+   ],
+   "size": [
+    0.359,
+    0.13,
+    0.052
+   ],
+   "faces": 225
+  },
+  {
+   "id": "body_0125",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.462,
+    0.937,
+    -0.878
+   ],
+   "size": [
+    0.081,
+    0.322,
+    0.139
+   ],
+   "faces": 347
+  },
+  {
+   "id": "body_0126",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.469,
+    0.781,
+    -0.816
+   ],
+   "size": [
+    0.095,
+    0.146,
+    0.272
+   ],
+   "faces": 715
+  },
+  {
+   "id": "body_0127",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.496,
+    0.706,
+    0.588
+   ],
+   "size": [
+    0.05,
+    0.011,
+    0.541
+   ],
+   "faces": 25
+  },
+  {
+   "id": "body_0128",
+   "part": "body",
+   "label": "Đèn trước · trái",
+   "source": "Cube.023_den xe_0",
+   "center": [
+    -2.158,
+    1.006,
+    0.742
+   ],
+   "size": [
+    0.308,
+    0.175,
+    0.528
+   ],
+   "faces": 33
+  },
+  {
+   "id": "body_0129",
+   "part": "body",
+   "label": "Đèn trước · phải",
+   "source": "Cube.023_den xe_0",
+   "center": [
+    -2.158,
+    1.006,
+    -0.728
+   ],
+   "size": [
+    0.308,
+    0.175,
+    0.528
+   ],
+   "faces": 33
+  },
+  {
+   "id": "body_0130",
+   "part": "body",
+   "label": "Gương chiếu hậu · trái",
+   "source": "Cube.006_Car Paint.002_0",
+   "center": [
+    -0.923,
+    1.376,
+    1.089
+   ],
+   "size": [
+    0.203,
+    0.117,
+    0.255
+   ],
+   "faces": 546
+  },
+  {
+   "id": "body_0131",
+   "part": "body",
+   "label": "Gương chiếu hậu · phải",
+   "source": "Cube.006_Car Paint.002_0",
+   "center": [
+    -0.923,
+    1.376,
+    -1.089
+   ],
+   "size": [
+    0.203,
+    0.117,
+    0.255
+   ],
+   "faces": 539
+  },
+  {
+   "id": "body_0132",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    0.34,
+    0.392,
+    -1.065
+   ],
+   "size": [
+    0.514,
+    0.004,
+    0.004
+   ],
+   "faces": 24
+  },
+  {
+   "id": "body_0133",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.412,
+    1.669,
+    -0.648
+   ],
+   "size": [
+    0.472,
+    0.036,
+    0.022
+   ],
+   "faces": 34
+  },
+  {
+   "id": "body_0134",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.067,
+    1.696,
+    -0.323
+   ],
+   "size": [
+    0.082,
+    0.022,
+    0.376
+   ],
+   "faces": 89
+  },
+  {
+   "id": "body_0135",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.067,
+    1.696,
+    0.329
+   ],
+   "size": [
+    0.082,
+    0.022,
+    0.376
+   ],
+   "faces": 88
+  },
+  {
+   "id": "body_0136",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.532,
+    0.738,
+    -0.339
+   ],
+   "size": [
+    0.031,
+    0.007,
+    0.682
+   ],
+   "faces": 7
+  },
+  {
+   "id": "body_0137",
+   "part": "body",
+   "label": "Đèn sau · phải",
+   "source": "Plane.004_Material.003_0",
+   "center": [
+    2.367,
+    1.208,
+    -0.887
+   ],
+   "size": [
+    0.229,
+    0.023,
+    0.156
+   ],
+   "faces": 447
+  },
+  {
+   "id": "body_0138",
+   "part": "body",
+   "label": "Đèn sau · trái",
+   "source": "Plane.004_Material.003_0",
+   "center": [
+    2.367,
+    1.208,
+    0.892
+   ],
+   "size": [
+    0.229,
+    0.023,
+    0.156
+   ],
+   "faces": 447
+  },
+  {
+   "id": "body_0139",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.047_Material.022_0",
+   "center": [
+    2.483,
+    1.159,
+    0.403
+   ],
+   "size": [
+    0.055,
+    0.223,
+    0.81
+   ],
+   "faces": 6
+  },
+  {
+   "id": "body_0140",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.047_Material.022_0",
+   "center": [
+    2.483,
+    1.159,
+    -0.398
+   ],
+   "size": [
+    0.055,
+    0.223,
+    0.81
+   ],
+   "faces": 6
+  },
+  {
+   "id": "body_0141",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.418,
+    1.631,
+    -0.674
+   ],
+   "size": [
+    0.345,
+    0.072,
+    0.059
+   ],
+   "faces": 44
+  },
+  {
+   "id": "body_0142",
+   "part": "body",
+   "label": "Ốp trang trí · trái",
+   "source": "Plane.014_plastic_0",
+   "center": [
+    1.43,
+    1.496,
+    0.8
+   ],
+   "size": [
+    0.173,
+    0.108,
+    0.09
+   ],
+   "faces": 626
+  },
+  {
+   "id": "body_0143",
+   "part": "body",
+   "label": "Ốp trang trí · phải",
+   "source": "Plane.014_plastic_0",
+   "center": [
+    1.43,
+    1.496,
+    -0.795
+   ],
+   "size": [
+    0.173,
+    0.108,
+    0.09
+   ],
+   "faces": 626
+  },
+  {
+   "id": "body_0144",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.601,
+    1.029,
+    1.058
+   ],
+   "size": [
+    0.327,
+    0.057,
+    0.025
+   ],
+   "faces": 46
+  },
+  {
+   "id": "body_0145",
+   "part": "body",
+   "label": "Logo VinFast",
+   "source": "Plane.023_logo color_0",
+   "center": [
+    -2.476,
+    0.981,
+    0.003
+   ],
+   "size": [
+    0.028,
+    0.128,
+    0.135
+   ],
+   "faces": 2037
+  },
+  {
+   "id": "body_0146",
+   "part": "body",
+   "label": "Logo VinFast",
+   "source": "Plane.023_logo color_0",
+   "center": [
+    2.547,
+    1.155,
+    0.002
+   ],
+   "size": [
+    0.016,
+    0.129,
+    0.135
+   ],
+   "faces": 2038
+  },
+  {
+   "id": "wheels_0147",
+   "part": "wheels",
+   "label": "Chi tiết bánh xe · phải · trước",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -1.117,
+    0.505,
+    -1.058
+   ],
+   "size": [
+    0.071,
+    0.256,
+    0.016
+   ],
+   "faces": 140
+  },
+  {
+   "id": "body_0148",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.003,
+    0.797,
+    1.046
+   ],
+   "size": [
+    0.186,
+    0.246,
+    0.009
+   ],
+   "faces": 51
+  },
+  {
+   "id": "body_0149",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -1.785,
+    1.03,
+    1.046
+   ],
+   "size": [
+    0.25,
+    0.056,
+    0.006
+   ],
+   "faces": 134
+  },
+  {
+   "id": "body_0150",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.507,
+    1.305,
+    -0.926
+   ],
+   "size": [
+    0.296,
+    0.059,
+    0.066
+   ],
+   "faces": 47
+  },
+  {
+   "id": "body_0151",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.623,
+    0.933,
+    1.074
+   ],
+   "size": [
+    0.34,
+    0.058,
+    0.008
+   ],
+   "faces": 26
+  },
+  {
+   "id": "body_0152",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -1.953,
+    1.101,
+    0.989
+   ],
+   "size": [
+    0.187,
+    0.08,
+    0.067
+   ],
+   "faces": 332
+  },
+  {
+   "id": "body_0153",
+   "part": "body",
+   "label": "Gương chiếu hậu · trái",
+   "source": "Cube.007_MIRROR_0",
+   "center": [
+    -0.868,
+    1.341,
+    1.087
+   ],
+   "size": [
+    0.092,
+    0.149,
+    0.218
+   ],
+   "faces": 121
+  },
+  {
+   "id": "body_0154",
+   "part": "body",
+   "label": "Gương chiếu hậu · phải",
+   "source": "Cube.007_MIRROR_0",
+   "center": [
+    -0.868,
+    1.341,
+    -1.087
+   ],
+   "size": [
+    0.092,
+    0.149,
+    0.218
+   ],
+   "faces": 121
+  },
+  {
+   "id": "doors_0155",
+   "part": "doors",
+   "label": "Tay nắm cửa · phải · trước",
+   "source": "Cube.003_Material.010_0",
+   "center": [
+    -0.076,
+    1.088,
+    -1.059
+   ],
+   "size": [
+    0.224,
+    0.054,
+    0.029
+   ],
+   "faces": 246
+  },
+  {
+   "id": "doors_0156",
+   "part": "doors",
+   "label": "Tay nắm cửa · trái · trước",
+   "source": "Cube.003_Material.010_0",
+   "center": [
+    -0.076,
+    1.088,
+    1.065
+   ],
+   "size": [
+    0.224,
+    0.054,
+    0.029
+   ],
+   "faces": 246
+  },
+  {
+   "id": "doors_0157",
+   "part": "doors",
+   "label": "Tay nắm cửa · phải · sau",
+   "source": "Cube.001_Material.010_0",
+   "center": [
+    0.985,
+    1.121,
+    -1.059
+   ],
+   "size": [
+    0.224,
+    0.054,
+    0.029
+   ],
+   "faces": 336
+  },
+  {
+   "id": "doors_0158",
+   "part": "doors",
+   "label": "Tay nắm cửa · trái · sau",
+   "source": "Cube.001_Material.010_0",
+   "center": [
+    1.115,
+    1.121,
+    1.062
+   ],
+   "size": [
+    0.224,
+    0.054,
+    0.029
+   ],
+   "faces": 336
+  },
+  {
+   "id": "body_0159",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.202,
+    0.48,
+    -1.024
+   ],
+   "size": [
+    0.2,
+    0.122,
+    0.061
+   ],
+   "faces": 92
+  },
+  {
+   "id": "body_0160",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.02,
+    1.081,
+    -1.03
+   ],
+   "size": [
+    0.208,
+    0.121,
+    0.03
+   ],
+   "faces": 59
+  },
+  {
+   "id": "body_0161",
+   "part": "body",
+   "label": "Chi tiết ngoại thất",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.526,
+    0.736,
+    0.242
+   ],
+   "size": [
+    0.018,
+    0.003,
+    0.48
+   ],
+   "faces": 8
+  },
+  {
+   "id": "body_0162",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.536,
+    1.013,
+    1.073
+   ],
+   "size": [
+    0.236,
+    0.026,
+    0.013
+   ],
+   "faces": 56
+  },
+  {
+   "id": "body_0163",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.53,
+    0.74,
+    0.444
+   ],
+   "size": [
+    0.026,
+    0.003,
+    0.482
+   ],
+   "faces": 6
+  },
+  {
+   "id": "body_0164",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    0.775,
+    1.751,
+    -0.553
+   ],
+   "size": [
+    0.413,
+    0.005,
+    0.003
+   ],
+   "faces": 5
+  },
+  {
+   "id": "body_0165",
+   "part": "body",
+   "label": "Chi tiết ngoại thất",
+   "source": "Plane.017_Material.012_0",
+   "center": [
+    -2.538,
+    0.42,
+    0.003
+   ],
+   "size": [
+    0.019,
+    0.135,
+    0.162
+   ],
+   "faces": 240
+  },
+  {
+   "id": "body_0166",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.553,
+    1.322,
+    -0.93
+   ],
+   "size": [
+    0.266,
+    0.055,
+    0.066
+   ],
+   "faces": 20
+  },
+  {
+   "id": "body_0167",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.503,
+    0.758,
+    0.738
+   ],
+   "size": [
+    0.03,
+    0.034,
+    0.235
+   ],
+   "faces": 54
+  },
+  {
+   "id": "body_0168",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.991,
+    0.683,
+    -1.037
    ],
    "size": [
     0.119,
-    0.01,
-    1.105
+    0.137,
+    0.016
    ],
-   "faces": 144
+   "faces": 295
+  },
+  {
+   "id": "body_0169",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.486,
+    0.674,
+    0.751
+   ],
+   "size": [
+    0.032,
+    0.057,
+    0.215
+   ],
+   "faces": 66
+  },
+  {
+   "id": "body_0170",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.551,
+    1.221,
+    1.013
+   ],
+   "size": [
+    0.246,
+    0.084,
+    0.03
+   ],
+   "faces": 20
+  },
+  {
+   "id": "body_0171",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.462,
+    1.063,
+    -0.884
+   ],
+   "size": [
+    0.077,
+    0.156,
+    0.116
+   ],
+   "faces": 60
+  },
+  {
+   "id": "body_0172",
+   "part": "body",
+   "label": "Chi tiết ngoại thất",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -0.403,
+    1.712,
+    0.144
+   ],
+   "size": [
+    0.018,
+    0.004,
+    0.282
+   ],
+   "faces": 19
+  },
+  {
+   "id": "body_0173",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.948,
+    0.979,
+    1.035
+   ],
+   "size": [
+    0.133,
+    0.126,
+    0.028
+   ],
+   "faces": 99
+  },
+  {
+   "id": "body_0174",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -1.166,
+    1.215,
+    -0.913
+   ],
+   "size": [
+    0.185,
+    0.059,
+    0.043
+   ],
+   "faces": 44
+  },
+  {
+   "id": "body_0175",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.444,
+    1.555,
+    -0.737
+   ],
+   "size": [
+    0.157,
+    0.064,
+    0.054
+   ],
+   "faces": 106
+  },
+  {
+   "id": "body_0176",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.046_Material.022_0",
+   "center": [
+    2.23,
+    1.151,
+    0.898
+   ],
+   "size": [
+    0.451,
+    0.184,
+    0.18
+   ],
+   "faces": 4
+  },
+  {
+   "id": "body_0177",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.048_Material.022_0",
+   "center": [
+    2.23,
+    1.151,
+    -0.893
+   ],
+   "size": [
+    0.451,
+    0.184,
+    0.18
+   ],
+   "faces": 4
+  },
+  {
+   "id": "body_0178",
+   "part": "body",
+   "label": "Đèn trước · phải",
+   "source": "Plane.011_Carlight triangle chrome red_0",
+   "center": [
+    -2.114,
+    0.637,
+    -1.063
+   ],
+   "size": [
+    0.075,
+    0.118,
+    0.033
+   ],
+   "faces": 223
+  },
+  {
+   "id": "body_0179",
+   "part": "body",
+   "label": "Đèn trước · trái",
+   "source": "Plane.011_Carlight triangle chrome red_0",
+   "center": [
+    -2.114,
+    0.637,
+    1.068
+   ],
+   "size": [
+    0.075,
+    0.118,
+    0.033
+   ],
+   "faces": 223
+  },
+  {
+   "id": "body_0180",
+   "part": "body",
+   "label": "Ốp trang trí · phải",
+   "source": "Cube.014_plastic_0",
+   "center": [
+    -2.152,
+    1.011,
+    -0.657
+   ],
+   "size": [
+    0.109,
+    0.076,
+    0.121
+   ],
+   "faces": 170
+  },
+  {
+   "id": "body_0181",
+   "part": "body",
+   "label": "Ốp trang trí · trái",
+   "source": "Cube.014_plastic_0",
+   "center": [
+    -2.152,
+    1.011,
+    0.671
+   ],
+   "size": [
+    0.109,
+    0.076,
+    0.121
+   ],
+   "faces": 170
+  },
+  {
+   "id": "body_0182",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.513,
+    1.023,
+    -1.07
+   ],
+   "size": [
+    0.217,
+    0.029,
+    0.005
+   ],
+   "faces": 22
+  },
+  {
+   "id": "body_0183",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -0.396,
+    0.385,
+    -1.067
+   ],
+   "size": [
+    0.317,
+    0.008,
+    0
+   ],
+   "faces": 5
+  },
+  {
+   "id": "body_0184",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.96,
+    0.696,
+    1.049
+   ],
+   "size": [
+    0.078,
+    0.112,
+    0.031
+   ],
+   "faces": 276
+  },
+  {
+   "id": "body_0185",
+   "part": "body",
+   "label": "Ốp trang trí · phải",
+   "source": "Cube.013_plastic_0",
+   "center": [
+    -2.072,
+    1.044,
+    -0.858
+   ],
+   "size": [
+    0.095,
+    0.058,
+    0.106
+   ],
+   "faces": 170
+  },
+  {
+   "id": "body_0186",
+   "part": "body",
+   "label": "Ốp trang trí · trái",
+   "source": "Cube.012_plastic_0",
+   "center": [
+    -2.072,
+    1.044,
+    0.872
+   ],
+   "size": [
+    0.095,
+    0.058,
+    0.106
+   ],
+   "faces": 170
+  },
+  {
+   "id": "wheels_0187",
+   "part": "wheels",
+   "label": "Chi tiết bánh xe · trái · trước",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -1.13,
+    0.56,
+    1.063
+   ],
+   "size": [
+    0.046,
+    0.147,
+    0.016
+   ],
+   "faces": 57
+  },
+  {
+   "id": "body_0188",
+   "part": "body",
+   "label": "Chi tiết ngoại thất",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.526,
+    0.511,
+    -0.284
+   ],
+   "size": [
+    0.014,
+    0.101,
+    0.12
+   ],
+   "faces": 52
+  },
+  {
+   "id": "body_0189",
+   "part": "body",
+   "label": "Chi tiết ngoại thất",
+   "source": "Plane.021_Material.006_0",
+   "center": [
+    2.514,
+    0.938,
+    0.003
+   ],
+   "size": [
+    0,
+    0.104,
+    0.557
+   ],
+   "faces": 2
+  },
+  {
+   "id": "body_0190",
+   "part": "body",
+   "label": "Chi tiết ngoại thất",
+   "source": "Plane.021_Material.006_0",
+   "center": [
+    -2.526,
+    0.595,
+    0.003
+   ],
+   "size": [
+    0,
+    0.104,
+    0.557
+   ],
+   "faces": 2
+  },
+  {
+   "id": "body_0191",
+   "part": "body",
+   "label": "Chi tiết ngoại thất",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.534,
+    0.521,
+    -0.104
+   ],
+   "size": [
+    0.018,
+    0.12,
+    0.083
+   ],
+   "faces": 70
+  },
+  {
+   "id": "body_0192",
+   "part": "body",
+   "label": "Chi tiết ngoại thất",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.525,
+    0.558,
+    -0.295
+   ],
+   "size": [
+    0.019,
+    0.062,
+    0.169
+   ],
+   "faces": 25
+  },
+  {
+   "id": "body_0193",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.514,
+    0.662,
+    -0.409
+   ],
+   "size": [
+    0.013,
+    0.037,
+    0.192
+   ],
+   "faces": 17
+  },
+  {
+   "id": "body_0194",
+   "part": "body",
+   "label": "Chi tiết ngoại thất",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.534,
+    0.528,
+    0.12
+   ],
+   "size": [
+    0.016,
+    0.124,
+    0.074
+   ],
+   "faces": 58
+  },
+  {
+   "id": "body_0195",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.496,
+    0.522,
+    0.608
+   ],
+   "size": [
+    0.008,
+    0.02,
+    0.121
+   ],
+   "faces": 186
+  },
+  {
+   "id": "body_0196",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -1.147,
+    1.279,
+    -0.831
+   ],
+   "size": [
+    0.112,
+    0.055,
+    0.079
+   ],
+   "faces": 81
+  },
+  {
+   "id": "body_0197",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.868,
+    0.806,
+    -1.061
+   ],
+   "size": [
+    0.109,
+    0.101,
+    0.005
+   ],
+   "faces": 49
+  },
+  {
+   "id": "body_0198",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -1.965,
+    1.098,
+    -0.984
+   ],
+   "size": [
+    0.111,
+    0.037,
+    0.031
+   ],
+   "faces": 96
+  },
+  {
+   "id": "body_0199",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.496,
+    0.549,
+    -0.592
+   ],
+   "size": [
+    0.007,
+    0.047,
+    0.118
+   ],
+   "faces": 63
+  },
+  {
+   "id": "body_0200",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.172,
+    0.697,
+    1.076
+   ],
+   "size": [
+    0.059,
+    0.133,
+    0.004
+   ],
+   "faces": 30
+  },
+  {
+   "id": "body_0201",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.472,
+    0.665,
+    0.879
+   ],
+   "size": [
+    0.041,
+    0.1,
+    0.08
+   ],
+   "faces": 32
+  },
+  {
+   "id": "body_0202",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.498,
+    0.503,
+    -0.616
+   ],
+   "size": [
+    0.005,
+    0.02,
+    0.111
+   ],
+   "faces": 77
+  },
+  {
+   "id": "body_0203",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.491,
+    0.519,
+    -0.393
+   ],
+   "size": [
+    0.006,
+    0.098,
+    0.069
+   ],
+   "faces": 65
+  },
+  {
+   "id": "body_0204",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.501,
+    0.473,
+    -0.647
+   ],
+   "size": [
+    0.001,
+    0.047,
+    0.105
+   ],
+   "faces": 57
+  },
+  {
+   "id": "body_0205",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -1.204,
+    1.281,
+    -0.811
+   ],
+   "size": [
+    0.091,
+    0.052,
+    0.051
+   ],
+   "faces": 105
+  },
+  {
+   "id": "body_0206",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.081,
+    1.634,
+    -0.635
+   ],
+   "size": [
+    0.104,
+    0.012,
+    0.011
+   ],
+   "faces": 89
+  },
+  {
+   "id": "body_0207",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -1.596,
+    1.186,
+    0.94
+   ],
+   "size": [
+    0.146,
+    0.017,
+    0.031
+   ],
+   "faces": 15
+  },
+  {
+   "id": "body_0208",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.497,
+    0.484,
+    -0.449
+   ],
+   "size": [
+    0.014,
+    0.052,
+    0.119
+   ],
+   "faces": 21
+  },
+  {
+   "id": "body_0209",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.675,
+    1.657,
+    -0.631
+   ],
+   "size": [
+    0.126,
+    0.018,
+    0.01
+   ],
+   "faces": 20
+  },
+  {
+   "id": "body_0210",
+   "part": "body",
+   "label": "Đèn trước · trái",
+   "source": "Cube.006_Carlight line chrome white_0",
+   "center": [
+    -0.918,
+    1.327,
+    1.169
+   ],
+   "size": [
+    0.101,
+    0.016,
+    0.086
+   ],
+   "faces": 45
+  },
+  {
+   "id": "body_0211",
+   "part": "body",
+   "label": "Đèn trước · phải",
+   "source": "Cube.006_Carlight line chrome white_0",
+   "center": [
+    -0.918,
+    1.327,
+    -1.169
+   ],
+   "size": [
+    0.101,
+    0.016,
+    0.086
+   ],
+   "faces": 45
+  },
+  {
+   "id": "glass_0212",
+   "part": "glass",
+   "label": "Kính · phải",
+   "source": "Cube.014_glass_0",
+   "center": [
+    -2.19,
+    1.011,
+    -0.657
+   ],
+   "size": [
+    0.002,
+    0.065,
+    0.103
+   ],
+   "faces": 70
+  },
+  {
+   "id": "glass_0213",
+   "part": "glass",
+   "label": "Kính · trái",
+   "source": "Cube.014_glass_0",
+   "center": [
+    -2.19,
+    1.011,
+    0.671
+   ],
+   "size": [
+    0.002,
+    0.065,
+    0.103
+   ],
+   "faces": 70
+  },
+  {
+   "id": "body_0214",
+   "part": "body",
+   "label": "Chi tiết ngoại thất",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.857,
+    1.728,
+    0.052
+   ],
+   "size": [
+    0.094,
+    0.013,
+    0.098
+   ],
+   "faces": 12
+  },
+  {
+   "id": "body_0215",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.952,
+    0.701,
+    -1.059
+   ],
+   "size": [
+    0.062,
+    0.098,
+    0.003
+   ],
+   "faces": 24
+  },
+  {
+   "id": "body_0216",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.123,
+    1.673,
+    -0.559
+   ],
+   "size": [
+    0.019,
+    0.021,
+    0.094
+   ],
+   "faces": 35
+  },
+  {
+   "id": "body_0217",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.031,
+    0.551,
+    -1.043
+   ],
+   "size": [
+    0.078,
+    0.081,
+    0.008
+   ],
+   "faces": 44
+  },
+  {
+   "id": "glass_0218",
+   "part": "glass",
+   "label": "Kính · phải",
+   "source": "Cube.013_glass_0",
+   "center": [
+    -2.104,
+    1.044,
+    -0.858
+   ],
+   "size": [
+    0.002,
+    0.049,
+    0.09
+   ],
+   "faces": 70
+  },
+  {
+   "id": "glass_0219",
+   "part": "glass",
+   "label": "Kính · trái",
+   "source": "Cube.012_glass_0",
+   "center": [
+    -2.104,
+    1.044,
+    0.872
+   ],
+   "size": [
+    0.002,
+    0.049,
+    0.09
+   ],
+   "faces": 70
+  },
+  {
+   "id": "body_0220",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.496,
+    0.476,
+    0.448
+   ],
+   "size": [
+    0.012,
+    0.037,
+    0.106
+   ],
+   "faces": 16
+  },
+  {
+   "id": "body_0221",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.405,
+    0.64,
+    0.984
+   ],
+   "size": [
+    0.024,
+    0.095,
+    0.024
+   ],
+   "faces": 29
+  },
+  {
+   "id": "body_0222",
+   "part": "body",
+   "label": "Chi tiết ngoại thất",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.526,
+    0.539,
+    -0.109
+   ],
+   "size": [
+    0.01,
+    0.081,
+    0.057
+   ],
+   "faces": 34
+  },
+  {
+   "id": "wheels_0223",
+   "part": "wheels",
+   "label": "Nắp tâm mâm · phải · trước",
+   "source": "Cylinder.011_logo color_0",
+   "center": [
+    -1.676,
+    0.436,
+    -1.059
+   ],
+   "size": [
+    0.035,
+    0.033,
+    0.001
+   ],
+   "faces": 1523
+  },
+  {
+   "id": "wheels_0224",
+   "part": "wheels",
+   "label": "Nắp tâm mâm · trái · sau",
+   "source": "Cylinder.011_logo color_0",
+   "center": [
+    1.543,
+    0.437,
+    1.066
+   ],
+   "size": [
+    0.035,
+    0.033,
+    0.001
+   ],
+   "faces": 1523
+  },
+  {
+   "id": "wheels_0225",
+   "part": "wheels",
+   "label": "Nắp tâm mâm · trái · trước",
+   "source": "Cylinder.011_logo color_0",
+   "center": [
+    -1.681,
+    0.437,
+    1.073
+   ],
+   "size": [
+    0.035,
+    0.033,
+    0.001
+   ],
+   "faces": 1522
+  },
+  {
+   "id": "wheels_0226",
+   "part": "wheels",
+   "label": "Nắp tâm mâm · phải · sau",
+   "source": "Cylinder.011_logo color_0",
+   "center": [
+    1.552,
+    0.436,
+    -1.057
+   ],
+   "size": [
+    0.035,
+    0.033,
+    0.001
+   ],
+   "faces": 1522
+  },
+  {
+   "id": "body_0227",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    2.152,
+    0.396,
+    0.981
+   ],
+   "size": [
+    0.081,
+    0.053,
+    0.016
+   ],
+   "faces": 34
+  },
+  {
+   "id": "body_0228",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · phải",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    -1.04,
+    0.475,
+    -1.053
+   ],
+   "size": [
+    0.088,
+    0.015,
+    0.003
+   ],
+   "faces": 17
+  },
+  {
+   "id": "body_0229",
+   "part": "body",
+   "label": "Chi tiết ngoại thất · trái",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    0.093,
+    1.746,
+    0.601
+   ],
+   "size": [
+    0.096,
+    0.009,
+    0.013
+   ],
+   "faces": 11
+  },
+  {
+   "id": "body_0230",
+   "part": "body",
+   "label": "Chi tiết ngoại thất",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    1.973,
+    1.715,
+    0.046
+   ],
+   "size": [
+    0.055,
+    0.006,
+    0.086
+   ],
+   "faces": 8
+  },
+  {
+   "id": "body_0231",
+   "part": "body",
+   "label": "Chi tiết nhỏ",
+   "source": "Plane.014_Car Paint.002_0",
+   "center": [
+    0.285,
+    1.059,
+    0.005
+   ],
+   "size": [
+    4.53,
+    1.419,
+    2.145
+   ],
+   "faces": 1041
+  },
+  {
+   "id": "body_0232",
+   "part": "body",
+   "label": "Chi tiết nhỏ",
+   "source": "Cylinder_Car Paint.002_0",
+   "center": [
+    -2.347,
+    0.561,
+    0.003
+   ],
+   "size": [
+    0.044,
+    0.041,
+    1.562
+   ],
+   "faces": 310
+  },
+  {
+   "id": "body_0233",
+   "part": "body",
+   "label": "Chi tiết nhỏ",
+   "source": "Cylinder_plastic_0",
+   "center": [
+    -2.362,
+    0.566,
+    0.003
+   ],
+   "size": [
+    0.013,
+    0.031,
+    1.562
+   ],
+   "faces": 50
+  },
+  {
+   "id": "body_0234",
+   "part": "body",
+   "label": "Chi tiết nhỏ",
+   "source": "Cube.023_den xe_0",
+   "center": [
+    -2.148,
+    1.038,
+    0.007
+   ],
+   "size": [
+    0.222,
+    0.064,
+    1.979
+   ],
+   "faces": 680
+  },
+  {
+   "id": "body_0235",
+   "part": "body",
+   "label": "Chi tiết nhỏ",
+   "source": "Cube.006_Car Paint.002_0",
+   "center": [
+    -0.829,
+    1.247,
+    0
+   ],
+   "size": [
+    0.005,
+    0.005,
+    2.344
+   ],
+   "faces": 5
+  },
+  {
+   "id": "body_0236",
+   "part": "body",
+   "label": "Chi tiết nhỏ",
+   "source": "Cylinder.001_Car Paint.002_0",
+   "center": [
+    2.209,
+    0.591,
+    0.003
+   ],
+   "size": [
+    0.036,
+    0.033,
+    2.124
+   ],
+   "faces": 309
+  },
+  {
+   "id": "body_0237",
+   "part": "body",
+   "label": "Chi tiết nhỏ",
+   "source": "Cylinder.001_plastic_0",
+   "center": [
+    2.211,
+    0.591,
+    0.003
+   ],
+   "size": [
+    0.033,
+    0.033,
+    2.124
+   ],
+   "faces": 44
+  },
+  {
+   "id": "body_0238",
+   "part": "body",
+   "label": "Chi tiết nhỏ",
+   "source": "Plane.013_logo color_0",
+   "center": [
+    1.418,
+    1.497,
+    0.003
+   ],
+   "size": [
+    0.076,
+    0.057,
+    1.649
+   ],
+   "faces": 3096
+  },
+  {
+   "id": "body_0239",
+   "part": "body",
+   "label": "Chi tiết nhỏ",
+   "source": "Cylinder.005_Car Paint.002_0",
+   "center": [
+    2.52,
+    0.68,
+    0.003
+   ],
+   "size": [
+    0.035,
+    0.034,
+    0.624
+   ],
+   "faces": 309
+  },
+  {
+   "id": "body_0240",
+   "part": "body",
+   "label": "Chi tiết nhỏ",
+   "source": "Cylinder.005_plastic_0",
+   "center": [
+    2.536,
+    0.679,
+    0.003
+   ],
+   "size": [
+    0.002,
+    0.033,
+    0.624
+   ],
+   "faces": 68
+  },
+  {
+   "id": "body_0241",
+   "part": "body",
+   "label": "Chi tiết nhỏ",
+   "source": "Cylinder.006_Car Paint.002_0",
+   "center": [
+    2.49,
+    0.68,
+    0.003
+   ],
+   "size": [
+    0.037,
+    0.034,
+    1.601
+   ],
+   "faces": 309
+  },
+  {
+   "id": "body_0242",
+   "part": "body",
+   "label": "Chi tiết nhỏ",
+   "source": "Cylinder.006_plastic_0",
+   "center": [
+    2.506,
+    0.679,
+    0.003
+   ],
+   "size": [
+    0.004,
+    0.033,
+    1.601
+   ],
+   "faces": 45
+  },
+  {
+   "id": "body_0243",
+   "part": "body",
+   "label": "Chi tiết nhỏ · phải",
+   "source": "Cube.013_light_0",
+   "center": [
+    -2.1,
+    1.044,
+    -0.858
+   ],
+   "size": [
+    0,
+    0.044,
+    0.083
+   ],
+   "faces": 22
+  },
+  {
+   "id": "body_0244",
+   "part": "body",
+   "label": "Chi tiết nhỏ",
+   "source": "Cube.014_light_0",
+   "center": [
+    -2.186,
+    1.011,
+    0.007
+   ],
+   "size": [
+    0,
+    0.056,
+    1.422
+   ],
+   "faces": 16
+  },
+  {
+   "id": "body_0245",
+   "part": "body",
+   "label": "Chi tiết nhỏ · trái",
+   "source": "Cube.012_light_0",
+   "center": [
+    -2.1,
+    1.044,
+    0.872
+   ],
+   "size": [
+    0,
+    0.044,
+    0.083
+   ],
+   "faces": 22
   }
  ]
 }

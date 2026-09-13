@@ -15,8 +15,9 @@ npm ci
 npm run dev          # http://localhost:3017
 ```
 
-Kho lưu trữ đi kèm một **mô hình mẫu** dựng bằng mã (`npm run model:sample`) để giao diện chạy được ngay.
-Góc trên bên trái sẽ ghi "Mô hình mẫu · chưa phải VF 9 thật" cho tới khi bạn thay bằng mô hình thật.
+Kho đi kèm mô hình VF 9 thật đã xử lý (`public/models/vf9.glb`, ~12 MB, ~420 nghìn mặt, 246 chi tiết).
+Để chạy lại quy trình từ mô hình gốc, xem phần dưới. `npm run model:sample` tạo một xe mẫu dựng bằng mã
+nếu bạn muốn thử quy trình mà không có mô hình gốc.
 
 ## Đưa mô hình VF 9 thật vào
 
@@ -30,13 +31,14 @@ https://sketchfab.com/3d-models/vinfast-vf9-model-no-interior-cac6cb95b9084d0abe
 SKETCHFAB_TOKEN=xxxxxxxx npm run model:download
 ```
 
-**Cách 2 — tải thủ công**: đăng nhập Sketchfab, bấm Download → định dạng glTF hoặc GLB, giải nén rồi đặt
-tệp vào `source/vf9-source.glb` (hoặc `source/vf9-source.gltf` cùng `.bin` và ảnh texture).
+**Cách 2 — tải thủ công**: đăng nhập Sketchfab, bấm Download → định dạng glTF, giải nén vào `source/`
+(ví dụ `source/vinfast_vf9_model_no_interior/scene.gltf`). Script tự tìm tệp `.gltf`/`.glb` đầu tiên trong `source/`.
+Điền `source/attribution.json` (tên, tác giả, link, giấy phép) để hiển thị ghi công trong ứng dụng.
 
 Sau đó:
 
 ```sh
-npm run model:prepare -- --simplify=0.35      # 1,09 triệu mặt → ~380 nghìn mặt
+npm run model:prepare -- --simplify=0.35      # 1,09 triệu mặt → ~420 nghìn mặt, chạy ~2 giây
 npm run validate
 ```
 
@@ -44,11 +46,14 @@ npm run validate
 
 1. Nướng transform, chuẩn hóa hệ tọa độ (dài dọc X, đầu xe về −X, bánh chạm y = 0, dài đúng 5,118 m).
    Đầu xe được đoán theo nguyên tắc "ca-pô thấp hơn cửa cốp"; nếu đoán sai, thêm `--flip`.
-2. Tách từng primitive thành các đảo lưới liên thông theo vị trí đỉnh; gộp mảnh li ti thành "Chi tiết nhỏ".
+2. Tách từng primitive thành các đảo lưới liên thông theo vị trí đỉnh (1.171 đảo với mô hình này). Gai lốp,
+   nan mâm và các chi tiết gần tâm bánh được gộp theo góc bánh; mảnh li ti gộp thành "Chi tiết nhỏ".
    Điều chỉnh bằng `--min-faces=24` và `--max-pieces=500`.
 3. Phân loại mỗi mảnh vào hệ thống (thân xe / kính / cửa / nội thất / bánh xe) và gán nhãn tiếng Việt dựa trên
    tên vật liệu, độ trong suốt, phát sáng và vị trí hình học. Xem hàm `classify` trong `scripts/prepare-model.mjs`;
-   với mô hình cộng đồng, hãy xem kết quả trong `public/models/vf9-manifest.json` và chỉnh ngưỡng nếu cần.
+   Kết quả với mô hình của Giang Trần: 4 lốp, 8 mâm, 4 nắp tâm mâm, 4 cửa, cửa cốp, ca-pô, cản trước/sau, nóc,
+   kính chắn gió + kính trần (một mảng liền trong mô hình gốc), kính bên, gương, đèn, tay nắm cửa, logo; khoảng
+   90 mảnh ngoại thất chưa gọi tên cụ thể. Mô hình không có nội thất, chỉ có một khối tối che khoang lái.
 4. Tùy chọn giảm mặt (`--simplify=0.35`), ghi `public/models/vf9.glb` và `vf9-manifest.json`.
 
 Pin, động cơ và hệ thống treo là hình học minh họa dựng bằng mã (mô hình nguồn không có), được gắn nhãn "Minh họa".
