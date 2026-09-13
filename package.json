@@ -1,5 +1,5 @@
 {
-  "name": "vinfast-vf9-studio",
+  "name": "autonomy",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -7,16 +7,19 @@
     "node": ">=22.13.0"
   },
   "scripts": {
+    "predev": "node scripts/build-registry.mjs",
     "dev": "vite --port 3017",
+    "prebuild": "node scripts/build-registry.mjs",
     "build": "vite build",
     "preview": "vite preview",
     "check": "tsc --noEmit",
     "lint": "oxlint",
     "format": "oxfmt",
+    "registry": "node scripts/build-registry.mjs",
+    "model:prepare": "node scripts/prepare-model.mjs",
+    "validate": "node scripts/validate-all.mjs",
     "model:download": "node scripts/download-source.mjs",
-    "model:sample": "node scripts/make-sample-model.mjs",
-    "model:prepare": "node --experimental-strip-types scripts/prepare-model.mjs",
-    "validate": "node --experimental-strip-types scripts/validate-model.mjs && node --experimental-strip-types scripts/validate-explosion.mjs && node --experimental-strip-types scripts/validate-touch.mjs"
+    "qa": "node scripts/qa-shot.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",
@@ -43,6 +46,7 @@
     "meshoptimizer": "1.2.0",
     "oxfmt": "0.61.0",
     "oxlint": "1.76.0",
+    "sharp": "^0.35.4",
     "tailwindcss": "4.2.1",
     "typescript": "5.9.3",
     "vite": "8.0.13"

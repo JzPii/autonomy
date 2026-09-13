@@ -1,0 +1,43 @@
+{
+  "systems": [
+    { "id": "body", "name": "Body & structure", "category": "Exterior", "tag": "THE PROTECTIVE SHELL", "explode": [0, 0.6, 0], "anchor": [-1.9, 1.02, 0.2],
+      "description": "The body ties everything together: an enclosed passenger cell, crumple zones at both ends and a smooth exterior that guides air around the vehicle.",
+      "principle": "The structure carries loads around the cabin. At over 5.1 m the VF 9 is an E-segment SUV, with a hood over the front compartment and a tailgate opening onto the luggage space behind the third row.",
+      "specs": [["Role", "Structure & protection"], ["L × W × H", "5,118 × 1,998 × 1,696 mm"], ["Wheelbase", "3,150 mm"]], "source": "specs" },
+    { "id": "glass", "name": "Glass & panoramic roof", "category": "Exterior", "tag": "A WIDER VIEW", "explode": [0, 2, 0], "anchor": [0.15, 1.94, 0],
+      "description": "Windshield, side glass and the panoramic roof panel open the cabin to the outside and make all three rows feel spacious.",
+      "principle": "The windshield and side glazing provide visibility around the car. On the top trim a panoramic roof spans most of the ceiling. The dark tint in this model is a rendering material.",
+      "specs": [["Role", "Visibility & enclosure"], ["Position", "Upper cabin"]], "source": "specs" },
+    { "id": "doors", "name": "Doors & tailgate", "category": "Exterior", "tag": "ACCESS TO THREE ROWS", "explode": [0, 1.1, 0], "anchor": [0.25, 1.44, 1.05],
+      "description": "Four conventionally hinged doors open onto three rows of seats; the tailgate lifts high for luggage. The door handles sit flush with the body while driving.",
+      "principle": "Each door is an assembly of outer panel, glass, latch, seals and interior trim. The tailgate is powered and can be operated from the key or the centre screen.",
+      "specs": [["Hinge", "Conventional"], ["Tailgate", "Powered"], ["Handles", "Flush, pop-out"]], "source": "manual" },
+    { "id": "cabin", "name": "Passenger cabin", "category": "Interior", "tag": "BUILT AROUND PEOPLE", "explode": [0, 0.7, 0], "anchor": [0.05, 1.05, -0.4],
+      "description": "The cabin sits above the battery pack: three rows for six or seven people, a 15.6-inch centre display and the controls the driver uses every day.",
+      "principle": "The flat floor of the EV platform allows several seating layouts: seven seats with a three-seat middle row, or six with two captain's chairs. The source model has no detailed interior, so this section is reference only.",
+      "specs": [["Seats", "6 or 7"], ["Centre display", "15.6 in"], ["Position", "Above the battery"]], "source": "specs" },
+    { "id": "battery", "name": "High-voltage battery", "category": "Energy", "tag": "THE ENERGY FOUNDATION", "illustrative": true, "explode": [0, -0.85, 0], "anchor": [0.1, 0.24, 1.02],
+      "description": "A liquid-cooled lithium-ion pack stores the energy for the whole vehicle. Mounted under the cabin floor, it feeds the two electric motors.",
+      "principle": "Under acceleration, energy flows from the pack to the motors. During regenerative braking the motors act as generators and return the car's kinetic energy to the pack.",
+      "specs": [["Capacity", "123 kWh"], ["Range", "up to 580 km (NEDC, claimed)"], ["Chemistry", "Lithium-ion, liquid-cooled"]], "source": "specs" },
+    { "id": "drive", "name": "Electric motors", "category": "Powertrain", "tag": "ELECTRICITY INTO MOTION", "illustrative": true, "explode": [0, -0.18, 0], "anchor": [-1.58, 0.57, 0.2],
+      "description": "Two electric motors turn stored energy into wheel torque. One sits on the front axle and one on the rear, giving permanent all-wheel drive.",
+      "principle": "An inverter controls each motor and a single-speed reduction gear transfers rotation to the wheels. The motors also slow the car through regenerative braking.",
+      "specs": [["Layout", "Front + rear, AWD"], ["Peak power", "300 kW (402 hp)"], ["Torque", "620 Nm"], ["Gearbox", "Single-speed"]], "source": "specs" },
+    { "id": "suspension", "name": "Air suspension", "category": "Chassis", "tag": "CONNECTED TO THE ROAD", "illustrative": true, "explode": [0, 0.08, 0], "anchor": [1.58, 0.83, -0.83],
+      "description": "Air springs carry the body and electronically controlled dampers manage its movement. The system can change ride height and how the car responds to the road.",
+      "principle": "Double-wishbone front and multi-link rear suspension guide each wheel. Air pressure sets the height while damping balances comfort and control. Air suspension is fitted on the top trim.",
+      "specs": [["Springs", "Air (top trim)"], ["Damping", "Adaptive electronic"], ["Ride height", "Adjustable"]], "source": "specs" },
+    { "id": "wheels", "name": "Wheels & brakes", "category": "Chassis", "tag": "WHERE MOTION MEETS GRIP", "explode": [0, 0, 0], "anchor": [1.58, 0.46, 1.1],
+      "description": "The tyres are the only contact between car and road. Behind each wheel a ventilated disc and caliper provide friction braking.",
+      "principle": "Regenerative braking recovers energy through the motors; friction brakes add stopping force when needed, with ABS controlling wheel slip.",
+      "specs": [["Wheels", "21 in"], ["Brakes", "Ventilated discs, ABS"], ["Energy recovery", "Regenerative braking"]], "source": "specs" }
+  ],
+  "labels": { "logo": "VinFast badge" },
+  "pieces": {
+    "interior.block": "The source model has no interior; the author placed a dark block inside the cabin to hide the void when looking through the glass. The real VF 9 cabin has three rows of seats and a 15.6-inch centre display.",
+    "door.handle": "Door handle. On the VF 9 the handles sit flush with the body and pop out when the car unlocks.",
+    "lens.front": "The glass cover over the front LED light bar, which runs across the nose in VinFast's V-shaped design language."
+  },
+  "notes": "VF 9 figures come from VinFast's official specification page; seating, air suspension and the glass roof vary by trim."
+}

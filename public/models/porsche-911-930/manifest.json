@@ -1,0 +1,4544 @@
+{
+ "id": "porsche-911-930",
+ "file": "model.glb",
+ "version": "5976fb15b3",
+ "generated": "2026-09-13T08:12:15.407Z",
+ "input": "source/porsche-911-930/scene.gltf",
+ "lengthMeters": 4.291,
+ "bounds": {
+  "length": 4.291,
+  "height": 1.31,
+  "bodyWidth": 1.775
+ },
+ "wheelCenters": {
+  "RR": [
+   1.0440914034843445,
+   0.3144648899742606,
+   -0.7770259082317352
+  ],
+  "FR": [
+   -1.2178261280059814,
+   0.31443744560056075,
+   -0.7573942840099335
+  ],
+  "FL": [
+   -1.2374016493558884,
+   0.31444143276894465,
+   0.7574019134044647
+  ],
+  "RL": [
+   1.0440619736909866,
+   0.31444957852363586,
+   0.7770335823297501
+  ]
+ },
+ "counts": {
+  "body": 139,
+  "cabin": 26,
+  "glass": 42,
+  "doors": 8,
+  "wheels": 10
+ },
+ "objects": [
+  {
+   "id": "body_0000",
+   "part": "body",
+   "key": "body.shell",
+   "side": null,
+   "end": null,
+   "source": "Object_60",
+   "material": "paint",
+   "center": [
+    -0.013,
+    0.763,
+    0
+   ],
+   "size": [
+    3.923,
+    0.99,
+    1.842
+   ],
+   "faces": 21106
+  },
+  {
+   "id": "cabin_0001",
+   "part": "cabin",
+   "key": "interior",
+   "side": null,
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    0.015,
+    0.424,
+    0
+   ],
+   "size": [
+    4.022,
+    0.671,
+    1.828
+   ],
+   "faces": 1618
+  },
+  {
+   "id": "cabin_0002",
+   "part": "cabin",
+   "key": "interior",
+   "side": null,
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    0.33,
+    0.992,
+    0
+   ],
+   "size": [
+    2.118,
+    0.475,
+    1.399
+   ],
+   "faces": 1238
+  },
+  {
+   "id": "body_0003",
+   "part": "body",
+   "key": "bumper.rear",
+   "side": null,
+   "end": null,
+   "source": "Object_60",
+   "material": "paint",
+   "center": [
+    1.701,
+    0.352,
+    0
+   ],
+   "size": [
+    0.642,
+    0.246,
+    1.825
+   ],
+   "faces": 3457
+  },
+  {
+   "id": "body_0004",
+   "part": "body",
+   "key": "bumper.rear",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    1.675,
+    0.521,
+    0
+   ],
+   "size": [
+    0.6,
+    0.106,
+    1.825
+   ],
+   "faces": 1742
+  },
+  {
+   "id": "body_0005",
+   "part": "body",
+   "key": "bumper.front",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -1.794,
+    0.302,
+    0
+   ],
+   "size": [
+    0.532,
+    0.348,
+    1.755
+   ],
+   "faces": 2110
+  },
+  {
+   "id": "body_0006",
+   "part": "body",
+   "key": "hood",
+   "side": null,
+   "end": null,
+   "source": "Object_15",
+   "material": "paint",
+   "center": [
+    -1.38,
+    0.657,
+    0
+   ],
+   "size": [
+    1.242,
+    0.363,
+    1.198
+   ],
+   "faces": 1354
+  },
+  {
+   "id": "body_0007",
+   "part": "body",
+   "key": "bumper.rear",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    1.861,
+    0.396,
+    0
+   ],
+   "size": [
+    0.329,
+    0.153,
+    1.522
+   ],
+   "faces": 2578
+  },
+  {
+   "id": "body_0008",
+   "part": "body",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -0.45,
+    1.027,
+    0
+   ],
+   "size": [
+    0.559,
+    0.404,
+    1.351
+   ],
+   "faces": 2976
+  },
+  {
+   "id": "body_0009",
+   "part": "body",
+   "key": "bumper.front",
+   "side": null,
+   "end": null,
+   "source": "Object_60",
+   "material": "paint",
+   "center": [
+    -1.855,
+    0.243,
+    0
+   ],
+   "size": [
+    0.39,
+    0.13,
+    1.542
+   ],
+   "faces": 1408
+  },
+  {
+   "id": "body_0010",
+   "part": "body",
+   "key": "bumper.rear",
+   "side": null,
+   "end": null,
+   "source": "Object_60",
+   "material": "paint",
+   "center": [
+    1.939,
+    0.398,
+    0
+   ],
+   "size": [
+    0.223,
+    0.147,
+    1.475
+   ],
+   "faces": 1792
+  },
+  {
+   "id": "body_0011",
+   "part": "body",
+   "key": "bumper.front",
+   "side": null,
+   "end": null,
+   "source": "Object_60",
+   "material": "paint",
+   "center": [
+    -1.958,
+    0.449,
+    0
+   ],
+   "size": [
+    0.349,
+    0.059,
+    1.577
+   ],
+   "faces": 838
+  },
+  {
+   "id": "body_0012",
+   "part": "body",
+   "key": "sill",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -0.099,
+    0.257,
+    0.834
+   ],
+   "size": [
+    1.509,
+    0.058,
+    0.139
+   ],
+   "faces": 886
+  },
+  {
+   "id": "body_0013",
+   "part": "body",
+   "key": "sill",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -0.099,
+    0.257,
+    -0.834
+   ],
+   "size": [
+    1.509,
+    0.058,
+    0.139
+   ],
+   "faces": 886
+  },
+  {
+   "id": "body_0014",
+   "part": "body",
+   "key": "sill",
+   "side": "L",
+   "end": null,
+   "source": "Object_60",
+   "material": "paint",
+   "center": [
+    -0.096,
+    0.19,
+    0.799
+   ],
+   "size": [
+    1.497,
+    0.104,
+    0.19
+   ],
+   "faces": 855
+  },
+  {
+   "id": "body_0015",
+   "part": "body",
+   "key": "sill",
+   "side": "R",
+   "end": null,
+   "source": "Object_60",
+   "material": "paint",
+   "center": [
+    -0.096,
+    0.19,
+    -0.799
+   ],
+   "size": [
+    1.497,
+    0.104,
+    0.19
+   ],
+   "faces": 855
+  },
+  {
+   "id": "glass_0016",
+   "part": "glass",
+   "key": "windshield",
+   "side": null,
+   "end": null,
+   "source": "Object_24",
+   "material": "glass",
+   "center": [
+    -0.447,
+    1.025,
+    0
+   ],
+   "size": [
+    0.531,
+    0.384,
+    1.319
+   ],
+   "faces": 1004
+  },
+  {
+   "id": "body_0017",
+   "part": "body",
+   "key": "bumper.front",
+   "side": null,
+   "end": null,
+   "source": "Object_60",
+   "material": "paint",
+   "center": [
+    -1.964,
+    0.345,
+    0
+   ],
+   "size": [
+    0.323,
+    0.043,
+    1.561
+   ],
+   "faces": 572
+  },
+  {
+   "id": "doors_0018",
+   "part": "doors",
+   "key": "tailgate",
+   "side": null,
+   "end": null,
+   "source": "Object_60",
+   "material": "paint",
+   "center": [
+    1.697,
+    0.75,
+    0
+   ],
+   "size": [
+    0.559,
+    0.352,
+    0.987
+   ],
+   "faces": 4382
+  },
+  {
+   "id": "body_0019",
+   "part": "body",
+   "key": "bumper.front",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -1.925,
+    0.468,
+    0
+   ],
+   "size": [
+    0.283,
+    0.022,
+    1.561
+   ],
+   "faces": 472
+  },
+  {
+   "id": "body_0020",
+   "part": "body",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    1.064,
+    1.042,
+    0
+   ],
+   "size": [
+    0.651,
+    0.262,
+    1.007
+   ],
+   "faces": 2652
+  },
+  {
+   "id": "doors_0021",
+   "part": "doors",
+   "key": "tailgate",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    1.837,
+    0.851,
+    0
+   ],
+   "size": [
+    0.384,
+    0.132,
+    1.155
+   ],
+   "faces": 2614
+  },
+  {
+   "id": "body_0022",
+   "part": "body",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -0.648,
+    0.826,
+    0
+   ],
+   "size": [
+    0.404,
+    0.03,
+    1.409
+   ],
+   "faces": 656
+  },
+  {
+   "id": "body_0023",
+   "part": "body",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "Object_55",
+   "material": "930_plastics",
+   "center": [
+    1.594,
+    0.848,
+    0
+   ],
+   "size": [
+    0.239,
+    0.126,
+    0.904
+   ],
+   "faces": 22138
+  },
+  {
+   "id": "doors_0024",
+   "part": "doors",
+   "key": "door.front",
+   "side": "L",
+   "end": null,
+   "source": "Object_60",
+   "material": "paint",
+   "center": [
+    -0.116,
+    0.556,
+    0.742
+   ],
+   "size": [
+    1.182,
+    0.546,
+    0.151
+   ],
+   "faces": 1136
+  },
+  {
+   "id": "doors_0025",
+   "part": "doors",
+   "key": "door.front",
+   "side": "R",
+   "end": null,
+   "source": "Object_60",
+   "material": "paint",
+   "center": [
+    -0.116,
+    0.556,
+    -0.742
+   ],
+   "size": [
+    1.182,
+    0.546,
+    0.151
+   ],
+   "faces": 1136
+  },
+  {
+   "id": "glass_0026",
+   "part": "glass",
+   "key": "glass",
+   "side": null,
+   "end": null,
+   "source": "Object_18",
+   "material": "glass",
+   "center": [
+    1.064,
+    1.042,
+    0
+   ],
+   "size": [
+    0.651,
+    0.263,
+    1.006
+   ],
+   "faces": 1828
+  },
+  {
+   "id": "body_0027",
+   "part": "body",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "Object_49",
+   "material": "930_chromes",
+   "center": [
+    1.065,
+    1.037,
+    0
+   ],
+   "size": [
+    0.541,
+    0.229,
+    0.997
+   ],
+   "faces": 1380
+  },
+  {
+   "id": "body_0028",
+   "part": "body",
+   "key": "grille",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -2.097,
+    0.391,
+    0
+   ],
+   "size": [
+    0.097,
+    0.058,
+    1.143
+   ],
+   "faces": 718
+  },
+  {
+   "id": "wheels_0029",
+   "part": "wheels",
+   "key": "tire",
+   "side": "R",
+   "end": "F",
+   "source": "Object_6",
+   "material": "930_tire",
+   "center": [
+    -1.218,
+    0.314,
+    -0.757
+   ],
+   "size": [
+    0.642,
+    0.629,
+    0.394
+   ],
+   "faces": 1920
+  },
+  {
+   "id": "wheels_0030",
+   "part": "wheels",
+   "key": "tire",
+   "side": "L",
+   "end": "F",
+   "source": "Object_48",
+   "material": "930_tire",
+   "center": [
+    -1.238,
+    0.314,
+    0.757
+   ],
+   "size": [
+    0.642,
+    0.629,
+    0.394
+   ],
+   "faces": 1920
+  },
+  {
+   "id": "wheels_0031",
+   "part": "wheels",
+   "key": "tire",
+   "side": "L",
+   "end": "R",
+   "source": "Object_63",
+   "material": "930_tire",
+   "center": [
+    1.044,
+    0.314,
+    0.776
+   ],
+   "size": [
+    0.629,
+    0.629,
+    0.271
+   ],
+   "faces": 1920
+  },
+  {
+   "id": "wheels_0032",
+   "part": "wheels",
+   "key": "tire",
+   "side": "R",
+   "end": "R",
+   "source": "Object_4",
+   "material": "930_tire",
+   "center": [
+    1.044,
+    0.314,
+    -0.776
+   ],
+   "size": [
+    0.629,
+    0.629,
+    0.271
+   ],
+   "faces": 1920
+  },
+  {
+   "id": "wheels_0033",
+   "part": "wheels",
+   "key": "rim",
+   "side": "R",
+   "end": "F",
+   "source": "Object_5",
+   "material": "930_rim",
+   "center": [
+    -1.218,
+    0.314,
+    -0.758
+   ],
+   "size": [
+    0.5,
+    0.46,
+    0.342
+   ],
+   "faces": 8140
+  },
+  {
+   "id": "wheels_0034",
+   "part": "wheels",
+   "key": "rim",
+   "side": "L",
+   "end": "F",
+   "source": "Object_47",
+   "material": "930_rim",
+   "center": [
+    -1.237,
+    0.314,
+    0.758
+   ],
+   "size": [
+    0.5,
+    0.46,
+    0.342
+   ],
+   "faces": 8140
+  },
+  {
+   "id": "body_0035",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.064,
+    0.992,
+    0.619
+   ],
+   "size": [
+    1.044,
+    0.348,
+    0.152
+   ],
+   "faces": 427
+  },
+  {
+   "id": "body_0036",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.064,
+    0.992,
+    -0.619
+   ],
+   "size": [
+    1.044,
+    0.348,
+    0.152
+   ],
+   "faces": 427
+  },
+  {
+   "id": "wheels_0037",
+   "part": "wheels",
+   "key": "rim",
+   "side": "L",
+   "end": "R",
+   "source": "Object_62",
+   "material": "930_rim",
+   "center": [
+    1.044,
+    0.314,
+    0.778
+   ],
+   "size": [
+    0.46,
+    0.46,
+    0.244
+   ],
+   "faces": 8140
+  },
+  {
+   "id": "wheels_0038",
+   "part": "wheels",
+   "key": "rim",
+   "side": "R",
+   "end": "R",
+   "source": "Object_3",
+   "material": "930_rim",
+   "center": [
+    1.044,
+    0.314,
+    -0.778
+   ],
+   "size": [
+    0.46,
+    0.46,
+    0.244
+   ],
+   "faces": 8140
+  },
+  {
+   "id": "body_0039",
+   "part": "body",
+   "key": "exterior",
+   "side": null,
+   "end": null,
+   "source": "Object_60",
+   "material": "paint",
+   "center": [
+    0.103,
+    1.241,
+    0
+   ],
+   "size": [
+    0.346,
+    0.041,
+    0.873
+   ],
+   "faces": 592
+  },
+  {
+   "id": "cabin_0040",
+   "part": "cabin",
+   "key": "interior",
+   "side": null,
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    1.593,
+    0.841,
+    0
+   ],
+   "size": [
+    0.239,
+    0.138,
+    0.904
+   ],
+   "faces": 518
+  },
+  {
+   "id": "glass_0041",
+   "part": "glass",
+   "key": "lens.rear",
+   "side": null,
+   "end": null,
+   "source": "Object_70",
+   "material": "930_lights",
+   "center": [
+    1.966,
+    0.528,
+    0
+   ],
+   "size": [
+    0.026,
+    0.076,
+    0.891
+   ],
+   "faces": 728
+  },
+  {
+   "id": "body_0042",
+   "part": "body",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.103,
+    1.239,
+    0
+   ],
+   "size": [
+    0.355,
+    0.038,
+    0.881
+   ],
+   "faces": 492
+  },
+  {
+   "id": "body_0043",
+   "part": "body",
+   "key": "antenna",
+   "side": "R",
+   "end": null,
+   "source": "Object_25",
+   "material": "930_chromes",
+   "center": [
+    -0.889,
+    1.226,
+    -0.713
+   ],
+   "size": [
+    0.021,
+    0.831,
+    0.041
+   ],
+   "faces": 912
+  },
+  {
+   "id": "doors_0044",
+   "part": "doors",
+   "key": "tailgate",
+   "side": null,
+   "end": null,
+   "source": "Object_58",
+   "material": "930_chromes",
+   "center": [
+    1.955,
+    0.529,
+    0
+   ],
+   "size": [
+    0.029,
+    0.09,
+    0.905
+   ],
+   "faces": 416
+  },
+  {
+   "id": "doors_0045",
+   "part": "doors",
+   "key": "tailgate",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    1.96,
+    0.529,
+    0
+   ],
+   "size": [
+    0.037,
+    0.09,
+    0.905
+   ],
+   "faces": 384
+  },
+  {
+   "id": "body_0046",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.01,
+    0.832,
+    -0.681
+   ],
+   "size": [
+    0.925,
+    0.013,
+    0.04
+   ],
+   "faces": 325
+  },
+  {
+   "id": "body_0047",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.01,
+    0.832,
+    0.681
+   ],
+   "size": [
+    0.925,
+    0.013,
+    0.04
+   ],
+   "faces": 325
+  },
+  {
+   "id": "body_0048",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_44",
+   "material": "930_plastics",
+   "center": [
+    -1.365,
+    0.645,
+    0.504
+   ],
+   "size": [
+    1.216,
+    0.338,
+    0.2
+   ],
+   "faces": 54
+  },
+  {
+   "id": "body_0049",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_44",
+   "material": "930_plastics",
+   "center": [
+    -1.365,
+    0.645,
+    -0.504
+   ],
+   "size": [
+    1.215,
+    0.338,
+    0.2
+   ],
+   "faces": 54
+  },
+  {
+   "id": "body_0050",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.777,
+    0.97,
+    0.615
+   ],
+   "size": [
+    0.601,
+    0.289,
+    0.138
+   ],
+   "faces": 891
+  },
+  {
+   "id": "body_0051",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.777,
+    0.97,
+    -0.615
+   ],
+   "size": [
+    0.601,
+    0.289,
+    0.138
+   ],
+   "faces": 891
+  },
+  {
+   "id": "body_0052",
+   "part": "body",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "Object_55",
+   "material": "930_plastics",
+   "center": [
+    1.841,
+    0.866,
+    0
+   ],
+   "size": [
+    0.139,
+    0.029,
+    0.474
+   ],
+   "faces": 10684
+  },
+  {
+   "id": "body_0053",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "L",
+   "end": null,
+   "source": "Object_30",
+   "material": "930_chromes",
+   "center": [
+    1.896,
+    0.258,
+    0.333
+   ],
+   "size": [
+    0.146,
+    0.097,
+    0.605
+   ],
+   "faces": 1408
+  },
+  {
+   "id": "glass_0054",
+   "part": "glass",
+   "key": "glass.side",
+   "side": "L",
+   "end": "R",
+   "source": "Object_13",
+   "material": "glass",
+   "center": [
+    0.197,
+    0.982,
+    0.616
+   ],
+   "size": [
+    0.7,
+    0.326,
+    0.14
+   ],
+   "faces": 80
+  },
+  {
+   "id": "glass_0055",
+   "part": "glass",
+   "key": "glass.side",
+   "side": "R",
+   "end": "R",
+   "source": "Object_13",
+   "material": "glass",
+   "center": [
+    0.197,
+    0.982,
+    -0.616
+   ],
+   "size": [
+    0.7,
+    0.326,
+    0.14
+   ],
+   "faces": 80
+  },
+  {
+   "id": "body_0056",
+   "part": "body",
+   "key": "trim.lower",
+   "side": null,
+   "end": null,
+   "source": "Object_30",
+   "material": "930_chromes",
+   "center": [
+    1.87,
+    0.273,
+    -0.214
+   ],
+   "size": [
+    0.145,
+    0.148,
+    0.488
+   ],
+   "faces": 508
+  },
+  {
+   "id": "cabin_0057",
+   "part": "cabin",
+   "key": "interior",
+   "side": "L",
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    0.403,
+    0.867,
+    0.306
+   ],
+   "size": [
+    0.153,
+    0.354,
+    0.406
+   ],
+   "faces": 202
+  },
+  {
+   "id": "cabin_0058",
+   "part": "cabin",
+   "key": "interior",
+   "side": "R",
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    0.403,
+    0.867,
+    -0.306
+   ],
+   "size": [
+    0.153,
+    0.354,
+    0.406
+   ],
+   "faces": 202
+  },
+  {
+   "id": "glass_0059",
+   "part": "glass",
+   "key": "glass.side",
+   "side": "L",
+   "end": "R",
+   "source": "Object_13",
+   "material": "glass",
+   "center": [
+    0.777,
+    0.967,
+    0.607
+   ],
+   "size": [
+    0.545,
+    0.25,
+    0.106
+   ],
+   "faces": 120
+  },
+  {
+   "id": "glass_0060",
+   "part": "glass",
+   "key": "glass.side",
+   "side": "R",
+   "end": "R",
+   "source": "Object_13",
+   "material": "glass",
+   "center": [
+    0.777,
+    0.967,
+    -0.607
+   ],
+   "size": [
+    0.545,
+    0.25,
+    0.106
+   ],
+   "faces": 120
+  },
+  {
+   "id": "body_0061",
+   "part": "body",
+   "key": "trim.lower",
+   "side": null,
+   "end": null,
+   "source": "Object_0",
+   "material": "930_plastics",
+   "center": [
+    -2.046,
+    0.249,
+    0
+   ],
+   "size": [
+    0.053,
+    0.133,
+    0.464
+   ],
+   "faces": 328
+  },
+  {
+   "id": "body_0062",
+   "part": "body",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "Object_0",
+   "material": "930_plastics",
+   "center": [
+    2.051,
+    0.403,
+    0
+   ],
+   "size": [
+    0.014,
+    0.136,
+    0.464
+   ],
+   "faces": 328
+  },
+  {
+   "id": "glass_0063",
+   "part": "glass",
+   "key": "lens.rear",
+   "side": null,
+   "end": null,
+   "source": "Object_45",
+   "material": "930_lights",
+   "center": [
+    1.97,
+    0.528,
+    0
+   ],
+   "size": [
+    0.017,
+    0.068,
+    0.698
+   ],
+   "faces": 48
+  },
+  {
+   "id": "body_0064",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.563,
+    0.433,
+    0.841
+   ],
+   "size": [
+    0.381,
+    0.301,
+    0.143
+   ],
+   "faces": 208
+  },
+  {
+   "id": "body_0065",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.563,
+    0.433,
+    -0.841
+   ],
+   "size": [
+    0.381,
+    0.301,
+    0.143
+   ],
+   "faces": 208
+  },
+  {
+   "id": "body_0066",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_40",
+   "material": "930_plastics",
+   "center": [
+    1.29,
+    0.97,
+    0.343
+   ],
+   "size": [
+    0.389,
+    0.117,
+    0.221
+   ],
+   "faces": 331
+  },
+  {
+   "id": "body_0067",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    1.947,
+    0.41,
+    -0.602
+   ],
+   "size": [
+    0.224,
+    0.062,
+    0.293
+   ],
+   "faces": 1188
+  },
+  {
+   "id": "body_0068",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    1.947,
+    0.41,
+    0.602
+   ],
+   "size": [
+    0.224,
+    0.062,
+    0.293
+   ],
+   "faces": 1188
+  },
+  {
+   "id": "body_0069",
+   "part": "body",
+   "key": "plate",
+   "side": null,
+   "end": null,
+   "source": "Object_2",
+   "material": "plate",
+   "center": [
+    -2.05,
+    0.255,
+    0
+   ],
+   "size": [
+    0.041,
+    0.109,
+    0.451
+   ],
+   "faces": 268
+  },
+  {
+   "id": "body_0070",
+   "part": "body",
+   "key": "plate",
+   "side": null,
+   "end": null,
+   "source": "Object_2",
+   "material": "plate",
+   "center": [
+    2.054,
+    0.409,
+    0
+   ],
+   "size": [
+    0.009,
+    0.112,
+    0.451
+   ],
+   "faces": 268
+  },
+  {
+   "id": "glass_0071",
+   "part": "glass",
+   "key": "lens.rear",
+   "side": null,
+   "end": null,
+   "source": "Object_70",
+   "material": "930_lights",
+   "center": [
+    1.83,
+    0.529,
+    0.588
+   ],
+   "size": [
+    0.236,
+    0.079,
+    0.258
+   ],
+   "faces": 689
+  },
+  {
+   "id": "glass_0072",
+   "part": "glass",
+   "key": "lens.rear",
+   "side": null,
+   "end": null,
+   "source": "Object_70",
+   "material": "930_lights",
+   "center": [
+    1.83,
+    0.529,
+    -0.588
+   ],
+   "size": [
+    0.236,
+    0.079,
+    0.258
+   ],
+   "faces": 689
+  },
+  {
+   "id": "body_0073",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_26",
+   "material": "930_chromes",
+   "center": [
+    -1.793,
+    0.631,
+    0.638
+   ],
+   "size": [
+    0.148,
+    0.189,
+    0.198
+   ],
+   "faces": 1658
+  },
+  {
+   "id": "body_0074",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_26",
+   "material": "930_chromes",
+   "center": [
+    -1.793,
+    0.631,
+    -0.638
+   ],
+   "size": [
+    0.148,
+    0.189,
+    0.198
+   ],
+   "faces": 1658
+  },
+  {
+   "id": "body_0075",
+   "part": "body",
+   "key": "exterior",
+   "side": "L",
+   "end": null,
+   "source": "Object_60",
+   "material": "paint",
+   "center": [
+    -1.811,
+    0.628,
+    0.637
+   ],
+   "size": [
+    0.126,
+    0.223,
+    0.231
+   ],
+   "faces": 754
+  },
+  {
+   "id": "body_0076",
+   "part": "body",
+   "key": "exterior",
+   "side": "R",
+   "end": null,
+   "source": "Object_60",
+   "material": "paint",
+   "center": [
+    -1.811,
+    0.628,
+    -0.637
+   ],
+   "size": [
+    0.126,
+    0.223,
+    0.231
+   ],
+   "faces": 754
+  },
+  {
+   "id": "cabin_0077",
+   "part": "cabin",
+   "key": "interior",
+   "side": null,
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    -0.346,
+    0.846,
+    0.296
+   ],
+   "size": [
+    0.108,
+    0.176,
+    0.375
+   ],
+   "faces": 192
+  },
+  {
+   "id": "cabin_0078",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": null,
+   "end": null,
+   "source": "Object_36",
+   "material": "930_plastics",
+   "center": [
+    -0.716,
+    0.888,
+    0.005
+   ],
+   "size": [
+    0.115,
+    0.053,
+    0.344
+   ],
+   "faces": 339
+  },
+  {
+   "id": "body_0079",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    2.058,
+    0.38,
+    0.394
+   ],
+   "size": [
+    0.175,
+    0.206,
+    0.139
+   ],
+   "faces": 735
+  },
+  {
+   "id": "body_0080",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    2.058,
+    0.38,
+    -0.394
+   ],
+   "size": [
+    0.175,
+    0.206,
+    0.139
+   ],
+   "faces": 735
+  },
+  {
+   "id": "cabin_0081",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": "L",
+   "end": null,
+   "source": "Object_17",
+   "material": "930_plastics",
+   "center": [
+    -0.688,
+    0.88,
+    0.339
+   ],
+   "size": [
+    0.166,
+    0.036,
+    0.297
+   ],
+   "faces": 339
+  },
+  {
+   "id": "body_0082",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_38",
+   "material": "930_plastics",
+   "center": [
+    1.099,
+    1.009,
+    0.448
+   ],
+   "size": [
+    0.389,
+    0.148,
+    0.025
+   ],
+   "faces": 112
+  },
+  {
+   "id": "body_0083",
+   "part": "body",
+   "key": "mirror",
+   "side": "L",
+   "end": null,
+   "source": "Object_60",
+   "material": "paint",
+   "center": [
+    -0.492,
+    0.836,
+    0.853
+   ],
+   "size": [
+    0.101,
+    0.149,
+    0.187
+   ],
+   "faces": 1556
+  },
+  {
+   "id": "body_0084",
+   "part": "body",
+   "key": "mirror",
+   "side": "R",
+   "end": null,
+   "source": "Object_60",
+   "material": "paint",
+   "center": [
+    -0.492,
+    0.836,
+    -0.853
+   ],
+   "size": [
+    0.101,
+    0.149,
+    0.187
+   ],
+   "faces": 1545
+  },
+  {
+   "id": "cabin_0085",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": null,
+   "end": null,
+   "source": "Object_37",
+   "material": "930_plastics",
+   "center": [
+    -0.653,
+    0.891,
+    0.167
+   ],
+   "size": [
+    0.063,
+    0.022,
+    0.396
+   ],
+   "faces": 112
+  },
+  {
+   "id": "body_0086",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.474,
+    0.198,
+    0.805
+   ],
+   "size": [
+    0.289,
+    0.089,
+    0.173
+   ],
+   "faces": 214
+  },
+  {
+   "id": "body_0087",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.474,
+    0.198,
+    -0.805
+   ],
+   "size": [
+    0.289,
+    0.089,
+    0.173
+   ],
+   "faces": 214
+  },
+  {
+   "id": "glass_0088",
+   "part": "glass",
+   "key": "lens.front",
+   "side": null,
+   "end": null,
+   "source": "Object_69",
+   "material": "930_lights",
+   "center": [
+    -1.829,
+    0.631,
+    -0.638
+   ],
+   "size": [
+    0.099,
+    0.191,
+    0.201
+   ],
+   "faces": 416
+  },
+  {
+   "id": "glass_0089",
+   "part": "glass",
+   "key": "lens.front",
+   "side": null,
+   "end": null,
+   "source": "Object_69",
+   "material": "930_lights",
+   "center": [
+    -1.829,
+    0.631,
+    0.638
+   ],
+   "size": [
+    0.099,
+    0.191,
+    0.201
+   ],
+   "faces": 416
+  },
+  {
+   "id": "glass_0090",
+   "part": "glass",
+   "key": "glass.side",
+   "side": "L",
+   "end": "F",
+   "source": "Object_13",
+   "material": "glass",
+   "center": [
+    -0.245,
+    0.982,
+    0.62
+   ],
+   "size": [
+    0.366,
+    0.323,
+    0.137
+   ],
+   "faces": 31
+  },
+  {
+   "id": "glass_0091",
+   "part": "glass",
+   "key": "glass.side",
+   "side": "R",
+   "end": "F",
+   "source": "Object_13",
+   "material": "glass",
+   "center": [
+    -0.245,
+    0.982,
+    -0.62
+   ],
+   "size": [
+    0.366,
+    0.323,
+    0.137
+   ],
+   "faces": 31
+  },
+  {
+   "id": "glass_0092",
+   "part": "glass",
+   "key": "lens.front",
+   "side": null,
+   "end": null,
+   "source": "Object_51",
+   "material": "930_lights_refraction",
+   "center": [
+    -1.829,
+    0.631,
+    -0.638
+   ],
+   "size": [
+    0.098,
+    0.19,
+    0.2
+   ],
+   "faces": 416
+  },
+  {
+   "id": "glass_0093",
+   "part": "glass",
+   "key": "lens.front",
+   "side": null,
+   "end": null,
+   "source": "Object_51",
+   "material": "930_lights_refraction",
+   "center": [
+    -1.829,
+    0.631,
+    0.638
+   ],
+   "size": [
+    0.098,
+    0.19,
+    0.2
+   ],
+   "faces": 416
+  },
+  {
+   "id": "body_0094",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_38",
+   "material": "930_plastics",
+   "center": [
+    1.103,
+    1.02,
+    0.449
+   ],
+   "size": [
+    0.263,
+    0.102,
+    0.023
+   ],
+   "faces": 476
+  },
+  {
+   "id": "body_0095",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -1.728,
+    0.397,
+    0.785
+   ],
+   "size": [
+    0.17,
+    0.154,
+    0.068
+   ],
+   "faces": 1468
+  },
+  {
+   "id": "body_0096",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -1.728,
+    0.397,
+    -0.785
+   ],
+   "size": [
+    0.17,
+    0.154,
+    0.068
+   ],
+   "faces": 1468
+  },
+  {
+   "id": "cabin_0097",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": null,
+   "end": null,
+   "source": "Object_37",
+   "material": "930_plastics",
+   "center": [
+    -0.661,
+    0.902,
+    0.168
+   ],
+   "size": [
+    0.049,
+    0.024,
+    0.268
+   ],
+   "faces": 476
+  },
+  {
+   "id": "cabin_0098",
+   "part": "cabin",
+   "key": "interior",
+   "side": null,
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    1.84,
+    0.858,
+    0
+   ],
+   "size": [
+    0.114,
+    0.017,
+    0.453
+   ],
+   "faces": 30
+  },
+  {
+   "id": "body_0099",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_19",
+   "material": "930_chromes",
+   "center": [
+    1.814,
+    0.529,
+    0.645
+   ],
+   "size": [
+    0.199,
+    0.076,
+    0.131
+   ],
+   "faces": 464
+  },
+  {
+   "id": "body_0100",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_19",
+   "material": "930_chromes",
+   "center": [
+    1.814,
+    0.529,
+    -0.645
+   ],
+   "size": [
+    0.199,
+    0.076,
+    0.131
+   ],
+   "faces": 463
+  },
+  {
+   "id": "body_0101",
+   "part": "body",
+   "key": "mirror",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -0.446,
+    0.857,
+    -0.862
+   ],
+   "size": [
+    0.058,
+    0.113,
+    0.171
+   ],
+   "faces": 960
+  },
+  {
+   "id": "body_0102",
+   "part": "body",
+   "key": "mirror",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -0.446,
+    0.857,
+    0.862
+   ],
+   "size": [
+    0.058,
+    0.113,
+    0.171
+   ],
+   "faces": 960
+  },
+  {
+   "id": "body_0103",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -1.798,
+    0.625,
+    0.638
+   ],
+   "size": [
+    0.11,
+    0.219,
+    0.227
+   ],
+   "faces": 70
+  },
+  {
+   "id": "body_0104",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -1.798,
+    0.625,
+    -0.638
+   ],
+   "size": [
+    0.11,
+    0.219,
+    0.227
+   ],
+   "faces": 70
+  },
+  {
+   "id": "body_0105",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "R",
+   "end": null,
+   "source": "Object_22",
+   "material": "930_plastics",
+   "center": [
+    -2.049,
+    0.26,
+    -0.475
+   ],
+   "size": [
+    0.068,
+    0.09,
+    0.165
+   ],
+   "faces": 820
+  },
+  {
+   "id": "body_0106",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "L",
+   "end": null,
+   "source": "Object_22",
+   "material": "930_plastics",
+   "center": [
+    -2.049,
+    0.26,
+    0.475
+   ],
+   "size": [
+    0.068,
+    0.09,
+    0.165
+   ],
+   "faces": 820
+  },
+  {
+   "id": "doors_0107",
+   "part": "doors",
+   "key": "door.handle",
+   "side": "R",
+   "end": "R",
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.334,
+    0.715,
+    -0.805
+   ],
+   "size": [
+    0.191,
+    0.045,
+    0.038
+   ],
+   "faces": 505
+  },
+  {
+   "id": "doors_0108",
+   "part": "doors",
+   "key": "door.handle",
+   "side": "L",
+   "end": "R",
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.334,
+    0.715,
+    0.805
+   ],
+   "size": [
+    0.191,
+    0.045,
+    0.038
+   ],
+   "faces": 505
+  },
+  {
+   "id": "glass_0109",
+   "part": "glass",
+   "key": "lens.front",
+   "side": null,
+   "end": null,
+   "source": "Object_67",
+   "material": "930_lights",
+   "center": [
+    -2.002,
+    0.391,
+    -0.65
+   ],
+   "size": [
+    0.113,
+    0.055,
+    0.162
+   ],
+   "faces": 424
+  },
+  {
+   "id": "glass_0110",
+   "part": "glass",
+   "key": "lens.front",
+   "side": null,
+   "end": null,
+   "source": "Object_71",
+   "material": "930_lights",
+   "center": [
+    -2.002,
+    0.391,
+    0.65
+   ],
+   "size": [
+    0.113,
+    0.055,
+    0.162
+   ],
+   "faces": 424
+  },
+  {
+   "id": "body_0111",
+   "part": "body",
+   "key": "exterior",
+   "side": "L",
+   "end": null,
+   "source": "Object_31",
+   "material": "black",
+   "center": [
+    1.907,
+    0.256,
+    0.578
+   ],
+   "size": [
+    0.122,
+    0.09,
+    0.112
+   ],
+   "faces": 352
+  },
+  {
+   "id": "cabin_0112",
+   "part": "cabin",
+   "key": "interior",
+   "side": null,
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    -0.284,
+    1.104,
+    0.001
+   ],
+   "size": [
+    0.035,
+    0.069,
+    0.217
+   ],
+   "faces": 78
+  },
+  {
+   "id": "body_0113",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "R",
+   "end": null,
+   "source": "Object_30",
+   "material": "930_chromes",
+   "center": [
+    1.87,
+    0.27,
+    -0.307
+   ],
+   "size": [
+    0.15,
+    0.145,
+    0.028
+   ],
+   "faces": 102
+  },
+  {
+   "id": "body_0114",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -0.836,
+    0.206,
+    0.783
+   ],
+   "size": [
+    0.048,
+    0.135,
+    0.099
+   ],
+   "faces": 245
+  },
+  {
+   "id": "wheels_0115",
+   "part": "wheels",
+   "key": "wheel.part",
+   "side": "R",
+   "end": "F",
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -0.836,
+    0.206,
+    -0.783
+   ],
+   "size": [
+    0.048,
+    0.135,
+    0.099
+   ],
+   "faces": 245
+  },
+  {
+   "id": "body_0116",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "L",
+   "end": null,
+   "source": "Object_27",
+   "material": "930_chromes",
+   "center": [
+    -1.996,
+    0.392,
+    0.648
+   ],
+   "size": [
+    0.106,
+    0.049,
+    0.148
+   ],
+   "faces": 144
+  },
+  {
+   "id": "body_0117",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "R",
+   "end": null,
+   "source": "Object_27",
+   "material": "930_chromes",
+   "center": [
+    -1.996,
+    0.392,
+    -0.648
+   ],
+   "size": [
+    0.106,
+    0.049,
+    0.148
+   ],
+   "faces": 144
+  },
+  {
+   "id": "body_0118",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_59",
+   "material": "930_chromes",
+   "center": [
+    1.913,
+    0.528,
+    0.52
+   ],
+   "size": [
+    0.07,
+    0.076,
+    0.119
+   ],
+   "faces": 381
+  },
+  {
+   "id": "body_0119",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_59",
+   "material": "930_chromes",
+   "center": [
+    1.913,
+    0.528,
+    -0.52
+   ],
+   "size": [
+    0.07,
+    0.076,
+    0.119
+   ],
+   "faces": 381
+  },
+  {
+   "id": "body_0120",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.649,
+    0.224,
+    0.854
+   ],
+   "size": [
+    0.023,
+    0.133,
+    0.102
+   ],
+   "faces": 245
+  },
+  {
+   "id": "body_0121",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.649,
+    0.224,
+    -0.854
+   ],
+   "size": [
+    0.023,
+    0.133,
+    0.102
+   ],
+   "faces": 245
+  },
+  {
+   "id": "body_0122",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -1.869,
+    0.394,
+    0.761
+   ],
+   "size": [
+    0.153,
+    0.059,
+    0.08
+   ],
+   "faces": 162
+  },
+  {
+   "id": "body_0123",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -1.869,
+    0.394,
+    -0.761
+   ],
+   "size": [
+    0.153,
+    0.059,
+    0.08
+   ],
+   "faces": 162
+  },
+  {
+   "id": "glass_0124",
+   "part": "glass",
+   "key": "lens.rear",
+   "side": null,
+   "end": null,
+   "source": "Object_45",
+   "material": "930_lights",
+   "center": [
+    1.857,
+    0.529,
+    0.632
+   ],
+   "size": [
+    0.114,
+    0.073,
+    0.108
+   ],
+   "faces": 208
+  },
+  {
+   "id": "glass_0125",
+   "part": "glass",
+   "key": "lens.rear",
+   "side": null,
+   "end": null,
+   "source": "Object_45",
+   "material": "930_lights",
+   "center": [
+    1.857,
+    0.529,
+    -0.632
+   ],
+   "size": [
+    0.114,
+    0.073,
+    0.108
+   ],
+   "faces": 208
+  },
+  {
+   "id": "body_0126",
+   "part": "body",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "Object_32",
+   "material": "930_plastics",
+   "center": [
+    1.947,
+    0.627,
+    -0.006
+   ],
+   "size": [
+    0.025,
+    0.026,
+    0.142
+   ],
+   "faces": 509
+  },
+  {
+   "id": "body_0127",
+   "part": "body",
+   "key": "mirror",
+   "side": "L",
+   "end": null,
+   "source": "Object_61",
+   "material": "930_chromes",
+   "center": [
+    -0.443,
+    0.857,
+    0.859
+   ],
+   "size": [
+    0.036,
+    0.097,
+    0.148
+   ],
+   "faces": 138
+  },
+  {
+   "id": "body_0128",
+   "part": "body",
+   "key": "mirror",
+   "side": "R",
+   "end": null,
+   "source": "Object_61",
+   "material": "930_chromes",
+   "center": [
+    -0.443,
+    0.857,
+    -0.859
+   ],
+   "size": [
+    0.036,
+    0.097,
+    0.148
+   ],
+   "faces": 138
+  },
+  {
+   "id": "glass_0129",
+   "part": "glass",
+   "key": "lens.front",
+   "side": null,
+   "end": null,
+   "source": "Object_69",
+   "material": "930_lights",
+   "center": [
+    -2.066,
+    0.258,
+    -0.476
+   ],
+   "size": [
+    0.033,
+    0.082,
+    0.138
+   ],
+   "faces": 196
+  },
+  {
+   "id": "glass_0130",
+   "part": "glass",
+   "key": "lens.front",
+   "side": null,
+   "end": null,
+   "source": "Object_69",
+   "material": "930_lights",
+   "center": [
+    -2.066,
+    0.258,
+    0.476
+   ],
+   "size": [
+    0.033,
+    0.082,
+    0.138
+   ],
+   "faces": 196
+  },
+  {
+   "id": "body_0131",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_9",
+   "material": "930_stickers",
+   "center": [
+    1.871,
+    0.632,
+    -0.545
+   ],
+   "size": [
+    0.11,
+    0.06,
+    0.141
+   ],
+   "faces": 95
+  },
+  {
+   "id": "cabin_0132",
+   "part": "cabin",
+   "key": "interior",
+   "side": null,
+   "end": null,
+   "source": "Object_65",
+   "material": "930_wunderbaum",
+   "center": [
+    -0.294,
+    1.008,
+    -0.001
+   ],
+   "size": [
+    0.024,
+    0.093,
+    0.049
+   ],
+   "faces": 1924
+  },
+  {
+   "id": "glass_0133",
+   "part": "glass",
+   "key": "lens.front",
+   "side": null,
+   "end": null,
+   "source": "Object_12",
+   "material": "930_lights",
+   "center": [
+    -2.005,
+    0.391,
+    -0.653
+   ],
+   "size": [
+    0.104,
+    0.047,
+    0.152
+   ],
+   "faces": 66
+  },
+  {
+   "id": "glass_0134",
+   "part": "glass",
+   "key": "lens.front",
+   "side": null,
+   "end": null,
+   "source": "Object_12",
+   "material": "930_lights",
+   "center": [
+    -2.005,
+    0.391,
+    0.653
+   ],
+   "size": [
+    0.104,
+    0.047,
+    0.152
+   ],
+   "faces": 66
+  },
+  {
+   "id": "body_0135",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "L",
+   "end": null,
+   "source": "Object_23",
+   "material": "930_chromes",
+   "center": [
+    -2.051,
+    0.26,
+    0.475
+   ],
+   "size": [
+    0.042,
+    0.082,
+    0.138
+   ],
+   "faces": 112
+  },
+  {
+   "id": "body_0136",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "R",
+   "end": null,
+   "source": "Object_23",
+   "material": "930_chromes",
+   "center": [
+    -2.051,
+    0.26,
+    -0.475
+   ],
+   "size": [
+    0.042,
+    0.082,
+    0.138
+   ],
+   "faces": 112
+  },
+  {
+   "id": "cabin_0137",
+   "part": "cabin",
+   "key": "interior",
+   "side": "L",
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    -1.998,
+    0.392,
+    0.647
+   ],
+   "size": [
+    0.106,
+    0.057,
+    0.155
+   ],
+   "faces": 36
+  },
+  {
+   "id": "cabin_0138",
+   "part": "cabin",
+   "key": "interior",
+   "side": "R",
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    -1.998,
+    0.392,
+    -0.647
+   ],
+   "size": [
+    0.106,
+    0.057,
+    0.155
+   ],
+   "faces": 36
+  },
+  {
+   "id": "glass_0139",
+   "part": "glass",
+   "key": "lens.rear",
+   "side": null,
+   "end": null,
+   "source": "Object_70",
+   "material": "930_lights",
+   "center": [
+    2.017,
+    0.284,
+    0.507
+   ],
+   "size": [
+    0.031,
+    0.069,
+    0.086
+   ],
+   "faces": 448
+  },
+  {
+   "id": "body_0140",
+   "part": "body",
+   "key": "trim.lower",
+   "side": "L",
+   "end": null,
+   "source": "Object_21",
+   "material": "930_plastics",
+   "center": [
+    2.007,
+    0.285,
+    0.506
+   ],
+   "size": [
+    0.037,
+    0.069,
+    0.087
+   ],
+   "faces": 358
+  },
+  {
+   "id": "body_0141",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_38",
+   "material": "930_plastics",
+   "center": [
+    1.221,
+    0.968,
+    0.444
+   ],
+   "size": [
+    0.131,
+    0.054,
+    0.016
+   ],
+   "faces": 120
+  },
+  {
+   "id": "body_0142",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_38",
+   "material": "930_plastics",
+   "center": [
+    0.979,
+    1.057,
+    0.453
+   ],
+   "size": [
+    0.133,
+    0.048,
+    0.015
+   ],
+   "faces": 120
+  },
+  {
+   "id": "cabin_0143",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": null,
+   "end": null,
+   "source": "Object_37",
+   "material": "930_plastics",
+   "center": [
+    -0.639,
+    0.901,
+    0.291
+   ],
+   "size": [
+    0.031,
+    0.013,
+    0.135
+   ],
+   "faces": 120
+  },
+  {
+   "id": "cabin_0144",
+   "part": "cabin",
+   "key": "trim.interior",
+   "side": null,
+   "end": null,
+   "source": "Object_37",
+   "material": "930_plastics",
+   "center": [
+    -0.673,
+    0.89,
+    0.044
+   ],
+   "size": [
+    0.024,
+    0.019,
+    0.136
+   ],
+   "faces": 120
+  },
+  {
+   "id": "glass_0145",
+   "part": "glass",
+   "key": "lens.front",
+   "side": null,
+   "end": null,
+   "source": "Object_51",
+   "material": "930_lights_refraction",
+   "center": [
+    -2.07,
+    0.257,
+    -0.477
+   ],
+   "size": [
+    0.025,
+    0.075,
+    0.133
+   ],
+   "faces": 72
+  },
+  {
+   "id": "glass_0146",
+   "part": "glass",
+   "key": "lens.front",
+   "side": null,
+   "end": null,
+   "source": "Object_51",
+   "material": "930_lights_refraction",
+   "center": [
+    -2.07,
+    0.257,
+    0.477
+   ],
+   "size": [
+    0.025,
+    0.075,
+    0.133
+   ],
+   "faces": 72
+  },
+  {
+   "id": "glass_0147",
+   "part": "glass",
+   "key": "lens.rear",
+   "side": null,
+   "end": null,
+   "source": "Object_45",
+   "material": "930_lights",
+   "center": [
+    1.959,
+    0.528,
+    0.395
+   ],
+   "size": [
+    0.008,
+    0.061,
+    0.086
+   ],
+   "faces": 128
+  },
+  {
+   "id": "glass_0148",
+   "part": "glass",
+   "key": "lens.rear",
+   "side": null,
+   "end": null,
+   "source": "Object_45",
+   "material": "930_lights",
+   "center": [
+    1.959,
+    0.528,
+    -0.395
+   ],
+   "size": [
+    0.008,
+    0.061,
+    0.086
+   ],
+   "faces": 128
+  },
+  {
+   "id": "body_0149",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -0.502,
+    0.784,
+    0.773
+   ],
+   "size": [
+    0.086,
+    0.049,
+    0.028
+   ],
+   "faces": 124
+  },
+  {
+   "id": "body_0150",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -0.502,
+    0.784,
+    -0.773
+   ],
+   "size": [
+    0.086,
+    0.049,
+    0.028
+   ],
+   "faces": 124
+  },
+  {
+   "id": "body_0151",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_73",
+   "material": "930_stickers",
+   "center": [
+    -2.087,
+    0.438,
+    0.468
+   ],
+   "size": [
+    0.044,
+    0.025,
+    0.089
+   ],
+   "faces": 37
+  },
+  {
+   "id": "wheels_0152",
+   "part": "wheels",
+   "key": "rim",
+   "side": "L",
+   "end": "F",
+   "source": "Object_64",
+   "material": "930_rim",
+   "center": [
+    -1.22,
+    0.128,
+    0.859
+   ],
+   "size": [
+    0.064,
+    0.026,
+    0.037
+   ],
+   "faces": 56
+  },
+  {
+   "id": "body_0153",
+   "part": "body",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "Object_1",
+   "material": "930_stickers",
+   "center": [
+    -2.034,
+    0.191,
+    -0.004
+   ],
+   "size": [
+    0.006,
+    0.014,
+    0.296
+   ],
+   "faces": 10
+  },
+  {
+   "id": "body_0154",
+   "part": "body",
+   "key": "trim",
+   "side": "L",
+   "end": null,
+   "source": "Object_7",
+   "material": "930_stickers",
+   "center": [
+    0.629,
+    0.866,
+    0.644
+   ],
+   "size": [
+    0.17,
+    0.033,
+    0.022
+   ],
+   "faces": 10
+  },
+  {
+   "id": "body_0155",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_7",
+   "material": "930_stickers",
+   "center": [
+    0.582,
+    0.866,
+    -0.644
+   ],
+   "size": [
+    0.114,
+    0.033,
+    0.019
+   ],
+   "faces": 6
+  },
+  {
+   "id": "body_0156",
+   "part": "body",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "Object_8",
+   "material": "930_stickers",
+   "center": [
+    1.351,
+    0.946,
+    0
+   ],
+   "size": [
+    0.032,
+    0.012,
+    0.168
+   ],
+   "faces": 20
+  },
+  {
+   "id": "glass_0157",
+   "part": "glass",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_10",
+   "material": "930_lights",
+   "center": [
+    2.021,
+    0.283,
+    0.508
+   ],
+   "size": [
+    0.022,
+    0.061,
+    0.075
+   ],
+   "faces": 184
+  },
+  {
+   "id": "glass_0158",
+   "part": "glass",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_11",
+   "material": "930_lights",
+   "center": [
+    2.054,
+    0.409,
+    0.554
+   ],
+   "size": [
+    0.004,
+    0.027,
+    0.072
+   ],
+   "faces": 14
+  },
+  {
+   "id": "cabin_0159",
+   "part": "cabin",
+   "key": "interior",
+   "side": "L",
+   "end": null,
+   "source": "Object_14",
+   "material": "930_chromes",
+   "center": [
+    1.845,
+    0.528,
+    0.585
+   ],
+   "size": [
+    0.202,
+    0.01,
+    0.244
+   ],
+   "faces": 234
+  },
+  {
+   "id": "cabin_0160",
+   "part": "cabin",
+   "key": "interior",
+   "side": "R",
+   "end": null,
+   "source": "Object_14",
+   "material": "930_chromes",
+   "center": [
+    1.845,
+    0.528,
+    -0.585
+   ],
+   "size": [
+    0.202,
+    0.01,
+    0.244
+   ],
+   "faces": 234
+  },
+  {
+   "id": "body_0161",
+   "part": "body",
+   "key": "small",
+   "side": null,
+   "end": null,
+   "source": "Object_17",
+   "material": "930_plastics",
+   "center": [
+    -0.762,
+    0.866,
+    0.19
+   ],
+   "size": [
+    0.033,
+    0.038,
+    0.044
+   ],
+   "faces": 268
+  },
+  {
+   "id": "body_0162",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_20",
+   "material": "930_chromes",
+   "center": [
+    2.014,
+    0.284,
+    0.507
+   ],
+   "size": [
+    0.035,
+    0.06,
+    0.075
+   ],
+   "faces": 84
+  },
+  {
+   "id": "body_0163",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_21",
+   "material": "930_plastics",
+   "center": [
+    2.002,
+    0.32,
+    0.504
+   ],
+   "size": [
+    0.019,
+    0.029,
+    0.022
+   ],
+   "faces": 84
+  },
+  {
+   "id": "body_0164",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_22",
+   "material": "930_plastics",
+   "center": [
+    -2.006,
+    0.265,
+    0.492
+   ],
+   "size": [
+    0.051,
+    0.078,
+    0.091
+   ],
+   "faces": 800
+  },
+  {
+   "id": "body_0165",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_22",
+   "material": "930_plastics",
+   "center": [
+    -2.006,
+    0.265,
+    -0.492
+   ],
+   "size": [
+    0.051,
+    0.078,
+    0.091
+   ],
+   "faces": 800
+  },
+  {
+   "id": "body_0166",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_23",
+   "material": "930_chromes",
+   "center": [
+    -2.07,
+    0.257,
+    0.476
+   ],
+   "size": [
+    0.019,
+    0.008,
+    0.16
+   ],
+   "faces": 48
+  },
+  {
+   "id": "body_0167",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_23",
+   "material": "930_chromes",
+   "center": [
+    -2.07,
+    0.257,
+    -0.476
+   ],
+   "size": [
+    0.019,
+    0.008,
+    0.16
+   ],
+   "faces": 48
+  },
+  {
+   "id": "body_0168",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_26",
+   "material": "930_chromes",
+   "center": [
+    -1.794,
+    0.586,
+    0.638
+   ],
+   "size": [
+    0.144,
+    0.136,
+    0.037
+   ],
+   "faces": 194
+  },
+  {
+   "id": "body_0169",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_26",
+   "material": "930_chromes",
+   "center": [
+    -1.794,
+    0.586,
+    -0.638
+   ],
+   "size": [
+    0.144,
+    0.136,
+    0.037
+   ],
+   "faces": 194
+  },
+  {
+   "id": "cabin_0170",
+   "part": "cabin",
+   "key": "interior",
+   "side": "L",
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    -1.868,
+    0.516,
+    0.652
+   ],
+   "size": [
+    0.304,
+    0.292,
+    0.156
+   ],
+   "faces": 126
+  },
+  {
+   "id": "cabin_0171",
+   "part": "cabin",
+   "key": "interior",
+   "side": "R",
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    -1.868,
+    0.516,
+    -0.652
+   ],
+   "size": [
+    0.304,
+    0.292,
+    0.156
+   ],
+   "faces": 126
+  },
+  {
+   "id": "cabin_0172",
+   "part": "cabin",
+   "key": "interior",
+   "side": null,
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    -0.555,
+    0.987,
+    0
+   ],
+   "size": [
+    0.541,
+    0.328,
+    0.159
+   ],
+   "faces": 76
+  },
+  {
+   "id": "cabin_0173",
+   "part": "cabin",
+   "key": "interior",
+   "side": null,
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    -0.821,
+    0.827,
+    0.177
+   ],
+   "size": [
+    0.007,
+    0.015,
+    0.139
+   ],
+   "faces": 16
+  },
+  {
+   "id": "cabin_0174",
+   "part": "cabin",
+   "key": "interior",
+   "side": null,
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    -0.821,
+    0.827,
+    -0.177
+   ],
+   "size": [
+    0.007,
+    0.015,
+    0.139
+   ],
+   "faces": 16
+  },
+  {
+   "id": "cabin_0175",
+   "part": "cabin",
+   "key": "interior",
+   "side": null,
+   "end": null,
+   "source": "Object_28",
+   "material": "black",
+   "center": [
+    -0.286,
+    1.066,
+    0.001
+   ],
+   "size": [
+    0.007,
+    0.02,
+    0.02
+   ],
+   "faces": 8
+  },
+  {
+   "id": "body_0176",
+   "part": "body",
+   "key": "small",
+   "side": null,
+   "end": null,
+   "source": "Object_29",
+   "material": "930_plastics",
+   "center": [
+    -0.32,
+    1.14,
+    0.001
+   ],
+   "size": [
+    0.032,
+    0.022,
+    0.037
+   ],
+   "faces": 16
+  },
+  {
+   "id": "body_0177",
+   "part": "body",
+   "key": "small",
+   "side": null,
+   "end": null,
+   "source": "Object_33",
+   "material": "930_plastics",
+   "center": [
+    -1.901,
+    0.537,
+    0
+   ],
+   "size": [
+    0.055,
+    0.029,
+    0.048
+   ],
+   "faces": 40
+  },
+  {
+   "id": "body_0178",
+   "part": "body",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "Object_34",
+   "material": "930_stickers",
+   "center": [
+    -1.902,
+    0.538,
+    0
+   ],
+   "size": [
+    0.051,
+    0.026,
+    0.045
+   ],
+   "faces": 18
+  },
+  {
+   "id": "body_0179",
+   "part": "body",
+   "key": "small",
+   "side": null,
+   "end": null,
+   "source": "Object_35",
+   "material": "930_chromes",
+   "center": [
+    -0.28,
+    1.104,
+    0.001
+   ],
+   "size": [
+    0.025,
+    0.06,
+    0.207
+   ],
+   "faces": 14
+  },
+  {
+   "id": "body_0180",
+   "part": "body",
+   "key": "small",
+   "side": null,
+   "end": null,
+   "source": "Object_36",
+   "material": "930_plastics",
+   "center": [
+    -0.764,
+    0.865,
+    -0.17
+   ],
+   "size": [
+    0.029,
+    0.038,
+    0.044
+   ],
+   "faces": 268
+  },
+  {
+   "id": "body_0181",
+   "part": "body",
+   "key": "small",
+   "side": null,
+   "end": null,
+   "source": "Object_40",
+   "material": "930_plastics",
+   "center": [
+    1.481,
+    0.912,
+    0.236
+   ],
+   "size": [
+    0.037,
+    0.038,
+    0.035
+   ],
+   "faces": 268
+  },
+  {
+   "id": "body_0182",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_40",
+   "material": "930_plastics",
+   "center": [
+    -0.88,
+    1.643,
+    -0.694
+   ],
+   "size": [
+    0.005,
+    0.003,
+    0.005
+   ],
+   "faces": 108
+  },
+  {
+   "id": "body_0183",
+   "part": "body",
+   "key": "trim",
+   "side": null,
+   "end": null,
+   "source": "Object_1",
+   "material": "930_stickers",
+   "center": [
+    2.058,
+    0.344,
+    0.004
+   ],
+   "size": [
+    0.003,
+    0.015,
+    0.296
+   ],
+   "faces": 10
+  },
+  {
+   "id": "glass_0184",
+   "part": "glass",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_45",
+   "material": "930_lights",
+   "center": [
+    -0.806,
+    0.667,
+    0.815
+   ],
+   "size": [
+    0.042,
+    0.028,
+    0.006
+   ],
+   "faces": 18
+  },
+  {
+   "id": "glass_0185",
+   "part": "glass",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_45",
+   "material": "930_lights",
+   "center": [
+    1.85,
+    0.528,
+    -0.573
+   ],
+   "size": [
+    0.195,
+    0.073,
+    0.224
+   ],
+   "faces": 610
+  },
+  {
+   "id": "glass_0186",
+   "part": "glass",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_45",
+   "material": "930_lights",
+   "center": [
+    1.85,
+    0.528,
+    0.573
+   ],
+   "size": [
+    0.195,
+    0.073,
+    0.224
+   ],
+   "faces": 610
+  },
+  {
+   "id": "glass_0187",
+   "part": "glass",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_45",
+   "material": "930_lights",
+   "center": [
+    -0.806,
+    0.667,
+    -0.815
+   ],
+   "size": [
+    0.042,
+    0.028,
+    0.006
+   ],
+   "faces": 18
+  },
+  {
+   "id": "body_0188",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_46",
+   "material": "930_chromes",
+   "center": [
+    -0.805,
+    0.665,
+    0.807
+   ],
+   "size": [
+    0.042,
+    0.03,
+    0.006
+   ],
+   "faces": 58
+  },
+  {
+   "id": "body_0189",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_46",
+   "material": "930_chromes",
+   "center": [
+    -0.805,
+    0.665,
+    -0.807
+   ],
+   "size": [
+    0.042,
+    0.03,
+    0.006
+   ],
+   "faces": 58
+  },
+  {
+   "id": "body_0190",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_50",
+   "material": "930_chromes",
+   "center": [
+    0.404,
+    0.719,
+    0.81
+   ],
+   "size": [
+    0.018,
+    0.018,
+    0.006
+   ],
+   "faces": 78
+  },
+  {
+   "id": "body_0191",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_50",
+   "material": "930_chromes",
+   "center": [
+    0.404,
+    0.719,
+    -0.81
+   ],
+   "size": [
+    0.018,
+    0.018,
+    0.006
+   ],
+   "faces": 78
+  },
+  {
+   "id": "glass_0192",
+   "part": "glass",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_52",
+   "material": "930_lights",
+   "center": [
+    -1.744,
+    0.623,
+    0.639
+   ],
+   "size": [
+    0.051,
+    0.044,
+    0.019
+   ],
+   "faces": 200
+  },
+  {
+   "id": "glass_0193",
+   "part": "glass",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_52",
+   "material": "930_lights",
+   "center": [
+    -1.744,
+    0.623,
+    -0.639
+   ],
+   "size": [
+    0.051,
+    0.044,
+    0.019
+   ],
+   "faces": 200
+  },
+  {
+   "id": "body_0194",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_53",
+   "material": "930_chromes",
+   "center": [
+    -1.998,
+    0.392,
+    0.652
+   ],
+   "size": [
+    0.098,
+    0.009,
+    0.139
+   ],
+   "faces": 24
+  },
+  {
+   "id": "body_0195",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_53",
+   "material": "930_chromes",
+   "center": [
+    -1.998,
+    0.392,
+    -0.652
+   ],
+   "size": [
+    0.098,
+    0.009,
+    0.139
+   ],
+   "faces": 24
+  },
+  {
+   "id": "body_0196",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_54",
+   "material": "930_chromes",
+   "center": [
+    -1.971,
+    0.393,
+    0.633
+   ],
+   "size": [
+    0.033,
+    0.029,
+    0.033
+   ],
+   "faces": 56
+  },
+  {
+   "id": "body_0197",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_54",
+   "material": "930_chromes",
+   "center": [
+    -1.971,
+    0.393,
+    -0.633
+   ],
+   "size": [
+    0.033,
+    0.029,
+    0.033
+   ],
+   "faces": 56
+  },
+  {
+   "id": "body_0198",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    1.843,
+    0.526,
+    0.603
+   ],
+   "size": [
+    0.172,
+    0.066,
+    0.134
+   ],
+   "faces": 124
+  },
+  {
+   "id": "body_0199",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -1.892,
+    0.546,
+    0.651
+   ],
+   "size": [
+    0.245,
+    0.198,
+    0.044
+   ],
+   "faces": 632
+  },
+  {
+   "id": "body_0200",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -0.668,
+    0.757,
+    0.489
+   ],
+   "size": [
+    0.322,
+    0.218,
+    0.65
+   ],
+   "faces": 337
+  },
+  {
+   "id": "body_0201",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.201,
+    0.441,
+    0.75
+   ],
+   "size": [
+    0.133,
+    0.577,
+    0.093
+   ],
+   "faces": 336
+  },
+  {
+   "id": "body_0202",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    2.108,
+    0.417,
+    -0.342
+   ],
+   "size": [
+    0.033,
+    0.055,
+    0.017
+   ],
+   "faces": 474
+  },
+  {
+   "id": "body_0203",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    1.843,
+    0.526,
+    -0.603
+   ],
+   "size": [
+    0.172,
+    0.066,
+    0.134
+   ],
+   "faces": 124
+  },
+  {
+   "id": "body_0204",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -1.892,
+    0.546,
+    -0.651
+   ],
+   "size": [
+    0.245,
+    0.198,
+    0.044
+   ],
+   "faces": 632
+  },
+  {
+   "id": "body_0205",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -0.668,
+    0.757,
+    -0.489
+   ],
+   "size": [
+    0.322,
+    0.218,
+    0.65
+   ],
+   "faces": 337
+  },
+  {
+   "id": "body_0206",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.201,
+    0.441,
+    -0.75
+   ],
+   "size": [
+    0.133,
+    0.577,
+    0.093
+   ],
+   "faces": 336
+  },
+  {
+   "id": "body_0207",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    2.108,
+    0.417,
+    0.342
+   ],
+   "size": [
+    0.033,
+    0.055,
+    0.017
+   ],
+   "faces": 474
+  },
+  {
+   "id": "body_0208",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.527,
+    0.944,
+    0.478
+   ],
+   "size": [
+    0.427,
+    0.473,
+    0.668
+   ],
+   "faces": 68
+  },
+  {
+   "id": "body_0209",
+   "part": "body",
+   "key": "small",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -0.205,
+    1.226,
+    0
+   ],
+   "size": [
+    0.006,
+    0.004,
+    0.037
+   ],
+   "faces": 48
+  },
+  {
+   "id": "body_0210",
+   "part": "body",
+   "key": "small",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    -0.724,
+    0.855,
+    0
+   ],
+   "size": [
+    0.006,
+    0.005,
+    0.04
+   ],
+   "faces": 48
+  },
+  {
+   "id": "body_0211",
+   "part": "body",
+   "key": "small",
+   "side": null,
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.751,
+    1.176,
+    0
+   ],
+   "size": [
+    0.019,
+    0.017,
+    0.277
+   ],
+   "faces": 116
+  },
+  {
+   "id": "body_0212",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_56",
+   "material": "930_plastics",
+   "center": [
+    0.527,
+    0.944,
+    -0.478
+   ],
+   "size": [
+    0.427,
+    0.473,
+    0.668
+   ],
+   "faces": 68
+  },
+  {
+   "id": "body_0213",
+   "part": "body",
+   "key": "small",
+   "side": null,
+   "end": null,
+   "source": "Object_57",
+   "material": "930_chromes",
+   "center": [
+    1.382,
+    0.94,
+    0
+   ],
+   "size": [
+    0.012,
+    0.006,
+    0.039
+   ],
+   "faces": 112
+  },
+  {
+   "id": "body_0214",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_59",
+   "material": "930_chromes",
+   "center": [
+    1.769,
+    0.528,
+    0.682
+   ],
+   "size": [
+    0.047,
+    0.011,
+    0.023
+   ],
+   "faces": 38
+  },
+  {
+   "id": "body_0215",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_59",
+   "material": "930_chromes",
+   "center": [
+    1.769,
+    0.528,
+    -0.682
+   ],
+   "size": [
+    0.047,
+    0.011,
+    0.023
+   ],
+   "faces": 38
+  },
+  {
+   "id": "cabin_0216",
+   "part": "cabin",
+   "key": "interior",
+   "side": null,
+   "end": null,
+   "source": "Object_65",
+   "material": "930_wunderbaum",
+   "center": [
+    -0.295,
+    1.079,
+    -0.002
+   ],
+   "size": [
+    0.008,
+    0.068,
+    0.026
+   ],
+   "faces": 256
+  },
+  {
+   "id": "glass_0217",
+   "part": "glass",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_66",
+   "material": "930_lights",
+   "center": [
+    2.054,
+    0.409,
+    -0.554
+   ],
+   "size": [
+    0.004,
+    0.027,
+    0.072
+   ],
+   "faces": 14
+  },
+  {
+   "id": "glass_0218",
+   "part": "glass",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_67",
+   "material": "930_lights",
+   "center": [
+    -0.805,
+    0.666,
+    -0.813
+   ],
+   "size": [
+    0.047,
+    0.033,
+    0.012
+   ],
+   "faces": 138
+  },
+  {
+   "id": "body_0219",
+   "part": "body",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_68",
+   "material": "black",
+   "center": [
+    2.053,
+    0.409,
+    0.554
+   ],
+   "size": [
+    0.006,
+    0.029,
+    0.073
+   ],
+   "faces": 46
+  },
+  {
+   "id": "body_0220",
+   "part": "body",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_68",
+   "material": "black",
+   "center": [
+    2.053,
+    0.409,
+    -0.554
+   ],
+   "size": [
+    0.006,
+    0.029,
+    0.073
+   ],
+   "faces": 46
+  },
+  {
+   "id": "glass_0221",
+   "part": "glass",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_70",
+   "material": "930_lights",
+   "center": [
+    2.054,
+    0.409,
+    0.554
+   ],
+   "size": [
+    0.005,
+    0.029,
+    0.073
+   ],
+   "faces": 46
+  },
+  {
+   "id": "glass_0222",
+   "part": "glass",
+   "key": "small",
+   "side": "R",
+   "end": null,
+   "source": "Object_70",
+   "material": "930_lights",
+   "center": [
+    2.054,
+    0.409,
+    -0.554
+   ],
+   "size": [
+    0.005,
+    0.029,
+    0.073
+   ],
+   "faces": 46
+  },
+  {
+   "id": "glass_0223",
+   "part": "glass",
+   "key": "small",
+   "side": "L",
+   "end": null,
+   "source": "Object_71",
+   "material": "930_lights",
+   "center": [
+    -0.805,
+    0.666,
+    0.813
+   ],
+   "size": [
+    0.047,
+    0.033,
+    0.012
+   ],
+   "faces": 138
+  },
+  {
+   "id": "body_0224",
+   "part": "body",
+   "key": "trim",
+   "side": "R",
+   "end": null,
+   "source": "Object_72",
+   "material": "930_stickers",
+   "center": [
+    1.949,
+    0.601,
+    -0.349
+   ],
+   "size": [
+    0.026,
+    0.03,
+    0.096
+   ],
+   "faces": 8
+  }
+ ]
+}

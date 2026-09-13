@@ -1,0 +1,68 @@
+{
+  "id": "porsche-911-930",
+  "brand": "Porsche",
+  "name": "911 Turbo (930)",
+  "type": "car",
+  "year": "1975",
+  "tagline": {
+    "vi": "Xe thể thao động cơ sau, tăng áp, làm mát bằng gió",
+    "en": "Rear-engined, turbocharged, air-cooled sports car"
+  },
+  "powertrain": "ice",
+  "dimensions": {
+    "length": 4.291,
+    "width": 1.775,
+    "height": 1.31,
+    "wheelbase": 2.272,
+    "track": 1.47
+  },
+  "attribution": {
+    "title": "FREE 1975 Porsche 911 (930) Turbo",
+    "creator": "Lionsharp Studios",
+    "creatorUrl": "https://sketchfab.com/lionsharp",
+    "source": "https://sketchfab.com/3d-models/free-1975-porsche-911-930-turbo-8568d9d14a994b9cae59499f0dbed21e",
+    "license": "CC BY 4.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "pipeline": {
+    "simplify": null,
+    "textures": 1024,
+    "flip": false,
+    "maxPieces": 400,
+    "ignore": [
+      "object_74",
+      "coat"
+    ],
+    "hints": [
+      {
+        "match": "wunderbaum",
+        "part": "cabin",
+        "key": "interior"
+      },
+      {
+        "match": "sticker",
+        "part": "body",
+        "key": "trim"
+      },
+      {
+        "match": "object_28",
+        "part": "cabin",
+        "key": "interior"
+      },
+      {
+        "match": "object_25",
+        "part": "body",
+        "key": "antenna"
+      }
+    ]
+  },
+  "systemFallback": {
+    "brakes": "wheels",
+    "exhaust": "engine",
+    "battery": "engine"
+  },
+  "links": {
+    "specs": "https://www.porsche.com/international/accessoriesandservice/classic/models/911-1974-1989/",
+    "manual": "https://www.porsche.com/international/accessoriesandservice/classic/"
+  }
+}

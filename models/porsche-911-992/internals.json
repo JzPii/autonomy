@@ -1,0 +1,20 @@
+{
+  "shapes": [
+    { "system": "engine", "shape": "box", "size": [0.6, 0.36, 0.8], "at": [1.6, 0.4, 0], "material": "silver", "radius": 0.05 },
+    { "system": "engine", "shape": "box", "size": [0.5, 0.22, 0.24], "at": [1.6, 0.38, 0.52], "material": "dark", "radius": 0.03, "mirror": "z" },
+    { "system": "engine", "shape": "cylinder", "axis": "x", "radius": 0.1, "length": 0.26, "at": [1.85, 0.3, 0.42], "material": "copper", "mirror": "z" },
+    { "system": "engine", "shape": "box", "size": [0.34, 0.12, 0.56], "at": [1.62, 0.64, 0], "material": "dark", "radius": 0.02 },
+    { "system": "engine", "shape": "tube", "radius": 0.03, "points": [[1.85, 0.26, 0.4], [2.05, 0.2, 0.3], [2.2, 0.2, 0.25]], "material": "silver", "mirror": "z" },
+    { "system": "drivetrain", "shape": "box", "size": [0.7, 0.32, 0.4], "at": [0.95, 0.35, 0], "material": "dark", "radius": 0.05 },
+    { "system": "drivetrain", "shape": "cylinder", "axis": "z", "radius": 0.035, "length": 1.2, "at": [1.15, 0.3, 0], "material": "silver" },
+    { "system": "drivetrain", "shape": "cylinder", "axis": "x", "radius": 0.03, "length": 2.2, "at": [-0.15, 0.25, 0.05], "material": "silver" },
+    { "system": "drivetrain", "shape": "box", "size": [0.3, 0.24, 0.3], "at": [-1.25, 0.3, 0], "material": "dark", "radius": 0.04 },
+    { "system": "drivetrain", "shape": "cylinder", "axis": "z", "radius": 0.03, "length": 1.2, "at": [-1.25, 0.28, 0], "material": "silver" },
+    { "system": "fuel", "shape": "box", "size": [0.5, 0.26, 0.95], "at": [-1.35, 0.42, 0], "material": "silver", "radius": 0.07 },
+    { "system": "fuel", "shape": "tube", "radius": 0.014, "points": [[-1.1, 0.32, 0.35], [0.2, 0.18, 0.55], [1.4, 0.26, 0.4]], "material": "copper" },
+    { "system": "suspension", "shape": "cylinder", "axis": "y", "radius": 0.06, "length": 0.44, "at": [-1.25, 0.52, 0.68], "material": "silver", "mirror": "xz" },
+    { "system": "suspension", "shape": "torus", "radius": 0.085, "tube": 0.02, "at": [-1.25, 0.42, 0.68], "material": "dark", "stack": { "count": 5, "step": 0.045 }, "mirror": "xz" },
+    { "system": "suspension", "shape": "tube", "radius": 0.022, "points": [[-1.05, 0.28, 0.35], [-1.25, 0.27, 0.78]], "material": "silver", "mirror": "xz" },
+    { "system": "suspension", "shape": "tube", "radius": 0.022, "points": [[-1.45, 0.28, 0.35], [-1.25, 0.27, 0.78]], "material": "silver", "mirror": "xz" }
+  ]
+}

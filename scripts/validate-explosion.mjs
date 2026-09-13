@@ -1,11 +1,11 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import * as THREE from 'three';
-import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
+import {loadGLB} from './lib/load-glb.mjs';
 import {createExplosionLayout,layoutCenter,overviewDirection} from '../app/explosion-layout.ts';
-const manifest=JSON.parse(fs.readFileSync('public/models/vf9-manifest.json','utf8'));
-const bytes=fs.readFileSync('public/models/'+manifest.file);
-const asset=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');
+const id=process.argv[2];if(!id){console.error('usage: validate-explosion.mjs <id>');process.exit(1)}
+const manifest=JSON.parse(fs.readFileSync(`public/models/${id}/manifest.json`,'utf8'));
+const {asset}=await loadGLB(`public/models/${id}/${manifest.file}`);
 asset.scene.updateMatrixWorld(true);
 const input=[];
 asset.scene.traverse(o=>{if(o.userData.component)input.push({id:o.userData.component,part:o.userData.part,bounds:new THREE.Box3().setFromObject(o)});});
@@ -24,4 +24,4 @@ for(const aspect of [.7,1.3,2]){
   assert(Math.abs(projected.x)<1&&Math.abs(projected.y)<1&&projected.z<1,`Piece ${p.id} outside view at ${aspect}`);
  }}
 }
-console.log(`Validated ${slots.length} distinct, non-overlapping projected slots; full model fits at three viewport proportions.`);
+console.log(`${id}: ${slots.length} distinct, non-overlapping projected slots; fits at three viewport proportions.`);

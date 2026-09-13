@@ -1,0 +1,21 @@
+{
+  "shapes": [
+    { "system": "engine", "shape": "box", "size": [0.62, 0.34, 0.78], "at": [1.5, 0.42, 0], "material": "silver", "radius": 0.05 },
+    { "system": "engine", "shape": "box", "size": [0.5, 0.2, 0.22], "at": [1.5, 0.4, 0.5], "material": "dark", "radius": 0.03, "mirror": "z" },
+    { "system": "engine", "shape": "box", "size": [0.44, 0.012, 0.2], "at": [1.5, 0.3, 0.5], "material": "silver", "radius": 0.003, "stack": { "count": 8, "step": 0.03 }, "mirror": "z" },
+    { "system": "engine", "shape": "cylinder", "axis": "x", "radius": 0.19, "length": 0.08, "at": [1.28, 0.62, 0], "material": "dark" },
+    { "system": "engine", "shape": "box", "size": [0.3, 0.14, 0.5], "at": [1.55, 0.64, 0], "material": "silver", "radius": 0.02 },
+    { "system": "engine", "shape": "cylinder", "axis": "x", "radius": 0.09, "length": 0.22, "at": [1.72, 0.33, -0.36], "material": "copper" },
+    { "system": "engine", "shape": "tube", "radius": 0.028, "points": [[1.72, 0.3, -0.3], [1.9, 0.22, -0.2], [2.05, 0.2, -0.25]], "material": "silver" },
+    { "system": "drivetrain", "shape": "box", "size": [0.58, 0.3, 0.34], "at": [0.86, 0.36, 0], "material": "dark", "radius": 0.05 },
+    { "system": "drivetrain", "shape": "cylinder", "axis": "z", "radius": 0.035, "length": 1.1, "at": [0.95, 0.3, 0], "material": "silver" },
+    { "system": "drivetrain", "shape": "cylinder", "axis": "x", "radius": 0.03, "length": 0.7, "at": [0.3, 0.42, 0], "material": "dark" },
+    { "system": "fuel", "shape": "box", "size": [0.55, 0.26, 0.95], "at": [-1.45, 0.4, 0], "material": "silver", "radius": 0.07 },
+    { "system": "fuel", "shape": "tube", "radius": 0.014, "points": [[-1.2, 0.3, 0.3], [0, 0.18, 0.5], [1.3, 0.25, 0.35]], "material": "copper" },
+    { "system": "suspension", "shape": "cylinder", "axis": "y", "radius": 0.055, "length": 0.42, "at": [-0.95, 0.5, 0.62], "material": "silver", "mirror": "z" },
+    { "system": "suspension", "shape": "cylinder", "axis": "x", "radius": 0.02, "length": 0.9, "at": [-0.5, 0.28, 0.62], "material": "dark", "mirror": "z" },
+    { "system": "suspension", "shape": "cylinder", "axis": "z", "radius": 0.02, "length": 1.35, "at": [0.7, 0.3, 0], "material": "dark" },
+    { "system": "suspension", "shape": "tube", "radius": 0.022, "points": [[0.7, 0.3, 0.45], [0.92, 0.28, 0.62]], "material": "silver", "mirror": "z" },
+    { "system": "suspension", "shape": "cylinder", "axis": "y", "radius": 0.05, "length": 0.36, "at": [0.95, 0.5, 0.6], "material": "silver", "mirror": "z" }
+  ]
+}

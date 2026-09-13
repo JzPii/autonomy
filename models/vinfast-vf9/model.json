@@ -1,0 +1,24 @@
+{
+  "id": "vinfast-vf9",
+  "brand": "VinFast",
+  "name": "VF 9",
+  "type": "car",
+  "year": "2023–",
+  "tagline": { "vi": "SUV điện 7 chỗ cỡ lớn", "en": "Full-size 7-seat electric SUV" },
+  "powertrain": "ev",
+  "dimensions": { "length": 5.118, "width": 1.998, "height": 1.696, "wheelbase": 3.15, "track": 1.65 },
+  "attribution": {
+    "title": "Vinfast VF9 model (no interior)",
+    "creator": "Giang Trần",
+    "creatorUrl": "https://sketchfab.com/giangtnh2206",
+    "source": "https://sketchfab.com/3d-models/vinfast-vf9-model-no-interior-cac6cb95b9084d0abee37dccb46fa10b",
+    "license": "CC BY 4.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by/4.0/"
+  },
+  "pipeline": { "simplify": 0.35, "textures": null, "flip": false, "maxPieces": 500, "ignore": [], "hints": [] },
+  "systemFallback": { "brakes": "wheels", "exhaust": "body", "engine": "body" },
+  "links": {
+    "specs": "https://vinfastauto.com/vn_vi/thong-so-ky-thuat-vinfast-vf9",
+    "manual": "https://om.vinfastauto.com/"
+  }
+}

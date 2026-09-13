@@ -1,0 +1,43 @@
+{
+  "systems": [
+    { "id": "body", "name": "Thân xe & kết cấu", "category": "Ngoại thất", "tag": "LỚP VỎ BẢO VỆ", "explode": [0, 0.6, 0], "anchor": [-1.9, 1.02, 0.2],
+      "description": "Thân xe gắn kết mọi thứ lại với nhau: khoang hành khách kín, vùng hấp thụ lực va chạm ở hai đầu và bề mặt ngoại thất liền mạch dẫn luồng không khí bao quanh xe.",
+      "principle": "Kết cấu chịu lực dẫn tải trọng vòng quanh khoang lái. VF 9 dài hơn 5,1 m, thuộc phân khúc SUV cỡ E, với nắp ca-pô che khoang trước và cửa cốp mở về khoang hành lý sau hàng ghế thứ ba.",
+      "specs": [["Vai trò", "Kết cấu & bảo vệ"], ["Dài × rộng × cao", "5.118 × 1.998 × 1.696 mm"], ["Chiều dài cơ sở", "3.150 mm"]], "source": "specs" },
+    { "id": "glass", "name": "Kính & cửa sổ trời", "category": "Ngoại thất", "tag": "TẦM NHÌN RỘNG MỞ", "explode": [0, 2, 0], "anchor": [0.15, 1.94, 0],
+      "description": "Kính chắn gió, kính bên và tấm kính trần toàn cảnh mở khoang lái ra với không gian bên ngoài, tạo cảm giác rộng rãi cho cả ba hàng ghế.",
+      "principle": "Kính chắn gió và kính bên tạo tầm quan sát quanh xe. Cửa sổ trời toàn cảnh trên phiên bản cao cấp trải dài phần lớn trần xe; lớp kính tối màu trong mô hình chỉ là vật liệu dựng hình.",
+      "specs": [["Vai trò", "Tầm nhìn & bao kín"], ["Vị trí", "Phần trên khoang lái"]], "source": "specs" },
+    { "id": "doors", "name": "Cửa xe & cửa cốp", "category": "Ngoại thất", "tag": "LỐI VÀO BA HÀNG GHẾ", "explode": [0, 1.1, 0], "anchor": [0.25, 1.44, 1.05],
+      "description": "Bốn cửa bản lề truyền thống mở vào ba hàng ghế; cửa cốp phía sau mở lên cao để lấy hành lý. Tay nắm cửa ẩn phẳng với thân xe khi di chuyển.",
+      "principle": "Mỗi cửa là một cụm gồm tấm vỏ ngoài, kính, khóa, gioăng và ốp nội thất. Cửa cốp đóng mở điện, có thể điều khiển từ chìa khóa hoặc màn hình trung tâm.",
+      "specs": [["Kiểu mở", "Bản lề truyền thống"], ["Cửa cốp", "Đóng mở điện"], ["Tay nắm", "Ẩn, tự bật"]], "source": "manual" },
+    { "id": "cabin", "name": "Khoang hành khách", "category": "Nội thất", "tag": "XÂY QUANH CON NGƯỚI", "explode": [0, 0.7, 0], "anchor": [0.05, 1.05, -0.4],
+      "description": "Khoang hành khách nằm trên khối pin, gồm ba hàng ghế cho 6 hoặc 7 người, màn hình trung tâm 15,6 inch và hệ thống điều khiển hằng ngày của người lái.",
+      "principle": "Sàn phẳng của nền tảng xe điện cho phép nhiều cấu hình ghế: 7 chỗ với hàng giữa ba ghế, hoặc 6 chỗ với hai ghế thương gia. Mô hình nguồn không có nội thất chi tiết, nên phần này chỉ mang tính tham khảo.",
+      "specs": [["Số chỗ", "6 hoặc 7"], ["Màn hình trung tâm", "15,6 inch"], ["Vị trí", "Phía trên khối pin"]], "source": "specs" },
+    { "id": "battery", "name": "Pin cao áp", "category": "Năng lượng", "tag": "NỀN TẢNG NĂNG LƯỢNG", "illustrative": true, "explode": [0, -0.85, 0], "anchor": [0.1, 0.24, 1.02],
+      "description": "Khối pin lithium-ion làm mát bằng chất lỏng lưu trữ năng lượng cho toàn bộ xe. Đặt dưới sàn khoang lái, pin cấp điện cho hai động cơ điện.",
+      "principle": "Khi tăng tốc, điện năng chảy từ pin tới động cơ. Khi phanh tái sinh, động cơ đảo vai trò thành máy phát, chuyển động năng của xe trở lại thành điện nạp vào pin.",
+      "specs": [["Dung lượng", "123 kWh"], ["Tầm hoạt động", "tới 580 km (công bố NEDC)"], ["Hóa học", "Lithium-ion, làm mát chất lỏng"]], "source": "specs" },
+    { "id": "drive", "name": "Động cơ điện", "category": "Hệ truyền động", "tag": "TỪ ĐIỆN THÀNH CHUYỂN ĐỘNG", "illustrative": true, "explode": [0, -0.18, 0], "anchor": [-1.58, 0.57, 0.2],
+      "description": "Hai động cơ điện biến năng lượng lưu trữ thành mô-men xoắn tại bánh xe. Một động cơ đặt ở cầu trước, một ở cầu sau, tạo hệ dẫn động bốn bánh toàn thời gian.",
+      "principle": "Bộ biến tần điều khiển từng động cơ; hộp giảm tốc một cấp truyền chuyển động quay tới bánh xe. Động cơ cũng giúp giảm tốc thông qua phanh tái sinh.",
+      "specs": [["Bố trí", "Trước + sau, AWD"], ["Công suất tối đa", "300 kW (402 mã lực)"], ["Mô-men xoắn", "620 Nm"], ["Hộp số", "Một cấp"]], "source": "specs" },
+    { "id": "suspension", "name": "Hệ thống treo khí nén", "category": "Khung gầm", "tag": "KẾT NỐI VỚI MẶT ĐƯỚNG", "illustrative": true, "explode": [0, 0.08, 0], "anchor": [1.58, 0.83, -0.83],
+      "description": "Bầu hơi khí nén nâng đỡ thân xe, giảm chấn điện tử kiểm soát dao động. Hệ thống có thể thay đổi độ cao gầm và cách xe phản ứng với mặt đường.",
+      "principle": "Treo trước tay đòn kép và treo sau đa liên kết dẫn hướng từng bánh. Áp suất khí quyết định độ cao, còn lực giảm chấn cân bằng giữa êm ái và ổn định. Cấu hình khí nén có trên phiên bản cao cấp.",
+      "specs": [["Lò xo", "Khí nén (bản cao cấp)"], ["Giảm chấn", "Điện tử thích ứng"], ["Độ cao gầm", "Điều chỉnh được"]], "source": "specs" },
+    { "id": "wheels", "name": "Bánh xe & phanh", "category": "Khung gầm", "tag": "NƠI CHUYỂN ĐỘNG GẶP ĐỘ BÁM", "explode": [0, 0, 0], "anchor": [1.58, 0.46, 1.1],
+      "description": "Lốp là điểm tiếp xúc duy nhất giữa xe và mặt đường. Sau mỗi mâm xe là đĩa phanh thông gió và cụm má phanh tạo lực ma sát.",
+      "principle": "Phanh tái sinh thu hồi năng lượng qua động cơ; phanh ma sát bổ sung lực dừng khi cần, với ABS giúp kiểm soát trượt bánh.",
+      "specs": [["Mâm xe", "21 inch"], ["Phanh", "Đĩa thông gió, ABS"], ["Thu hồi năng lượng", "Phanh tái sinh"]], "source": "specs" }
+  ],
+  "labels": { "logo": "Logo VinFast" },
+  "pieces": {
+    "interior.block": "Mô hình nguồn không có nội thất; tác giả đặt một khối tối bên trong khoang lái để che khoảng trống khi nhìn qua kính. Nội thất thật của VF 9 gồm ba hàng ghế và màn hình trung tâm 15,6 inch.",
+    "door.handle": "Tay nắm cửa. Trên VF 9 tay nắm ẩn phẳng với thân xe và tự bật ra khi mở khóa.",
+    "lens.front": "Mặt kính che dải đèn LED phía trước, trải ngang đầu xe theo ngôn ngữ thiết kế chữ V của VinFast."
+  },
+  "notes": "Thông số VF 9 lấy từ trang thông số chính thức; số chỗ, treo khí nén và cửa sổ trời khác nhau theo phiên bản."
+}
