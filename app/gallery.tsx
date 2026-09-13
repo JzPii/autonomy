@@ -1,6 +1,6 @@
 import {ArrowUpRight} from 'lucide-react';
 import {UI,type Lang} from './i18n/ui';
-import type {Registry} from './registry';
+import {url,type Registry} from './registry';
 import {vehicleHref} from './router';
 import LangToggle from './lang-toggle';
 
@@ -18,7 +18,7 @@ export default function Gallery({lang,setLang,registry,error}:{lang:Lang;setLang
    <h2>{t.types[type]||type}</h2>
    <div className="gallery-grid">
     {list.map(v=><a key={v.id} className={'vehicle-card '+(v.ready?'':'is-pending')} href={v.ready?vehicleHref(v.id,lang):undefined} aria-disabled={!v.ready}>
-     <div className="vehicle-thumb">{v.thumbnail?<img src={v.thumbnail} alt="" loading="lazy"/>:<span className="vehicle-thumb-fallback">{v.name}</span>}</div>
+     <div className="vehicle-thumb">{v.thumbnail?<img src={url(v.thumbnail)} alt="" loading="lazy"/>:<span className="vehicle-thumb-fallback">{v.name}</span>}</div>
      <div className="vehicle-card-body">
       <span className="vehicle-brand">{v.brand}{v.year?<em> · {v.year}</em>:null}</span>
       <strong>{v.name}</strong>

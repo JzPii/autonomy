@@ -12,7 +12,7 @@ for(const id of ids){
  const out=path.join(root,'public/models',id);fs.mkdirSync(out,{recursive:true});
  for(const f of ['model.json','content.vi.json','content.en.json','internals.json'])if(fs.existsSync(path.join(dir,f)))fs.copyFileSync(path.join(dir,f),path.join(out,f));
  const manifestPath=path.join(out,'manifest.json');const manifest=fs.existsSync(manifestPath)?JSON.parse(fs.readFileSync(manifestPath,'utf8')):null;
- registry.push({id,brand:model.brand,name:model.name,type:model.type,year:model.year,tagline:model.tagline,powertrain:model.powertrain,pieces:manifest?manifest.objects.length:0,ready:Boolean(manifest),thumbnail:fs.existsSync(path.join(out,'thumb.jpg'))?`/models/${id}/thumb.jpg`:null,creator:model.attribution?.creator||''});
+ registry.push({id,brand:model.brand,name:model.name,type:model.type,year:model.year,tagline:model.tagline,powertrain:model.powertrain,pieces:manifest?manifest.objects.length:0,ready:Boolean(manifest),thumbnail:fs.existsSync(path.join(out,'thumb.jpg'))?`models/${id}/thumb.jpg`:null,creator:model.attribution?.creator||''});
  // per-vehicle entry page: same app, vehicle-specific metadata
  const title=`${model.brand} ${model.name} — Autonomy`;
  const desc=`${model.tagline?.en||''} / ${model.tagline?.vi||''}`.trim();

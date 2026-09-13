@@ -4,9 +4,18 @@
   "name": "911 Turbo S (992)",
   "type": "car",
   "year": "2020–",
-  "tagline": { "vi": "Xe thể thao động cơ sau, tăng áp kép, có nội thất chi tiết", "en": "Rear-engined twin-turbo sports car with a detailed interior" },
+  "tagline": {
+    "vi": "Xe thể thao động cơ sau, tăng áp kép, có nội thất chi tiết",
+    "en": "Rear-engined twin-turbo sports car with a detailed interior"
+  },
   "powertrain": "ice",
-  "dimensions": { "length": 4.535, "width": 1.9, "height": 1.303, "wheelbase": 2.45, "track": 1.59 },
+  "dimensions": {
+    "length": 4.535,
+    "width": 1.9,
+    "height": 1.303,
+    "wheelbase": 2.45,
+    "track": 1.59
+  },
   "attribution": {
     "title": "Porsche 911 with interior",
     "creator": "n.brizitskaya",
@@ -15,7 +24,23 @@
     "license": "CC BY 4.0",
     "licenseUrl": "http://creativecommons.org/licenses/by/4.0/"
   },
-  "pipeline": { "simplify": null, "textures": 1024, "flip": false, "maxPieces": 450, "ignore": ["invisible", "AO_tire", "service_black"], "hints": [] },
-  "systemFallback": { "exhaust": "engine", "battery": "engine" },
-  "links": { "specs": "https://www.porsche.com/international/models/911/911-turbo-models/911-turbo-s/", "manual": "https://www.porsche.com/international/accessoriesandservice/porscheservice/vehicleinformation/" }
+  "pipeline": {
+    "simplify": null,
+    "textures": 1024,
+    "flip": false,
+    "maxPieces": 450,
+    "ignore": [
+      "invisible",
+      "service_black"
+    ],
+    "hints": []
+  },
+  "systemFallback": {
+    "exhaust": "engine",
+    "battery": "engine"
+  },
+  "links": {
+    "specs": "https://www.porsche.com/international/models/911/911-turbo-models/911-turbo-s/",
+    "manual": "https://www.porsche.com/international/accessoriesandservice/porscheservice/vehicleinformation/"
+  }
 }
