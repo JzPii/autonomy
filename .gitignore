@@ -1,0 +1,12 @@
+/node_modules
+/dist
+/coverage
+.DS_Store
+.env*
+.vercel
+*.tsbuildinfo
+npm-debug.log*
+
+# Downloaded creator asset: redistribute only under its own license (see README).
+/source/*
+!/source/README.md

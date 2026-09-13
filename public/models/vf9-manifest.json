@@ -1,0 +1,662 @@
+{
+ "model": "VinFast VF 9",
+ "file": "vf9.glb",
+ "version": "27b9cbcb2f",
+ "creator": "Mô hình mẫu dựng bằng mã",
+ "source": "",
+ "license": "",
+ "licenseUrl": "",
+ "placeholder": true,
+ "lengthMeters": 5.118,
+ "generated": "2026-09-13T05:38:19.994Z",
+ "input": "sample.glb",
+ "counts": {
+  "body": 16,
+  "glass": 7,
+  "doors": 5,
+  "cabin": 0,
+  "wheels": 12
+ },
+ "objects": [
+  {
+   "id": "body_0000",
+   "part": "body",
+   "label": "Vỏ thân xe",
+   "center": [
+    0.01,
+    0.647,
+    0
+   ],
+   "size": [
+    4.68,
+    0.597,
+    1.892
+   ],
+   "faces": 12
+  },
+  {
+   "id": "body_0001",
+   "part": "body",
+   "label": "Vỏ thân xe",
+   "center": [
+    0.01,
+    0.321,
+    0
+   ],
+   "size": [
+    4.58,
+    0.045,
+    1.792
+   ],
+   "faces": 12
+  },
+  {
+   "id": "body_0002",
+   "part": "body",
+   "label": "Chi tiết ngoại thất",
+   "center": [
+    0.458,
+    1.317,
+    0
+   ],
+   "size": [
+    2.091,
+    0.743,
+    1.892
+   ],
+   "faces": 36
+  },
+  {
+   "id": "glass_0003",
+   "part": "glass",
+   "label": "Kính bên / kính trần",
+   "center": [
+    0.458,
+    1.694,
+    0
+   ],
+   "size": [
+    1.892,
+    0.008,
+    1.195
+   ],
+   "faces": 12
+  },
+  {
+   "id": "body_0004",
+   "part": "body",
+   "label": "Nắp ca-pô",
+   "center": [
+    -1.782,
+    0.973,
+    0
+   ],
+   "size": [
+    0.996,
+    0.045,
+    1.792
+   ],
+   "faces": 12
+  },
+  {
+   "id": "wheels_0005",
+   "part": "wheels",
+   "label": "Lốp xe · phải · trước",
+   "center": [
+    -1.558,
+    0.378,
+    -0.816
+   ],
+   "size": [
+    0.757,
+    0.757,
+    0.259
+   ],
+   "faces": 128
+  },
+  {
+   "id": "wheels_0006",
+   "part": "wheels",
+   "label": "Lốp xe · phải · sau",
+   "center": [
+    1.578,
+    0.378,
+    -0.816
+   ],
+   "size": [
+    0.757,
+    0.757,
+    0.259
+   ],
+   "faces": 128
+  },
+  {
+   "id": "wheels_0007",
+   "part": "wheels",
+   "label": "Lốp xe · trái · trước",
+   "center": [
+    -1.558,
+    0.378,
+    0.816
+   ],
+   "size": [
+    0.757,
+    0.757,
+    0.259
+   ],
+   "faces": 128
+  },
+  {
+   "id": "wheels_0008",
+   "part": "wheels",
+   "label": "Lốp xe · trái · sau",
+   "center": [
+    1.578,
+    0.378,
+    0.816
+   ],
+   "size": [
+    0.757,
+    0.757,
+    0.259
+   ],
+   "faces": 128
+  },
+  {
+   "id": "body_0009",
+   "part": "body",
+   "label": "Cản trước",
+   "center": [
+    -2.44,
+    0.423,
+    0
+   ],
+   "size": [
+    0.199,
+    0.349,
+    1.952
+   ],
+   "faces": 12
+  },
+  {
+   "id": "body_0010",
+   "part": "body",
+   "label": "Cản sau",
+   "center": [
+    2.459,
+    0.423,
+    0
+   ],
+   "size": [
+    0.199,
+    0.349,
+    1.952
+   ],
+   "faces": 12
+  },
+  {
+   "id": "doors_0011",
+   "part": "doors",
+   "label": "Cửa cốp",
+   "center": [
+    2.33,
+    1.299,
+    0
+   ],
+   "size": [
+    0.06,
+    0.687,
+    1.693
+   ],
+   "faces": 12
+  },
+  {
+   "id": "glass_0012",
+   "part": "glass",
+   "label": "Kính chắn gió",
+   "center": [
+    -0.627,
+    1.314,
+    0
+   ],
+   "size": [
+    0.04,
+    0.637,
+    1.553
+   ],
+   "faces": 12
+  },
+  {
+   "id": "glass_0013",
+   "part": "glass",
+   "label": "Kính sau",
+   "center": [
+    2.275,
+    1.344,
+    0
+   ],
+   "size": [
+    0.03,
+    0.498,
+    1.553
+   ],
+   "faces": 12
+  },
+  {
+   "id": "doors_0014",
+   "part": "doors",
+   "label": "Cửa trước · phải",
+   "center": [
+    -0.587,
+    1.021,
+    -0.971
+   ],
+   "size": [
+    0.996,
+    1.145,
+    0.03
+   ],
+   "faces": 12
+  },
+  {
+   "id": "doors_0015",
+   "part": "doors",
+   "label": "Cửa trước · trái",
+   "center": [
+    -0.587,
+    1.021,
+    0.971
+   ],
+   "size": [
+    0.996,
+    1.145,
+    0.03
+   ],
+   "faces": 12
+  },
+  {
+   "id": "doors_0016",
+   "part": "doors",
+   "label": "Cửa sau · phải",
+   "center": [
+    0.607,
+    1.021,
+    -0.971
+   ],
+   "size": [
+    0.996,
+    1.145,
+    0.03
+   ],
+   "faces": 12
+  },
+  {
+   "id": "doors_0017",
+   "part": "doors",
+   "label": "Cửa sau · trái",
+   "center": [
+    0.607,
+    1.021,
+    0.971
+   ],
+   "size": [
+    0.996,
+    1.145,
+    0.03
+   ],
+   "faces": 12
+  },
+  {
+   "id": "wheels_0018",
+   "part": "wheels",
+   "label": "Mâm xe · phải · trước",
+   "center": [
+    -1.558,
+    0.378,
+    -0.816
+   ],
+   "size": [
+    0.538,
+    0.538,
+    0.279
+   ],
+   "faces": 128
+  },
+  {
+   "id": "wheels_0019",
+   "part": "wheels",
+   "label": "Mâm xe · phải · sau",
+   "center": [
+    1.578,
+    0.378,
+    -0.816
+   ],
+   "size": [
+    0.538,
+    0.538,
+    0.279
+   ],
+   "faces": 128
+  },
+  {
+   "id": "wheels_0020",
+   "part": "wheels",
+   "label": "Mâm xe · trái · trước",
+   "center": [
+    -1.558,
+    0.378,
+    0.816
+   ],
+   "size": [
+    0.538,
+    0.538,
+    0.279
+   ],
+   "faces": 128
+  },
+  {
+   "id": "wheels_0021",
+   "part": "wheels",
+   "label": "Mâm xe · trái · sau",
+   "center": [
+    1.578,
+    0.378,
+    0.816
+   ],
+   "size": [
+    0.538,
+    0.538,
+    0.279
+   ],
+   "faces": 128
+  },
+  {
+   "id": "glass_0022",
+   "part": "glass",
+   "label": "Kính bên / kính trần · phải",
+   "center": [
+    -0.587,
+    1.294,
+    -0.951
+   ],
+   "size": [
+    0.956,
+    0.597,
+    0.006
+   ],
+   "faces": 12
+  },
+  {
+   "id": "glass_0023",
+   "part": "glass",
+   "label": "Kính bên / kính trần · trái",
+   "center": [
+    -0.587,
+    1.294,
+    0.951
+   ],
+   "size": [
+    0.956,
+    0.597,
+    0.006
+   ],
+   "faces": 12
+  },
+  {
+   "id": "glass_0024",
+   "part": "glass",
+   "label": "Kính bên / kính trần · phải",
+   "center": [
+    0.607,
+    1.294,
+    -0.951
+   ],
+   "size": [
+    0.956,
+    0.597,
+    0.006
+   ],
+   "faces": 12
+  },
+  {
+   "id": "glass_0025",
+   "part": "glass",
+   "label": "Kính bên / kính trần · trái",
+   "center": [
+    0.607,
+    1.294,
+    0.951
+   ],
+   "size": [
+    0.956,
+    0.597,
+    0.006
+   ],
+   "faces": 12
+  },
+  {
+   "id": "wheels_0026",
+   "part": "wheels",
+   "label": "Cụm bánh xe · phải · sau",
+   "center": [
+    1.578,
+    0.378,
+    -0.816
+   ],
+   "size": [
+    0.339,
+    0.339,
+    0.309
+   ],
+   "faces": 128
+  },
+  {
+   "id": "wheels_0027",
+   "part": "wheels",
+   "label": "Cụm bánh xe · trái · sau",
+   "center": [
+    1.578,
+    0.378,
+    0.816
+   ],
+   "size": [
+    0.339,
+    0.339,
+    0.309
+   ],
+   "faces": 128
+  },
+  {
+   "id": "wheels_0028",
+   "part": "wheels",
+   "label": "Cụm bánh xe · phải · trước",
+   "center": [
+    -1.558,
+    0.378,
+    -0.816
+   ],
+   "size": [
+    0.339,
+    0.339,
+    0.309
+   ],
+   "faces": 128
+  },
+  {
+   "id": "wheels_0029",
+   "part": "wheels",
+   "label": "Cụm bánh xe · trái · trước",
+   "center": [
+    -1.558,
+    0.378,
+    0.816
+   ],
+   "size": [
+    0.339,
+    0.339,
+    0.309
+   ],
+   "faces": 128
+  },
+  {
+   "id": "body_0030",
+   "part": "body",
+   "label": "Tai xe / hông xe · phải",
+   "center": [
+    -1.583,
+    0.697,
+    -0.971
+   ],
+   "size": [
+    0.797,
+    0.597,
+    0.03
+   ],
+   "faces": 12
+  },
+  {
+   "id": "body_0031",
+   "part": "body",
+   "label": "Tai xe / hông xe · phải",
+   "center": [
+    1.603,
+    0.697,
+    -0.971
+   ],
+   "size": [
+    0.797,
+    0.597,
+    0.03
+   ],
+   "faces": 12
+  },
+  {
+   "id": "body_0032",
+   "part": "body",
+   "label": "Tai xe / hông xe · trái",
+   "center": [
+    -1.583,
+    0.697,
+    0.971
+   ],
+   "size": [
+    0.797,
+    0.597,
+    0.03
+   ],
+   "faces": 12
+  },
+  {
+   "id": "body_0033",
+   "part": "body",
+   "label": "Tai xe / hông xe · trái",
+   "center": [
+    1.603,
+    0.697,
+    0.971
+   ],
+   "size": [
+    0.797,
+    0.597,
+    0.03
+   ],
+   "faces": 12
+  },
+  {
+   "id": "body_0034",
+   "part": "body",
+   "label": "Đèn trước · phải",
+   "center": [
+    -2.342,
+    0.871,
+    -0.647
+   ],
+   "size": [
+    0.015,
+    0.149,
+    0.498
+   ],
+   "faces": 12
+  },
+  {
+   "id": "body_0035",
+   "part": "body",
+   "label": "Đèn sau · phải",
+   "center": [
+    2.362,
+    0.871,
+    -0.647
+   ],
+   "size": [
+    0.015,
+    0.149,
+    0.498
+   ],
+   "faces": 12
+  },
+  {
+   "id": "body_0036",
+   "part": "body",
+   "label": "Đèn trước · trái",
+   "center": [
+    -2.342,
+    0.871,
+    0.647
+   ],
+   "size": [
+    0.015,
+    0.149,
+    0.498
+   ],
+   "faces": 12
+  },
+  {
+   "id": "body_0037",
+   "part": "body",
+   "label": "Đèn sau · trái",
+   "center": [
+    2.362,
+    0.871,
+    0.647
+   ],
+   "size": [
+    0.015,
+    0.149,
+    0.498
+   ],
+   "faces": 12
+  },
+  {
+   "id": "body_0038",
+   "part": "body",
+   "label": "Chi tiết nhỏ",
+   "center": [
+    -1.772,
+    0.946,
+    0
+   ],
+   "size": [
+    1.573,
+    0.498,
+    2.29
+   ],
+   "faces": 36
+  },
+  {
+   "id": "body_0039",
+   "part": "body",
+   "label": "Chi tiết nhỏ",
+   "center": [
+    -1.444,
+    1.011,
+    -0.045
+   ],
+   "size": [
+    0.119,
+    0.01,
+    1.105
+   ],
+   "faces": 144
+  }
+ ]
+}
